@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StatisticsAPP.Data;
 
@@ -11,9 +12,11 @@ using StatisticsAPP.Data;
 namespace StatisticsAPP.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250301084438_edit2")]
+    partial class edit2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -229,35 +232,6 @@ namespace StatisticsAPP.Migrations
                         });
                 });
 
-            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserCircles", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int?>("CircleId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdCircle")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdUser")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CircleId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserCircles");
-                });
-
             modelBuilder.Entity("StatisticsAPP.Models.Auth.UserRole", b =>
                 {
                     b.Property<int>("Id")
@@ -306,64 +280,6 @@ namespace StatisticsAPP.Migrations
                             UserCreatedId = 1,
                             UserId = 1
                         });
-                });
-
-            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserSupCourts", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("IdSupCourt")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdUser")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("SuperCourtId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SuperCourtId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserSupCourts");
-                });
-
-            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserSuperCourts", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("IdSuperCourt")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdUser")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("SuperCourtId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("SuperCourtId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("UserSuperCourts");
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.CircleModels.Circle", b =>
@@ -1006,21 +922,6 @@ namespace StatisticsAPP.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserCircles", b =>
-                {
-                    b.HasOne("StatisticsAPP.Models.CircleModels.Circle", "Circle")
-                        .WithMany()
-                        .HasForeignKey("CircleId");
-
-                    b.HasOne("StatisticsAPP.Models.Auth.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("Circle");
-
-                    b.Navigation("User");
-                });
-
             modelBuilder.Entity("StatisticsAPP.Models.Auth.UserRole", b =>
                 {
                     b.HasOne("StatisticsAPP.Models.Auth.Role", "Role")
@@ -1044,36 +945,6 @@ namespace StatisticsAPP.Migrations
                         .HasForeignKey("UserId1");
 
                     b.Navigation("Role");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserSupCourts", b =>
-                {
-                    b.HasOne("StatisticsAPP.Models.CourtsModels.SupCourt", "SuperCourt")
-                        .WithMany()
-                        .HasForeignKey("SuperCourtId");
-
-                    b.HasOne("StatisticsAPP.Models.Auth.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("SuperCourt");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserSuperCourts", b =>
-                {
-                    b.HasOne("StatisticsAPP.Models.CourtsModels.SuperCourt", "SuperCourt")
-                        .WithMany()
-                        .HasForeignKey("SuperCourtId");
-
-                    b.HasOne("StatisticsAPP.Models.Auth.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId");
-
-                    b.Navigation("SuperCourt");
 
                     b.Navigation("User");
                 });

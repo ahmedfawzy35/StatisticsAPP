@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StatisticsAPP.Seeds;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,7 +27,7 @@ namespace StatisticsAPP.Forms.MainForm
                 if (main_form == null)
                 {
                     main_form = new MainForm();
-                    main_form.FormClosed += new FormClosedEventHandler(formmain_formclosed);
+                    main_form.FormClosed += new FormClosedEventHandler(formmain_formclosed!);
                 }
                 return main_form;
             }
@@ -199,12 +200,22 @@ namespace StatisticsAPP.Forms.MainForm
         }
         #endregion
         #region Events
-        private void MainForm_Load(object sender, EventArgs e)
+        private async void MainForm_Load(object sender, EventArgs e)
         {
             CloseImage = Properties.Resources.close16;
             tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
-            tabControl1.DrawItem += tabControl1_DrawItem;
+            //tabControl1.DrawItem += tabControl1_DrawItem;
             tabControl1.Padding = new System.Drawing.Point(50, 3);
+
+            await Task.Run(async () => {
+
+                await DefualtPermissions.AddDefualtOperations();
+                await DefualtPermissions.AddDefualtToRoleOperation();
+                
+              
+
+
+            });
         }
         private void RecentLable_Click(object sender, EventArgs e)
         {

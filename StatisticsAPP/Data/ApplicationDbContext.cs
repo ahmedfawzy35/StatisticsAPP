@@ -32,6 +32,9 @@ namespace StatisticsAPP.Data
         public DbSet<Operation> Operations { get; set; } = default!;
         public DbSet<UserRole> UserRoles { get; set; } = default!;
         public DbSet<RoleOperation> RoleOperations { get; set; } = default!;
+        public DbSet<UserCircles> UserCircles { get; set; } = default!;
+        public DbSet<UserSupCourts> UserSupCourts { get; set; } = default!;
+        public DbSet<UserSuperCourts> UserSuperCourts { get; set; } = default!;
 
         #endregion
 

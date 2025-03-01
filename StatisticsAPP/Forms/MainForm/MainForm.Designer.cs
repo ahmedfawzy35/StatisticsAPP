@@ -259,6 +259,8 @@
             tabControl1.Size = new Size(1271, 595);
             tabControl1.TabIndex = 7;
             tabControl1.MouseClick += tabControl1_MouseClick;
+            tabControl1.DrawItem += tabControl1_DrawItem;
+
             // 
             // tabPage1
             // 
