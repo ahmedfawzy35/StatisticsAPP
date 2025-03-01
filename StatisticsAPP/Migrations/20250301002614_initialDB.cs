@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StatisticsAPP.Migrations
 {
     /// <inheritdoc />
-    public partial class IntialDB : Migration
+    public partial class initialDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -42,7 +42,8 @@ namespace StatisticsAPP.Migrations
                     InterCasesCount = table.Column<int>(type: "int", nullable: false),
                     DelayedCases = table.Column<int>(type: "int", nullable: false),
                     DecisionsCount = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -62,7 +63,8 @@ namespace StatisticsAPP.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -83,7 +85,8 @@ namespace StatisticsAPP.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ParentID = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -104,7 +107,8 @@ namespace StatisticsAPP.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ParentID = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -125,7 +129,8 @@ namespace StatisticsAPP.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ParentID = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -146,7 +151,8 @@ namespace StatisticsAPP.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SeniorityNumber = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -208,7 +214,8 @@ namespace StatisticsAPP.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -232,7 +239,8 @@ namespace StatisticsAPP.Migrations
                     Count = table.Column<int>(type: "int", nullable: false),
                     Enable = table.Column<bool>(type: "bit", nullable: false),
                     CircleTypeId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -259,7 +267,8 @@ namespace StatisticsAPP.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IdDecisionCategory = table.Column<int>(type: "int", nullable: false),
                     DecisionCategoryId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -286,7 +295,8 @@ namespace StatisticsAPP.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IdDelayCasesCategory = table.Column<int>(type: "int", nullable: false),
                     DelayCasesCategoryId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -313,7 +323,8 @@ namespace StatisticsAPP.Migrations
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IdInterCasesCategory = table.Column<int>(type: "int", nullable: false),
                     InterCasesCategoryId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -339,9 +350,9 @@ namespace StatisticsAPP.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     IdRole = table.Column<int>(type: "int", nullable: false),
                     IdOperation = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
                     OperationId = table.Column<int>(type: "int", nullable: true),
-                    RoleId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    RoleId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -351,7 +362,7 @@ namespace StatisticsAPP.Migrations
                         column: x => x.IdOperation,
                         principalTable: "Operations",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_RoleOperations_Operations_OperationId",
                         column: x => x.OperationId,
@@ -397,7 +408,7 @@ namespace StatisticsAPP.Migrations
                         column: x => x.IdRole,
                         principalTable: "Roles",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_UserRoles_Roles_RoleId",
                         column: x => x.RoleId,
@@ -424,7 +435,8 @@ namespace StatisticsAPP.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SuperCourtId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -434,7 +446,7 @@ namespace StatisticsAPP.Migrations
                         column: x => x.SuperCourtId,
                         principalTable: "SuperCourts",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_SupCourts_Users_UserId",
                         column: x => x.UserId,
@@ -456,7 +468,8 @@ namespace StatisticsAPP.Migrations
                     DateEnd = table.Column<DateTime>(type: "datetime2", nullable: true),
                     CircleId = table.Column<int>(type: "int", nullable: true),
                     JudgeId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -471,13 +484,13 @@ namespace StatisticsAPP.Migrations
                         column: x => x.IdCircle,
                         principalTable: "Circles",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_CircleJudges_Judges_IdJudge",
                         column: x => x.IdJudge,
                         principalTable: "Judges",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_CircleJudges_Judges_JudgeId",
                         column: x => x.JudgeId,
@@ -502,7 +515,8 @@ namespace StatisticsAPP.Migrations
                     Count = table.Column<int>(type: "int", nullable: false),
                     IdJudge = table.Column<int>(type: "int", nullable: false),
                     JudgeId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -512,13 +526,13 @@ namespace StatisticsAPP.Migrations
                         column: x => x.IdCircleStatistics,
                         principalTable: "CircleStatistics",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_StatisticsDecisions_Decisions_IdDecision",
                         column: x => x.IdDecision,
                         principalTable: "Decisions",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_StatisticsDecisions_Judges_JudgeId",
                         column: x => x.JudgeId,
@@ -546,7 +560,8 @@ namespace StatisticsAPP.Migrations
                     YearDelay = table.Column<int>(type: "int", nullable: false),
                     DelayCaseId = table.Column<int>(type: "int", nullable: true),
                     JudgeId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -556,7 +571,7 @@ namespace StatisticsAPP.Migrations
                         column: x => x.IdCircleStatistics,
                         principalTable: "CircleStatistics",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_StatisticsDelayCases_DelayCases_DelayCaseId",
                         column: x => x.DelayCaseId,
@@ -587,7 +602,8 @@ namespace StatisticsAPP.Migrations
                     IdJudge = table.Column<int>(type: "int", nullable: false),
                     InterCaseId = table.Column<int>(type: "int", nullable: true),
                     JudgeId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -597,7 +613,7 @@ namespace StatisticsAPP.Migrations
                         column: x => x.IdCircleStatistics,
                         principalTable: "CircleStatistics",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_StatisticsInterCases_InterCases_InterCaseId",
                         column: x => x.InterCaseId,
@@ -615,19 +631,20 @@ namespace StatisticsAPP.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                 });
+
             migrationBuilder.InsertData(
-              table: "Users",
-              columns: new[] { "Id", "CreatedBy", "Enable", "FullName", "Password", "UserName" },
-              values: new object[] { 1, 0, true, "مدير النظام", "ADMIN", "admin" });
+                table: "Users",
+                columns: new[] { "Id", "CreatedBy", "Enable", "FullName", "Password", "UserName" },
+                values: new object[] { 1, 0, true, "مدير النظام", "ADMIN", "admin" });
 
             migrationBuilder.InsertData(
                 table: "Operations",
-                columns: new[] { "Id", "Code", "Name", "UserId"  },
+                columns: new[] { "Id", "Code", "Name", "UserId" },
                 values: new object[,]
                 {
-                    { 1, "ADD_USER", "إضافة مستخدم", 1},
+                    { 1, "ADD_USER", "إضافة مستخدم", 1 },
                     { 2, "EDIT_USER", "تعديل مستخدم", 1 },
-                    { 3, "DELETE_USER", "حذف مستخدم",1 }
+                    { 3, "DELETE_USER", "حذف مستخدم", 1 }
                 });
 
             migrationBuilder.InsertData(
@@ -639,17 +656,20 @@ namespace StatisticsAPP.Migrations
                     { 2, "JUDGE", "قاضٍ", 1 }
                 });
 
-          
-
             migrationBuilder.InsertData(
                 table: "RoleOperations",
                 columns: new[] { "Id", "IdOperation", "IdRole", "OperationId", "RoleId", "UserId" },
                 values: new object[,]
                 {
                     { 1, 1, 1, null, null, 1 },
-                    { 2, 2, 1, null, null,1 },
+                    { 2, 2, 1, null, null, 1 },
                     { 3, 3, 1, null, null, 1 }
                 });
+
+            migrationBuilder.InsertData(
+                table: "UserRoles",
+                columns: new[] { "Id", "CreatedAt", "IdRole", "RoleId", "UserCreatedId", "UserId", "UserId1" },
+                values: new object[] { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, null, 1, 1, null });
 
             migrationBuilder.CreateIndex(
                 name: "IX_CircleJudges_CircleId",
