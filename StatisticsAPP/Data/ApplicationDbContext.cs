@@ -17,6 +17,15 @@ namespace StatisticsAPP.Data
 {
     public class ApplicationDbContext : DbContext
     {
+       static readonly string con = Properties.Settings.Default.ConnectionString;
+        //static readonly string con1 = "Server=.;Initial Catalog=StoreManageDBTest1;Trusted_Connection=Yes;TrustServerCertificate=true";
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(con);
+        }
+
+      
         #region Auth
         public DbSet<User> Users { get; set; } = default!;
         public DbSet<Role> Roles { get; set; } = default!;
@@ -79,26 +88,30 @@ namespace StatisticsAPP.Data
             #region اضافة البيانات الافتراضية 
             // إضافة مستخدم افتراضي "مدير النظام"
             modelBuilder.Entity<User>().HasData(
-                new User { Id = 1, FullName = "مدير النظام" , UserName = "admin", Password = "ADMIN"  , Enable = true , CreatedAt = DateTime.Now ,CreatedBy = 0 }
+                new User { Id = 1, FullName = "مدير النظام" , UserName = "admin", Password = "ADMIN"  , Enable = true  ,CreatedBy = 0 }
+            );
+            // إضافة مستخدم افتراضي "مدير النظام"
+            modelBuilder.Entity<UserRole>().HasData(
+                new UserRole { Id = 1, UserId =1, IdRole = 1, UserCreatedId = 1  }
             );
             // إضافة دور "مدير النظام"
             modelBuilder.Entity<Role>().HasData(
-                new Role { Id = 1, Name = "مدير النظام", Code = "ADMIN" },
-                new Role { Id = 2, Name = "قاضٍ", Code = "JUDGE" }
+                new Role { Id = 1, Name = "مدير النظام", Code = "ADMIN"  , UserId = 1},
+                new Role { Id = 2, Name = "قاضٍ", Code = "JUDGE",  UserId = 1 }
             );
 
             // إضافة عمليات (إجراءات) للنظام
             modelBuilder.Entity<Operation>().HasData(
-                new Operation { Id = 1, Name = "إضافة مستخدم", Code = "ADD_USER" },
-                new Operation { Id = 2, Name = "تعديل مستخدم", Code = "EDIT_USER" },
-                new Operation { Id = 3, Name = "حذف مستخدم", Code = "DELETE_USER" }
+                new Operation { Id = 1, Name = "إضافة مستخدم", Code = "ADD_USER", UserId = 1 },
+                new Operation { Id = 2, Name = "تعديل مستخدم", Code = "EDIT_USER", UserId = 1 },
+                new Operation { Id = 3, Name = "حذف مستخدم", Code = "DELETE_USER", UserId = 1 }
             );
 
             // تعيين الصلاحيات لدور "مدير النظام"
             modelBuilder.Entity<RoleOperation>().HasData(
-                new RoleOperation { Id = 1, IdRole = 1, IdOperation = 1 },
-                new RoleOperation { Id = 2, IdRole = 1, IdOperation = 2 },
-                new RoleOperation { Id = 3, IdRole = 1, IdOperation = 3 }
+                new RoleOperation { Id = 1, IdRole = 1, IdOperation = 1, UserId = 1 },
+                new RoleOperation { Id = 2, IdRole = 1, IdOperation = 2, UserId = 1 },
+                new RoleOperation { Id = 3, IdRole = 1, IdOperation = 3, UserId = 1 }
             );
 
             #endregion

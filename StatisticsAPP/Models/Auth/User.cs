@@ -16,7 +16,6 @@ namespace StatisticsAPP.Models.Auth
 
         // تتبع الإنشاء والتعديل
         public int CreatedBy { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
         // العلاقات
         public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();

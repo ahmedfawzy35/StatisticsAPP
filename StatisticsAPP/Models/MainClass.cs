@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using StatisticsAPP.Models.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,6 @@ namespace StatisticsAPP.Models
     {
         public int UserId { get; set; }
         public User? User { get; set; }
-        public DateTime CreatedAt { get; set; }
+       
     }
 }
