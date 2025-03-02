@@ -17,11 +17,11 @@ namespace StatisticsAPP.Utility
         public static string PermessionDelete = "بحذف";
         public static string PermessionView_Code = "VIEW_";
         public static string PermessionCreate_Code = "ADD_";
-        public static string PermessionEdit_Code = "EDIT";
+        public static string PermessionEdit_Code = "EDIT_";
         public static string PermessionDelete_Code = "DELETE_";
         public static string UnPermission = "غير مصرح";
 
-      
+       
 
 
         public static string AddSucsessMessage = "تمت الاضافة بنجاح";
@@ -123,14 +123,14 @@ namespace StatisticsAPP.Utility
             #endregion
 
             #region DelayCasesModels
-            public static string DelayCasesCategoriy = "تصنيفات القضايا المؤجلة";
+            public static string DelayCasesCategory = "تصنيفات القضايا المؤجلة";
             public static string DelayCase = "القضايا المؤجلة";
 
             #endregion
 
             #region InterCasesModels
             public static string InterCasesCategory = "تصنيفات القضايا المقدمة";
-            public static string InterCase = "القضايا المقدمة";
+            public static string InterCases = "القضايا المقدمة";
 
             #endregion
 
@@ -140,8 +140,8 @@ namespace StatisticsAPP.Utility
             #endregion
 
             #region StatisticsModels
-            public static string CircleStatistic = "احصائيات الدوائر";
-            public static string StatisticsDecision = "احصائيات الاحكام";
+            public static string CircleStatistics = "احصائيات الدوائر";
+            public static string StatisticsDecisions = "احصائيات الاحكام";
             public static string StatisticsInterCases = "احصائيات القضايا الداخلة";
             public static string StatisticsDelayCases = "احصائيات القضايا المؤجلة";
 
@@ -157,8 +157,8 @@ namespace StatisticsAPP.Utility
                 return new List<string>
                 {
                     User, Role, UserRole, RoleOperation ,UserCircles,UserSupCourts,UserSuperCourts, Circle, CircleType,CircleJudge,SuperCourt,
-                    SupCourt,DecisionCategory,Decision,DelayCasesCategoriy,DelayCase,
-                    InterCasesCategory,InterCase,Judge,CircleStatistic,StatisticsDecision,StatisticsInterCases,StatisticsDelayCases
+                    SupCourt,DecisionCategory,Decision,DelayCasesCategory,DelayCase,
+                    InterCasesCategory,InterCases,Judge,CircleStatistics,StatisticsDecisions,StatisticsInterCases,StatisticsDelayCases
                 };
             }
 
@@ -180,17 +180,27 @@ namespace StatisticsAPP.Utility
                     new OperationTexts{Name = SupCourt , Code = GetPropertyName(()=>SupCourt),},
                     new OperationTexts{Name = DecisionCategory , Code = GetPropertyName(()=>DecisionCategory),},
                     new OperationTexts{Name = Decision , Code = GetPropertyName(()=>Decision),},
-                    new OperationTexts{Name = DelayCasesCategoriy , Code = GetPropertyName(()=>DelayCasesCategoriy),},
+                    new OperationTexts{Name = DelayCasesCategory , Code = GetPropertyName(()=>DelayCasesCategory),},
                     new OperationTexts{Name = DelayCase , Code = GetPropertyName(()=>DelayCase),},
                     new OperationTexts{Name = InterCasesCategory , Code = GetPropertyName(()=>InterCasesCategory),},
-                    new OperationTexts{Name = InterCase , Code = GetPropertyName(()=>InterCase),},
+                    new OperationTexts{Name = InterCases , Code = GetPropertyName(()=>InterCases),},
                     new OperationTexts{Name = Judge , Code = GetPropertyName(()=>Judge),},
-                    new OperationTexts{Name = CircleStatistic , Code = GetPropertyName(()=>CircleStatistic),},
-                    new OperationTexts{Name = StatisticsDecision , Code = GetPropertyName(()=>StatisticsDecision),},
+                    new OperationTexts{Name = CircleStatistics , Code = GetPropertyName(()=>CircleStatistics),},
+                    new OperationTexts{Name = StatisticsDecisions , Code = GetPropertyName(()=>StatisticsDecisions),},
                     new OperationTexts{Name = StatisticsInterCases , Code = GetPropertyName(()=>StatisticsInterCases),},
                     new OperationTexts{Name = StatisticsDelayCases , Code = GetPropertyName(()=>StatisticsDelayCases),},
 
                 };
+            }
+
+            public static string GetModulesCode(string modelName)
+            {
+              var model =   ModulesoperationTexts().Where(x => x.Name == modelName).FirstOrDefault();
+                if (model != null)
+                {
+                    return model.Code;
+                }
+                return string.Empty ;
             }
         }
         }

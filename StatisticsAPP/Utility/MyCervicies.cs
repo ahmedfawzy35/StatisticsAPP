@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace StatisticsAPP.Utility
 {
-    public static class MySyrvicies
+    public static class MyCervicies
     {
         public static ApplicationDbContext _context = MyContext.context;
 

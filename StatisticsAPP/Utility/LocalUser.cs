@@ -29,7 +29,7 @@ namespace StatisticsAPP.Utility
 
             }
         }
-        public static List<Operation> UserClime = MySyrvicies.roleManager.getuserOperations(LocalUser.localUserId);
+        public static List<Operation> UserClime = MyCervicies.roleManager.getuserOperations(LocalUser.localUserId);
 
     }
 }

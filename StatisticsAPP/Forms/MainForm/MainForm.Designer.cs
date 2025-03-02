@@ -32,7 +32,7 @@
             ToolStripMenuItem_File = new ToolStripMenuItem();
             اغلاقToolStripMenuItem = new ToolStripMenuItem();
             ToolStripMenuItem_Courts = new ToolStripMenuItem();
-            ToolStripMenuItem_AddCourt = new ToolStripMenuItem();
+            ToolStripMenuItem_AddSuperCourt = new ToolStripMenuItem();
             ToolStripMenuItem_ManageCourt = new ToolStripMenuItem();
             ToolStripMenuItem_circles = new ToolStripMenuItem();
             ToolStripMenuItem_AddCircle = new ToolStripMenuItem();
@@ -55,9 +55,13 @@
             ToolStripMenuItem_AddRole = new ToolStripMenuItem();
             ToolStripMenuItem_ManageRoles = new ToolStripMenuItem();
             ToolStripMenuItem_EditPassword = new ToolStripMenuItem();
-            مصرToolStripMenuItem = new ToolStripMenuItem();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            ToolStripMenuItem_AddSupCourt = new ToolStripMenuItem();
+            احصائيةدائرةToolStripMenuItem = new ToolStripMenuItem();
+            احصائيةقاضيToolStripMenuItem = new ToolStripMenuItem();
+            احصائيةمحكمةابتدائيةToolStripMenuItem = new ToolStripMenuItem();
+            احصائيةمحكمةجزئيةToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             tabControl1.SuspendLayout();
             SuspendLayout();
@@ -87,17 +91,17 @@
             // 
             // ToolStripMenuItem_Courts
             // 
-            ToolStripMenuItem_Courts.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuItem_AddCourt, ToolStripMenuItem_ManageCourt });
+            ToolStripMenuItem_Courts.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuItem_AddSuperCourt, ToolStripMenuItem_AddSupCourt, ToolStripMenuItem_ManageCourt });
             ToolStripMenuItem_Courts.Name = "ToolStripMenuItem_Courts";
             ToolStripMenuItem_Courts.Size = new Size(56, 20);
             ToolStripMenuItem_Courts.Text = "المحاكم";
             // 
-            // ToolStripMenuItem_AddCourt
+            // ToolStripMenuItem_AddSuperCourt
             // 
-            ToolStripMenuItem_AddCourt.Name = "ToolStripMenuItem_AddCourt";
-            ToolStripMenuItem_AddCourt.Size = new Size(180, 22);
-            ToolStripMenuItem_AddCourt.Text = "اضافة محكمة";
-            ToolStripMenuItem_AddCourt.Click += ToolStripMenuItem_AddCourt_Click;
+            ToolStripMenuItem_AddSuperCourt.Name = "ToolStripMenuItem_AddSuperCourt";
+            ToolStripMenuItem_AddSuperCourt.Size = new Size(180, 22);
+            ToolStripMenuItem_AddSuperCourt.Text = "اضافة محكمة ابتدائية";
+            ToolStripMenuItem_AddSuperCourt.Click += ToolStripMenuItem_AddCourt_Click;
             // 
             // ToolStripMenuItem_ManageCourt
             // 
@@ -115,13 +119,13 @@
             // ToolStripMenuItem_AddCircle
             // 
             ToolStripMenuItem_AddCircle.Name = "ToolStripMenuItem_AddCircle";
-            ToolStripMenuItem_AddCircle.Size = new Size(180, 22);
+            ToolStripMenuItem_AddCircle.Size = new Size(130, 22);
             ToolStripMenuItem_AddCircle.Text = "اضافة دائرة";
             // 
             // ToolStripMenuItem_ManageCircle
             // 
             ToolStripMenuItem_ManageCircle.Name = "ToolStripMenuItem_ManageCircle";
-            ToolStripMenuItem_ManageCircle.Size = new Size(180, 22);
+            ToolStripMenuItem_ManageCircle.Size = new Size(130, 22);
             ToolStripMenuItem_ManageCircle.Text = "ادارة الدوائر";
             // 
             // ToolStripMenuItem_judges
@@ -157,7 +161,7 @@
             // 
             // ToolStripMenuItem_Statistics
             // 
-            ToolStripMenuItem_Statistics.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuItem_AddStatistic, ToolStripMenuItem_ManageStatistic });
+            ToolStripMenuItem_Statistics.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuItem_AddStatistic, ToolStripMenuItem_ManageStatistic, احصائيةدائرةToolStripMenuItem, احصائيةقاضيToolStripMenuItem, احصائيةمحكمةابتدائيةToolStripMenuItem, احصائيةمحكمةجزئيةToolStripMenuItem });
             ToolStripMenuItem_Statistics.Name = "ToolStripMenuItem_Statistics";
             ToolStripMenuItem_Statistics.Size = new Size(73, 20);
             ToolStripMenuItem_Statistics.Text = "الاحصائيات";
@@ -195,7 +199,7 @@
             // 
             // ToolStripMenuItem_Users
             // 
-            ToolStripMenuItem_Users.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuItem_AddUser, ToolStripMenuItem_ManageUsers, ToolStripMenuItem_Roles, ToolStripMenuItem_EditPassword, مصرToolStripMenuItem });
+            ToolStripMenuItem_Users.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuItem_AddUser, ToolStripMenuItem_ManageUsers, ToolStripMenuItem_Roles, ToolStripMenuItem_EditPassword });
             ToolStripMenuItem_Users.Name = "ToolStripMenuItem_Users";
             ToolStripMenuItem_Users.Size = new Size(79, 20);
             ToolStripMenuItem_Users.Text = "المستخدمين";
@@ -211,6 +215,7 @@
             ToolStripMenuItem_ManageUsers.Name = "ToolStripMenuItem_ManageUsers";
             ToolStripMenuItem_ManageUsers.Size = new Size(247, 22);
             ToolStripMenuItem_ManageUsers.Text = "ادارة المستخدمين";
+            ToolStripMenuItem_ManageUsers.Click += ToolStripMenuItem_ManageUsers_Click;
             // 
             // ToolStripMenuItem_Roles
             // 
@@ -237,12 +242,6 @@
             ToolStripMenuItem_EditPassword.Size = new Size(247, 22);
             ToolStripMenuItem_EditPassword.Text = "تعديل كلمة المرور للمستخدم الحالي";
             // 
-            // مصرToolStripMenuItem
-            // 
-            مصرToolStripMenuItem.Name = "مصرToolStripMenuItem";
-            مصرToolStripMenuItem.Size = new Size(247, 22);
-            مصرToolStripMenuItem.Text = "مصر";
-            // 
             // tabControl1
             // 
             tabControl1.Controls.Add(tabPage1);
@@ -258,9 +257,8 @@
             tabControl1.ShowToolTips = true;
             tabControl1.Size = new Size(1271, 595);
             tabControl1.TabIndex = 7;
-            tabControl1.MouseClick += tabControl1_MouseClick;
             tabControl1.DrawItem += tabControl1_DrawItem;
-
+            tabControl1.MouseClick += tabControl1_MouseClick;
             // 
             // tabPage1
             // 
@@ -274,6 +272,36 @@
             tabPage1.Size = new Size(1263, 552);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "الرئيسيه";
+            // 
+            // ToolStripMenuItem_AddSupCourt
+            // 
+            ToolStripMenuItem_AddSupCourt.Name = "ToolStripMenuItem_AddSupCourt";
+            ToolStripMenuItem_AddSupCourt.Size = new Size(180, 22);
+            ToolStripMenuItem_AddSupCourt.Text = "اضافة محكمة جزئية";
+            // 
+            // احصائيةدائرةToolStripMenuItem
+            // 
+            احصائيةدائرةToolStripMenuItem.Name = "احصائيةدائرةToolStripMenuItem";
+            احصائيةدائرةToolStripMenuItem.Size = new Size(186, 22);
+            احصائيةدائرةToolStripMenuItem.Text = "احصائية دائرة";
+            // 
+            // احصائيةقاضيToolStripMenuItem
+            // 
+            احصائيةقاضيToolStripMenuItem.Name = "احصائيةقاضيToolStripMenuItem";
+            احصائيةقاضيToolStripMenuItem.Size = new Size(186, 22);
+            احصائيةقاضيToolStripMenuItem.Text = "احصائية قاضي";
+            // 
+            // احصائيةمحكمةابتدائيةToolStripMenuItem
+            // 
+            احصائيةمحكمةابتدائيةToolStripMenuItem.Name = "احصائيةمحكمةابتدائيةToolStripMenuItem";
+            احصائيةمحكمةابتدائيةToolStripMenuItem.Size = new Size(186, 22);
+            احصائيةمحكمةابتدائيةToolStripMenuItem.Text = "احصائية محكمة ابتدائية";
+            // 
+            // احصائيةمحكمةجزئيةToolStripMenuItem
+            // 
+            احصائيةمحكمةجزئيةToolStripMenuItem.Name = "احصائيةمحكمةجزئيةToolStripMenuItem";
+            احصائيةمحكمةجزئيةToolStripMenuItem.Size = new Size(186, 22);
+            احصائيةمحكمةجزئيةToolStripMenuItem.Text = "احصائية محكمة جزئية";
             // 
             // MainForm
             // 
@@ -301,7 +329,7 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem ToolStripMenuItem_File;
         private ToolStripMenuItem ToolStripMenuItem_Courts;
-        private ToolStripMenuItem ToolStripMenuItem_AddCourt;
+        private ToolStripMenuItem ToolStripMenuItem_AddSuperCourt;
         private ToolStripMenuItem ToolStripMenuItem_ManageCourt;
         private ToolStripMenuItem ToolStripMenuItem_circles;
         private ToolStripMenuItem ToolStripMenuItem_AddCircle;
@@ -324,9 +352,13 @@
         private ToolStripMenuItem ToolStripMenuItem_AddRole;
         private ToolStripMenuItem ToolStripMenuItem_ManageRoles;
         private ToolStripMenuItem ToolStripMenuItem_EditPassword;
-        private ToolStripMenuItem مصرToolStripMenuItem;
         private ToolStripMenuItem اغلاقToolStripMenuItem;
         private TabPage tabPage1;
         public TabControl tabControl1;
+        private ToolStripMenuItem ToolStripMenuItem_AddSupCourt;
+        private ToolStripMenuItem احصائيةدائرةToolStripMenuItem;
+        private ToolStripMenuItem احصائيةقاضيToolStripMenuItem;
+        private ToolStripMenuItem احصائيةمحكمةابتدائيةToolStripMenuItem;
+        private ToolStripMenuItem احصائيةمحكمةجزئيةToolStripMenuItem;
     }
 }

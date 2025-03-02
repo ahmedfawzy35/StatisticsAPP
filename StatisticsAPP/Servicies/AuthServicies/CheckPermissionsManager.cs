@@ -1,4 +1,5 @@
 ﻿using StatisticsAPP.Models.Auth;
+using StatisticsAPP.Models.CircleModels;
 using StatisticsAPP.Seeds;
 using StatisticsAPP.Servicies.AuthServicies.DTOS;
 using StatisticsAPP.Utility;
@@ -25,7 +26,9 @@ namespace StatisticsAPP.Servicies.AuthServicies
 
         public CheckPermissionsDto CheckPermission(string model, PermissionsType type)
         {
-            var modelCode = MyStrings.ModulsName.ModulesoperationTexts().ToList().Where(x=>x.Name == model).FirstOrDefault();
+           
+            var modulesoperationTexts = MyStrings.ModulsName.ModulesoperationTexts().ToList();
+            var modelCode = modulesoperationTexts.Where(x => x.Name == model).FirstOrDefault();
             if (modelCode == null)
             {
                 return new CheckPermissionsDto
@@ -80,7 +83,55 @@ namespace StatisticsAPP.Servicies.AuthServicies
 
 
         }
+        public CheckPermissionsDto CheckPermissionByCode(string code, PermissionsType type)
+        {
+           
+            switch (type)
+            {
+                case PermissionsType.None:
+                    break;
+                case PermissionsType.View:
+                    return new CheckPermissionsDto
+                    {
+                        Permission = _userPermission.Any(x => x.Code == Permissions.View(code, code).Code),
+                        Message = $"{MyStrings.UnPermission} {MyStrings.PermessionView} {code}"
+                    };
 
+                case PermissionsType.Create:
+                    return new CheckPermissionsDto
+                    {
+                        Permission = _userPermission.Any(x => x.Code == Permissions.Creat(code, code).Code),
+                        Message = $"{MyStrings.UnPermission} {MyStrings.PermessionCreate} {code}"
+                    };
+
+                case PermissionsType.Edit:
+                    return new CheckPermissionsDto
+                    {
+                        Permission = _userPermission.Any(x => x.Code == Permissions.Edit(code, code).Code),
+                        Message = $"{MyStrings.UnPermission} {MyStrings.PermessionEdit} {code}"
+                    };
+                case PermissionsType.Delete:
+                    return new CheckPermissionsDto
+                    {
+                        Permission = _userPermission.Any(x => x.Code == Permissions.Delete(code, code).Code),
+                        Message = $"{MyStrings.UnPermission}  {MyStrings.PermessionDelete} {code}"
+                    };
+                default:
+                    return new CheckPermissionsDto
+                    {
+                        Permission = _userPermission.Any(x => x.Code == Permissions.View(code, code).Code),
+                        Message = $"{MyStrings.UnPermission} {MyStrings.PermessionView} {code}"
+                    };
+
+            }
+            return new CheckPermissionsDto
+            {
+                Permission = _userPermission.Any(x => x.Name == Permissions.View(code, code).Code),
+                Message = $"{MyStrings.UnPermission} {MyStrings.PermessionView} {code}"
+            };
+
+
+        }
 
         public bool CheckAnyModelPermission(string model)
         {

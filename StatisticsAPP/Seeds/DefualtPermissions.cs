@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic.ApplicationServices;
 using StatisticsAPP.Data;
 using StatisticsAPP.Models.Auth;
 using System;
@@ -56,6 +57,46 @@ namespace StatisticsAPP.Seeds
             }
 
 
+        }
+
+        public static async Task AddDefualtSuperCourt()
+        {
+            var adminUser = await db.Users.Where(x=>x.UserName == "admin").FirstOrDefaultAsync();
+            if (adminUser != null) return;
+            var allSuperCourts = await db.SuperCourts.ToListAsync();
+            if (allSuperCourts.Count < 1) return;
+            var allUserSuperCourts = await db.UserSuperCourts.ToListAsync();
+            List<UserSuperCourts> adds = new List<UserSuperCourts>();
+            foreach (var superCourt in allSuperCourts)
+            {
+                if (!allUserSuperCourts.Any(x=>x.IdSuperCourt == superCourt.Id))
+                {
+                    adds.Add(new UserSuperCourts {IdUser = adminUser!.Id  , IdSuperCourt = superCourt.Id , User = adminUser });
+
+                }
+            }
+            await db.AddRangeAsync(adds);
+            await db.SaveChangesAsync();
+        }
+        public static async Task AddDefualtSupCourt()
+        {
+            var adminUser = await db.Users.Where(x => x.UserName == "admin").FirstOrDefaultAsync();
+            if (adminUser != null) return;
+            var allSupCourts = await db.SupCourts.ToListAsync();
+            if (allSupCourts.Count < 1) return;
+            
+            var allUserSupCourts = await db.UserSupCourts.ToListAsync();
+            List<UserSupCourts> adds = new List<UserSupCourts>();
+            foreach (var supCourt in allSupCourts)
+            {
+                if (!allUserSupCourts.Any(x => x.IdSupCourt == supCourt.Id))
+                {
+                    adds.Add(new UserSupCourts { IdUser = adminUser!.Id, IdSupCourt = supCourt.Id, User = adminUser });
+
+                }
+            }
+            await db.AddRangeAsync(adds);
+            await db.SaveChangesAsync();
         }
     }
 }

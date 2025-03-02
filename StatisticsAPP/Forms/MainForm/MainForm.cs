@@ -1,4 +1,6 @@
-﻿using StatisticsAPP.Seeds;
+﻿using StatisticsAPP.Forms.AuthForms.UserForms;
+using StatisticsAPP.Forms.CourtsForms;
+using StatisticsAPP.Seeds;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -207,12 +209,15 @@ namespace StatisticsAPP.Forms.MainForm
             //tabControl1.DrawItem += tabControl1_DrawItem;
             tabControl1.Padding = new System.Drawing.Point(50, 3);
 
-            await Task.Run(async () => {
+            await Task.Run(async () =>
+            {
 
                 await DefualtPermissions.AddDefualtOperations();
                 await DefualtPermissions.AddDefualtToRoleOperation();
-                
-              
+                await DefualtPermissions.AddDefualtSuperCourt();
+                await DefualtPermissions.AddDefualtSupCourt();
+
+
 
 
             });
@@ -240,7 +245,12 @@ namespace StatisticsAPP.Forms.MainForm
 
         private void ToolStripMenuItem_AddCourt_Click(object sender, EventArgs e)
         {
-            ShowForm("اضافة محكمة", new Form());
+            ShowForm("اضافة محكمة ابتدائية", new AddSuperCourtForm());
+        }
+
+        private void ToolStripMenuItem_ManageUsers_Click(object sender, EventArgs e)
+        {
+            ShowForm("ادارة المستخدمين", new ManageUsersForm());
         }
     }
 }
