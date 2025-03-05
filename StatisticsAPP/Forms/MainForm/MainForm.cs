@@ -245,7 +245,7 @@ namespace StatisticsAPP.Forms.MainForm
 
         private void ToolStripMenuItem_AddCourt_Click(object sender, EventArgs e)
         {
-            ShowForm("اضافة محكمة ابتدائية", new AddSuperCourtForm());
+            ShowForm("المحاكم الابتدائية", new SuperCourtTabes());
         }
 
         private void ToolStripMenuItem_ManageUsers_Click(object sender, EventArgs e)

@@ -84,7 +84,7 @@ namespace StatisticsAPP.Forms.CourtsForms
                 return;
             }
 
-            SuperCourt supercourt = new SuperCourt { Name = text_Name.Text , UserId = LocalUser.localUserId };
+            SuperCourt supercourt = new SuperCourt { Name = text_Name.Text , UserId = LocalUser.localUserId , CreatedAt = DateTime.Now };
             await MyContext.UnitOfWork.SuperCourt.AddAsync(supercourt);
             MyContext.UnitOfWork.Complete();
 

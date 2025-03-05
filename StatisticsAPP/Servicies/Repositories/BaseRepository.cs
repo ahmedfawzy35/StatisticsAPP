@@ -27,6 +27,7 @@ namespace StatisticsAPP.Servicies.Repositories
             //    MessageBox.Show(message, "Permission Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 
             //}
+            
         public IEnumerable<T> GetAll()
         {
 
@@ -42,6 +43,7 @@ namespace StatisticsAPP.Servicies.Repositories
         {
             if (!CheckPermission(MyTypes.PermissionsType.View, out var message))
             {
+
                 MessageBox.Show(message, "Permission Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return Enumerable.Empty<T>();
             }
@@ -106,6 +108,7 @@ namespace StatisticsAPP.Servicies.Repositories
         {
             if (!CheckPermission(MyTypes.PermissionsType.View, out var message))
             {
+               
                 MessageBox.Show(message, "Permission Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return Enumerable.Empty<T>();
             }
@@ -318,10 +321,19 @@ namespace StatisticsAPP.Servicies.Repositories
         {
             return await _context.Set<T>().CountAsync(criteria);
         }
-
+        private string[]? GetUserIclude()
+        {
+            var includse = new string[1];
+            includse[0] = "User";
+            return includse;    
+        }
+        private string GetModelName()
+        {
+            return  typeof(T).Name;
+        }
         private bool CheckPermission(PermissionsType permissionType, out string message)
         {
-            string className = typeof(T).Name;
+            string className = GetModelName();
             var permissionResult = MyCervicies.checkPermissionsManager.CheckPermissionByCode(className, permissionType);
 
             if (!permissionResult.Permission)

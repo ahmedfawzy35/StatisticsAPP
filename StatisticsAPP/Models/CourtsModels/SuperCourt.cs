@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,11 @@ namespace StatisticsAPP.Models.CourtsModels
 {
     public class SuperCourt : MainClass
     {
+        [DisplayName("الرقم التعريفي")]
         public int Id { get; set; }
+        [DisplayName("اسم المحكمة")]
+        public  required String Name { get; set; }
+       
 
-        public required String Name { get; set; }
-        
     }
 }

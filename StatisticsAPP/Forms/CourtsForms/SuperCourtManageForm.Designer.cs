@@ -1,6 +1,6 @@
-﻿namespace StatisticsAPP.Forms.AuthForms.UserForms
+﻿namespace StatisticsAPP.Forms.CourtsForms
 {
-    partial class ManageUsersForm
+    partial class SuperCourtManageForm
     {
         /// <summary>
         /// Required designer variable.
@@ -32,78 +32,90 @@
             panel2 = new Panel();
             panel3 = new Panel();
             pictureBox_Loading = new PictureBox();
-            dataGridView_Users = new DataGridView();
+            dataGridView_SuperCourts = new DataGridView();
+            btn_Refresh = new Button();
+            panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_Loading).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_Users).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_SuperCourts).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
+            panel1.Controls.Add(btn_Refresh);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1224, 100);
+            panel1.Size = new Size(964, 89);
             panel1.TabIndex = 0;
             // 
             // panel2
             // 
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 463);
+            panel2.Location = new Point(0, 508);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1224, 100);
+            panel2.Size = new Size(964, 88);
             panel2.TabIndex = 1;
             // 
             // panel3
             // 
             panel3.Controls.Add(pictureBox_Loading);
-            panel3.Controls.Add(dataGridView_Users);
+            panel3.Controls.Add(dataGridView_SuperCourts);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(0, 100);
+            panel3.Location = new Point(0, 89);
             panel3.Name = "panel3";
-            panel3.Size = new Size(1224, 363);
+            panel3.Size = new Size(964, 419);
             panel3.TabIndex = 2;
             // 
             // pictureBox_Loading
             // 
-            pictureBox_Loading.Dock = DockStyle.Fill;
             pictureBox_Loading.Image = Properties.Resources.loading_gif;
-            pictureBox_Loading.Location = new Point(0, 0);
+            pictureBox_Loading.Location = new Point(151, 53);
             pictureBox_Loading.Name = "pictureBox_Loading";
-            pictureBox_Loading.Size = new Size(1224, 363);
+            pictureBox_Loading.Size = new Size(389, 25);
             pictureBox_Loading.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox_Loading.TabIndex = 0;
+            pictureBox_Loading.TabIndex = 1;
             pictureBox_Loading.TabStop = false;
             pictureBox_Loading.Visible = false;
             // 
-            // dataGridView_Users
+            // dataGridView_SuperCourts
             // 
-            dataGridView_Users.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView_Users.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_Users.Dock = DockStyle.Fill;
-            dataGridView_Users.Location = new Point(0, 0);
-            dataGridView_Users.Name = "dataGridView_Users";
-            dataGridView_Users.ReadOnly = true;
-            dataGridView_Users.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView_Users.Size = new Size(1224, 363);
-            dataGridView_Users.TabIndex = 0;
+            dataGridView_SuperCourts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView_SuperCourts.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView_SuperCourts.Dock = DockStyle.Fill;
+            dataGridView_SuperCourts.Location = new Point(0, 0);
+            dataGridView_SuperCourts.Name = "dataGridView_SuperCourts";
+            dataGridView_SuperCourts.ReadOnly = true;
+            dataGridView_SuperCourts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_SuperCourts.Size = new Size(964, 419);
+            dataGridView_SuperCourts.TabIndex = 1;
             // 
-            // ManageUsersForm
+            // btn_Refresh
+            // 
+            btn_Refresh.Location = new Point(23, 12);
+            btn_Refresh.Name = "btn_Refresh";
+            btn_Refresh.Size = new Size(100, 60);
+            btn_Refresh.TabIndex = 0;
+            btn_Refresh.Text = "تحديث";
+            btn_Refresh.UseVisualStyleBackColor = true;
+            btn_Refresh.Click += btn_Refresh_Click;
+            // 
+            // SuperCourtManageForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1224, 563);
+            ClientSize = new Size(964, 596);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
-            Name = "ManageUsersForm";
+            Name = "SuperCourtManageForm";
             RightToLeft = RightToLeft.Yes;
             RightToLeftLayout = true;
-            Text = "ادارة المستخدمين";
-            Load += ManageUsersForm_Load;
+            Text = "ادارة المحاكم الابتدائية";
+            panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox_Loading).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView_Users).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_SuperCourts).EndInit();
             ResumeLayout(false);
         }
 
@@ -112,7 +124,8 @@
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
-        private DataGridView dataGridView_Users;
         private PictureBox pictureBox_Loading;
+        private DataGridView dataGridView_SuperCourts;
+        private Button btn_Refresh;
     }
 }
