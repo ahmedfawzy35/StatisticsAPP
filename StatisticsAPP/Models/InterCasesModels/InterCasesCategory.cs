@@ -11,6 +11,7 @@ namespace StatisticsAPP.Models.InterCasesModels
         public int Id { get; set; }
         public required string Name { get; set; }
         public int? ParentID { get; set; }
+        public bool IsFather { get; set; }
     }
 
 }

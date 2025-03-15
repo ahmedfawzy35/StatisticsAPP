@@ -12,6 +12,7 @@ namespace StatisticsAPP.Models.DecisionModels
         public required string Name { get; set; }
         public int? ParentID { get; set; }
         public bool IsFather { get; set; } = false;
+        public virtual IQueryable<Decision>? Decisions { get; set; }
     }
 
 }

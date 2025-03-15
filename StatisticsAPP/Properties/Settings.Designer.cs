@@ -50,5 +50,17 @@ namespace StatisticsAPP.Properties {
                 return ((int)(this["LocalUserId"]));
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool IsFirstLuanche {
+            get {
+                return ((bool)(this["IsFirstLuanche"]));
+            }
+            set {
+                this["IsFirstLuanche"] = value;
+            }
+        }
     }
 }

@@ -1,4 +1,7 @@
-﻿using StatisticsAPP.Models.CourtsModels;
+﻿using Microsoft.EntityFrameworkCore.Internal;
+using StatisticsAPP.Data;
+using StatisticsAPP.Models.CourtsModels;
+using StatisticsAPP.Servicies.Repositories;
 using StatisticsAPP.Utility;
 using System;
 using System.Collections.Generic;
@@ -30,6 +33,8 @@ namespace StatisticsAPP.Forms.CourtsForms
         {
             pictureBox1.Visible = false;
         }
+
+        #region VALIDATIONS
         private List<string> ValidationAdd()
         {
             List<string> eroors = new List<string>();
@@ -75,8 +80,8 @@ namespace StatisticsAPP.Forms.CourtsForms
 
             return eroors;
         }
-
-        private async Task Add()
+        #endregion
+        private void Add()
         {
             
             if (ValidationAdd().Count > 0)
@@ -85,10 +90,11 @@ namespace StatisticsAPP.Forms.CourtsForms
             }
 
             SuperCourt supercourt = new SuperCourt { Name = text_Name.Text , UserId = LocalUser.localUserId , CreatedAt = DateTime.Now };
-            await MyContext.UnitOfWork.SuperCourt.AddAsync(supercourt);
-            MyContext.UnitOfWork.Complete();
+             MyContext.UnitOfWork.SuperCourt.Add(supercourt!);
 
-            MessageBox.Show("تم الاضافة");
+
+            MessageBox.Show(MyContext.UnitOfWork.Save());
+           
             CleanText();
         }
         private void Edit()
@@ -100,7 +106,7 @@ namespace StatisticsAPP.Forms.CourtsForms
 
             SuperCourtToEdit!.Name = text_Name.Text;
             MyContext.UnitOfWork.SuperCourt.Update(SuperCourtToEdit!);
-            MyContext.UnitOfWork.Complete();
+           MessageBox.Show(  MyContext.UnitOfWork.Save());
             this.Close();
         }
         void CleanText()
@@ -110,27 +116,28 @@ namespace StatisticsAPP.Forms.CourtsForms
         #endregion
 
         #region Events
-
-        #endregion
-
-        private async void btn_Save_Click(object sender, EventArgs e)
+        private void btn_Save_Click(object sender, EventArgs e)
         {
-            Loading();
+
             if (IsEdit)
             {
                 if (SuperCourtToEdit == null)
                 {
-                   
+
                     MessageBox.Show("لم يتم العثور على المحكمة للتعديل");
                     return;
                 }
                 Edit();
-            }else
-            {
-               await Add();
             }
-           UnLoading();
+            else
+            {
+                Add();
+            }
+
 
         }
+        #endregion
+
+
     }
 }

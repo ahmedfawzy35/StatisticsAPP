@@ -42,6 +42,7 @@ namespace StatisticsAPP.Data
         public DbSet<Circle> Circles { get; set; } = default!;
         public DbSet<CircleType> CircleTypes { get; set; } = default!;
         public DbSet<CircleJudge> CircleJudges { get; set; } = default!;
+        public DbSet<CircleDay> CircleDays { get; set; } = default!;
 
         #endregion
 
@@ -56,7 +57,6 @@ namespace StatisticsAPP.Data
         #endregion
 
         #region DelayCasesModels
-        public DbSet<DelayCasesCategory> DelayCasesCategories { get; set; } = default!;
         public DbSet<DelayCase> DelayCases { get; set; } = default!;
 
         #endregion
@@ -64,6 +64,7 @@ namespace StatisticsAPP.Data
         #region InterCasesModels
         public DbSet<InterCasesCategory> InterCasesCategories { get; set; } = default!;
         public DbSet<InterCase> InterCases { get; set; } = default!;
+        public DbSet<Shortening> Shortenings { get; set; } = default!;
         #endregion
 
         #region JudgeModels
@@ -76,6 +77,8 @@ namespace StatisticsAPP.Data
         public DbSet<StatisticsDecisions> StatisticsDecisions { get; set; } = default!;
         public DbSet<StatisticsInterCases> StatisticsInterCases { get; set; } = default!;
         public DbSet<StatisticsDelayCases> StatisticsDelayCases { get; set; } = default!;
+        public DbSet<DelayCacesForMonth> DelayCacesForMonths { get; set; } = default!;
+        public DbSet<CaseYear> CaseYears { get; set; } = default!;
 
         #endregion
 

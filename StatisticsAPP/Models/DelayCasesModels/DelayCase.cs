@@ -10,9 +10,9 @@ namespace StatisticsAPP.Models.DelayCasesModels
     {
         public int Id { get; set; }
         public required string Name { get; set; }
-        public int IdDelayCasesCategory { get; set; }
+      
 
-        public DelayCasesCategory? DelayCasesCategory { get; set; }
+       
     }
 
 }

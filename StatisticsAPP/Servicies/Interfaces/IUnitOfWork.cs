@@ -29,19 +29,23 @@ namespace StatisticsAPP.Servicies.Interfaces
         IBaseRepository<Circle> Circle { get; }
         IBaseRepository<CircleJudge> CircleJudge { get; }
         IBaseRepository<CircleType> CircleType { get; }
+        IBaseRepository<CircleDay> CircleDays { get; }
+
         IBaseRepository<SupCourt> SupCourt { get; }
         IBaseRepository<SuperCourt> SuperCourt { get; }
         IBaseRepository<Decision> Decision { get; }
         IBaseRepository<DecisionCategory> DecisionCategory { get; }
         IBaseRepository<DelayCase> DelayCase { get; }
-        IBaseRepository<DelayCasesCategory> DelayCasesCategory { get; }
         IBaseRepository<InterCase> InterCase { get; }
+        IBaseRepository<Shortening> Shortening { get; }
         IBaseRepository<InterCasesCategory> InterCasesCategory { get; }
         IBaseRepository<Judge> Judge { get; }
         IBaseRepository<CircleStatistics> CircleStatistics { get; }
         IBaseRepository<StatisticsDecisions> StatisticsDecisions { get; }
         IBaseRepository<StatisticsDelayCases> StatisticsDelayCases { get; }
         IBaseRepository<StatisticsInterCases> StatisticsInterCases { get; }
+        IBaseRepository<DelayCacesForMonth> DelayCacesForMonths { get; }
+        IBaseRepository<CaseYear> CaseYears{ get; }
         
 
 
@@ -69,6 +73,6 @@ namespace StatisticsAPP.Servicies.Interfaces
        
 
         #endregion
-        int Complete();
+        string Save();
     }
 }

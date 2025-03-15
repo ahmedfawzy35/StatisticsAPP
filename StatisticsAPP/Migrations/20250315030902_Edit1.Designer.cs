@@ -12,8 +12,8 @@ using StatisticsAPP.Data;
 namespace StatisticsAPP.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250301002614_initialDB")]
-    partial class initialDB
+    [Migration("20250315030902_Edit1")]
+    partial class Edit1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -232,6 +232,35 @@ namespace StatisticsAPP.Migrations
                         });
                 });
 
+            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserCircles", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CircleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdCircle")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdUser")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CircleId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserCircles");
+                });
+
             modelBuilder.Entity("StatisticsAPP.Models.Auth.UserRole", b =>
                 {
                     b.Property<int>("Id")
@@ -282,7 +311,7 @@ namespace StatisticsAPP.Migrations
                         });
                 });
 
-            modelBuilder.Entity("StatisticsAPP.Models.CircleModels.Circle", b =>
+            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserSupCourts", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -290,8 +319,63 @@ namespace StatisticsAPP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("CircleTypeId")
+                    b.Property<int>("IdSupCourt")
                         .HasColumnType("int");
+
+                    b.Property<int>("IdUser")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SuperCourtId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SuperCourtId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserSupCourts");
+                });
+
+            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserSuperCourts", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("IdSuperCourt")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdUser")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("SuperCourtId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SuperCourtId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("UserSuperCourts");
+                });
+
+            modelBuilder.Entity("StatisticsAPP.Models.CircleModels.Circle", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Count")
                         .HasColumnType("int");
@@ -302,9 +386,6 @@ namespace StatisticsAPP.Migrations
                     b.Property<bool>("Enable")
                         .HasColumnType("bit");
 
-                    b.Property<int>("IdType")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -314,14 +395,39 @@ namespace StatisticsAPP.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CircleTypeId");
-
                     b.HasIndex("Name")
                         .IsUnique();
 
                     b.HasIndex("UserId");
 
                     b.ToTable("Circles");
+                });
+
+            modelBuilder.Entity("StatisticsAPP.Models.CircleModels.CircleDay", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CircleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CircleTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CircleId");
+
+                    b.HasIndex("CircleTypeId");
+
+                    b.ToTable("CircleDays");
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.CircleModels.CircleJudge", b =>
@@ -408,6 +514,9 @@ namespace StatisticsAPP.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Adress")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -500,6 +609,9 @@ namespace StatisticsAPP.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsFather")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -528,45 +640,9 @@ namespace StatisticsAPP.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("DelayCasesCategoryId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdDelayCasesCategory")
-                        .HasColumnType("int");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DelayCasesCategoryId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("DelayCases");
-                });
-
-            modelBuilder.Entity("StatisticsAPP.Models.DelayCasesModels.DelayCasesCategory", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("ParentID")
-                        .HasColumnType("int");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -575,7 +651,7 @@ namespace StatisticsAPP.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("DelayCasesCategories");
+                    b.ToTable("DelayCases");
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.InterCasesModels.InterCase", b =>
@@ -622,6 +698,9 @@ namespace StatisticsAPP.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsFather")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -637,6 +716,44 @@ namespace StatisticsAPP.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("InterCasesCategories");
+                });
+
+            modelBuilder.Entity("StatisticsAPP.Models.InterCasesModels.Shortening", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CircleStatisticsId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IdCircleStatistics")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Month")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CircleStatisticsId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Shortenings");
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.JudgeModels.Judge", b =>
@@ -670,6 +787,29 @@ namespace StatisticsAPP.Migrations
                     b.ToTable("Judges");
                 });
 
+            modelBuilder.Entity("StatisticsAPP.Models.StatisticsModels.CaseYear", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<bool>("IsOld")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CaseYears");
+                });
+
             modelBuilder.Entity("StatisticsAPP.Models.StatisticsModels.CircleStatistics", b =>
                 {
                     b.Property<int>("Id")
@@ -678,19 +818,17 @@ namespace StatisticsAPP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("CircleDayId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<int>("DecisionsCount")
-                        .HasColumnType("int");
+                    b.Property<string>("DayOfWork")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("DelayedCases")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdCircle")
-                        .HasColumnType("int");
-
-                    b.Property<int>("InterCasesCount")
+                    b.Property<int>("IdCircleDay")
                         .HasColumnType("int");
 
                     b.Property<int>("Month")
@@ -704,9 +842,37 @@ namespace StatisticsAPP.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CircleDayId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("CircleStatistics");
+                });
+
+            modelBuilder.Entity("StatisticsAPP.Models.StatisticsModels.DelayCacesForMonth", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Month")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Type")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("DelayCacesForMonths");
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.StatisticsModels.StatisticsDecisions", b =>
@@ -716,6 +882,12 @@ namespace StatisticsAPP.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CaseYearId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CircleStatisticsId")
+                        .HasColumnType("int");
 
                     b.Property<int>("Count")
                         .HasColumnType("int");
@@ -740,6 +912,10 @@ namespace StatisticsAPP.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CaseYearId");
+
+                    b.HasIndex("CircleStatisticsId");
+
                     b.HasIndex("IdCircleStatistics");
 
                     b.HasIndex("IdDecision");
@@ -759,6 +935,12 @@ namespace StatisticsAPP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CaseYearId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CircleStatisticsId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Count")
                         .HasColumnType("int");
 
@@ -774,12 +956,6 @@ namespace StatisticsAPP.Migrations
                     b.Property<int>("IdDelayCase")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdJudge")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("JudgeId")
-                        .HasColumnType("int");
-
                     b.Property<int>("MonthDelay")
                         .HasColumnType("int");
 
@@ -791,11 +967,13 @@ namespace StatisticsAPP.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CaseYearId");
+
+                    b.HasIndex("CircleStatisticsId");
+
                     b.HasIndex("DelayCaseId");
 
                     b.HasIndex("IdCircleStatistics");
-
-                    b.HasIndex("JudgeId");
 
                     b.HasIndex("UserId");
 
@@ -810,6 +988,12 @@ namespace StatisticsAPP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CaseYearId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CircleStatisticsId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Count")
                         .HasColumnType("int");
 
@@ -822,13 +1006,7 @@ namespace StatisticsAPP.Migrations
                     b.Property<int>("IdInterCase")
                         .HasColumnType("int");
 
-                    b.Property<int>("IdJudge")
-                        .HasColumnType("int");
-
                     b.Property<int?>("InterCaseId")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("JudgeId")
                         .HasColumnType("int");
 
                     b.Property<int>("UserId")
@@ -836,11 +1014,13 @@ namespace StatisticsAPP.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CaseYearId");
+
+                    b.HasIndex("CircleStatisticsId");
+
                     b.HasIndex("IdCircleStatistics");
 
                     b.HasIndex("InterCaseId");
-
-                    b.HasIndex("JudgeId");
 
                     b.HasIndex("UserId");
 
@@ -904,6 +1084,21 @@ namespace StatisticsAPP.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserCircles", b =>
+                {
+                    b.HasOne("StatisticsAPP.Models.CircleModels.Circle", "Circle")
+                        .WithMany()
+                        .HasForeignKey("CircleId");
+
+                    b.HasOne("StatisticsAPP.Models.Auth.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Circle");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("StatisticsAPP.Models.Auth.UserRole", b =>
                 {
                     b.HasOne("StatisticsAPP.Models.Auth.Role", "Role")
@@ -931,21 +1126,64 @@ namespace StatisticsAPP.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserSupCourts", b =>
+                {
+                    b.HasOne("StatisticsAPP.Models.CourtsModels.SupCourt", "SuperCourt")
+                        .WithMany()
+                        .HasForeignKey("SuperCourtId");
+
+                    b.HasOne("StatisticsAPP.Models.Auth.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("SuperCourt");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("StatisticsAPP.Models.Auth.UserSuperCourts", b =>
+                {
+                    b.HasOne("StatisticsAPP.Models.CourtsModels.SuperCourt", "SuperCourt")
+                        .WithMany()
+                        .HasForeignKey("SuperCourtId");
+
+                    b.HasOne("StatisticsAPP.Models.Auth.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("SuperCourt");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("StatisticsAPP.Models.CircleModels.Circle", b =>
                 {
-                    b.HasOne("StatisticsAPP.Models.CircleModels.CircleType", "CircleType")
-                        .WithMany()
-                        .HasForeignKey("CircleTypeId");
-
                     b.HasOne("StatisticsAPP.Models.Auth.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("CircleType");
-
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("StatisticsAPP.Models.CircleModels.CircleDay", b =>
+                {
+                    b.HasOne("StatisticsAPP.Models.CircleModels.Circle", "Circle")
+                        .WithMany("CircleDaies")
+                        .HasForeignKey("CircleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StatisticsAPP.Models.CircleModels.CircleType", "CircleType")
+                        .WithMany()
+                        .HasForeignKey("CircleTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Circle");
+
+                    b.Navigation("CircleType");
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.CircleModels.CircleJudge", b =>
@@ -1027,7 +1265,7 @@ namespace StatisticsAPP.Migrations
             modelBuilder.Entity("StatisticsAPP.Models.DecisionModels.Decision", b =>
                 {
                     b.HasOne("StatisticsAPP.Models.DecisionModels.DecisionCategory", "DecisionCategory")
-                        .WithMany()
+                        .WithMany("Decisions")
                         .HasForeignKey("DecisionCategoryId");
 
                     b.HasOne("StatisticsAPP.Models.Auth.User", "User")
@@ -1053,23 +1291,6 @@ namespace StatisticsAPP.Migrations
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.DelayCasesModels.DelayCase", b =>
-                {
-                    b.HasOne("StatisticsAPP.Models.DelayCasesModels.DelayCasesCategory", "DelayCasesCategory")
-                        .WithMany()
-                        .HasForeignKey("DelayCasesCategoryId");
-
-                    b.HasOne("StatisticsAPP.Models.Auth.User", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DelayCasesCategory");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("StatisticsAPP.Models.DelayCasesModels.DelayCasesCategory", b =>
                 {
                     b.HasOne("StatisticsAPP.Models.Auth.User", "User")
                         .WithMany()
@@ -1108,6 +1329,23 @@ namespace StatisticsAPP.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("StatisticsAPP.Models.InterCasesModels.Shortening", b =>
+                {
+                    b.HasOne("StatisticsAPP.Models.StatisticsModels.CircleStatistics", "CircleStatistics")
+                        .WithMany()
+                        .HasForeignKey("CircleStatisticsId");
+
+                    b.HasOne("StatisticsAPP.Models.Auth.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CircleStatistics");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("StatisticsAPP.Models.JudgeModels.Judge", b =>
                 {
                     b.HasOne("StatisticsAPP.Models.Auth.User", "User")
@@ -1121,17 +1359,33 @@ namespace StatisticsAPP.Migrations
 
             modelBuilder.Entity("StatisticsAPP.Models.StatisticsModels.CircleStatistics", b =>
                 {
+                    b.HasOne("StatisticsAPP.Models.CircleModels.CircleDay", "CircleDay")
+                        .WithMany()
+                        .HasForeignKey("CircleDayId");
+
                     b.HasOne("StatisticsAPP.Models.Auth.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("CircleDay");
+
                     b.Navigation("User");
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.StatisticsModels.StatisticsDecisions", b =>
                 {
+                    b.HasOne("StatisticsAPP.Models.StatisticsModels.CaseYear", "CaseYear")
+                        .WithMany()
+                        .HasForeignKey("CaseYearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StatisticsAPP.Models.StatisticsModels.CircleStatistics", null)
+                        .WithMany("StatisticsDecisions")
+                        .HasForeignKey("CircleStatisticsId");
+
                     b.HasOne("StatisticsAPP.Models.StatisticsModels.CircleStatistics", "CircleStatistics")
                         .WithMany()
                         .HasForeignKey("IdCircleStatistics")
@@ -1154,6 +1408,8 @@ namespace StatisticsAPP.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("CaseYear");
+
                     b.Navigation("CircleStatistics");
 
                     b.Navigation("Decision");
@@ -1165,6 +1421,16 @@ namespace StatisticsAPP.Migrations
 
             modelBuilder.Entity("StatisticsAPP.Models.StatisticsModels.StatisticsDelayCases", b =>
                 {
+                    b.HasOne("StatisticsAPP.Models.StatisticsModels.CaseYear", "CaseYear")
+                        .WithMany()
+                        .HasForeignKey("CaseYearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StatisticsAPP.Models.StatisticsModels.CircleStatistics", null)
+                        .WithMany("StatisticsDelayCases")
+                        .HasForeignKey("CircleStatisticsId");
+
                     b.HasOne("StatisticsAPP.Models.DelayCasesModels.DelayCase", "DelayCase")
                         .WithMany()
                         .HasForeignKey("DelayCaseId");
@@ -1175,27 +1441,33 @@ namespace StatisticsAPP.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("StatisticsAPP.Models.JudgeModels.Judge", "Judge")
-                        .WithMany()
-                        .HasForeignKey("JudgeId");
-
                     b.HasOne("StatisticsAPP.Models.Auth.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("CaseYear");
+
                     b.Navigation("CircleStatistics");
 
                     b.Navigation("DelayCase");
-
-                    b.Navigation("Judge");
 
                     b.Navigation("User");
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.StatisticsModels.StatisticsInterCases", b =>
                 {
+                    b.HasOne("StatisticsAPP.Models.StatisticsModels.CaseYear", "CaseYear")
+                        .WithMany()
+                        .HasForeignKey("CaseYearId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("StatisticsAPP.Models.StatisticsModels.CircleStatistics", null)
+                        .WithMany("StatisticsInterCases")
+                        .HasForeignKey("CircleStatisticsId");
+
                     b.HasOne("StatisticsAPP.Models.StatisticsModels.CircleStatistics", "CircleStatistics")
                         .WithMany()
                         .HasForeignKey("IdCircleStatistics")
@@ -1206,21 +1478,17 @@ namespace StatisticsAPP.Migrations
                         .WithMany()
                         .HasForeignKey("InterCaseId");
 
-                    b.HasOne("StatisticsAPP.Models.JudgeModels.Judge", "Judge")
-                        .WithMany()
-                        .HasForeignKey("JudgeId");
-
                     b.HasOne("StatisticsAPP.Models.Auth.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.Navigation("CaseYear");
+
                     b.Navigation("CircleStatistics");
 
                     b.Navigation("InterCase");
-
-                    b.Navigation("Judge");
 
                     b.Navigation("User");
                 });
@@ -1244,12 +1512,28 @@ namespace StatisticsAPP.Migrations
 
             modelBuilder.Entity("StatisticsAPP.Models.CircleModels.Circle", b =>
                 {
+                    b.Navigation("CircleDaies");
+
                     b.Navigation("CircleJudges");
+                });
+
+            modelBuilder.Entity("StatisticsAPP.Models.DecisionModels.DecisionCategory", b =>
+                {
+                    b.Navigation("Decisions");
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.JudgeModels.Judge", b =>
                 {
                     b.Navigation("CircleJudges");
+                });
+
+            modelBuilder.Entity("StatisticsAPP.Models.StatisticsModels.CircleStatistics", b =>
+                {
+                    b.Navigation("StatisticsDecisions");
+
+                    b.Navigation("StatisticsDelayCases");
+
+                    b.Navigation("StatisticsInterCases");
                 });
 #pragma warning restore 612, 618
         }

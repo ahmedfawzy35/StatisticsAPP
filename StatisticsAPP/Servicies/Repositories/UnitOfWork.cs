@@ -20,6 +20,7 @@ namespace StatisticsAPP.Servicies.Repositories
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ApplicationDbContext _context;
+        public static event Action DataUpdated; // الحدث اللي هيبلغ الفورمات بالتحديث
 
         public IBaseRepository<User> User { get; private set; }
 
@@ -42,6 +43,7 @@ namespace StatisticsAPP.Servicies.Repositories
         public IBaseRepository<CircleJudge> CircleJudge { get; private set; }
 
         public IBaseRepository<CircleType> CircleType { get; private set; }
+        public IBaseRepository<CircleDay> CircleDays { get; private set; }
 
         public IBaseRepository<SupCourt> SupCourt { get; private set; }
 
@@ -53,9 +55,9 @@ namespace StatisticsAPP.Servicies.Repositories
 
         public IBaseRepository<DelayCase> DelayCase { get; private set; }
 
-        public IBaseRepository<DelayCasesCategory> DelayCasesCategory { get; private set; }
 
         public IBaseRepository<InterCase> InterCase { get; private set; }
+        public IBaseRepository<Shortening> Shortening { get; private set; }
 
         public IBaseRepository<InterCasesCategory> InterCasesCategory { get; private set; }
 
@@ -68,6 +70,10 @@ namespace StatisticsAPP.Servicies.Repositories
         public IBaseRepository<StatisticsDelayCases> StatisticsDelayCases { get; private set; }
 
         public IBaseRepository<StatisticsInterCases> StatisticsInterCases { get; private set; }
+
+
+        public IBaseRepository<DelayCacesForMonth> DelayCacesForMonths { get; private set; }
+        public IBaseRepository<CaseYear> CaseYears { get; private set; }
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -84,26 +90,40 @@ namespace StatisticsAPP.Servicies.Repositories
             Circle = new BaseRepository<Circle>(_context);
             CircleJudge = new BaseRepository<CircleJudge>(_context);
             CircleType = new BaseRepository<CircleType>(_context);
+            CircleDays = new BaseRepository<CircleDay>(_context);
             SupCourt = new BaseRepository<SupCourt>(_context);
             SuperCourt = new BaseRepository<SuperCourt>(_context);
             Decision = new BaseRepository<Decision>(_context);
             DecisionCategory = new BaseRepository<DecisionCategory>(_context);
             DelayCase = new BaseRepository<DelayCase>(_context);
-            DelayCasesCategory = new BaseRepository<DelayCasesCategory>(_context);
             InterCase = new BaseRepository<InterCase>(_context);
+            Shortening = new BaseRepository<Shortening>(_context);
             InterCasesCategory = new BaseRepository<InterCasesCategory>(_context);
             Judge = new BaseRepository<Judge>(_context);
             CircleStatistics = new BaseRepository<CircleStatistics>(_context);
             StatisticsDecisions = new BaseRepository<StatisticsDecisions>(_context);
             StatisticsDelayCases = new BaseRepository<StatisticsDelayCases>(_context);
             StatisticsInterCases = new BaseRepository<StatisticsInterCases>(_context);
+            DelayCacesForMonths = new BaseRepository<DelayCacesForMonth>(_context);
+            CaseYears = new BaseRepository<CaseYear>(_context);
             
            
         }
 
-        public int Complete()
+        public string Save()
         {
-            return _context.SaveChanges();
+            try
+            {
+                int result = _context.SaveChanges();
+                DataUpdated?.Invoke();
+                return result == 1 ? "تم الحفظ بنجاح" : "فشل في حفظ البيانات  ";
+            }
+            catch (Exception x)
+            {
+
+                return   $"فشل في حفظ البيانات  {x.Message} ";
+            }
+          
         }
 
         public void Dispose()

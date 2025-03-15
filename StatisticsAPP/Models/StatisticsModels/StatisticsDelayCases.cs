@@ -14,13 +14,13 @@ namespace StatisticsAPP.Models.StatisticsModels
         public int IdCircleStatistics { get; set; }
         public int IdDelayCase { get; set; }
         public int Count { get; set; }
-        public int IdJudge { get; set; }
         public int MonthDelay { get; set; }
         public int YearDelay { get; set; }
+        public int CaseYearId { get; set; }
 
         public CircleStatistics? CircleStatistics { get; set; }
         public DelayCase? DelayCase { get; set; }
-        public Judge? Judge { get; set; }
+        public CaseYear? CaseYear { get; set; }
     }
 
 }
