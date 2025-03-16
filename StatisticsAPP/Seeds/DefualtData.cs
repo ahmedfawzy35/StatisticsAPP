@@ -5,6 +5,7 @@ using StatisticsAPP.Models.CourtsModels;
 using StatisticsAPP.Models.DecisionModels;
 using StatisticsAPP.Models.DelayCasesModels;
 using StatisticsAPP.Models.InterCasesModels;
+using StatisticsAPP.Models.JudgeModels;
 using StatisticsAPP.Models.StatisticsModels;
 using StatisticsAPP.Utility;
 using System;
@@ -226,15 +227,158 @@ namespace StatisticsAPP.Seeds
             await AddDefultInterCases();
             await AddDefultCaseYear();
 
-
-
-
-
-
-
-
-          
            
+
+        }
+
+        public static async Task AddJudjes()
+        {
+          
+            var judjes = new List<Judge>
+            {
+                new Judge { Name = "محمد فرحات عبد العظيم عبد الجواد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ"  },
+                new Judge { Name = "احمد عبد الفتاح ابراهيم احمد الفقى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 471, Degree = "أ"  },
+                new Judge { Name = "احمد عبد الهادي محمد خليفه", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 913, Degree = "أ"  },
+                new Judge { Name = "محمد انس عبد اللطيف محمد ابو السعود", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 112, Degree = "أ"  },
+                new Judge { Name = "هيثم اسماعيل خليل جمعه", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 1162, Degree = "أ"  },
+                new Judge { Name = "احمد اسماعيل احمد عبد الواحد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 339, Degree = "أ"  },
+                new Judge { Name = "على عبد المعطى محمد حسن حسان", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 512, Degree = "أ"  },
+                new Judge { Name = "محمد فتحى محمد على عرايس", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 171 , Degree = "أ"},
+                new Judge { Name = "احمد نصر محمد عتمان", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 566, Degree = "أ"  },
+                new Judge { Name = "رامز جمال فخرى جميل", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 221 , Degree = "أ"},
+                new Judge { Name = "بولا نسيم مرقص يعقوب", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 187 , Degree = "أ"},
+                new Judge { Name = "محمد يوسف سيد مرسى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 1315 , Degree = "أ"},
+                new Judge { Name = "بدر الدين اسامه بدرى مروان", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 2658, Degree = "أ"  },
+                new Judge { Name = "اسلام اسامه محمد احمد السيد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 784 , Degree = "أ"},
+                new Judge { Name = "احمد مصطفى ابوضيف سيد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 209, Degree = "أ"  },
+                new Judge { Name = "حسين كامل عبد العظيم احمد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 3158, Degree = "أ"  },
+                new Judge { Name = "مصطفى محمود ادريس محمود صفر", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 224, Degree = "أ"  },
+                new Judge { Name = "احمد رمضان عبد الرحمن محمد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 272 , Degree = "أ" },
+                new Judge { Name = "احمد عبد الحكم حسن محمد عبد العال", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 3290 , Degree = "أ" },
+                new Judge { Name = "احمد محمد محمود فؤاد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 208 , Degree = "أ" },
+                new Judge { Name = "محمود سيد ذكي سكر", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 561, Degree = "أ"  },
+                new Judge { Name = "عمر جمال محمود محمد الكردى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 1155, Degree = "أ"  },
+                new Judge { Name = "مينا يوسف مرقس يوسف", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 794 ,Degree = "أ" },
+                new Judge { Name = "احمد حسام الدين حمزة محمد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 461 , Degree = "أ" },
+                new Judge { Name = "احمد ربيع محمد محمد عمر", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 113 , Degree = "ب"},
+                new Judge { Name = "محمد فاروق ورداني صالح", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "ب"},
+                new Judge { Name = "محمود عبد الحميد حمدى السيد منصور", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 1394 , Degree = "أ"},
+                new Judge { Name = "أيات محمد منصور محمد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 674 , Degree = "ب"},
+                new Judge { Name = "احمد فاروق عبد القادر عبد العليم", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 796 , Degree = "ب"},
+                new Judge { Name = "خالد محمد بهجت محمود محمد عاشور", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "ب"},
+                new Judge { Name = "ثروت حامد محمد عبد الجواد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 1138 , Degree = "أ"},
+                new Judge { Name = "احمد معوض كمال الدين عبد القادر", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 844 , Degree = "ب"},
+                new Judge { Name = "مصطفى سيد عبد التواب عبد الحميد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 1105 , Degree = "ب"},
+                new Judge { Name = "احمد محمد محسن محمد كامل", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 199 , Degree = "ب"},
+                new Judge { Name = "محي الدين محمود محمد محمد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 724 , Degree = "أ"},
+                new Judge { Name = "هند محمد ابراهيم ابو سيف", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 140 , Degree = "أ"},
+                new Judge { Name = "احمد عمرو عبد الفتاح حسن الحنفي", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 718 , Degree = "ق"},
+                new Judge { Name = "علاء الدين عصام عبد العزيز على", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 761 , Degree = "ق"},
+                new Judge { Name = "احمد عادل احمد عيسى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "ب"},
+                new Judge { Name = "ايهاب محمود صفوت", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "احمد طه محمود طه", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "محمود مسامح محمود عثمان", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "حازم حسن احمد ابراهيم", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "احمد سعيد محمد سعيد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "محمد احمد امين عبدالتواب", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "يحيى محرز عبدالحمبد محمد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "ابراهيم محمد طلعت ابراهيم عبدالحميد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "احمد حسين السيد النشار", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "محمد عبدالتواب احمد عبد المجيد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "محمود احمد ابراهيم عبدالقادر", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "مصطفى محمود سعيد اللمعي", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "محمد علي سالمان علي", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "محمود ذكي عبدالمعم سلامه", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "محمد يحيى ابوحامد عبدالجواد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "احمد عبدالعزيز فكري عبدالعزيز", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "احمد علام محمد علام", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "حسام عمر توفيق عبدالحميد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950 , Degree = "أ"},
+                new Judge { Name = "محمد مجدي زين العابدين محمد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "محمد حافظ عباس امين", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "احمد يوسف محمد عبدالعليم", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "مصطفى محمود عبد الرحمن احمد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 1734, Degree = "أ" },
+                new Judge { Name = "مؤمن عادل سعيد حامد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 336, Degree = "أ" },
+                new Judge { Name = "بسمة على يحيى عبد المجيد اليمانى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 683, Degree = "ب" },
+                new Judge { Name = "شادى عصمت حسن محمد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "ب" },  
+                new Judge { Name = "محمد احمد محمد عبد الجليل", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 590, Degree = "أ" },
+                new Judge { Name = "ريهام حسن ابراهيم حسن", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 156, Degree = "أ" },
+                new Judge { Name = "محمد مكرم صلاح الدين حسن", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 259, Degree = "أ" },
+                new Judge { Name = "احمد محمد فهمى عبد الهادى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 1058, Degree = "ق" },
+                new Judge { Name = "محمود نبيل محمد قناوى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 3271, Degree = "أ" },
+                new Judge { Name = "احمد صلاح محمود صالح", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 243, Degree = "أ" },
+                new Judge { Name = "مصطفى محمود يوسف حبيب العادلى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 485, Degree = "ق" },
+                new Judge { Name = "احمد محمد ربيع احمد عبد الصالحين", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 1655, Degree = "أ" },
+                new Judge { Name = "محمد سيد على ابراهيم", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 3191, Degree = "أ" },
+                new Judge { Name = "خالد محمد شاكر عبد الرحمن", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 231, Degree = "ق" },
+                new Judge { Name = "احمد محمد سيد مراد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 2393, Degree = "أ" },
+                new Judge { Name = "طه رجب محمد فراج", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 797, Degree = "ب" },
+                new Judge { Name = "الحسينى جمال عبد العزيز عبد الغفار", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "ب" },
+                new Judge { Name = "عمر صلاح محمد زكى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 3137, Degree = "أ" },
+                new Judge { Name = "احمد عبد الناصر محمود عبد العليم", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 526, Degree = "أ" },
+                new Judge { Name = "محمد عبد الفتاح سيد عبد الرحمن ادريس", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 179, Degree = "ب" },
+                new Judge { Name = "محمد محمود اسماعيل عويس", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 2761, Degree = "أ" },
+                new Judge { Name = "محمد كامل عباس كامل", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 1031, Degree = "ب" },
+                new Judge { Name = "هيثم محمد عبد الحميد عبد الله", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 138, Degree = "ب" },
+                new Judge { Name = "ايهاب محمود صفوت احمد سعد الدين الصاوى ", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "ممود مسامح محمود عثمان", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "كريم احمد عامر لطفى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "مصطفى هاني عبد الله العفيفى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "احمد عبد العزيز السيد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "ب" },
+                new Judge { Name = "حاتم حسن محمد برعى الجمل", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "سامح ربيع محمود عليان", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "مروة ايهاب سيد حافظ", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "ب" },
+                new Judge { Name = "محمد عبد المنعم عبد الستار سعد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "طارق مدحت جلال حسن", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "احمد عصام ابراهيم على", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "ب" },
+                new Judge { Name = "حاتم ربيع محمود عليان", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "احمد رمضان محمد عبد الغنى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "احمد عبد الرؤف ابو العطا عبد الرؤف", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "ب" },
+                new Judge { Name = "شريف صلاح الدين ابراهيم العطار", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "اسلام محمد محمود محمد حسانين", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "محمد جمال نصار عبد الباقي", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "ب" },
+                new Judge { Name = "احمد منير عبد الحليم عبد المجيد", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "مصطفى محمد سيد محمد عطوه", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "احمد رمضان عبد الله صابر", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "ب" },
+                new Judge { Name = "عمرو احمد ممدوح عوض الله انيس", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "يحيى عمر احمد فؤاد الشافعى", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "محمد فخرى راشد ابراهيم", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "احمد حلمى عبد العظيم ابو بكر", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+                new Judge { Name = "محمد احمد شوقي عبد العظيم", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "ب" },
+                new Judge { Name = "محمود حسن قرني حسن", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "ب" },
+                new Judge { Name = "محمد اسماعيل مكى اسماعيل", UserId = userid, CreatedAt = DateTime.Now , SeniorityNumber = 950, Degree = "أ" },
+
+            };
+            db.Judges.AddRange(judjes);
+            await db.SaveChangesAsync();
+        }
+
+        public static async Task AddCircleTypes()
+        {
+            var ciecleTyps = new List<CircleType>
+            {
+                new CircleType{ Name = "مدني كلي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "مدني جزئي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "جنح جزئي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "جنح مسأنف", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "اسرة", UserId = userid, CreatedAt = DateTime.Now  },
+               
+            };
+            db.CircleTypes.AddRange(ciecleTyps);
+            await db.SaveChangesAsync();
+        }
+        public static async Task AddCircles()
+        {
+            var ciecleTyps = await db.CircleTypes.ToListAsync();
+            if (ciecleTyps == null) return;
+            var madnyKoly = ciecleTyps.Where(x => x.Name == "مدني كلي").FirstOrDefault();
+            var madnyJzy = ciecleTyps.Where(x => x.Name == "مدني جزئي").FirstOrDefault();
+            var jn7Jzy = ciecleTyps.Where(x => x.Name == "جنح جزئي").FirstOrDefault();
+            var jn7Msnf = ciecleTyps.Where(x => x.Name == "جنح مسأنف").FirstOrDefault();
+            var asra = ciecleTyps.Where(x => x.Name == "اسرة").FirstOrDefault();
+            var Circles = new List<Circle>
+            {
+                new Circle{ Name = "الدائرة الأولى", UserId = userid, CreatedAt = DateTime.Now  },
+            };
 
         }
     }

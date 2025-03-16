@@ -12,6 +12,7 @@ namespace StatisticsAPP.Models.JudgeModels
         public int Id { get; set; }
         public required string Name { get; set; }
         public int SeniorityNumber { get; set; }
+        public string? Degree { get; set; }
         // العلاقات
         public ICollection<CircleJudge> CircleJudges { get; set; } = new List<CircleJudge>();
     }

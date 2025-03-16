@@ -23,6 +23,8 @@ namespace StatisticsAPP.Models.StatisticsModels
         public virtual IQueryable<StatisticsDecisions>? StatisticsDecisions { get; set; }
         public virtual IQueryable<StatisticsInterCases>? StatisticsInterCases { get; set; }
         public virtual IQueryable<StatisticsDelayCases>? StatisticsDelayCases { get; set; }
+        public virtual IQueryable<DelayCacesForMonth>? DelayCacesForMonths { get; set; }
+
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StatisticsAPP.Models.StatisticsModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,5 +20,8 @@ namespace StatisticsAPP.Models.CircleModels
 
         public Circle? Circle  { get; set; }
         public CircleType? CircleType  { get; set; }
+
+        public virtual IQueryable<DelayCacesForMonth>? DelayCacesForMonths { get; set; }
+        public virtual IQueryable<CircleStatistics>? CircleStatistics { get; set; }
     }
 }

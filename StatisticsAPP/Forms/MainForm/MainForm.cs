@@ -216,6 +216,7 @@ namespace StatisticsAPP.Forms.MainForm
                 await DefualtPermissions.AddDefualtToRoleOperation();
                 await DefualtPermissions.AddDefualtSuperCourt();
                 await DefualtPermissions.AddDefualtSupCourt();
+
                 if (Properties.Settings.Default.IsFirstLuanche )
                 {
                     await DefualtData.AddDefultData();

@@ -1,4 +1,5 @@
 ﻿using StatisticsAPP.Models.JudgeModels;
+using StatisticsAPP.Models.StatisticsModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +20,9 @@ namespace StatisticsAPP.Models.CircleModels
         // العلاقات
         public Circle? Circle { get; set; }
         public Judge? Judge { get; set; }
+
+        public virtual IQueryable<StatisticsDecisions>? StatisticsDecisions { get; set; }
+
     }
 
 }

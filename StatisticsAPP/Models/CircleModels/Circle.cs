@@ -17,7 +17,7 @@ namespace StatisticsAPP.Models.CircleModels
         // العلاقات
 
          public ICollection<CircleJudge>? CircleJudges { get; set; }
-         public IQueryable<CircleDay>? CircleDaies { get; set; } 
+         public IQueryable<CircleDay>? CircleDays { get; set; } 
 
 
     }
