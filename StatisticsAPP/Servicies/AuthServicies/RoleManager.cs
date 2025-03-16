@@ -1,5 +1,8 @@
-﻿using StatisticsAPP.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualBasic.ApplicationServices;
+using StatisticsAPP.Data;
 using StatisticsAPP.Models.Auth;
+using StatisticsAPP.Models.CourtsModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,5 +59,42 @@ namespace StatisticsAPP.Servicies.AuthServicies
             return claims;
         }
 
+        public List<SuperCourt> GetUserSuperCourts(int idUser )
+        {
+
+            var usersc= _context.UserSuperCourts.Include(x=>x.SuperCourt).Where(x=>x.IdUser == idUser).ToList();
+            if (usersc.Count ==0)
+            {
+                return new List<SuperCourt>();
+            }
+            List<SuperCourt> superCourts = new List<SuperCourt>();
+            foreach (var item in usersc)
+            {
+                if (item.SuperCourt == null)
+                {
+                    MessageBox.Show("");
+                    
+                }
+                superCourts.Add(item.SuperCourt!);
+            }
+
+            return superCourts;
+        }
+        public List<SupCourt> GetUserSupCourts(int idUser)
+        {
+
+            var usersc = _context.UserSupCourts.Include(x => x.SupCourt).Where(x => x.IdUser == idUser).ToList();
+            if (usersc.Count == 0)
+            {
+                return new List<SupCourt>();
+            }
+            List<SupCourt> supCourts = new List<SupCourt>();
+            foreach (var item in usersc)
+            {
+                supCourts.Add(item.SupCourt!);
+            }
+
+            return supCourts;
+        }
     }
 }

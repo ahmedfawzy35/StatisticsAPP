@@ -15,7 +15,7 @@ namespace StatisticsAPP.Models.Auth
 
 
 
-        public SupCourt? SuperCourt { get; set; }
+        public SupCourt? SupCourt { get; set; }
         public User? User { get; set; }
     }
 }

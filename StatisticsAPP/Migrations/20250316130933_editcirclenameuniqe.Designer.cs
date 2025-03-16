@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StatisticsAPP.Data;
 
@@ -11,9 +12,11 @@ using StatisticsAPP.Data;
 namespace StatisticsAPP.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250316130933_editcirclenameuniqe")]
+    partial class editcirclenameuniqe
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -322,7 +325,7 @@ namespace StatisticsAPP.Migrations
                     b.Property<int>("IdUser")
                         .HasColumnType("int");
 
-                    b.Property<int?>("SupCourtId")
+                    b.Property<int?>("SuperCourtId")
                         .HasColumnType("int");
 
                     b.Property<int?>("UserId")
@@ -330,7 +333,7 @@ namespace StatisticsAPP.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SupCourtId");
+                    b.HasIndex("SuperCourtId");
 
                     b.HasIndex("UserId");
 
@@ -1187,15 +1190,15 @@ namespace StatisticsAPP.Migrations
 
             modelBuilder.Entity("StatisticsAPP.Models.Auth.UserSupCourts", b =>
                 {
-                    b.HasOne("StatisticsAPP.Models.CourtsModels.SupCourt", "SupCourt")
+                    b.HasOne("StatisticsAPP.Models.CourtsModels.SupCourt", "SuperCourt")
                         .WithMany()
-                        .HasForeignKey("SupCourtId");
+                        .HasForeignKey("SuperCourtId");
 
                     b.HasOne("StatisticsAPP.Models.Auth.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
 
-                    b.Navigation("SupCourt");
+                    b.Navigation("SuperCourt");
 
                     b.Navigation("User");
                 });

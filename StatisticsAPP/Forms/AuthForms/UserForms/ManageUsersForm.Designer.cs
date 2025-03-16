@@ -66,11 +66,10 @@
             // 
             // pictureBox_Loading
             // 
-            pictureBox_Loading.Dock = DockStyle.Fill;
             pictureBox_Loading.Image = Properties.Resources.loading_gif;
             pictureBox_Loading.Location = new Point(0, 0);
             pictureBox_Loading.Name = "pictureBox_Loading";
-            pictureBox_Loading.Size = new Size(1224, 363);
+            pictureBox_Loading.Size = new Size(1160, 363);
             pictureBox_Loading.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox_Loading.TabIndex = 0;
             pictureBox_Loading.TabStop = false;

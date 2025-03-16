@@ -61,6 +61,7 @@
             ToolStripMenuItem_EditPassword = new ToolStripMenuItem();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            ايامالانعقادToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             tabControl1.SuspendLayout();
             SuspendLayout();
@@ -110,7 +111,7 @@
             // 
             // ToolStripMenuItem_circles
             // 
-            ToolStripMenuItem_circles.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuItem_AddCircle, ToolStripMenuItem_ManageCircle });
+            ToolStripMenuItem_circles.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuItem_AddCircle, ToolStripMenuItem_ManageCircle, ايامالانعقادToolStripMenuItem });
             ToolStripMenuItem_circles.Name = "ToolStripMenuItem_circles";
             ToolStripMenuItem_circles.Size = new Size(50, 20);
             ToolStripMenuItem_circles.Text = "الدوائر";
@@ -118,13 +119,13 @@
             // ToolStripMenuItem_AddCircle
             // 
             ToolStripMenuItem_AddCircle.Name = "ToolStripMenuItem_AddCircle";
-            ToolStripMenuItem_AddCircle.Size = new Size(130, 22);
+            ToolStripMenuItem_AddCircle.Size = new Size(180, 22);
             ToolStripMenuItem_AddCircle.Text = "اضافة دائرة";
             // 
             // ToolStripMenuItem_ManageCircle
             // 
             ToolStripMenuItem_ManageCircle.Name = "ToolStripMenuItem_ManageCircle";
-            ToolStripMenuItem_ManageCircle.Size = new Size(130, 22);
+            ToolStripMenuItem_ManageCircle.Size = new Size(180, 22);
             ToolStripMenuItem_ManageCircle.Text = "ادارة الدوائر";
             // 
             // ToolStripMenuItem_judges
@@ -296,6 +297,13 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "الرئيسيه";
             // 
+            // ايامالانعقادToolStripMenuItem
+            // 
+            ايامالانعقادToolStripMenuItem.Name = "ايامالانعقادToolStripMenuItem";
+            ايامالانعقادToolStripMenuItem.Size = new Size(180, 22);
+            ايامالانعقادToolStripMenuItem.Text = "ايام الانعقاد";
+            ايامالانعقادToolStripMenuItem.Click += ايامالانعقادToolStripMenuItem_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -352,5 +360,6 @@
         private ToolStripMenuItem احصائيةقاضيToolStripMenuItem;
         private ToolStripMenuItem احصائيةمحكمةابتدائيةToolStripMenuItem;
         private ToolStripMenuItem احصائيةمحكمةجزئيةToolStripMenuItem;
+        private ToolStripMenuItem ايامالانعقادToolStripMenuItem;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StatisticsAPP.Models.CircleModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,6 @@ namespace StatisticsAPP.Models.CourtsModels
         public  int SuperCourtId { get; set; }
 
         public SuperCourt? SuperCourt { get; set; }
-
+        public IQueryable<Circle>? Circles { get; set; }
     }
 }

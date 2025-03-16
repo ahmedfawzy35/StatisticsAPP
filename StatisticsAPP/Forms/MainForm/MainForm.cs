@@ -1,4 +1,5 @@
 ﻿using StatisticsAPP.Forms.AuthForms.UserForms;
+using StatisticsAPP.Forms.CircleForms;
 using StatisticsAPP.Forms.CourtsForms;
 using StatisticsAPP.Seeds;
 using System;
@@ -217,13 +218,20 @@ namespace StatisticsAPP.Forms.MainForm
                 await DefualtPermissions.AddDefualtSuperCourt();
                 await DefualtPermissions.AddDefualtSupCourt();
 
-                if (Properties.Settings.Default.IsFirstLuanche )
+
+                if (Properties.Settings.Default.IsFirstLuanche)
                 {
                     await DefualtData.AddDefultData();
+
+                    //await DefualtData.AddJudjes();
+                    //await DefualtData.AddCircleTypes();
+                    //await DefualtData.AddCircleCategory();
+                    //await DefualtData.AddCircles();
+
                     Properties.Settings.Default.IsFirstLuanche = false;
                     Properties.Settings.Default.Save();
                 }
-               
+
 
 
 
@@ -258,6 +266,11 @@ namespace StatisticsAPP.Forms.MainForm
         private void ToolStripMenuItem_ManageUsers_Click(object sender, EventArgs e)
         {
             ShowForm("ادارة المستخدمين", new ManageUsersForm());
+        }
+
+        private void ايامالانعقادToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm("ايام الانعقاد", new CircleDayForm());
         }
     }
 }

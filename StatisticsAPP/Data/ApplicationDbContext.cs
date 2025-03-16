@@ -40,6 +40,7 @@ namespace StatisticsAPP.Data
 
         #region CircleModels
         public DbSet<Circle> Circles { get; set; } = default!;
+        public DbSet<CircleCategory> CircleCategories { get; set; } = default!;
         public DbSet<CircleType> CircleTypes { get; set; } = default!;
         public DbSet<CircleJudge> CircleJudges { get; set; } = default!;
         public DbSet<CircleDay> CircleDays { get; set; } = default!;
@@ -213,9 +214,7 @@ namespace StatisticsAPP.Data
                 .WithMany()
                 .HasForeignKey(ro => ro.IdOperation);
 
-            modelBuilder.Entity<Circle>()
-           .HasIndex(c => c.Name)
-           .IsUnique();
+           
 
             // 🔹 منع تكرار اسم القاضي
             modelBuilder.Entity<Judge>()

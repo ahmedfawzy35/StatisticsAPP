@@ -357,28 +357,141 @@ namespace StatisticsAPP.Seeds
             var ciecleTyps = new List<CircleType>
             {
                 new CircleType{ Name = "مدني كلي", UserId = userid, CreatedAt = DateTime.Now  },
-                new CircleType{ Name = "مدني جزئي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "عمال كلي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "ايجارات كلي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "اوقاف كلي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "مدني مستأنف", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "مستعجل مستأنف", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "تجاري كلي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "مدني حكومة كلي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "تعويضات مدني كلي", UserId = userid, CreatedAt = DateTime.Now  },
                 new CircleType{ Name = "جنح جزئي", UserId = userid, CreatedAt = DateTime.Now  },
-                new CircleType{ Name = "جنح مسأنف", UserId = userid, CreatedAt = DateTime.Now  },
-                new CircleType{ Name = "اسرة", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "جنح مسأنفة", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "مباني", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "جنح طفل ابتدائي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "جنايات طفل مستأنفة", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "اسرة نفس", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "اسرة حبس", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleType{ Name = "صحة توقيع", UserId = userid, CreatedAt = DateTime.Now  },
                
             };
             db.CircleTypes.AddRange(ciecleTyps);
             await db.SaveChangesAsync();
         }
+        public static async Task AddCircleCategory()
+        {
+            var ciecleTyps = new List<CircleCategory>
+            {
+                new CircleCategory{ Name = "مدني", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleCategory{ Name = "جنائي", UserId = userid, CreatedAt = DateTime.Now  },
+                new CircleCategory{ Name = "اسرة", UserId = userid, CreatedAt = DateTime.Now  },
+          
+
+            };
+            db.CircleCategories.AddRange(ciecleTyps);
+            await db.SaveChangesAsync();
+        }
         public static async Task AddCircles()
         {
-            var ciecleTyps = await db.CircleTypes.ToListAsync();
-            if (ciecleTyps == null) return;
-            var madnyKoly = ciecleTyps.Where(x => x.Name == "مدني كلي").FirstOrDefault();
-            var madnyJzy = ciecleTyps.Where(x => x.Name == "مدني جزئي").FirstOrDefault();
-            var jn7Jzy = ciecleTyps.Where(x => x.Name == "جنح جزئي").FirstOrDefault();
-            var jn7Msnf = ciecleTyps.Where(x => x.Name == "جنح مسأنف").FirstOrDefault();
-            var asra = ciecleTyps.Where(x => x.Name == "اسرة").FirstOrDefault();
+            //var ciecleTyps = await db.CircleTypes.ToListAsync();
+            //if (ciecleTyps == null) return;
+            //var madnyKoly = ciecleTyps.Where(x => x.Name == "مدني كلي").FirstOrDefault();
+            //var madnyJzy = ciecleTyps.Where(x => x.Name == "مدني جزئي").FirstOrDefault();
+            //var jn7Jzy = ciecleTyps.Where(x => x.Name == "جنح جزئي").FirstOrDefault();
+            //var jn7Msnf = ciecleTyps.Where(x => x.Name == "جنح مسأنف").FirstOrDefault();
+            //var asra = ciecleTyps.Where(x => x.Name == "اسرة").FirstOrDefault();
+
+            var supCourt = await db.SupCourts.ToListAsync();
+            var محكمة_بني_سويف_الكلية = supCourt.Where(x => x.Name == "محكمة بني سويف الكلية").FirstOrDefault();
+
+            var محكمة_الواسطى = supCourt.Where(x => x.Name == "محكمة الواسطى" + " " + "الجزئية").FirstOrDefault();
+            var محكمة_ناصر = supCourt.Where(x => x.Name == "محكمة ناصر").FirstOrDefault();
+            var محكمة_بندر = supCourt.Where(x => x.Name == "محكمة بندر بني سويف" + " " + "الجزئية").FirstOrDefault();
+            var محكمة_مركز = supCourt.Where(x => x.Name == "محكمة مركز بني سويف" + " " + "الجزئية").FirstOrDefault();
+            var محكمة_اهناسيا = supCourt.Where(x => x.Name == "محكمة اهناسيا" + " " + "الجزئية").FirstOrDefault();
+            var محكمة_ببا = supCourt.Where(x => x.Name == "محكمة ببا" + " " + "الجزئية").FirstOrDefault();
+            var محكمة_سمسطا = supCourt.Where(x => x.Name == "محكمة سمسطا" + " " + "الجزئية").FirstOrDefault();
+            var محكمة_الفشن = supCourt.Where(x => x.Name == "محكمة الفشن" + " " + "الجزئية").FirstOrDefault();
+
+
+            var circlecategory = await db.CircleCategories.ToListAsync();
+            var مدني = circlecategory.Where(x => x.Name == "مدني").FirstOrDefault();
+            var جنائي = circlecategory.Where(x => x.Name == "جنائي").FirstOrDefault();
+            var اسرة = circlecategory.Where(x => x.Name == "اسرة").FirstOrDefault();
             var Circles = new List<Circle>
             {
-                new Circle{ Name = "الدائرة الأولى", UserId = userid, CreatedAt = DateTime.Now  },
+
+                new Circle{ Name = "الدائرة الأولى مدني كلي"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = مدني!.Id},
+                new Circle{ Name = "الدائرة الثانية مدني كلي", UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id ,IdCircleCategory = مدني!.Id },
+                new Circle{ Name = "الدائرة الثالثة مدني كلي", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = مدني!.Id},
+                new Circle{ Name = "الدائرة الرابعه مدني كلي", UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = مدني !.Id},
+                new Circle{ Name = "الدائرة الخامسه مدني كلي", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id ,IdCircleCategory = مدني!.Id },
+                new Circle{ Name = "الدائرة السادسة مدني كلي", UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = مدني!.Id},
+                new Circle{ Name = "الدائرة السابعه مدني كلي", UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = مدني!.Id},
+                new Circle{ Name = "الدائرة الثامنه مدني كلي", UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = مدني!.Id},
+                new Circle{ Name = "الدائرة التاسعه مدني كلي", UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = مدني !.Id},
+                new Circle{ Name = "الدائرة العاشرة مدني كلي", UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = مدني !.Id},
+                
+                
+                new Circle{ Name = "الدائرة الأولى جنائي"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = جنائي !.Id},
+                new Circle{ Name = "الدائرة الثانية جنائي", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = جنائي !.Id},
+                new Circle{ Name = "الدائرة الثالثه جنائي", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = جنائي !.Id},
+                new Circle{ Name = "الدائرة الرابعه جنائي", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = جنائي !.Id},
+                new Circle{ Name = "الدائرة الخامسة جنائي", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = جنائي !.Id},
+                new Circle{ Name = "الدائرة السادسة جنائي", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = جنائي !.Id},
+                new Circle{ Name = "الدائرة السابعه جنائي", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = جنائي !.Id},
+                new Circle{ Name = "الدائرة الثامنه جنائي", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = جنائي !.Id},
+
+
+                  new Circle{ Name = "الدائرة الأولى اسرة"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id, IdCircleCategory = اسرة !.Id },
+                new Circle{ Name = "الدائرة الثانية اسرة", UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id, IdCircleCategory = اسرة !.Id },
+                new Circle{ Name = "الدائرة الثالثه اسرة", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = اسرة !.Id},
+                new Circle{ Name = "الدائرة الرابعه اسرة", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = اسرة !.Id},
+                new Circle{ Name = "الدائرة الخامسة اسرة", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = اسرة !.Id},
+                new Circle{ Name = "الدائرة السادسة اسرة", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = اسرة !.Id},
+                new Circle{ Name = "الدائرة السابعه اسرة", UserId = userid, CreatedAt = DateTime.Now ,Count = 3 ,IdSupCourt = محكمة_بني_سويف_الكلية!.Id , IdCircleCategory = اسرة !.Id},
+
+
+
+               new Circle{ Name = "الدائرة الأولى"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_الواسطى!.Id , IdCircleCategory = مدني !.Id},
+               new Circle{ Name = "الدائرة الثانية"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_الواسطى!.Id , IdCircleCategory = مدني !.Id},
+               new Circle{ Name = "الدائرة الثالثة"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_الواسطى!.Id , IdCircleCategory = مدني !.Id},
+
+               new Circle{ Name = "الدائرة الأولى"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_ناصر!.Id , IdCircleCategory = مدني !.Id},
+               new Circle{ Name = "الدائرة الثانية"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_ناصر!.Id , IdCircleCategory = مدني !.Id},
+
+                 new Circle{ Name = "الدائرة الأولى"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بندر!.Id , IdCircleCategory = مدني !.Id},
+               new Circle{ Name = "الدائرة الثانية"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بندر!.Id , IdCircleCategory = مدني !.Id},
+                 new Circle{ Name = "الدائرة الثالثة"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بندر!.Id , IdCircleCategory = مدني !.Id},
+               new Circle{ Name = "الدائرة الرابعه"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_بندر!.Id , IdCircleCategory = مدني !.Id},
+              
+                new Circle{ Name = "الدائرة الأولى"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_مركز!.Id , IdCircleCategory = مدني !.Id},
+               new Circle{ Name = "الدائرة الثانية"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_مركز!.Id , IdCircleCategory = مدني !.Id},
+                 new Circle{ Name = "الدائرة الثالثة"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_مركز!.Id , IdCircleCategory = مدني !.Id},
+                 new Circle{ Name = "الدائرة الرابعه"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_مركز!.Id , IdCircleCategory = مدني !.Id},
+
+                  new Circle{ Name = "الدائرة الأولى"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_اهناسيا!.Id  , IdCircleCategory = مدني !.Id},
+               new Circle{ Name = "الدائرة الثانية"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_اهناسيا!.Id , IdCircleCategory = مدني !.Id},
+
+                 new Circle{ Name = "الدائرة الأولى"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_ببا!.Id , IdCircleCategory = مدني !.Id},
+               new Circle{ Name = "الدائرة الثانية"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_ببا!.Id },
+                 new Circle{ Name = "الدائرة الثالثة"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_ببا!.Id , IdCircleCategory = مدني !.Id},
+
+                    new Circle{ Name = "الدائرة الأولى"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_سمسطا!.Id , IdCircleCategory = مدني !.Id},
+               new Circle{ Name = "الدائرة الثانية"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_سمسطا!.Id , IdCircleCategory = مدني !.Id},
+
+               
+                    new Circle{ Name = "الدائرة الأولى"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_الفشن!.Id , IdCircleCategory = مدني !.Id},
+               new Circle{ Name = "الدائرة الثانية"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_الفشن!.Id , IdCircleCategory = مدني !.Id},
+                new Circle{ Name = "الدائرة الثالثة"  , UserId = userid, CreatedAt = DateTime.Now ,Count = 4 ,IdSupCourt = محكمة_الفشن!.Id , IdCircleCategory = مدني !.Id},
+
+
+
+
             };
+
+            db.Circles.AddRange(Circles);
+            await db.SaveChangesAsync();
 
         }
     }
