@@ -70,26 +70,28 @@
             comboBoxSupCourt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBoxSupCourt.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxSupCourt.FormattingEnabled = true;
-            comboBoxSupCourt.Location = new Point(608, 24);
+            comboBoxSupCourt.Location = new Point(528, 21);
             comboBoxSupCourt.Name = "comboBoxSupCourt";
             comboBoxSupCourt.Size = new Size(184, 23);
             comboBoxSupCourt.TabIndex = 1;
+            comboBoxSupCourt.SelectedIndexChanged += comboBoxSupCourt_SelectedIndexChanged;
             // 
             // comboBoxSuperCourt
             // 
             comboBoxSuperCourt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBoxSuperCourt.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxSuperCourt.FormattingEnabled = true;
-            comboBoxSuperCourt.Location = new Point(897, 24);
+            comboBoxSuperCourt.Location = new Point(840, 24);
             comboBoxSuperCourt.Name = "comboBoxSuperCourt";
-            comboBoxSuperCourt.Size = new Size(185, 23);
+            comboBoxSuperCourt.Size = new Size(225, 23);
             comboBoxSuperCourt.TabIndex = 1;
+            comboBoxSuperCourt.SelectedIndexChanged += comboBoxSuperCourt_SelectedIndexChanged;
             // 
             // label2
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(798, 27);
+            label2.Location = new Point(718, 24);
             label2.Name = "label2";
             label2.Size = new Size(84, 15);
             label2.TabIndex = 0;
@@ -99,7 +101,7 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(1088, 27);
+            label1.Location = new Point(1071, 27);
             label1.Name = "label1";
             label1.Size = new Size(91, 15);
             label1.TabIndex = 0;
@@ -121,11 +123,12 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1180, 103);
             panel2.TabIndex = 1;
+            panel2.Paint += panel2_Paint;
             // 
             // btn_Save
             // 
             btn_Save.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btn_Save.Location = new Point(302, 65);
+            btn_Save.Location = new Point(263, 65);
             btn_Save.Name = "btn_Save";
             btn_Save.Size = new Size(75, 23);
             btn_Save.TabIndex = 3;
@@ -135,9 +138,9 @@
             // text_Name
             // 
             text_Name.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            text_Name.Location = new Point(448, 62);
+            text_Name.Location = new Point(383, 62);
             text_Name.Name = "text_Name";
-            text_Name.Size = new Size(195, 23);
+            text_Name.Size = new Size(260, 23);
             text_Name.TabIndex = 2;
             // 
             // comboBox_Type
@@ -155,7 +158,7 @@
             comboBox_Day.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_Day.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_Day.FormattingEnabled = true;
-            comboBox_Day.Location = new Point(971, 62);
+            comboBox_Day.Location = new Point(944, 62);
             comboBox_Day.Name = "comboBox_Day";
             comboBox_Day.Size = new Size(121, 23);
             comboBox_Day.TabIndex = 1;
@@ -165,9 +168,9 @@
             comboBox_Circle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_Circle.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_Circle.FormattingEnabled = true;
-            comboBox_Circle.Location = new Point(971, 12);
+            comboBox_Circle.Location = new Point(840, 12);
             comboBox_Circle.Name = "comboBox_Circle";
-            comboBox_Circle.Size = new Size(121, 23);
+            comboBox_Circle.Size = new Size(225, 23);
             comboBox_Circle.TabIndex = 1;
             // 
             // label5
@@ -184,7 +187,7 @@
             // 
             label6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label6.AutoSize = true;
-            label6.Location = new Point(910, 65);
+            label6.Location = new Point(894, 65);
             label6.Name = "label6";
             label6.Size = new Size(31, 15);
             label6.TabIndex = 0;
@@ -194,7 +197,7 @@
             // 
             label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label4.AutoSize = true;
-            label4.Location = new Point(1131, 65);
+            label4.Location = new Point(1098, 69);
             label4.Name = "label4";
             label4.Size = new Size(31, 15);
             label4.TabIndex = 0;
@@ -204,7 +207,7 @@
             // 
             label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Location = new Point(1131, 15);
+            label3.Location = new Point(1098, 15);
             label3.Name = "label3";
             label3.Size = new Size(37, 15);
             label3.TabIndex = 0;

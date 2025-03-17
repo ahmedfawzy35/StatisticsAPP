@@ -1,4 +1,5 @@
 ﻿using StatisticsAPP.Models.Auth;
+using StatisticsAPP.Models.CircleModels;
 using StatisticsAPP.Models.CourtsModels;
 using System;
 using System.Collections.Generic;
@@ -33,6 +34,7 @@ namespace StatisticsAPP.Utility
         public static List<Operation> UserClime = MyCervicies.roleManager.getuserOperations(localUserId);
         public static List<SuperCourt> userSuperCourt = MyCervicies.roleManager.GetUserSuperCourts(localUserId);
         public static List<SupCourt> userSupCourt = MyCervicies.roleManager.GetUserSupCourts(localUserId);
+        public static List<Circle> userCircles = MyCervicies.roleManager.GetUserCircles(localUserId);
 
 
     }

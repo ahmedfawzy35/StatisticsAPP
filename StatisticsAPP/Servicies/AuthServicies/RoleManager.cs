@@ -2,6 +2,7 @@
 using Microsoft.VisualBasic.ApplicationServices;
 using StatisticsAPP.Data;
 using StatisticsAPP.Models.Auth;
+using StatisticsAPP.Models.CircleModels;
 using StatisticsAPP.Models.CourtsModels;
 using System;
 using System.Collections.Generic;
@@ -95,6 +96,20 @@ namespace StatisticsAPP.Servicies.AuthServicies
             }
 
             return supCourts;
+        }
+        public List<Circle> GetUserCircles(int idUser)
+        {
+            var usersc = _context.UserCircles.Include(x => x.Circle).Where(x => x.IdUser == idUser).ToList();
+            if (usersc.Count == 0)
+            {
+                return new List<Circle>();
+            }
+            List<Circle> circles = new List<Circle>();
+            foreach (var item in usersc)
+            {
+                circles.Add(item.Circle!);
+            }
+            return circles;
         }
     }
 }
