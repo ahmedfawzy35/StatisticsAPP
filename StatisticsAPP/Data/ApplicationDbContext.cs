@@ -128,26 +128,26 @@ namespace StatisticsAPP.Data
                 .HasOne(ur => ur.User)
                 .WithMany(u => u.UserRoles)
                 .HasForeignKey(ur => ur.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<UserRole>()
                 .HasOne(ur => ur.Role)
                 .WithMany(r => r.UserRoles)
                 .HasForeignKey(ur => ur.IdRole)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             // إعداد العلاقة بين Role و RoleOperation
             modelBuilder.Entity<RoleOperation>()
                 .HasOne(ro => ro.Role)
                 .WithMany(r => r.RoleOperations)
                 .HasForeignKey(ro => ro.IdRole)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             modelBuilder.Entity<RoleOperation>()
                 .HasOne(ro => ro.Operation)
                 .WithMany(o => o.RoleOperations)
                 .HasForeignKey(ro => ro.IdOperation)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             // إضافة فهرس فريد لمنع تكرار نفس الدور للمستخدم أكثر من مرة
             modelBuilder.Entity<UserRole>()

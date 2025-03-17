@@ -13,7 +13,8 @@ namespace StatisticsAPP.Models.CourtsModels
         [DisplayName("الرقم التعريفي")]
         public int Id { get; set; }
         [DisplayName("اسم المحكمة")]
-        public  required String Name { get; set; }
+        [Required]
+        public   String? Name { get; set; }
        
 
     }

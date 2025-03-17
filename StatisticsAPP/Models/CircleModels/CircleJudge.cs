@@ -2,6 +2,7 @@
 using StatisticsAPP.Models.StatisticsModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,10 +19,12 @@ namespace StatisticsAPP.Models.CircleModels
         public DateTime? DateEnd { get; set; }
 
         // العلاقات
+        [ForeignKey("IdCircle")]
         public Circle? Circle { get; set; }
+        [ForeignKey("IdJudge")]
         public Judge? Judge { get; set; }
 
-        public virtual IQueryable<StatisticsDecisions>? StatisticsDecisions { get; set; }
+        public virtual IEnumerable<StatisticsDecisions>? StatisticsDecisions { get; set; }
 
     }
 

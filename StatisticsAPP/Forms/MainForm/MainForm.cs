@@ -219,18 +219,20 @@ namespace StatisticsAPP.Forms.MainForm
                 await DefualtPermissions.AddDefualtSupCourt();
 
 
-                if (Properties.Settings.Default.IsFirstLuanche)
-                {
-                    await DefualtData.AddDefultData();
 
-                    //await DefualtData.AddJudjes();
-                    //await DefualtData.AddCircleTypes();
-                    //await DefualtData.AddCircleCategory();
-                    //await DefualtData.AddCircles();
 
-                    Properties.Settings.Default.IsFirstLuanche = false;
-                    Properties.Settings.Default.Save();
-                }
+                ////if (Properties.Settings.Default.IsFirstLuanche)
+                ////{
+                ////                  await DefualtData.AddDefultData();
+                //await DefualtData.AddJudjes();
+                //await DefualtData.AddCircleTypes();
+                //await DefualtData.AddCircleCategory();
+                //await DefualtData.AddCircles();
+                //await DefualtData.AddUserCircle();
+                //await DefualtData.AddCircles();
+                ////    Properties.Settings.Default.IsFirstLuanche = false;
+                ////    Properties.Settings.Default.Save();
+                ////}
 
 
 

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +19,9 @@ namespace StatisticsAPP.Models.StatisticsModels
         public int Year { get; set; }
         public int IdCircleStatistics { get; set; }
         public int IdCircleDay { get; set; }
-
+        [ForeignKey("IdCircleDay")]
         public CircleDay?  CircleDay { get; set; }
+        [ForeignKey("IdCircleStatistics")]
         public CircleStatistics? CircleStatistics { get; set; }
     }
 }

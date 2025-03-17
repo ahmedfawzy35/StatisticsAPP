@@ -8,13 +8,13 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StatisticsAPP.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialDataBase : Migration
+    public partial class InitiaklDB : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "CaseYear",
+                name: "CaseYears",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -25,23 +25,7 @@ namespace StatisticsAPP.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CaseYear", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "DelayCacesForMonths",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Count = table.Column<int>(type: "int", nullable: false),
-                    Month = table.Column<int>(type: "int", nullable: false),
-                    Year = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_DelayCacesForMonths", x => x.Id);
+                    table.PrimaryKey("PK_CaseYears", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -62,22 +46,20 @@ namespace StatisticsAPP.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Circles",
+                name: "CircleCategories",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
-                    Count = table.Column<int>(type: "int", nullable: false),
-                    Enable = table.Column<bool>(type: "bit", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Circles", x => x.Id);
+                    table.PrimaryKey("PK_CircleCategories", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Circles_Users_UserId",
+                        name: "FK_CircleCategories_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id",
@@ -157,6 +139,7 @@ namespace StatisticsAPP.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ParentID = table.Column<int>(type: "int", nullable: true),
+                    IsFather = table.Column<bool>(type: "bit", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -179,6 +162,7 @@ namespace StatisticsAPP.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     SeniorityNumber = table.Column<int>(type: "int", nullable: false),
+                    Degree = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -257,29 +241,258 @@ namespace StatisticsAPP.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserCircles",
+                name: "Decisions",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IdCircle = table.Column<int>(type: "int", nullable: false),
-                    IdUser = table.Column<int>(type: "int", nullable: false),
-                    CircleId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: true)
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IdDecisionCategory = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserCircles", x => x.Id);
+                    table.PrimaryKey("PK_Decisions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UserCircles_Circles_CircleId",
-                        column: x => x.CircleId,
-                        principalTable: "Circles",
+                        name: "FK_Decisions_DecisionCategories_IdDecisionCategory",
+                        column: x => x.IdDecisionCategory,
+                        principalTable: "DecisionCategories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_Decisions_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "InterCases",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IdInterCasesCategory = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_InterCases", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_InterCases_InterCasesCategories_IdInterCasesCategory",
+                        column: x => x.IdInterCasesCategory,
+                        principalTable: "InterCasesCategories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_InterCases_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "RoleOperations",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdRole = table.Column<int>(type: "int", nullable: false),
+                    IdOperation = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    OperationId = table.Column<int>(type: "int", nullable: true),
+                    RoleId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RoleOperations", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RoleOperations_Operations_IdOperation",
+                        column: x => x.IdOperation,
+                        principalTable: "Operations",
                         principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_UserCircles_Users_UserId",
+                        name: "FK_RoleOperations_Operations_OperationId",
+                        column: x => x.OperationId,
+                        principalTable: "Operations",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_RoleOperations_Roles_IdRole",
+                        column: x => x.IdRole,
+                        principalTable: "Roles",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_RoleOperations_Roles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "Roles",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_RoleOperations_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserRoles",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdRole = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    UserCreatedId = table.Column<int>(type: "int", nullable: true),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    RoleId = table.Column<int>(type: "int", nullable: true),
+                    UserId1 = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserRoles", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserRoles_Roles_IdRole",
+                        column: x => x.IdRole,
+                        principalTable: "Roles",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_UserRoles_Roles_RoleId",
+                        column: x => x.RoleId,
+                        principalTable: "Roles",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_UserRoles_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
                         principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_UserRoles_Users_UserId1",
+                        column: x => x.UserId1,
+                        principalTable: "Users",
+                        principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "SupCourts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Adress = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SuperCourtId = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_SupCourts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_SupCourts_SuperCourts_SuperCourtId",
+                        column: x => x.SuperCourtId,
+                        principalTable: "SuperCourts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_SupCourts_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserSuperCourts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdSuperCourt = table.Column<int>(type: "int", nullable: false),
+                    IdUser = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserSuperCourts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserSuperCourts_SuperCourts_IdSuperCourt",
+                        column: x => x.IdSuperCourt,
+                        principalTable: "SuperCourts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_UserSuperCourts_Users_IdUser",
+                        column: x => x.IdUser,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Circles",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Count = table.Column<int>(type: "int", nullable: false),
+                    IdSupCourt = table.Column<int>(type: "int", nullable: false),
+                    IdCircleCategory = table.Column<int>(type: "int", nullable: false),
+                    Enable = table.Column<bool>(type: "bit", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Circles", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Circles_CircleCategories_IdCircleCategory",
+                        column: x => x.IdCircleCategory,
+                        principalTable: "CircleCategories",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_Circles_SupCourts_IdSupCourt",
+                        column: x => x.IdSupCourt,
+                        principalTable: "SupCourts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_Circles_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "UserSupCourts",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdSupCourt = table.Column<int>(type: "int", nullable: false),
+                    IdUser = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_UserSupCourts", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_UserSupCourts_SupCourts_IdSupCourt",
+                        column: x => x.IdSupCourt,
+                        principalTable: "SupCourts",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_UserSupCourts_Users_IdUser",
+                        column: x => x.IdUser,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -305,62 +518,6 @@ namespace StatisticsAPP.Migrations
                         name: "FK_CircleDays_Circles_CircleId",
                         column: x => x.CircleId,
                         principalTable: "Circles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Decisions",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IdDecisionCategory = table.Column<int>(type: "int", nullable: false),
-                    DecisionCategoryId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Decisions", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Decisions_DecisionCategories_DecisionCategoryId",
-                        column: x => x.DecisionCategoryId,
-                        principalTable: "DecisionCategories",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_Decisions_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "InterCases",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IdInterCasesCategory = table.Column<int>(type: "int", nullable: false),
-                    InterCasesCategoryId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_InterCases", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_InterCases_InterCasesCategories_InterCasesCategoryId",
-                        column: x => x.InterCasesCategoryId,
-                        principalTable: "InterCasesCategories",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_InterCases_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                 });
@@ -415,143 +572,29 @@ namespace StatisticsAPP.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "RoleOperations",
+                name: "UserCircles",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IdRole = table.Column<int>(type: "int", nullable: false),
-                    IdOperation = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    OperationId = table.Column<int>(type: "int", nullable: true),
-                    RoleId = table.Column<int>(type: "int", nullable: true)
+                    IdCircle = table.Column<int>(type: "int", nullable: false),
+                    IdUser = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RoleOperations", x => x.Id);
+                    table.PrimaryKey("PK_UserCircles", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_RoleOperations_Operations_IdOperation",
-                        column: x => x.IdOperation,
-                        principalTable: "Operations",
+                        name: "FK_UserCircles_Circles_IdCircle",
+                        column: x => x.IdCircle,
+                        principalTable: "Circles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
-                        name: "FK_RoleOperations_Operations_OperationId",
-                        column: x => x.OperationId,
-                        principalTable: "Operations",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_RoleOperations_Roles_IdRole",
-                        column: x => x.IdRole,
-                        principalTable: "Roles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                    table.ForeignKey(
-                        name: "FK_RoleOperations_Roles_RoleId",
-                        column: x => x.RoleId,
-                        principalTable: "Roles",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_RoleOperations_Users_UserId",
-                        column: x => x.UserId,
+                        name: "FK_UserCircles_Users_IdUser",
+                        column: x => x.IdUser,
                         principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserRoles",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IdRole = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    UserCreatedId = table.Column<int>(type: "int", nullable: true),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    RoleId = table.Column<int>(type: "int", nullable: true),
-                    UserId1 = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_UserRoles", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_UserRoles_Roles_IdRole",
-                        column: x => x.IdRole,
-                        principalTable: "Roles",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                    table.ForeignKey(
-                        name: "FK_UserRoles_Roles_RoleId",
-                        column: x => x.RoleId,
-                        principalTable: "Roles",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_UserRoles_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                    table.ForeignKey(
-                        name: "FK_UserRoles_Users_UserId1",
-                        column: x => x.UserId1,
-                        principalTable: "Users",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "SupCourts",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Adress = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SuperCourtId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SupCourts", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_SupCourts_SuperCourts_SuperCourtId",
-                        column: x => x.SuperCourtId,
-                        principalTable: "SuperCourts",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                    table.ForeignKey(
-                        name: "FK_SupCourts_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.NoAction);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "UserSuperCourts",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IdSuperCourt = table.Column<int>(type: "int", nullable: false),
-                    IdUser = table.Column<int>(type: "int", nullable: false),
-                    SuperCourtId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_UserSuperCourts", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_UserSuperCourts_SuperCourts_SuperCourtId",
-                        column: x => x.SuperCourtId,
-                        principalTable: "SuperCourts",
-                        principalColumn: "Id");
-                    table.ForeignKey(
-                        name: "FK_UserSuperCourts_Users_UserId",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateTable(
@@ -564,7 +607,6 @@ namespace StatisticsAPP.Migrations
                     DayOfWork = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Year = table.Column<int>(type: "int", nullable: false),
                     Month = table.Column<int>(type: "int", nullable: false),
-                    CircleDayId = table.Column<int>(type: "int", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
@@ -572,10 +614,11 @@ namespace StatisticsAPP.Migrations
                 {
                     table.PrimaryKey("PK_CircleStatistics", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_CircleStatistics_CircleDays_CircleDayId",
-                        column: x => x.CircleDayId,
+                        name: "FK_CircleStatistics_CircleDays_IdCircleDay",
+                        column: x => x.IdCircleDay,
                         principalTable: "CircleDays",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_CircleStatistics_Users_UserId",
                         column: x => x.UserId,
@@ -585,29 +628,63 @@ namespace StatisticsAPP.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "UserSupCourts",
+                name: "DelayCacesForMonths",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IdSupCourt = table.Column<int>(type: "int", nullable: false),
-                    IdUser = table.Column<int>(type: "int", nullable: false),
-                    SuperCourtId = table.Column<int>(type: "int", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: true)
+                    Type = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Count = table.Column<int>(type: "int", nullable: false),
+                    Month = table.Column<int>(type: "int", nullable: false),
+                    Year = table.Column<int>(type: "int", nullable: false),
+                    IdCircleStatistics = table.Column<int>(type: "int", nullable: false),
+                    IdCircleDay = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_UserSupCourts", x => x.Id);
+                    table.PrimaryKey("PK_DelayCacesForMonths", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_UserSupCourts_SupCourts_SuperCourtId",
-                        column: x => x.SuperCourtId,
-                        principalTable: "SupCourts",
-                        principalColumn: "Id");
+                        name: "FK_DelayCacesForMonths_CircleDays_IdCircleDay",
+                        column: x => x.IdCircleDay,
+                        principalTable: "CircleDays",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
-                        name: "FK_UserSupCourts_Users_UserId",
+                        name: "FK_DelayCacesForMonths_CircleStatistics_IdCircleStatistics",
+                        column: x => x.IdCircleStatistics,
+                        principalTable: "CircleStatistics",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Shortenings",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Count = table.Column<int>(type: "int", nullable: false),
+                    Month = table.Column<int>(type: "int", nullable: false),
+                    Year = table.Column<int>(type: "int", nullable: false),
+                    IdCircleStatistics = table.Column<int>(type: "int", nullable: false),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Shortenings", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Shortenings_CircleStatistics_IdCircleStatistics",
+                        column: x => x.IdCircleStatistics,
+                        principalTable: "CircleStatistics",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_Shortenings_Users_UserId",
                         column: x => x.UserId,
                         principalTable: "Users",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -621,7 +698,7 @@ namespace StatisticsAPP.Migrations
                     Count = table.Column<int>(type: "int", nullable: false),
                     CaseYearId = table.Column<int>(type: "int", nullable: false),
                     IdJudge = table.Column<int>(type: "int", nullable: false),
-                    JudgeId = table.Column<int>(type: "int", nullable: true),
+                    CircleJudgeId = table.Column<int>(type: "int", nullable: true),
                     CircleStatisticsId = table.Column<int>(type: "int", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -630,11 +707,16 @@ namespace StatisticsAPP.Migrations
                 {
                     table.PrimaryKey("PK_StatisticsDecisions", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_StatisticsDecisions_CaseYear_CaseYearId",
+                        name: "FK_StatisticsDecisions_CaseYears_CaseYearId",
                         column: x => x.CaseYearId,
-                        principalTable: "CaseYear",
+                        principalTable: "CaseYears",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
+                    table.ForeignKey(
+                        name: "FK_StatisticsDecisions_CircleJudges_CircleJudgeId",
+                        column: x => x.CircleJudgeId,
+                        principalTable: "CircleJudges",
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_StatisticsDecisions_CircleStatistics_CircleStatisticsId",
                         column: x => x.CircleStatisticsId,
@@ -653,10 +735,11 @@ namespace StatisticsAPP.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
-                        name: "FK_StatisticsDecisions_Judges_JudgeId",
-                        column: x => x.JudgeId,
+                        name: "FK_StatisticsDecisions_Judges_IdJudge",
+                        column: x => x.IdJudge,
                         principalTable: "Judges",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_StatisticsDecisions_Users_UserId",
                         column: x => x.UserId,
@@ -677,7 +760,6 @@ namespace StatisticsAPP.Migrations
                     MonthDelay = table.Column<int>(type: "int", nullable: false),
                     YearDelay = table.Column<int>(type: "int", nullable: false),
                     CaseYearId = table.Column<int>(type: "int", nullable: false),
-                    DelayCaseId = table.Column<int>(type: "int", nullable: true),
                     CircleStatisticsId = table.Column<int>(type: "int", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -686,9 +768,9 @@ namespace StatisticsAPP.Migrations
                 {
                     table.PrimaryKey("PK_StatisticsDelayCases", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_StatisticsDelayCases_CaseYear_CaseYearId",
+                        name: "FK_StatisticsDelayCases_CaseYears_CaseYearId",
                         column: x => x.CaseYearId,
-                        principalTable: "CaseYear",
+                        principalTable: "CaseYears",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
@@ -703,10 +785,11 @@ namespace StatisticsAPP.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
-                        name: "FK_StatisticsDelayCases_DelayCases_DelayCaseId",
-                        column: x => x.DelayCaseId,
+                        name: "FK_StatisticsDelayCases_DelayCases_IdDelayCase",
+                        column: x => x.IdDelayCase,
                         principalTable: "DelayCases",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_StatisticsDelayCases_Users_UserId",
                         column: x => x.UserId,
@@ -725,7 +808,6 @@ namespace StatisticsAPP.Migrations
                     IdInterCase = table.Column<int>(type: "int", nullable: false),
                     Count = table.Column<int>(type: "int", nullable: false),
                     CaseYearId = table.Column<int>(type: "int", nullable: false),
-                    InterCaseId = table.Column<int>(type: "int", nullable: true),
                     CircleStatisticsId = table.Column<int>(type: "int", nullable: true),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -734,9 +816,9 @@ namespace StatisticsAPP.Migrations
                 {
                     table.PrimaryKey("PK_StatisticsInterCases", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_StatisticsInterCases_CaseYear_CaseYearId",
+                        name: "FK_StatisticsInterCases_CaseYears_CaseYearId",
                         column: x => x.CaseYearId,
-                        principalTable: "CaseYear",
+                        principalTable: "CaseYears",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
@@ -751,10 +833,11 @@ namespace StatisticsAPP.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
-                        name: "FK_StatisticsInterCases_InterCases_InterCaseId",
-                        column: x => x.InterCaseId,
+                        name: "FK_StatisticsInterCases_InterCases_IdInterCase",
+                        column: x => x.IdInterCase,
                         principalTable: "InterCases",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_StatisticsInterCases_Users_UserId",
                         column: x => x.UserId,
@@ -803,6 +886,11 @@ namespace StatisticsAPP.Migrations
                 values: new object[] { 1, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, null, 1, 1, null });
 
             migrationBuilder.CreateIndex(
+                name: "IX_CircleCategories_UserId",
+                table: "CircleCategories",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_CircleDays_CircleId",
                 table: "CircleDays",
                 column: "CircleId");
@@ -840,10 +928,14 @@ namespace StatisticsAPP.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Circles_Name",
+                name: "IX_Circles_IdCircleCategory",
                 table: "Circles",
-                column: "Name",
-                unique: true);
+                column: "IdCircleCategory");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Circles_IdSupCourt",
+                table: "Circles",
+                column: "IdSupCourt");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Circles_UserId",
@@ -851,9 +943,9 @@ namespace StatisticsAPP.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_CircleStatistics_CircleDayId",
+                name: "IX_CircleStatistics_IdCircleDay",
                 table: "CircleStatistics",
-                column: "CircleDayId");
+                column: "IdCircleDay");
 
             migrationBuilder.CreateIndex(
                 name: "IX_CircleStatistics_UserId",
@@ -871,9 +963,9 @@ namespace StatisticsAPP.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Decisions_DecisionCategoryId",
+                name: "IX_Decisions_IdDecisionCategory",
                 table: "Decisions",
-                column: "DecisionCategoryId");
+                column: "IdDecisionCategory");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Decisions_UserId",
@@ -881,14 +973,24 @@ namespace StatisticsAPP.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_DelayCacesForMonths_IdCircleDay",
+                table: "DelayCacesForMonths",
+                column: "IdCircleDay");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DelayCacesForMonths_IdCircleStatistics",
+                table: "DelayCacesForMonths",
+                column: "IdCircleStatistics");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_DelayCases_UserId",
                 table: "DelayCases",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_InterCases_InterCasesCategoryId",
+                name: "IX_InterCases_IdInterCasesCategory",
                 table: "InterCases",
-                column: "InterCasesCategoryId");
+                column: "IdInterCasesCategory");
 
             migrationBuilder.CreateIndex(
                 name: "IX_InterCases_UserId",
@@ -960,9 +1062,24 @@ namespace StatisticsAPP.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Shortenings_IdCircleStatistics",
+                table: "Shortenings",
+                column: "IdCircleStatistics");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Shortenings_UserId",
+                table: "Shortenings",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_StatisticsDecisions_CaseYearId",
                 table: "StatisticsDecisions",
                 column: "CaseYearId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_StatisticsDecisions_CircleJudgeId",
+                table: "StatisticsDecisions",
+                column: "CircleJudgeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_StatisticsDecisions_CircleStatisticsId",
@@ -980,9 +1097,9 @@ namespace StatisticsAPP.Migrations
                 column: "IdDecision");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StatisticsDecisions_JudgeId",
+                name: "IX_StatisticsDecisions_IdJudge",
                 table: "StatisticsDecisions",
-                column: "JudgeId");
+                column: "IdJudge");
 
             migrationBuilder.CreateIndex(
                 name: "IX_StatisticsDecisions_UserId",
@@ -1000,14 +1117,14 @@ namespace StatisticsAPP.Migrations
                 column: "CircleStatisticsId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StatisticsDelayCases_DelayCaseId",
-                table: "StatisticsDelayCases",
-                column: "DelayCaseId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_StatisticsDelayCases_IdCircleStatistics",
                 table: "StatisticsDelayCases",
                 column: "IdCircleStatistics");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_StatisticsDelayCases_IdDelayCase",
+                table: "StatisticsDelayCases",
+                column: "IdDelayCase");
 
             migrationBuilder.CreateIndex(
                 name: "IX_StatisticsDelayCases_UserId",
@@ -1030,9 +1147,9 @@ namespace StatisticsAPP.Migrations
                 column: "IdCircleStatistics");
 
             migrationBuilder.CreateIndex(
-                name: "IX_StatisticsInterCases_InterCaseId",
+                name: "IX_StatisticsInterCases_IdInterCase",
                 table: "StatisticsInterCases",
-                column: "InterCaseId");
+                column: "IdInterCase");
 
             migrationBuilder.CreateIndex(
                 name: "IX_StatisticsInterCases_UserId",
@@ -1055,14 +1172,14 @@ namespace StatisticsAPP.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserCircles_CircleId",
+                name: "IX_UserCircles_IdCircle",
                 table: "UserCircles",
-                column: "CircleId");
+                column: "IdCircle");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserCircles_UserId",
+                name: "IX_UserCircles_IdUser",
                 table: "UserCircles",
-                column: "UserId");
+                column: "IdUser");
 
             migrationBuilder.CreateIndex(
                 name: "IX_UserRoles_IdRole",
@@ -1098,37 +1215,37 @@ namespace StatisticsAPP.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserSupCourts_SuperCourtId",
+                name: "IX_UserSupCourts_IdSupCourt",
                 table: "UserSupCourts",
-                column: "SuperCourtId");
+                column: "IdSupCourt");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserSupCourts_UserId",
+                name: "IX_UserSupCourts_IdUser",
                 table: "UserSupCourts",
-                column: "UserId");
+                column: "IdUser");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserSuperCourts_SuperCourtId",
+                name: "IX_UserSuperCourts_IdSuperCourt",
                 table: "UserSuperCourts",
-                column: "SuperCourtId");
+                column: "IdSuperCourt");
 
             migrationBuilder.CreateIndex(
-                name: "IX_UserSuperCourts_UserId",
+                name: "IX_UserSuperCourts_IdUser",
                 table: "UserSuperCourts",
-                column: "UserId");
+                column: "IdUser");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CircleJudges");
-
-            migrationBuilder.DropTable(
                 name: "DelayCacesForMonths");
 
             migrationBuilder.DropTable(
                 name: "RoleOperations");
+
+            migrationBuilder.DropTable(
+                name: "Shortenings");
 
             migrationBuilder.DropTable(
                 name: "StatisticsDecisions");
@@ -1155,16 +1272,16 @@ namespace StatisticsAPP.Migrations
                 name: "Operations");
 
             migrationBuilder.DropTable(
-                name: "Decisions");
+                name: "CircleJudges");
 
             migrationBuilder.DropTable(
-                name: "Judges");
+                name: "Decisions");
 
             migrationBuilder.DropTable(
                 name: "DelayCases");
 
             migrationBuilder.DropTable(
-                name: "CaseYear");
+                name: "CaseYears");
 
             migrationBuilder.DropTable(
                 name: "CircleStatistics");
@@ -1176,7 +1293,7 @@ namespace StatisticsAPP.Migrations
                 name: "Roles");
 
             migrationBuilder.DropTable(
-                name: "SupCourts");
+                name: "Judges");
 
             migrationBuilder.DropTable(
                 name: "DecisionCategories");
@@ -1188,13 +1305,19 @@ namespace StatisticsAPP.Migrations
                 name: "InterCasesCategories");
 
             migrationBuilder.DropTable(
-                name: "SuperCourts");
-
-            migrationBuilder.DropTable(
                 name: "CircleTypes");
 
             migrationBuilder.DropTable(
                 name: "Circles");
+
+            migrationBuilder.DropTable(
+                name: "CircleCategories");
+
+            migrationBuilder.DropTable(
+                name: "SupCourts");
+
+            migrationBuilder.DropTable(
+                name: "SuperCourts");
 
             migrationBuilder.DropTable(
                 name: "Users");

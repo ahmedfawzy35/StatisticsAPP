@@ -134,6 +134,7 @@
             btn_Save.TabIndex = 3;
             btn_Save.Text = "اضافة";
             btn_Save.UseVisualStyleBackColor = true;
+            btn_Save.Click += btn_Save_Click;
             // 
             // text_Name
             // 
@@ -172,6 +173,7 @@
             comboBox_Circle.Name = "comboBox_Circle";
             comboBox_Circle.Size = new Size(225, 23);
             comboBox_Circle.TabIndex = 1;
+            comboBox_Circle.SelectedIndexChanged += comboBox_Circle_SelectedIndexChanged;
             // 
             // label5
             // 

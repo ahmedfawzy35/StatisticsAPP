@@ -12,7 +12,7 @@
       <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="IsFirstLuanche" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

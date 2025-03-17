@@ -40,7 +40,7 @@ namespace StatisticsAPP.Utility
             return string.Format("لم يتم ايجاد {0} في قاعدة البيانات", Name);
         }
 
-        enum ArabicDay
+        public enum ArabicDay
         {
             السبت,
             الأحد,
@@ -107,6 +107,7 @@ namespace StatisticsAPP.Utility
             public static string Circle = "الدوائر";
             public static string CircleType = "انواع الدوائر";
             public static string CircleJudge = "تعيينات القضاه";
+            public static string CircleDay = "ايام الانعقاد";
 
             #endregion
 
@@ -156,7 +157,7 @@ namespace StatisticsAPP.Utility
                
                 return new List<string>
                 {
-                    User, Role, UserRole, RoleOperation ,UserCircles,UserSupCourts,UserSuperCourts, Circle, CircleType,CircleJudge,SuperCourt,
+                    User, Role, UserRole, RoleOperation ,UserCircles,UserSupCourts,UserSuperCourts, Circle, CircleType,CircleJudge,CircleDay,SuperCourt,
                     SupCourt,DecisionCategory,Decision,DelayCasesCategory,DelayCase,
                     InterCasesCategory,InterCases,Judge,CircleStatistics,StatisticsDecisions,StatisticsInterCases,StatisticsDelayCases
                 };
@@ -176,6 +177,7 @@ namespace StatisticsAPP.Utility
                     new OperationTexts{Name = Circle , Code = GetPropertyName(()=>Circle),},
                     new OperationTexts{Name = CircleType , Code = GetPropertyName(()=>CircleType),},
                     new OperationTexts{Name = CircleJudge , Code = GetPropertyName(()=>CircleJudge),},
+                    new OperationTexts{Name = CircleDay , Code = GetPropertyName(()=>CircleDay),},
                     new OperationTexts{Name = SuperCourt , Code = GetPropertyName(()=>SuperCourt),},
                     new OperationTexts{Name = SupCourt , Code = GetPropertyName(()=>SupCourt),},
                     new OperationTexts{Name = DecisionCategory , Code = GetPropertyName(()=>DecisionCategory),},
