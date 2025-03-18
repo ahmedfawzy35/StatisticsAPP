@@ -272,14 +272,34 @@ namespace StatisticsAPP.Servicies.Repositories
             _context.SaveChanges();
             return entity;
         }
-
-        public void Delete(T entity)
+        public void Delete(int Id)
         {
             if (!CheckPermission(MyTypes.PermissionsType.Delete, out var message))
             {
                 MessageBox.Show(message, "Permission Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            _context.Set<T>().Remove(entity);
+            else
+            {
+                var entity = _context.Set<T>().Find(Id);
+
+                if (entity != null)
+                    _context.Set<T>().Remove(entity);
+                else  
+                    MessageBox.Show("Entity not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+           
+        }
+        public void Delete(T entity)
+        {
+            if (!CheckPermission(MyTypes.PermissionsType.Delete, out var message))
+            {
+                MessageBox.Show(message, "Permission Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               
+            }else
+            {
+                _context.Set<T>().Remove(entity);
+            }
+           
         }
 
         public void DeleteRange(IEnumerable<T> entities)
@@ -346,6 +366,7 @@ namespace StatisticsAPP.Servicies.Repositories
             return true;
         }
 
+     
     }
 
 

@@ -45,8 +45,7 @@
             label3 = new Label();
             panel3 = new Panel();
             dataGridView_CirleDays = new DataGridView();
-            تعديل = new DataGridViewButtonColumn();
-            حذف = new DataGridViewButtonColumn();
+            btnDelete = new DataGridViewButtonColumn();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -228,7 +227,7 @@
             // 
             dataGridView_CirleDays.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView_CirleDays.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView_CirleDays.Columns.AddRange(new DataGridViewColumn[] { تعديل, حذف });
+            dataGridView_CirleDays.Columns.AddRange(new DataGridViewColumn[] { btnDelete });
             dataGridView_CirleDays.Dock = DockStyle.Fill;
             dataGridView_CirleDays.Location = new Point(0, 0);
             dataGridView_CirleDays.Name = "dataGridView_CirleDays";
@@ -236,20 +235,17 @@
             dataGridView_CirleDays.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView_CirleDays.Size = new Size(1180, 411);
             dataGridView_CirleDays.TabIndex = 1;
+            dataGridView_CirleDays.CellClick += dataGridView_CirleDays_CellClick;
             // 
-            // تعديل
+            // btnDelete
             // 
-            تعديل.HeaderText = "";
-            تعديل.Name = "تعديل";
-            تعديل.ReadOnly = true;
-            تعديل.Text = "تعديل";
-            // 
-            // حذف
-            // 
-            حذف.HeaderText = "";
-            حذف.Name = "حذف";
-            حذف.ReadOnly = true;
-            حذف.Text = "حذف";
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.HeaderText = "";
+            btnDelete.Name = "btnDelete";
+            btnDelete.ReadOnly = true;
+            btnDelete.Text = "حذف";
+            btnDelete.ToolTipText = "حذف";
+            btnDelete.UseColumnTextForButtonValue = true;
             // 
             // CircleDayForm
             // 
@@ -291,7 +287,6 @@
         private Label label5;
         private Label label6;
         private Button btn_Save;
-        private DataGridViewButtonColumn تعديل;
-        private DataGridViewButtonColumn حذف;
+        private DataGridViewButtonColumn btnDelete;
     }
 }

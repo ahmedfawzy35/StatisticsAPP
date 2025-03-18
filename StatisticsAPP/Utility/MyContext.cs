@@ -11,7 +11,7 @@ namespace StatisticsAPP.Utility
 {
     public static class MyContext
     {
-        private static UnitOfWork _UnitOfWork = new UnitOfWork( DbContextFactory.GetContext());
+        private static UnitOfWork _UnitOfWork = new UnitOfWork(context);
         private static ApplicationDbContext _context = new ApplicationDbContext();
 
         public static ApplicationDbContext context

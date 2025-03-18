@@ -1,6 +1,8 @@
-﻿using StatisticsAPP.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using StatisticsAPP.Data;
 using StatisticsAPP.Models.CircleModels;
 using StatisticsAPP.Models.CourtsModels;
+using StatisticsAPP.Servicies.Repositories.CircleRepos;
 using StatisticsAPP.Utility;
 using System;
 using System.Collections.Generic;
@@ -20,6 +22,7 @@ namespace StatisticsAPP.Forms.CircleForms
         List<SuperCourt> usersuperCourts;
         List<SupCourt> supCourts;
         List<Circle> userCircles;
+        string[] includs = new string[] { "Circle", "CircleType" };
         bool isloding = true;
         public CircleDayForm()
         {
@@ -29,6 +32,8 @@ namespace StatisticsAPP.Forms.CircleForms
             userCircles = LocalUser.userCircles;
 
         }
+
+
         #region Methods
         private void GetCircls()
         {
@@ -139,25 +144,28 @@ namespace StatisticsAPP.Forms.CircleForms
             {
                 if (comboBox_Circle.SelectedItem == null)
                 {
-                    FillDataGrid(new List<CircleDay>());
+                    FillDataGrid(new List<CircleDayDTO>());
                     return;
                 }
                 Circle selectedCircle = (Circle)comboBox_Circle.SelectedItem;
                 if (selectedCircle == null)
                 {
-                    FillDataGrid(new List<CircleDay>());
+                    FillDataGrid(new List<CircleDayDTO>());
                     return;
                 }
-                FillDataGrid(MyContext.UnitOfWork.CircleDays.FindAll(x => x.CircleId == selectedCircle.Id).ToList());
+                List<CircleDay> datat = MyContext.context.CircleDays.Include(x => x.CircleType).Include(x => x.Circle).ThenInclude(x => x.SupCourt).Where(x => x.CircleId == selectedCircle.Id).ToList();
+                FillDataGrid(MyMap.MapToCircleDayDTO(datat));
+                // FillDataGrid(MyMap.MapToCircleDayDTO(MyContext.UnitOfWork.CircleDays.FindAll(x => x.CircleId == selectedCircle.Id , includs).ToList()));
             }
             catch (Exception)
             {
-                FillDataGrid(new List<CircleDay>());
+                FillDataGrid(new List<CircleDayDTO>());
                 return;
             }
         }
-        private void FillDataGrid(List<CircleDay> data)
+        private void FillDataGrid(List<CircleDayDTO> data)
         {
+
             dataGridView_CirleDays.DataSource = data;
         }
         private void AddCircleDay()
@@ -177,10 +185,11 @@ namespace StatisticsAPP.Forms.CircleForms
                 circleDay.Name = text_Name.Text;
                 MyContext.UnitOfWork.CircleDays.Add(circleDay);
                 MessageBox.Show(MyContext.UnitOfWork.Save());
-               
-                DbContextFactory.RefreshContext();
-                
-                FillDataGrid(MyContext.UnitOfWork.CircleDays.FindAll(x => x.CircleId == selectedCircle.Id).ToList());
+
+                GetCircleDays();
+                //List<CircleDay> datat = MyContext.context.CircleDays.Include(x => x.CircleType).Include(x => x.Circle).ThenInclude(x => x.SupCourt).Where(x => x.CircleId == selectedCircle.Id).ToList();
+                //FillDataGrid(MyMap.MapToCircleDayDTO(datat));
+                //FillDataGrid(MyMap.MapToCircleDayDTO( MyContext.UnitOfWork.CircleDays.FindAll(x => x.CircleId == selectedCircle.Id, includs).ToList()));
             }
             catch (Exception ex)
             {
@@ -220,10 +229,6 @@ namespace StatisticsAPP.Forms.CircleForms
             }
 
         }
-        #endregion
-
-
-
         private void comboBoxSupCourt_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetCircls();
@@ -244,5 +249,43 @@ namespace StatisticsAPP.Forms.CircleForms
         {
             AddCircleDay();
         }
+
+        private void dataGridView_CirleDays_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // التأكد أن المستخدم ضغط على عمود الزر وليس أي عمود آخر
+            if (e.ColumnIndex >= 0 && dataGridView_CirleDays.Columns[e.ColumnIndex].Name == "btnDelete")
+            {
+                // جلب رقم الصف المضغوط عليه
+                int rowIndex = e.RowIndex;
+                if (rowIndex >= 0)
+                {
+                    // الحصول على بيانات الصف
+                    var row = dataGridView_CirleDays.Rows[rowIndex];
+
+                    // جلب اسم العنصر من العمود الأول (حسب الحاجة)
+                    string itemID = row.Cells[1].Value?.ToString() ?? "العنصر";
+                    string itemName = row.Cells[2].Value?.ToString() ?? "العنصر";
+
+                    // 3️⃣ إظهار رسالة تأكيد
+                    DialogResult result = MessageBox.Show($" - هل تريد حذف العنصر رقم ( {itemID} ) -  والمسجل بالاسم (  {itemName}  )؟",
+                        "تأكيد الحذف", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+
+                    if (result == DialogResult.Yes)
+                    {
+                        MyContext.UnitOfWork.CircleDays.Delete(int.Parse(itemID));
+                        MyContext.UnitOfWork.Save();
+                        // dataGridView_CirleDays.Rows.RemoveAt(rowIndex);
+                        MessageBox.Show("تم الحذف بنجاح!", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        GetCircleDays();
+                    }
+                }
+            }
+        }
+        #endregion
+
+
+
+
     }
 }

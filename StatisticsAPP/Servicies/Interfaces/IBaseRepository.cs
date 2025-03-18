@@ -31,6 +31,7 @@ namespace StatisticsAPP.Servicies.Interfaces
         Task<IEnumerable<T>> AddRangeAsync(IEnumerable<T> entities);
         T Update(T entity);
         void Delete(T entity);
+        void Delete(int Id);
         void DeleteRange(IEnumerable<T> entities);
         void Attach(T entity);
         void AttachRange(IEnumerable<T> entities);
