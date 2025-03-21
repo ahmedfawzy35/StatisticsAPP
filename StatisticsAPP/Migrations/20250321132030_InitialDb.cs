@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StatisticsAPP.Migrations
 {
     /// <inheritdoc />
-    public partial class InitiaklDB : Migration
+    public partial class InitialDb : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,6 +26,19 @@ namespace StatisticsAPP.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CaseYears", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "CircleMasterTypes",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CircleMasterTypes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -73,12 +86,19 @@ namespace StatisticsAPP.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IdCircleMasterType = table.Column<int>(type: "int", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_CircleTypes", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_CircleTypes_CircleMasterTypes_IdCircleMasterType",
+                        column: x => x.IdCircleMasterType,
+                        principalTable: "CircleMasterTypes",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
                         name: "FK_CircleTypes_Users_UserId",
                         column: x => x.UserId,
@@ -502,6 +522,7 @@ namespace StatisticsAPP.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Day = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CircleTypeId = table.Column<int>(type: "int", nullable: false),
                     CircleId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -953,6 +974,11 @@ namespace StatisticsAPP.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_CircleTypes_IdCircleMasterType",
+                table: "CircleTypes",
+                column: "IdCircleMasterType");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_CircleTypes_UserId",
                 table: "CircleTypes",
                 column: "UserId");
@@ -1309,6 +1335,9 @@ namespace StatisticsAPP.Migrations
 
             migrationBuilder.DropTable(
                 name: "Circles");
+
+            migrationBuilder.DropTable(
+                name: "CircleMasterTypes");
 
             migrationBuilder.DropTable(
                 name: "CircleCategories");

@@ -41,6 +41,7 @@ namespace StatisticsAPP.Data
         #region CircleModels
         public DbSet<Circle> Circles { get; set; } = default!;
         public DbSet<CircleCategory> CircleCategories { get; set; } = default!;
+        public DbSet<CircleMasterType> CircleMasterTypes { get; set; } = default!;
         public DbSet<CircleType> CircleTypes { get; set; } = default!;
         public DbSet<CircleJudge> CircleJudges { get; set; } = default!;
         public DbSet<CircleDay> CircleDays { get; set; } = default!;

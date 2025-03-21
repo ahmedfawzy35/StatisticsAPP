@@ -215,21 +215,24 @@ namespace StatisticsAPP.Forms.MainForm
 
                 await DefualtPermissions.AddDefualtOperations();
                 await DefualtPermissions.AddDefualtToRoleOperation();
-                await DefualtPermissions.AddDefualtSuperCourt();
-                await DefualtPermissions.AddDefualtSupCourt();
+               
 
 
 
 
                 ////if (Properties.Settings.Default.IsFirstLuanche)
                 ////{
-                ////                  await DefualtData.AddDefultData();
-                //await DefualtData.AddJudjes();
+                //                  await DefualtData.AddDefultData();
+              //  await DefualtData.AddJudjes();
+                //await DefualtData.AddCircleMasterTypes();
                 //await DefualtData.AddCircleTypes();
                 //await DefualtData.AddCircleCategory();
-                //await DefualtData.AddCircles();
+                //await DefualtData.AddDefultData();
+                // await DefualtData.AddCircles();
                 //await DefualtData.AddUserCircle();
-                //await DefualtData.AddCircles();
+                //await DefualtData.AddUserSuperCourts();
+                //await DefualtData.AddUserSupCourts();
+                
                 ////    Properties.Settings.Default.IsFirstLuanche = false;
                 ////    Properties.Settings.Default.Save();
                 ////}

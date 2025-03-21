@@ -12,8 +12,8 @@ using StatisticsAPP.Data;
 namespace StatisticsAPP.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250317211808_Initiak=lDB")]
-    partial class InitiaklDB
+    [Migration("20250321132030_InitialDb")]
+    partial class InitialDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -431,6 +431,10 @@ namespace StatisticsAPP.Migrations
                     b.Property<int>("CircleTypeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Day")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -496,6 +500,23 @@ namespace StatisticsAPP.Migrations
                     b.ToTable("CircleJudges");
                 });
 
+            modelBuilder.Entity("StatisticsAPP.Models.CircleModels.CircleMasterType", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CircleMasterTypes");
+                });
+
             modelBuilder.Entity("StatisticsAPP.Models.CircleModels.CircleType", b =>
                 {
                     b.Property<int>("Id")
@@ -507,6 +528,9 @@ namespace StatisticsAPP.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("IdCircleMasterType")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -515,6 +539,8 @@ namespace StatisticsAPP.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IdCircleMasterType");
 
                     b.HasIndex("UserId");
 
@@ -1273,11 +1299,19 @@ namespace StatisticsAPP.Migrations
 
             modelBuilder.Entity("StatisticsAPP.Models.CircleModels.CircleType", b =>
                 {
+                    b.HasOne("StatisticsAPP.Models.CircleModels.CircleMasterType", "CircleMasterType")
+                        .WithMany()
+                        .HasForeignKey("IdCircleMasterType")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("StatisticsAPP.Models.Auth.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("CircleMasterType");
 
                     b.Navigation("User");
                 });

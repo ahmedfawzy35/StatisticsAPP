@@ -23,9 +23,12 @@ namespace StatisticsAPP.Utility
                 Day = circleDayDTO.Day,
                 CircleTypeName = circleDayDTO.CircleType != null ? circleDayDTO.CircleType.Name : null,
                 CircleName = circleDayDTO.Circle != null ? circleDayDTO.Circle.Name : null,
-                SupCourteName = circleDayDTO.Circle != null && circleDayDTO.Circle.SupCourt != null
-                                ? circleDayDTO.Circle.SupCourt.Name : null
-           
+              
+                 CircleMasterTypeName = circleDayDTO.CircleType != null  && circleDayDTO.CircleType.CircleMasterType != null
+                                         ? circleDayDTO.CircleType.CircleMasterType.Name : null,
+                    SupCourteName = circleDayDTO.Circle != null && circleDayDTO.Circle.SupCourt != null
+                                ? circleDayDTO.Circle.SupCourt.Name : null,
+
                 });
             }
             return circleDayDTOs;

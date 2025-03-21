@@ -23,6 +23,8 @@ namespace StatisticsAPP.Servicies.Repositories.CircleRepos
         public string? Day { get; set; }
         [DisplayName("النوع ")]
         public string? CircleTypeName { get; set; }
+        [DisplayName("النوع الرئيسي ")]
+        public string? CircleMasterTypeName { get; set; }
         [DisplayName("الدائرة")]
 
         public string? CircleName { get; set; }

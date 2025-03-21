@@ -153,7 +153,7 @@ namespace StatisticsAPP.Forms.CircleForms
                     FillDataGrid(new List<CircleDayDTO>());
                     return;
                 }
-                List<CircleDay> datat = MyContext.context.CircleDays.Include(x => x.CircleType).Include(x => x.Circle).ThenInclude(x => x.SupCourt).Where(x => x.CircleId == selectedCircle.Id).ToList();
+                List<CircleDay> datat = MyContext.context.CircleDays.Include(x => x.CircleType).ThenInclude(x=>x.CircleMasterType).Include(x => x.Circle).ThenInclude(x => x.SupCourt).Where(x => x.CircleId == selectedCircle.Id).ToList();
                 FillDataGrid(MyMap.MapToCircleDayDTO(datat));
                 // FillDataGrid(MyMap.MapToCircleDayDTO(MyContext.UnitOfWork.CircleDays.FindAll(x => x.CircleId == selectedCircle.Id , includs).ToList()));
             }
