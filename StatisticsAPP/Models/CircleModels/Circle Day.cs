@@ -1,4 +1,5 @@
-﻿using StatisticsAPP.Models.StatisticsModels;
+﻿using StatisticsAPP.Models.JudgeModels;
+using StatisticsAPP.Models.StatisticsModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

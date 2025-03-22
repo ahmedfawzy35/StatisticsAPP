@@ -375,8 +375,12 @@ namespace StatisticsAPP.Seeds
                 new CircleType{ Name = "مدني حكومة كلي", UserId = userid, CreatedAt = DateTime.Now  ,IdCircleMasterType = مدني.Id },
                 new CircleType{ Name = "تعويضات مدني كلي", UserId = userid, CreatedAt = DateTime.Now  ,IdCircleMasterType = مدني.Id },
                   new CircleType{ Name = "مدني جزئي", UserId = userid, CreatedAt = DateTime.Now ,IdCircleMasterType = مدني.Id },
+                  new CircleType{ Name = "مدني جزئي - مستعجل", UserId = userid, CreatedAt = DateTime.Now ,IdCircleMasterType = مدني.Id },
+                  new CircleType{ Name = " مدني جزئي - حكومة", UserId = userid, CreatedAt = DateTime.Now ,IdCircleMasterType = مدني.Id },
                   new CircleType{ Name = "صحة توقيع", UserId = userid, CreatedAt = DateTime.Now ,IdCircleMasterType = مدني.Id },
-                new CircleType{ Name = "جنح جزئي", UserId = userid, CreatedAt = DateTime.Now  , IdCircleMasterType = جنائي.Id},
+                new CircleType{ Name = "جنح جزئي", UserId = userid, CreatedAt = DateTime.Now  , IdCircleMasterType = جنائي.Id}, 
+                new CircleType{ Name = "جنح جزئي - مباني", UserId = userid, CreatedAt = DateTime.Now  , IdCircleMasterType = جنائي.Id},
+
                 new CircleType{ Name = "جنح مسأنفة", UserId = userid, CreatedAt = DateTime.Now  , IdCircleMasterType = جنائي.Id },
                 new CircleType{ Name = "جنح مستأنفة مباني", UserId = userid, CreatedAt = DateTime.Now  , IdCircleMasterType = جنائي.Id },
                 new CircleType{ Name = "جنح طفل ابتدائي", UserId = userid, CreatedAt = DateTime.Now  , IdCircleMasterType = جنائي.Id },

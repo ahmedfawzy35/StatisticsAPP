@@ -223,7 +223,7 @@ namespace StatisticsAPP.Forms.MainForm
                 ////if (Properties.Settings.Default.IsFirstLuanche)
                 ////{
                 //                  await DefualtData.AddDefultData();
-              //  await DefualtData.AddJudjes();
+           //   await DefualtData.AddJudjes();
                 //await DefualtData.AddCircleMasterTypes();
                 //await DefualtData.AddCircleTypes();
                 //await DefualtData.AddCircleCategory();
