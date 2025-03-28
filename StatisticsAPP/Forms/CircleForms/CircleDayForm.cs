@@ -3,6 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using StatisticsAPP.Data;
 using StatisticsAPP.Models.CircleModels;
 using StatisticsAPP.Models.CourtsModels;
+using StatisticsAPP.Servicies.CircleServicies.DTOS;
 using StatisticsAPP.Servicies.Repositories.CircleRepos;
 using StatisticsAPP.Utility;
 using System;
@@ -14,6 +15,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace StatisticsAPP.Forms.CircleForms
@@ -184,7 +186,7 @@ namespace StatisticsAPP.Forms.CircleForms
                     MessageBox.Show("قم باختيار دائرة اولا");
                     return;
                 }
-                CircleType selectedCircleType = (CircleType)comboBox_Circle.SelectedItem;
+                CircleType selectedCircleType = (CircleType)comboBox_Type.SelectedItem;
                 if (selectedCircleType == null)
                 {
                     MessageBox.Show("قم باختيار نوع الدائرة  اولا");
@@ -227,37 +229,75 @@ namespace StatisticsAPP.Forms.CircleForms
             dataGridView_SearchJudjes.Columns[7].Visible = false;
             dataGridView_SearchJudjes.Columns[8].Visible = false;
         }
-        private void GetCircleJujes()
+        private void FillCircleJujes()
+        {
+            dataGridView_CircleJudjes.DataSource = GetCircleJujes();
+            dataGridView_CircleJudjes.Columns[1].Visible = false;
+            dataGridView_CircleJudjes.Columns[2].Visible = false;
+            dataGridView_CircleJudjes.Columns[3].Visible = false;
+            dataGridView_CircleJudjes.Columns[5].Visible = false;
+            dataGridView_CircleJudjes.Columns[6].Visible = false;
+        }
+        private List<CircleJudgeDto>? GetCircleJujes()
         {
             try
             {
                 if (comboBox_Circle.SelectedItem == null)
                 {
                     dataGridView_CircleJudjes.DataSource = null;
-                    return;
+                  return  null;
                 }
                 Circle selectedCircle = (Circle)comboBox_Circle.SelectedItem;
                 if (selectedCircle == null)
                 {
                     dataGridView_CircleJudjes.DataSource = null;
-                    return;
+                    return null;
                 }
                 var data = MyContext.context.CircleJudges.Include(x => x.Circle).Include(x => x.Judge).Where(x => x.IdCircle == selectedCircle.Id).ToList();
-                var data2 = data.Select(x => new
+               
+                return data.Select(x => new CircleJudgeDto
                 {
-                    id = x.Id,
-                    NameJudge = x.Judge!.Name,
-                    datetart = x.DateStart,
+                    Id = x.Id,
+                    IdCircle = x.IdCircle,
+                    IdJudge = x.IdJudge,
+                    NameJudge = x.Judge!.Name!,
+                    DateStart = x.DateStart,
+                    NameCircle = x.Circle!.Name!,
+                    rate = x.Rate,
                     DateEnd = x.DateEnd
                 }).ToList();
-                dataGridView_CircleJudjes.DataSource = data2;
+
             }
             catch (Exception)
             {
                 dataGridView_CircleJudjes.DataSource = null;
 
-                return;
+                return null;
             }
+        }
+        private CircleJudge? CheckJudjeEvaliability()
+        {
+            if (string.IsNullOrEmpty(text_GudjeId.Text))
+            {
+                return null;
+            }
+            var newdatestart = date_Start.Value.Date;
+            var newdateend = date_End.Value.Date;
+            var contex = new ApplicationDbContext();
+            int judjeId = int.Parse(text_GudjeId.Text);
+            return contex.CircleJudges.Include(x=>x.Circle).Where(x=>x.IdJudge == judjeId  &&
+                                                 (
+
+                                                 ( x.DateStart.Date >= newdatestart.Date && x.DateStart.Date <= newdateend.Date) ||
+                                                 (x.DateEnd!.Value.Date >= newdatestart.Date && x.DateEnd.Value.Date <= newdateend.Date) || 
+                                                 (newdatestart.Date >= x.DateStart.Date && newdatestart.Date <=x.DateEnd.Value.Date) || 
+                                                 (newdateend.Date >=x.DateStart.Date && newdateend.Date <=x.DateEnd.Value.Date)) 
+
+                                                 ).FirstOrDefault();
+
+
+           
+              
         }
         private void AddCircleJudge()
         {
@@ -273,13 +313,43 @@ namespace StatisticsAPP.Forms.CircleForms
                     MessageBox.Show("   برجاء ادخال ترتيب القاضي ");
                     return;
                 }
-
+                if (int.Parse(textBox_Rate.Text) > 4 || int.Parse(textBox_Rate.Text) < 1)
+                {
+                    MessageBox.Show("الترتيب يجب ان يكون بين 1 و 4");
+                    return;
+                }
                 Circle selectedCircle = (Circle)comboBox_Circle.SelectedItem;
                 if (selectedCircle == null)
                 {
                     MessageBox.Show("قم باختيار دائرة اولا");
                     return;
 
+                }
+                if (date_Start.Value.Date > date_End.Value.Date)
+                {
+                    MessageBox.Show("تاريخ البداية يجب ان يكون اقل من تاريخ النهاية");
+                    return;
+                }
+                var checkJudjeEvaliability = CheckJudjeEvaliability();
+                if (checkJudjeEvaliability != null)
+                {
+                    MessageBox.Show($"القاضي موجود بالفعل في  الدائرة  ( {checkJudjeEvaliability.Circle!.Name}) ابتداء من  ({checkJudjeEvaliability.DateStart.Date.ToShortDateString()} ) الى التاريخ  ({checkJudjeEvaliability.DateEnd!.Value.Date.ToShortDateString()} )  وبالتالي لا يمكن تعيينه ");
+                    return;
+                }
+                var circleJudjes = GetCircleJujes();
+                if(circleJudjes != null)
+                {
+                    if (circleJudjes.Count >= 4)
+                    {
+                        MessageBox.Show("لا يمكن تعيين اكثر من 4 قضاة للدائرة");
+                        return;
+                    }
+                }
+               if(circleJudjes != null && circleJudjes.Any(x=>x.rate == int.Parse(textBox_Rate.Text)))
+                {
+                    var xx= circleJudjes.FirstOrDefault(x => x.rate == int.Parse(textBox_Rate.Text));
+                    MessageBox.Show($"{xx.rateName}  موجود مسبقا  ");
+                    return;
                 }
 
                 CircleJudge circleJudje = new CircleJudge();
@@ -294,7 +364,7 @@ namespace StatisticsAPP.Forms.CircleForms
                 MyContext.UnitOfWork.CircleJudge.Add(circleJudje);
                 MessageBox.Show(MyContext.UnitOfWork.Save());
 
-                GetCircleJujes();
+                FillCircleJujes();
 
             }
             catch (Exception ex)
@@ -320,8 +390,10 @@ namespace StatisticsAPP.Forms.CircleForms
             GetSupCourts();
 
             comboBox_Day.DataSource = Enum.GetValues(typeof(MyStrings.ArabicDay));
-            date_Start.Value = new DateTime(DateTime.Now.Year - 1, 10, 1);
-            date_End.Value = new DateTime(DateTime.Now.Year, 9, 30);
+
+
+            date_Start.Value = new DateTime(DateTime.Now.Year - 1, 10, 1); // مؤقت
+            date_End.Value = new DateTime(DateTime.Now.Year, 9, 30);  // مؤقت
         }
         private void comboBoxSuperCourt_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -350,7 +422,7 @@ namespace StatisticsAPP.Forms.CircleForms
         {
             GetCircleType();
             GetCircleDays();
-            GetCircleJujes();
+            FillCircleJujes();
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
@@ -365,11 +437,15 @@ namespace StatisticsAPP.Forms.CircleForms
             {
                 // جلب رقم الصف المضغوط عليه
                 int rowIndex = e.RowIndex;
+
                 if (rowIndex >= 0)
                 {
                     // الحصول على بيانات الصف
                     var row = dataGridView_CirleDays.Rows[rowIndex];
-
+                    if (row.Cells.Count <= 1)
+                    {
+                        return;
+                    }
                     // جلب اسم العنصر من العمود الأول (حسب الحاجة)
                     string itemID = row.Cells[1].Value?.ToString() ?? "العنصر";
                     string itemName = row.Cells[2].Value?.ToString() ?? "العنصر";
@@ -401,7 +477,10 @@ namespace StatisticsAPP.Forms.CircleForms
                 {
                     // الحصول على بيانات الصف
                     var row = dataGridView_CircleJudjes.Rows[rowIndex];
-
+                    if (row.Cells.Count <= 1)
+                    {
+                        return;
+                    }
                     // جلب اسم العنصر من العمود الأول (حسب الحاجة)
                     string itemID = row.Cells[1].Value?.ToString() ?? "العنصر";
                     string JudjeName = row.Cells[2].Value?.ToString() ?? "العنصر";
@@ -416,7 +495,7 @@ namespace StatisticsAPP.Forms.CircleForms
                         MyContext.UnitOfWork.CircleJudge.Delete(int.Parse(itemID));
                         MessageBox.Show(MyContext.UnitOfWork.Save());
                        
-                        GetCircleJujes();
+                        FillCircleJujes();
                     }
                 }
             }
@@ -432,7 +511,10 @@ namespace StatisticsAPP.Forms.CircleForms
                 {
                     // الحصول على بيانات الصف
                     var row = dataGridView_SearchJudjes.Rows[rowIndex];
-
+                    if (row.Cells.Count <= 1)
+                    {
+                        return;
+                    }
                     // جلب اسم العنصر من العمود الأول (حسب الحاجة)
                     string itemID = row.Cells[1].Value?.ToString() ?? "العنصر";
                     string itemName = row.Cells[2].Value?.ToString() ?? "العنصر";
