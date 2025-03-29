@@ -1,6 +1,7 @@
 ﻿using StatisticsAPP.Forms.AuthForms.UserForms;
 using StatisticsAPP.Forms.CircleForms;
 using StatisticsAPP.Forms.CourtsForms;
+using StatisticsAPP.Forms.StatisticsForms;
 using StatisticsAPP.Seeds;
 using System;
 using System.Collections.Generic;
@@ -215,7 +216,7 @@ namespace StatisticsAPP.Forms.MainForm
 
                 await DefualtPermissions.AddDefualtOperations();
                 await DefualtPermissions.AddDefualtToRoleOperation();
-               
+
 
 
 
@@ -223,7 +224,7 @@ namespace StatisticsAPP.Forms.MainForm
                 ////if (Properties.Settings.Default.IsFirstLuanche)
                 ////{
                 //                  await DefualtData.AddDefultData();
-           //   await DefualtData.AddJudjes();
+                //   await DefualtData.AddJudjes();
                 //await DefualtData.AddCircleMasterTypes();
                 //await DefualtData.AddCircleTypes();
                 //await DefualtData.AddCircleCategory();
@@ -232,7 +233,7 @@ namespace StatisticsAPP.Forms.MainForm
                 //await DefualtData.AddUserCircle();
                 //await DefualtData.AddUserSuperCourts();
                 //await DefualtData.AddUserSupCourts();
-                
+
                 ////    Properties.Settings.Default.IsFirstLuanche = false;
                 ////    Properties.Settings.Default.Save();
                 ////}
@@ -276,6 +277,13 @@ namespace StatisticsAPP.Forms.MainForm
         private void ايامالانعقادToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowForm("ايام الانعقاد", new CircleDayForm());
+        }
+
+        private void ToolStripMenuItem_AddStatistic_Madani_Click(object sender, EventArgs e)
+        {
+            StatisticsAddConfigurationForm frm = new StatisticsAddConfigurationForm();
+            frm.ShowDialog();
+          
         }
     }
 }

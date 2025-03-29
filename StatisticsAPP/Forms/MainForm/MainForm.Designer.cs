@@ -37,6 +37,7 @@
             ToolStripMenuItem_circles = new ToolStripMenuItem();
             ToolStripMenuItem_AddCircle = new ToolStripMenuItem();
             ToolStripMenuItem_ManageCircle = new ToolStripMenuItem();
+            ايامالانعقادToolStripMenuItem = new ToolStripMenuItem();
             ToolStripMenuItem_judges = new ToolStripMenuItem();
             ToolStripMenuItem_AddJudge = new ToolStripMenuItem();
             ToolStripMenuItem_AppointmentOfJudge = new ToolStripMenuItem();
@@ -61,7 +62,6 @@
             ToolStripMenuItem_EditPassword = new ToolStripMenuItem();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
-            ايامالانعقادToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             tabControl1.SuspendLayout();
             SuspendLayout();
@@ -119,14 +119,21 @@
             // ToolStripMenuItem_AddCircle
             // 
             ToolStripMenuItem_AddCircle.Name = "ToolStripMenuItem_AddCircle";
-            ToolStripMenuItem_AddCircle.Size = new Size(180, 22);
+            ToolStripMenuItem_AddCircle.Size = new Size(130, 22);
             ToolStripMenuItem_AddCircle.Text = "اضافة دائرة";
             // 
             // ToolStripMenuItem_ManageCircle
             // 
             ToolStripMenuItem_ManageCircle.Name = "ToolStripMenuItem_ManageCircle";
-            ToolStripMenuItem_ManageCircle.Size = new Size(180, 22);
+            ToolStripMenuItem_ManageCircle.Size = new Size(130, 22);
             ToolStripMenuItem_ManageCircle.Text = "ادارة الدوائر";
+            // 
+            // ايامالانعقادToolStripMenuItem
+            // 
+            ايامالانعقادToolStripMenuItem.Name = "ايامالانعقادToolStripMenuItem";
+            ايامالانعقادToolStripMenuItem.Size = new Size(130, 22);
+            ايامالانعقادToolStripMenuItem.Text = "ايام الانعقاد";
+            ايامالانعقادToolStripMenuItem.Click += ايامالانعقادToolStripMenuItem_Click;
             // 
             // ToolStripMenuItem_judges
             // 
@@ -170,7 +177,8 @@
             // 
             ToolStripMenuItem_AddStatistic_Madani.Name = "ToolStripMenuItem_AddStatistic_Madani";
             ToolStripMenuItem_AddStatistic_Madani.Size = new Size(186, 22);
-            ToolStripMenuItem_AddStatistic_Madani.Text = "اضافة احصائية مدني";
+            ToolStripMenuItem_AddStatistic_Madani.Text = "اضافة احصائية ";
+            ToolStripMenuItem_AddStatistic_Madani.Click += ToolStripMenuItem_AddStatistic_Madani_Click;
             // 
             // ToolStripMenuItem_AddStatistic_Genaey
             // 
@@ -296,13 +304,6 @@
             tabPage1.Size = new Size(1263, 552);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "الرئيسيه";
-            // 
-            // ايامالانعقادToolStripMenuItem
-            // 
-            ايامالانعقادToolStripMenuItem.Name = "ايامالانعقادToolStripMenuItem";
-            ايامالانعقادToolStripMenuItem.Size = new Size(180, 22);
-            ايامالانعقادToolStripMenuItem.Text = "ايام الانعقاد";
-            ايامالانعقادToolStripMenuItem.Click += ايامالانعقادToolStripMenuItem_Click;
             // 
             // MainForm
             // 

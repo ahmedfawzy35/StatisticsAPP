@@ -13,7 +13,7 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         public int Year { get; set; }
         public int Month { get; set; }
         public int CircleCtogryId { get; set; }
-        public int CirclSuperTypeId { get; set; }
+        public int CircleMasterTypeId { get; set; }
 
     }
 }
