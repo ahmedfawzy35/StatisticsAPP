@@ -282,8 +282,15 @@ namespace StatisticsAPP.Forms.MainForm
         private void ToolStripMenuItem_AddStatistic_Madani_Click(object sender, EventArgs e)
         {
             StatisticsAddConfigurationForm frm = new StatisticsAddConfigurationForm();
-            frm.ShowDialog();
-          
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+                var config = frm.FormConfig;
+                StatisticsAddForm frm2 = new StatisticsAddForm(config!);
+                frm2._Config = config;
+                ShowForm("ايام الانعقاد",frm2);
+
+            }
+
         }
     }
 }

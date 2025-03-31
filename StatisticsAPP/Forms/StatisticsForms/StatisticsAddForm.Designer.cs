@@ -43,9 +43,10 @@
             // panel2
             // 
             panel2.AutoScroll = true;
-            panel2.Location = new Point(0, 106);
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(0, 100);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1553, 1600);
+            panel2.Size = new Size(1553, 499);
             panel2.TabIndex = 1;
             // 
             // StatisticsAddForm
