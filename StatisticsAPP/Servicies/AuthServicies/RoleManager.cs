@@ -100,7 +100,9 @@ namespace StatisticsAPP.Servicies.AuthServicies
         public List<Circle> GetUserCircles(int idUser)
         {
             var usersc = _context.UserCircles.Include(x => x.Circle).ThenInclude(x=>x.CircleDays! ).ThenInclude(x=>x.CircleType)
-                                             .Include(x => x.Circle).ThenInclude(x=>x.SupCourt)                                           
+                                             .Include(x => x.Circle).ThenInclude(x=>x.SupCourt)   
+                                             .Include(x => x.Circle).ThenInclude(x => x.CircleJudges!).ThenInclude(x => x.Judge)
+                                             .Include(x => x.Circle)
                                              .Where(x => x.IdUser == idUser).ToList();
             if (usersc.Count == 0)
             {

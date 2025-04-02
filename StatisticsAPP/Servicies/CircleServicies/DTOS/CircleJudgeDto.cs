@@ -9,7 +9,7 @@ namespace StatisticsAPP.Servicies.CircleServicies.DTOS
 {
     public class CircleJudgeDto
     {
-        private static readonly Dictionary<int, string> RateNames = new()
+        public static readonly Dictionary<int, string> RateNames = new()
     {
         { 1, "رئيس الدائرة" },
         { 2, "عضو يمين" },

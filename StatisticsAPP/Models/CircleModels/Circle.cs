@@ -23,8 +23,8 @@ namespace StatisticsAPP.Models.CircleModels
 
         // العلاقات
 
-         public virtual IEnumerable<CircleJudge>? CircleJudges { get; set; }
-         public virtual IEnumerable<CircleDay>? CircleDays { get; set; }
+         public virtual IEnumerable<CircleJudge>? CircleJudges { get; set; } = new List<CircleJudge>();
+        public virtual IEnumerable<CircleDay>? CircleDays { get; set; } = new List<CircleDay>();
         [ForeignKey("IdSupCourt")]
         public SupCourt? SupCourt { get; set; }
         [ForeignKey("IdCircleCategory")]

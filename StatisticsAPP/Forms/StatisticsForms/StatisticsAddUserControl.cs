@@ -13,6 +13,10 @@ using Microsoft.EntityFrameworkCore;
 using StatisticsAPP.Models.CircleModels;
 using StatisticsAPP.Models.StatisticsModels;
 using Microsoft.IdentityModel.Tokens;
+using StatisticsAPP.Models.JudgeModels;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using StatisticsAPP.Servicies.CircleServicies.DTOS;
+using System.Globalization;
 
 namespace StatisticsAPP.Forms.StatisticsForms
 {
@@ -23,46 +27,84 @@ namespace StatisticsAPP.Forms.StatisticsForms
         bool isEditCircleStatistics = false;
         bool isEditCircleStatisticsForYear = false;
         List<Circle> userCircles;
-
+        private Dictionary<string, int> months = new Dictionary<string, int>
+    {
+       
+    };
         public StatisticsAddUserControl()
         {
             InitializeComponent();
             userCircles = LocalUser.userCircles;
+            comboBox_CaseYear.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
+            comboBox_Circles.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
+            comboBox_CircleDays.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
+            comboBox_MoagalatAlaAshhorTalia_AlBaky.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
+            comboBox_MoagalatAlaAshhorTalia_Farey.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
+            comboBox_MoagalatAlaAshhorTalia_MadAgal.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
+            comboBox_Tawzie_Judje.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
 
+           
         }
         #region Methods
         #region get Methods
         private void GetCircles()
         {
-           var circlesQuery = userCircles.Where(x => x.IdSupCourt == Config!.SupCourtId    &&
-                                                x.IdCircleCategory == Config.CircleCtogryId  );
+            var circlesQuery = userCircles.Where(x => x.IdSupCourt == Config!.SupCourtId &&
+                                                 x.IdCircleCategory == Config.CircleCtogryId);
 
-           var circlesQuery2 = userCircles.Where(x => x.SupCourt!.SuperCourtId == Config!.SuperCourtId    &&
-                                                 x.IdCircleCategory == Config.CircleCtogryId  );
+            var circlesQuery2 = userCircles.Where(x => x.SupCourt!.SuperCourtId == Config!.SuperCourtId &&
+                                                  x.IdCircleCategory == Config.CircleCtogryId);
 
             var circls = Config!.SupCourtId == 0 ? circlesQuery2.ToList() : circlesQuery.ToList();
 
-            var circleToView = circls.Where(x => (x.CircleDays.Where(cd =>cd.CircleType.IdCircleMasterType == Config.CircleMasterTypeId).ToList().Count > 0)).ToList();
+            var circleToView = circls.Where(x => (x.CircleDays.Where(cd => cd.CircleType.IdCircleMasterType == Config.CircleMasterTypeId).ToList().Count > 0)).ToList();
 
 
 
-          
+
 
             comboBox_Circles.DataSource = circleToView;
             comboBox_Circles.DisplayMember = "Name";
             comboBox_Circles.ValueMember = "Id";
+
         }
         private void GetCirclDays()
         {
             var circle = (Circle)comboBox_Circles.SelectedItem!;
             if (circle == null) { MessageBox.Show("CircleDay is null"); return; }
-            var _circle = userCircles.Where(x=>x.Id == circle.Id).First();
+            var _circle = userCircles.Where(x => x.Id == circle.Id).First();
 
-            var circledays =_circle.CircleDays!.Where(cd => cd.CircleType!.IdCircleMasterType == Config!.CircleMasterTypeId).ToList();
+            var circledays = _circle.CircleDays!.Where(cd => cd.CircleType!.IdCircleMasterType == Config!.CircleMasterTypeId).ToList();
 
             comboBox_CircleDays.DataSource = circledays;
             comboBox_CircleDays.DisplayMember = "Name";
             comboBox_CircleDays.ValueMember = "Id";
+
+            GetJudges();
+        }
+        private void GetJudges()
+        {
+            var circle = (Circle)comboBox_Circles.SelectedItem!;
+            if (circle == null) { MessageBox.Show("CircleDay is null"); return; }
+
+            var judges = MyContext.context.CircleJudges.Include(j => j.Judge).Where(cj =>cj.IdCircle == circle.Id && cj.DateStart <= DateTime.Now.Date && cj.DateEnd >= DateTime.Now.Date).Select(x => new CircleJudgeDto
+            {
+                IdJudge = x.IdJudge,
+                NameJudge = x.Judge!.Name!,
+                DateEnd = x.DateEnd,
+                DateStart = x.DateStart,
+                Id = x.Id,
+                IdCircle = x.IdCircle,
+                rate = x.Rate   ,
+              
+            }
+            ).ToList();
+
+            comboBox_Tawzie_Judje.DataSource = judges;
+            comboBox_Tawzie_Judje.DisplayMember = "NameJudge";
+            comboBox_Tawzie_Judje.ValueMember = "IdJudge";
         }
         private void GetStatistic()
         {
@@ -102,7 +144,7 @@ namespace StatisticsAPP.Forms.StatisticsForms
         #region Calc Methods
         private void CalcMotadawal()
         {
-            var textboxes = groupBox_Motdawal.Controls.OfType<TextBox>().ToList();
+            var textboxes = CustomGroupBox_Motdawal.Controls.OfType<TextBox>().ToList();
 
 
             int motadawal = 0;
@@ -128,7 +170,7 @@ namespace StatisticsAPP.Forms.StatisticsForms
 
         private void CalcMahkoumFih()
         {
-            var textBoxes = groupBox_MahkoumFih.Controls.OfType<TextBox>().ToList();
+            var textBoxes = CustomGroupBox_MahkoumFih.Controls.OfType<TextBox>().ToList();
             var textBoxesKatey = group_Katey.Controls.OfType<TextBox>().ToList();
 
             int totalKatey = 0;
@@ -240,20 +282,88 @@ namespace StatisticsAPP.Forms.StatisticsForms
             tex_Tawzie_TotalMahkomFih.Text = (Katey_Shakly + Katey_Mawdoey + Ethbat + Okhra + solh + farey).ToString();
         }
         #endregion
+
+        #region Validation Methods
+
+        private List<string> Validation()
+        {
+            List<string> validation_errors = new List<string>();
+
+            if (string.IsNullOrEmpty(text_Mokadam_Total.Text))
+            {
+                validation_errors.Add("حملة المقدم فارغ");
+            }
+
+            int Mokadam_Total = int.Parse(text_Mokadam_Total.Text);
+            int MoeagalKhargALshahr_Total = int.Parse(text_MoeagalKhargALshahr_Total.Text);
+            int MahkoumFih_Total = int.Parse(text_MahkoumFih_Total.Text);
+            if (Mokadam_Total != MoeagalKhargALshahr_Total + MahkoumFih_Total)
+            {
+                validation_errors.Add($"حملة المقدم {Mokadam_Total} وحملة المؤجل والحكوم فيه {MoeagalKhargALshahr_Total + MahkoumFih_Total}  غير متساويان");
+            }
+
+            int Tawzie_MoeagalKhargALshahr = string.IsNullOrEmpty(text_MoagalatAlaAshhorTaliaTotal.Text) ? 0 : int.Parse(text_MoagalatAlaAshhorTaliaTotal.Text);
+            if (MoeagalKhargALshahr_Total != Tawzie_MoeagalKhargALshahr)
+            {
+                validation_errors.Add("المؤجل خارج الشهر غير موزع بشكل صحيح");
+            }
+
+            return validation_errors;
+        }
+
+        private string GetArabicMonthName(int month)
+        {
+            return new DateTime(1, month, 1)
+                .ToString("MMMM", new CultureInfo("ar-AE")); // أو "ar-EG" للغة المصرية
+        }
+
+        private void SetMonthComboBox()
+        {
+            comboBox_MoagalatAlaAshhorTalia_Farey.DataSource = new BindingSource(months, null);
+            comboBox_MoagalatAlaAshhorTalia_Farey.DisplayMember = "Key";
+            comboBox_MoagalatAlaAshhorTalia_Farey.ValueMember = "Value";
+
+             comboBox_MoagalatAlaAshhorTalia_MadAgal.DataSource = new BindingSource(months, null);
+            comboBox_MoagalatAlaAshhorTalia_MadAgal.DisplayMember = "Key";
+            comboBox_MoagalatAlaAshhorTalia_MadAgal.ValueMember = "Value";
+
+             comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.DataSource = new BindingSource(months, null);
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.DisplayMember = "Key";
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.ValueMember = "Value";
+
+             comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.DataSource = new BindingSource(months, null);
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.DisplayMember = "Key";
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.ValueMember = "Value";
+
+             comboBox_MoagalatAlaAshhorTalia_AlBaky.DataSource = new BindingSource(months, null);
+            comboBox_MoagalatAlaAshhorTalia_AlBaky.DisplayMember = "Key";
+            comboBox_MoagalatAlaAshhorTalia_AlBaky.ValueMember = "Value";
+
+
+        }
+        #endregion
         #endregion
 
 
         #region Events
         private void StatisticsAddUserControl_Load(object sender, EventArgs e)
         {
+            months.Add(GetArabicMonthName(Config.Month +1 ), Config!.Month + 1);
+            months.Add(GetArabicMonthName(Config.Month + 2), Config!.Month + 2);
+            months.Add(GetArabicMonthName(Config.Month + 3), Config!.Month + 3);
+            months.Add(GetArabicMonthName(Config.Month + 4), Config!.Month + 4);
             GetCircles();
             comboBox_CaseYear.DataSource = MyContext.context.CaseYears.ToList();
+
             comboBox_CaseYear.DisplayMember = "Name";
             comboBox_CaseYear.ValueMember = "Id";
+
+            SetMonthComboBox();
+
             Text_SupCourt.Text = Config.SupCourtName;
             Text_SuperCourt.Text = Config.SuperCourtName;
             Text_Year.Text = Config.Year.ToString();
-            Text_Month.Text = Config.Month.ToString();
+            Text_Month.Text = GetArabicMonthName(Config.Month);
             Text_CircleCtogry.Text = Config.CircleCtogryName;
             Text_CircleMasterType.Text = Config.CircleMasterTypeName;
 
@@ -342,6 +452,20 @@ namespace StatisticsAPP.Forms.StatisticsForms
         private void text_Tawzie_Total_TextChanged(object sender, EventArgs e)
         {
             CalcTotalMahkomFIh();
+        }
+        private void comboBox1_MouseWheel(object sender, MouseEventArgs e)
+        {
+            ((HandledMouseEventArgs)e).Handled = true;
+        }
+
+        private void comboBox_Tawzie_Judje_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var judge = (CircleJudgeDto)comboBox_Tawzie_Judje.SelectedItem;
+            if (judge == null) { return; }
+
+            Text_Tawzie_Judge_Job.Text =judge!.rateName!;
+            Text_Tawzie_JudgeId.Text = judge.IdJudge.ToString();
+
         }
     }
 }

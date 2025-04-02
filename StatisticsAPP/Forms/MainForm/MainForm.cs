@@ -4,6 +4,7 @@ using StatisticsAPP.Forms.CourtsForms;
 using StatisticsAPP.Forms.StatisticsForms;
 using StatisticsAPP.Seeds;
 using StatisticsAPP.Servicies.StatisticsCervicies.DTOS;
+using StatisticsAPP.Utility;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -289,6 +290,7 @@ namespace StatisticsAPP.Forms.MainForm
             //tabControl1.DrawItem += tabControl1_DrawItem;
             tabControl1.Padding = new System.Drawing.Point(50, 3);
 
+          
             await Task.Run(async () =>
             {
 

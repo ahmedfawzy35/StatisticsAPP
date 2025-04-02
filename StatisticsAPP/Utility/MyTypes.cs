@@ -17,5 +17,9 @@ namespace StatisticsAPP.Utility
             Delete,
 
         }
+
+
+
+
     }
 }
