@@ -14,6 +14,10 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         public int Month { get; set; }
         public int CircleCtogryId { get; set; }
         public int CircleMasterTypeId { get; set; }
+        public String? SuperCourtName { get; set; }
+        public String? SupCourtName { get; set; }
+        public String? CircleCtogryName { get; set; }
+        public String? CircleMasterTypeName { get; set; }
 
     }
 }

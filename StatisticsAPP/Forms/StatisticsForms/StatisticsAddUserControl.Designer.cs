@@ -31,132 +31,150 @@
             panel1 = new Panel();
             label2 = new Label();
             comboBox_CircleDays = new ComboBox();
+            Text_CircleMasterType = new Label();
+            Text_Month = new Label();
+            Text_CircleCtogry = new Label();
+            Text_SupCourt = new Label();
+            Text_Year = new Label();
+            Text_SuperCourt = new Label();
             label1 = new Label();
             comboBox_Circles = new ComboBox();
             groupBox1 = new GroupBox();
             label3 = new Label();
             comboBox_CaseYear = new ComboBox();
-            groupBox2 = new GroupBox();
-            groupBox3 = new GroupBox();
+            groupBox_Motdawal = new GroupBox();
+            groupBox_Taksir = new GroupBox();
             label14 = new Label();
-            textBox9 = new TextBox();
-            comboBox4 = new ComboBox();
+            Text_Taksir_Count = new TextBox();
+            comboBox_Taksir_Month = new ComboBox();
             label15 = new Label();
             comboBox3 = new ComboBox();
-            textBox8 = new TextBox();
+            text_Motdawal_MoadFromEstenaf = new TextBox();
             label12 = new Label();
-            textBox6 = new TextBox();
+            text_Motdawal_MoagalMenAlWakfEtfaky = new TextBox();
             label10 = new Label();
-            textBox7 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
+            text_Motdawal_MoagalMenAlEnktae = new TextBox();
+            text_Motdawal_MoagalMenAlWakfGazaey = new TextBox();
+            text_Motdawal_MoagalMenAlWakfTaeliky = new TextBox();
             label11 = new Label();
             label8 = new Label();
             label9 = new Label();
-            textBox3 = new TextBox();
+            text_Motdawal_MogalMenALWakfRad = new TextBox();
             label7 = new Label();
-            textBox2 = new TextBox();
+            text_Motdawal_MogadadMenAlShatb = new TextBox();
             label6 = new Label();
-            textBox1 = new TextBox();
+            text_Motdawal_MoagalSabek = new TextBox();
             label5 = new Label();
             comboBox2 = new ComboBox();
-            groupBox4 = new GroupBox();
-            textBox10 = new TextBox();
+            groupBox_Ehalah = new GroupBox();
+            text__Ehalah_To = new TextBox();
             label17 = new Label();
-            textBox11 = new TextBox();
+            text__Ehalah_From = new TextBox();
             label18 = new Label();
             label16 = new Label();
             comboBox5 = new ComboBox();
-            groupBox5 = new GroupBox();
-            textBox14 = new TextBox();
-            textBox12 = new TextBox();
+            group_Mokadam = new GroupBox();
+            text_Mokadam_Total = new TextBox();
+            text_Mokadam_New = new TextBox();
             label22 = new Label();
             label19 = new Label();
-            textBox13 = new TextBox();
+            text_Mokadam_Motadawal = new TextBox();
             label20 = new Label();
             label21 = new Label();
             comboBox6 = new ComboBox();
-            groupBox6 = new GroupBox();
+            group_MoeagalKhargALshahr = new GroupBox();
             label25 = new Label();
             comboBox7 = new ComboBox();
-            textBox29 = new TextBox();
+            text_MoeagalKhargALshahr_MadAgl = new TextBox();
             label42 = new Label();
             label23 = new Label();
-            textBox30 = new TextBox();
+            text_MoeagalKhargALshahr_Total = new TextBox();
             label24 = new Label();
             label39 = new Label();
             label41 = new Label();
-            textBox31 = new TextBox();
-            textBox15 = new TextBox();
-            textBox16 = new TextBox();
-            textBox28 = new TextBox();
+            text_MoeagalKhargALshahr_Okhra = new TextBox();
+            text_MoeagalKhargALshahr_EadaLelMorafeah = new TextBox();
+            text_MoeagalKhargALshahr_MoagalLelTakrir = new TextBox();
+            text_MoeagalKhargALshahr_MahgouzLelhokm = new TextBox();
             label40 = new Label();
-            groupBox7 = new GroupBox();
-            textBox26 = new TextBox();
-            textBox24 = new TextBox();
+            groupBox_MahkoumFih = new GroupBox();
+            text_MahkoumFih_EnktaeSirAlKhsoma = new TextBox();
+            text_MahkoumFih_WakfGazaey = new TextBox();
             label37 = new Label();
-            groupBox8 = new GroupBox();
-            textBox19 = new TextBox();
+            group_Katey = new GroupBox();
+            text_MahkoumFih_Katey_Solh = new TextBox();
             label29 = new Label();
-            textBox22 = new TextBox();
+            text_MahkoumFih_Katey_Mawdoey = new TextBox();
             label33 = new Label();
-            textBox21 = new TextBox();
+            text_MahkoumFih_Katey_Total = new TextBox();
             label32 = new Label();
-            textBox20 = new TextBox();
+            text_MahkoumFih_Katey_Shakly = new TextBox();
             label30 = new Label();
             label31 = new Label();
             comboBox9 = new ComboBox();
-            textBox27 = new TextBox();
+            text_MahkoumFih_Total = new TextBox();
             label35 = new Label();
             label38 = new Label();
             label28 = new Label();
-            textBox23 = new TextBox();
+            text_MahkoumFih_Ethbat = new TextBox();
             comboBox8 = new ComboBox();
             label34 = new Label();
-            textBox17 = new TextBox();
-            textBox25 = new TextBox();
-            textBox18 = new TextBox();
+            text_MahkoumFih_Farey = new TextBox();
+            text_MahkoumFih_WakfEtfaky = new TextBox();
+            text_MahkoumFih_WakfTaeliky = new TextBox();
             label36 = new Label();
             label26 = new Label();
             label27 = new Label();
-            groupBox9 = new GroupBox();
-            button4 = new Button();
-            button3 = new Button();
-            button5 = new Button();
-            button2 = new Button();
-            button1 = new Button();
-            comboBox15 = new ComboBox();
-            comboBox14 = new ComboBox();
-            comboBox13 = new ComboBox();
-            comboBox12 = new ComboBox();
-            comboBox11 = new ComboBox();
+            groupBox_MoagalatAlaAshhorTalia = new GroupBox();
+            text_MoagalatAlaAshhorTalia_AlBaky_Count = new Label();
+            label162 = new Label();
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count = new Label();
+            label159 = new Label();
+            text_MoagalatAlaAshhorTalia_MadAgal_Count = new Label();
+            label155 = new Label();
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count = new Label();
+            label151 = new Label();
+            text_MoagalatAlaAshhorTalia_Ethbat_Count = new Label();
+            label13 = new Label();
+            btn_MoagalatAlaAshhorTalia_EadaLelMorafea = new Button();
+            btn_MoagalatAlaAshhorTalia_MadAgal = new Button();
+            btn_MoagalatAlaAshhorTalia_MahgouzLelhokm = new Button();
+            btn_MoagalatAlaAshhorTalia_AlBaky = new Button();
+            btn_MoagalatAlaAshhorTalia_Farey = new Button();
+            comboBox_MoagalatAlaAshhorTalia_AlBaky = new ComboBox();
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea = new ComboBox();
+            comboBox_MoagalatAlaAshhorTalia_MadAgal = new ComboBox();
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm = new ComboBox();
+            comboBox_MoagalatAlaAshhorTalia_Farey = new ComboBox();
             label43 = new Label();
             comboBox10 = new ComboBox();
-            textBox32 = new TextBox();
+            text_MoagalatAlaAshhorTalia_AlBaky = new TextBox();
             label47 = new Label();
             label44 = new Label();
             label50 = new Label();
             label46 = new Label();
             label45 = new Label();
-            textBox33 = new TextBox();
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea = new TextBox();
             label48 = new Label();
-            textBox34 = new TextBox();
-            textBox35 = new TextBox();
-            textBox37 = new TextBox();
+            text_MoagalatAlaAshhorTalia_MadAgal = new TextBox();
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm = new TextBox();
+            text_MoagalatAlaAshhorTalia_Farey = new TextBox();
             label49 = new Label();
-            groupBox10 = new GroupBox();
-            button46 = new Button();
-            groupBox17 = new GroupBox();
-            textBox103 = new TextBox();
+            group_Tawzie = new GroupBox();
+            tex_Tawzie_TotalMahkomFih = new TextBox();
+            label60 = new Label();
+            btn_Tawzie_Add = new Button();
+            group_Tawzie_Okhra = new GroupBox();
+            text_Tawzie_Okhra_Total = new TextBox();
             label141 = new Label();
             label145 = new Label();
-            textBox107 = new TextBox();
+            text_Tawzie_Okhra_Enktae = new TextBox();
             label148 = new Label();
-            textBox108 = new TextBox();
+            text_Tawzie_Okhra_WakfTaeliky = new TextBox();
             label149 = new Label();
-            textBox109 = new TextBox();
+            text_Tawzie_Okhra_WakfEtfaky = new TextBox();
             label150 = new Label();
-            textBox110 = new TextBox();
+            text_Tawzie_Okhra_WakfGzaey = new TextBox();
             button41 = new Button();
             button42 = new Button();
             button43 = new Button();
@@ -181,21 +199,21 @@
             textBox75 = new TextBox();
             textBox76 = new TextBox();
             label117 = new Label();
-            groupBox16 = new GroupBox();
-            textBox99 = new TextBox();
+            group_Tawzie_Ethbat = new GroupBox();
+            text_Tawzie_Ethbat_Total = new TextBox();
             label139 = new Label();
             label140 = new Label();
             label142 = new Label();
-            textBox100 = new TextBox();
+            text_Tawzie_Ethbat_HelfYamin = new TextBox();
             label143 = new Label();
-            textBox101 = new TextBox();
-            textBox102 = new TextBox();
+            text_Tawzie_Ethbat_Tahkik = new TextBox();
+            text_Tawzie_Ethbat_NadbKhabir = new TextBox();
             label144 = new Label();
             label146 = new Label();
-            textBox104 = new TextBox();
+            text_Tawzie_Ethbat_Estgwab = new TextBox();
             label147 = new Label();
-            textBox105 = new TextBox();
-            textBox106 = new TextBox();
+            text_Tawzie_Ethbat_EadaLelKhabir = new TextBox();
+            text_Tawzie_Ethbat_NadbHakmin = new TextBox();
             button36 = new Button();
             button37 = new Button();
             button38 = new Button();
@@ -220,8 +238,8 @@
             textBox70 = new TextBox();
             textBox71 = new TextBox();
             label109 = new Label();
-            groupBox15 = new GroupBox();
-            textBox98 = new TextBox();
+            group_Tawzie_Farey = new GroupBox();
+            text_Tawzie_Farey = new TextBox();
             button31 = new Button();
             button32 = new Button();
             button33 = new Button();
@@ -246,9 +264,9 @@
             textBox65 = new TextBox();
             textBox66 = new TextBox();
             label101 = new Label();
-            groupBox11 = new GroupBox();
-            groupBox14 = new GroupBox();
-            textBox97 = new TextBox();
+            group_Tawzie_Katey = new GroupBox();
+            group_Tawzie_Katey_Solh = new GroupBox();
+            text_Tawzie_Katey_Solh = new TextBox();
             button26 = new Button();
             button27 = new Button();
             button28 = new Button();
@@ -273,27 +291,27 @@
             textBox60 = new TextBox();
             textBox61 = new TextBox();
             label93 = new Label();
-            groupBox13 = new GroupBox();
+            group_Tawzie_Katey_Mawdoey = new GroupBox();
             label136 = new Label();
-            textBox94 = new TextBox();
+            text_Tawzie_Katey_Mawdoey_Total = new TextBox();
             label137 = new Label();
-            textBox95 = new TextBox();
+            text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz = new TextBox();
             label128 = new Label();
             label129 = new Label();
             label130 = new Label();
-            textBox86 = new TextBox();
+            text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz = new TextBox();
             label131 = new Label();
-            textBox87 = new TextBox();
-            textBox88 = new TextBox();
-            textBox89 = new TextBox();
+            text_Tawzie_Katey_Mawdoey_Okhrah = new TextBox();
+            text_Tawzie_Katey_Mawdoey_AdamGwaz = new TextBox();
+            text_Tawzie_Katey_Mawdoey_Rafd = new TextBox();
             label132 = new Label();
             label133 = new Label();
             label134 = new Label();
-            textBox90 = new TextBox();
+            text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas = new TextBox();
             label135 = new Label();
-            textBox91 = new TextBox();
-            textBox92 = new TextBox();
-            textBox93 = new TextBox();
+            text_Tawzie_Katey_Mawdoey_Enkeda = new TextBox();
+            text_Tawzie_Katey_Mawdoey_RafdBehaltha = new TextBox();
+            text_Tawzie_Katey_Mawdoey_Kobol = new TextBox();
             button21 = new Button();
             button22 = new Button();
             button23 = new Button();
@@ -318,25 +336,25 @@
             textBox55 = new TextBox();
             textBox56 = new TextBox();
             label85 = new Label();
-            groupBox12 = new GroupBox();
-            textBox96 = new TextBox();
+            group_Tawzie_Katey_Shakly = new GroupBox();
+            text_Tawzie_Katey_Shakly_Total = new TextBox();
             label138 = new Label();
             label124 = new Label();
             label125 = new Label();
             label126 = new Label();
-            textBox81 = new TextBox();
+            text_Tawzie_Katey_Shakly_Okhrah = new TextBox();
             label127 = new Label();
-            textBox83 = new TextBox();
-            textBox84 = new TextBox();
-            textBox85 = new TextBox();
+            text_Tawzie_Katey_Shakly_EnedamAlKhsoma = new TextBox();
+            text_Tawzie_Katey_Shakly_SkotAlKhsoma = new TextBox();
+            text_Tawzie_Katey_Shakly_adamEkhtsas = new TextBox();
             label119 = new Label();
             label120 = new Label();
             label122 = new Label();
-            textBox77 = new TextBox();
+            text_Tawzie_Katey_Shakly_KanLamTakon = new TextBox();
             label123 = new Label();
-            textBox78 = new TextBox();
-            textBox79 = new TextBox();
-            textBox80 = new TextBox();
+            text_Tawzie_Katey_Shakly_TarkAlKhsoma = new TextBox();
+            text_Tawzie_Katey_Shakly_SkotAlhak = new TextBox();
+            text_Tawzie_Katey_Shakly_AdamKbol = new TextBox();
             button16 = new Button();
             button17 = new Button();
             button18 = new Button();
@@ -385,9 +403,9 @@
             textBox45 = new TextBox();
             textBox46 = new TextBox();
             label69 = new Label();
-            comboBox22 = new ComboBox();
-            label61 = new Label();
-            label60 = new Label();
+            comboBox_Tawzie_Judje = new ComboBox();
+            Text_Tawzie_JudgeId = new Label();
+            Text_Tawzie_Judge_Job = new Label();
             label59 = new Label();
             button6 = new Button();
             button7 = new Button();
@@ -413,38 +431,44 @@
             textBox40 = new TextBox();
             textBox41 = new TextBox();
             label58 = new Label();
-            button47 = new Button();
-            button48 = new Button();
-            groupBox18 = new GroupBox();
+            btn_Save = new Button();
+            btn_Delete = new Button();
+            groupBox_MoeadMenAlKhobraa = new GroupBox();
             label118 = new Label();
             comboBox65 = new ComboBox();
             label121 = new Label();
-            textBox82 = new TextBox();
+            text_MoeadMenAlKhobraa = new TextBox();
             panel1.SuspendLayout();
             groupBox1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            groupBox3.SuspendLayout();
-            groupBox4.SuspendLayout();
-            groupBox5.SuspendLayout();
-            groupBox6.SuspendLayout();
-            groupBox7.SuspendLayout();
-            groupBox8.SuspendLayout();
-            groupBox9.SuspendLayout();
-            groupBox10.SuspendLayout();
-            groupBox17.SuspendLayout();
-            groupBox16.SuspendLayout();
-            groupBox15.SuspendLayout();
-            groupBox11.SuspendLayout();
-            groupBox14.SuspendLayout();
-            groupBox13.SuspendLayout();
-            groupBox12.SuspendLayout();
-            groupBox18.SuspendLayout();
+            groupBox_Motdawal.SuspendLayout();
+            groupBox_Taksir.SuspendLayout();
+            groupBox_Ehalah.SuspendLayout();
+            group_Mokadam.SuspendLayout();
+            group_MoeagalKhargALshahr.SuspendLayout();
+            groupBox_MahkoumFih.SuspendLayout();
+            group_Katey.SuspendLayout();
+            groupBox_MoagalatAlaAshhorTalia.SuspendLayout();
+            group_Tawzie.SuspendLayout();
+            group_Tawzie_Okhra.SuspendLayout();
+            group_Tawzie_Ethbat.SuspendLayout();
+            group_Tawzie_Farey.SuspendLayout();
+            group_Tawzie_Katey.SuspendLayout();
+            group_Tawzie_Katey_Solh.SuspendLayout();
+            group_Tawzie_Katey_Mawdoey.SuspendLayout();
+            group_Tawzie_Katey_Shakly.SuspendLayout();
+            groupBox_MoeadMenAlKhobraa.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.Controls.Add(label2);
             panel1.Controls.Add(comboBox_CircleDays);
+            panel1.Controls.Add(Text_CircleMasterType);
+            panel1.Controls.Add(Text_Month);
+            panel1.Controls.Add(Text_CircleCtogry);
+            panel1.Controls.Add(Text_SupCourt);
+            panel1.Controls.Add(Text_Year);
+            panel1.Controls.Add(Text_SuperCourt);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(comboBox_Circles);
             panel1.Dock = DockStyle.Top;
@@ -457,7 +481,7 @@
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(1448, 78);
+            label2.Location = new Point(1136, 80);
             label2.Name = "label2";
             label2.Size = new Size(41, 15);
             label2.TabIndex = 1;
@@ -468,17 +492,77 @@
             comboBox_CircleDays.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_CircleDays.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_CircleDays.FormattingEnabled = true;
-            comboBox_CircleDays.Location = new Point(1170, 75);
+            comboBox_CircleDays.Location = new Point(858, 77);
             comboBox_CircleDays.Name = "comboBox_CircleDays";
             comboBox_CircleDays.Size = new Size(230, 23);
             comboBox_CircleDays.TabIndex = 1;
             comboBox_CircleDays.SelectedIndexChanged += comboBox_CircleDays_SelectedIndexChanged;
             // 
+            // Text_CircleMasterType
+            // 
+            Text_CircleMasterType.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Text_CircleMasterType.Location = new Point(639, 109);
+            Text_CircleMasterType.Name = "Text_CircleMasterType";
+            Text_CircleMasterType.Size = new Size(185, 15);
+            Text_CircleMasterType.TabIndex = 1;
+            Text_CircleMasterType.Text = "الدائرة";
+            Text_CircleMasterType.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Text_Month
+            // 
+            Text_Month.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Text_Month.Location = new Point(335, 22);
+            Text_Month.Name = "Text_Month";
+            Text_Month.Size = new Size(87, 15);
+            Text_Month.TabIndex = 1;
+            Text_Month.Text = "الدائرة";
+            Text_Month.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Text_CircleCtogry
+            // 
+            Text_CircleCtogry.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Text_CircleCtogry.Location = new Point(639, 80);
+            Text_CircleCtogry.Name = "Text_CircleCtogry";
+            Text_CircleCtogry.Size = new Size(185, 15);
+            Text_CircleCtogry.TabIndex = 1;
+            Text_CircleCtogry.Text = "الدائرة";
+            Text_CircleCtogry.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Text_SupCourt
+            // 
+            Text_SupCourt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Text_SupCourt.Location = new Point(639, 53);
+            Text_SupCourt.Name = "Text_SupCourt";
+            Text_SupCourt.Size = new Size(185, 15);
+            Text_SupCourt.TabIndex = 1;
+            Text_SupCourt.Text = "الدائرة";
+            Text_SupCourt.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Text_Year
+            // 
+            Text_Year.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Text_Year.Location = new Point(255, 22);
+            Text_Year.Name = "Text_Year";
+            Text_Year.Size = new Size(74, 15);
+            Text_Year.TabIndex = 1;
+            Text_Year.Text = "الدائرة";
+            Text_Year.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Text_SuperCourt
+            // 
+            Text_SuperCourt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Text_SuperCourt.Location = new Point(639, 22);
+            Text_SuperCourt.Name = "Text_SuperCourt";
+            Text_SuperCourt.Size = new Size(185, 15);
+            Text_SuperCourt.TabIndex = 1;
+            Text_SuperCourt.Text = "الدائرة";
+            Text_SuperCourt.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // label1
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(1448, 33);
+            label1.Location = new Point(1136, 35);
             label1.Name = "label1";
             label1.Size = new Size(37, 15);
             label1.TabIndex = 1;
@@ -489,7 +573,7 @@
             comboBox_Circles.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_Circles.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_Circles.FormattingEnabled = true;
-            comboBox_Circles.Location = new Point(1170, 30);
+            comboBox_Circles.Location = new Point(858, 32);
             comboBox_Circles.Name = "comboBox_Circles";
             comboBox_Circles.Size = new Size(230, 23);
             comboBox_Circles.TabIndex = 0;
@@ -528,48 +612,48 @@
             comboBox_CaseYear.TabIndex = 2;
             comboBox_CaseYear.SelectedIndexChanged += comboBox_CaseYear_SelectedIndexChanged;
             // 
-            // groupBox2
+            // groupBox_Motdawal
             // 
-            groupBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox2.Controls.Add(groupBox3);
-            groupBox2.Controls.Add(textBox8);
-            groupBox2.Controls.Add(label12);
-            groupBox2.Controls.Add(textBox6);
-            groupBox2.Controls.Add(label10);
-            groupBox2.Controls.Add(textBox7);
-            groupBox2.Controls.Add(textBox4);
-            groupBox2.Controls.Add(textBox5);
-            groupBox2.Controls.Add(label11);
-            groupBox2.Controls.Add(label8);
-            groupBox2.Controls.Add(label9);
-            groupBox2.Controls.Add(textBox3);
-            groupBox2.Controls.Add(label7);
-            groupBox2.Controls.Add(textBox2);
-            groupBox2.Controls.Add(label6);
-            groupBox2.Controls.Add(textBox1);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(comboBox2);
-            groupBox2.Location = new Point(331, 246);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(905, 353);
-            groupBox2.TabIndex = 2;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "المتداول";
+            groupBox_Motdawal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            groupBox_Motdawal.Controls.Add(groupBox_Taksir);
+            groupBox_Motdawal.Controls.Add(text_Motdawal_MoadFromEstenaf);
+            groupBox_Motdawal.Controls.Add(label12);
+            groupBox_Motdawal.Controls.Add(text_Motdawal_MoagalMenAlWakfEtfaky);
+            groupBox_Motdawal.Controls.Add(label10);
+            groupBox_Motdawal.Controls.Add(text_Motdawal_MoagalMenAlEnktae);
+            groupBox_Motdawal.Controls.Add(text_Motdawal_MoagalMenAlWakfGazaey);
+            groupBox_Motdawal.Controls.Add(text_Motdawal_MoagalMenAlWakfTaeliky);
+            groupBox_Motdawal.Controls.Add(label11);
+            groupBox_Motdawal.Controls.Add(label8);
+            groupBox_Motdawal.Controls.Add(label9);
+            groupBox_Motdawal.Controls.Add(text_Motdawal_MogalMenALWakfRad);
+            groupBox_Motdawal.Controls.Add(label7);
+            groupBox_Motdawal.Controls.Add(text_Motdawal_MogadadMenAlShatb);
+            groupBox_Motdawal.Controls.Add(label6);
+            groupBox_Motdawal.Controls.Add(text_Motdawal_MoagalSabek);
+            groupBox_Motdawal.Controls.Add(label5);
+            groupBox_Motdawal.Controls.Add(comboBox2);
+            groupBox_Motdawal.Location = new Point(331, 246);
+            groupBox_Motdawal.Name = "groupBox_Motdawal";
+            groupBox_Motdawal.Size = new Size(905, 353);
+            groupBox_Motdawal.TabIndex = 2;
+            groupBox_Motdawal.TabStop = false;
+            groupBox_Motdawal.Text = "المتداول";
             // 
-            // groupBox3
+            // groupBox_Taksir
             // 
-            groupBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox3.Controls.Add(label14);
-            groupBox3.Controls.Add(textBox9);
-            groupBox3.Controls.Add(comboBox4);
-            groupBox3.Controls.Add(label15);
-            groupBox3.Controls.Add(comboBox3);
-            groupBox3.Location = new Point(152, 253);
-            groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(719, 85);
-            groupBox3.TabIndex = 11;
-            groupBox3.TabStop = false;
-            groupBox3.Text = "التقصير";
+            groupBox_Taksir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            groupBox_Taksir.Controls.Add(label14);
+            groupBox_Taksir.Controls.Add(Text_Taksir_Count);
+            groupBox_Taksir.Controls.Add(comboBox_Taksir_Month);
+            groupBox_Taksir.Controls.Add(label15);
+            groupBox_Taksir.Controls.Add(comboBox3);
+            groupBox_Taksir.Location = new Point(152, 253);
+            groupBox_Taksir.Name = "groupBox_Taksir";
+            groupBox_Taksir.Size = new Size(719, 85);
+            groupBox_Taksir.TabIndex = 11;
+            groupBox_Taksir.TabStop = false;
+            groupBox_Taksir.Text = "التقصير";
             // 
             // label14
             // 
@@ -581,23 +665,24 @@
             label14.TabIndex = 1;
             label14.Text = "الشهر";
             // 
-            // textBox9
+            // Text_Taksir_Count
             // 
-            textBox9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox9.Location = new Point(6, 39);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(230, 23);
-            textBox9.TabIndex = 12;
+            Text_Taksir_Count.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Text_Taksir_Count.Location = new Point(6, 39);
+            Text_Taksir_Count.Name = "Text_Taksir_Count";
+            Text_Taksir_Count.Size = new Size(230, 23);
+            Text_Taksir_Count.TabIndex = 12;
+            Text_Taksir_Count.TextChanged += text_Motadawal_TextChanged;
             // 
-            // comboBox4
+            // comboBox_Taksir_Month
             // 
-            comboBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox4.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(372, 39);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(230, 23);
-            comboBox4.TabIndex = 11;
+            comboBox_Taksir_Month.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox_Taksir_Month.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_Taksir_Month.FormattingEnabled = true;
+            comboBox_Taksir_Month.Location = new Point(372, 39);
+            comboBox_Taksir_Month.Name = "comboBox_Taksir_Month";
+            comboBox_Taksir_Month.Size = new Size(230, 23);
+            comboBox_Taksir_Month.TabIndex = 11;
             // 
             // label15
             // 
@@ -619,13 +704,14 @@
             comboBox3.Size = new Size(230, 23);
             comboBox3.TabIndex = 1;
             // 
-            // textBox8
+            // text_Motdawal_MoadFromEstenaf
             // 
-            textBox8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox8.Location = new Point(152, 209);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(230, 23);
-            textBox8.TabIndex = 10;
+            text_Motdawal_MoadFromEstenaf.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Motdawal_MoadFromEstenaf.Location = new Point(152, 209);
+            text_Motdawal_MoadFromEstenaf.Name = "text_Motdawal_MoadFromEstenaf";
+            text_Motdawal_MoadFromEstenaf.Size = new Size(230, 23);
+            text_Motdawal_MoadFromEstenaf.TabIndex = 10;
+            text_Motdawal_MoadFromEstenaf.TextChanged += text_Motadawal_TextChanged;
             // 
             // label12
             // 
@@ -637,13 +723,14 @@
             label12.TabIndex = 5;
             label12.Text = "معاد من الاستئناف";
             // 
-            // textBox6
+            // text_Motdawal_MoagalMenAlWakfEtfaky
             // 
-            textBox6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox6.Location = new Point(152, 157);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(230, 23);
-            textBox6.TabIndex = 8;
+            text_Motdawal_MoagalMenAlWakfEtfaky.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Motdawal_MoagalMenAlWakfEtfaky.Location = new Point(152, 157);
+            text_Motdawal_MoagalMenAlWakfEtfaky.Name = "text_Motdawal_MoagalMenAlWakfEtfaky";
+            text_Motdawal_MoagalMenAlWakfEtfaky.Size = new Size(230, 23);
+            text_Motdawal_MoagalMenAlWakfEtfaky.TabIndex = 8;
+            text_Motdawal_MoagalMenAlWakfEtfaky.TextChanged += text_Motadawal_TextChanged;
             // 
             // label10
             // 
@@ -655,29 +742,32 @@
             label10.TabIndex = 5;
             label10.Text = "معجل من الوقف الاتفاقي";
             // 
-            // textBox7
+            // text_Motdawal_MoagalMenAlEnktae
             // 
-            textBox7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox7.Location = new Point(524, 209);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(230, 23);
-            textBox7.TabIndex = 9;
+            text_Motdawal_MoagalMenAlEnktae.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Motdawal_MoagalMenAlEnktae.Location = new Point(524, 209);
+            text_Motdawal_MoagalMenAlEnktae.Name = "text_Motdawal_MoagalMenAlEnktae";
+            text_Motdawal_MoagalMenAlEnktae.Size = new Size(230, 23);
+            text_Motdawal_MoagalMenAlEnktae.TabIndex = 9;
+            text_Motdawal_MoagalMenAlEnktae.TextChanged += text_Motadawal_TextChanged;
             // 
-            // textBox4
+            // text_Motdawal_MoagalMenAlWakfGazaey
             // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox4.Location = new Point(152, 111);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(230, 23);
-            textBox4.TabIndex = 6;
+            text_Motdawal_MoagalMenAlWakfGazaey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Motdawal_MoagalMenAlWakfGazaey.Location = new Point(152, 111);
+            text_Motdawal_MoagalMenAlWakfGazaey.Name = "text_Motdawal_MoagalMenAlWakfGazaey";
+            text_Motdawal_MoagalMenAlWakfGazaey.Size = new Size(230, 23);
+            text_Motdawal_MoagalMenAlWakfGazaey.TabIndex = 6;
+            text_Motdawal_MoagalMenAlWakfGazaey.TextChanged += text_Motadawal_TextChanged;
             // 
-            // textBox5
+            // text_Motdawal_MoagalMenAlWakfTaeliky
             // 
-            textBox5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox5.Location = new Point(524, 157);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(230, 23);
-            textBox5.TabIndex = 7;
+            text_Motdawal_MoagalMenAlWakfTaeliky.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Motdawal_MoagalMenAlWakfTaeliky.Location = new Point(524, 157);
+            text_Motdawal_MoagalMenAlWakfTaeliky.Name = "text_Motdawal_MoagalMenAlWakfTaeliky";
+            text_Motdawal_MoagalMenAlWakfTaeliky.Size = new Size(230, 23);
+            text_Motdawal_MoagalMenAlWakfTaeliky.TabIndex = 7;
+            text_Motdawal_MoagalMenAlWakfTaeliky.TextChanged += text_Motadawal_TextChanged;
             // 
             // label11
             // 
@@ -709,13 +799,14 @@
             label9.TabIndex = 5;
             label9.Text = "معجل من الوقف التعليقي";
             // 
-            // textBox3
+            // text_Motdawal_MogalMenALWakfRad
             // 
-            textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox3.Location = new Point(524, 111);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(230, 23);
-            textBox3.TabIndex = 5;
+            text_Motdawal_MogalMenALWakfRad.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Motdawal_MogalMenALWakfRad.Location = new Point(524, 111);
+            text_Motdawal_MogalMenALWakfRad.Name = "text_Motdawal_MogalMenALWakfRad";
+            text_Motdawal_MogalMenALWakfRad.Size = new Size(230, 23);
+            text_Motdawal_MogalMenALWakfRad.TabIndex = 5;
+            text_Motdawal_MogalMenALWakfRad.TextChanged += text_Motadawal_TextChanged;
             // 
             // label7
             // 
@@ -726,13 +817,14 @@
             label7.TabIndex = 5;
             label7.Text = "معجل من الوقف لحين الفصل في طلب الرد";
             // 
-            // textBox2
+            // text_Motdawal_MogadadMenAlShatb
             // 
-            textBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox2.Location = new Point(524, 66);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(230, 23);
-            textBox2.TabIndex = 4;
+            text_Motdawal_MogadadMenAlShatb.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Motdawal_MogadadMenAlShatb.Location = new Point(524, 66);
+            text_Motdawal_MogadadMenAlShatb.Name = "text_Motdawal_MogadadMenAlShatb";
+            text_Motdawal_MogadadMenAlShatb.Size = new Size(230, 23);
+            text_Motdawal_MogadadMenAlShatb.TabIndex = 4;
+            text_Motdawal_MogadadMenAlShatb.TextChanged += text_Motadawal_TextChanged;
             // 
             // label6
             // 
@@ -744,13 +836,14 @@
             label6.TabIndex = 3;
             label6.Text = "مجدد من الشطب";
             // 
-            // textBox1
+            // text_Motdawal_MoagalSabek
             // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox1.Location = new Point(524, 26);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(230, 23);
-            textBox1.TabIndex = 3;
+            text_Motdawal_MoagalSabek.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Motdawal_MoagalSabek.Location = new Point(524, 26);
+            text_Motdawal_MoagalSabek.Name = "text_Motdawal_MoagalSabek";
+            text_Motdawal_MoagalSabek.Size = new Size(230, 23);
+            text_Motdawal_MoagalSabek.TabIndex = 3;
+            text_Motdawal_MoagalSabek.TextChanged += text_Motadawal_TextChanged;
             // 
             // label5
             // 
@@ -772,29 +865,30 @@
             comboBox2.Size = new Size(230, 23);
             comboBox2.TabIndex = 1;
             // 
-            // groupBox4
+            // groupBox_Ehalah
             // 
-            groupBox4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox4.Controls.Add(textBox10);
-            groupBox4.Controls.Add(label17);
-            groupBox4.Controls.Add(textBox11);
-            groupBox4.Controls.Add(label18);
-            groupBox4.Controls.Add(label16);
-            groupBox4.Controls.Add(comboBox5);
-            groupBox4.Location = new Point(334, 605);
-            groupBox4.Name = "groupBox4";
-            groupBox4.Size = new Size(905, 100);
-            groupBox4.TabIndex = 13;
-            groupBox4.TabStop = false;
-            groupBox4.Text = "الاحالة";
+            groupBox_Ehalah.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            groupBox_Ehalah.Controls.Add(text__Ehalah_To);
+            groupBox_Ehalah.Controls.Add(label17);
+            groupBox_Ehalah.Controls.Add(text__Ehalah_From);
+            groupBox_Ehalah.Controls.Add(label18);
+            groupBox_Ehalah.Controls.Add(label16);
+            groupBox_Ehalah.Controls.Add(comboBox5);
+            groupBox_Ehalah.Location = new Point(334, 605);
+            groupBox_Ehalah.Name = "groupBox_Ehalah";
+            groupBox_Ehalah.Size = new Size(905, 100);
+            groupBox_Ehalah.TabIndex = 13;
+            groupBox_Ehalah.TabStop = false;
+            groupBox_Ehalah.Text = "الاحالة";
             // 
-            // textBox10
+            // text__Ehalah_To
             // 
-            textBox10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox10.Location = new Point(155, 34);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(230, 23);
-            textBox10.TabIndex = 14;
+            text__Ehalah_To.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text__Ehalah_To.Location = new Point(155, 34);
+            text__Ehalah_To.Name = "text__Ehalah_To";
+            text__Ehalah_To.Size = new Size(230, 23);
+            text__Ehalah_To.TabIndex = 14;
+            text__Ehalah_To.TextChanged += text_Motadawal_TextChanged;
             // 
             // label17
             // 
@@ -806,13 +900,14 @@
             label17.TabIndex = 7;
             label17.Text = "احالة الى";
             // 
-            // textBox11
+            // text__Ehalah_From
             // 
-            textBox11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox11.Location = new Point(521, 39);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(230, 23);
-            textBox11.TabIndex = 13;
+            text__Ehalah_From.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text__Ehalah_From.Location = new Point(521, 39);
+            text__Ehalah_From.Name = "text__Ehalah_From";
+            text__Ehalah_From.Size = new Size(230, 23);
+            text__Ehalah_From.TabIndex = 13;
+            text__Ehalah_From.TextChanged += text_Motadawal_TextChanged;
             // 
             // label18
             // 
@@ -844,39 +939,41 @@
             comboBox5.Size = new Size(230, 23);
             comboBox5.TabIndex = 1;
             // 
-            // groupBox5
+            // group_Mokadam
             // 
-            groupBox5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox5.Controls.Add(textBox14);
-            groupBox5.Controls.Add(textBox12);
-            groupBox5.Controls.Add(label22);
-            groupBox5.Controls.Add(label19);
-            groupBox5.Controls.Add(textBox13);
-            groupBox5.Controls.Add(label20);
-            groupBox5.Controls.Add(label21);
-            groupBox5.Controls.Add(comboBox6);
-            groupBox5.Location = new Point(334, 711);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(905, 100);
-            groupBox5.TabIndex = 15;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "المقدم";
+            group_Mokadam.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_Mokadam.Controls.Add(text_Mokadam_Total);
+            group_Mokadam.Controls.Add(text_Mokadam_New);
+            group_Mokadam.Controls.Add(label22);
+            group_Mokadam.Controls.Add(label19);
+            group_Mokadam.Controls.Add(text_Mokadam_Motadawal);
+            group_Mokadam.Controls.Add(label20);
+            group_Mokadam.Controls.Add(label21);
+            group_Mokadam.Controls.Add(comboBox6);
+            group_Mokadam.Location = new Point(334, 711);
+            group_Mokadam.Name = "group_Mokadam";
+            group_Mokadam.Size = new Size(905, 100);
+            group_Mokadam.TabIndex = 15;
+            group_Mokadam.TabStop = false;
+            group_Mokadam.Text = "المقدم";
             // 
-            // textBox14
+            // text_Mokadam_Total
             // 
-            textBox14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox14.Location = new Point(129, 39);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(119, 23);
-            textBox14.TabIndex = 500;
+            text_Mokadam_Total.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Mokadam_Total.Location = new Point(129, 39);
+            text_Mokadam_Total.Name = "text_Mokadam_Total";
+            text_Mokadam_Total.ReadOnly = true;
+            text_Mokadam_Total.Size = new Size(119, 23);
+            text_Mokadam_Total.TabIndex = 500;
             // 
-            // textBox12
+            // text_Mokadam_New
             // 
-            textBox12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox12.Location = new Point(402, 42);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(119, 23);
-            textBox12.TabIndex = 16;
+            text_Mokadam_New.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Mokadam_New.Location = new Point(402, 42);
+            text_Mokadam_New.Name = "text_Mokadam_New";
+            text_Mokadam_New.Size = new Size(119, 23);
+            text_Mokadam_New.TabIndex = 16;
+            text_Mokadam_New.TextChanged += text_Mokadam_TextChanged;
             // 
             // label22
             // 
@@ -898,13 +995,15 @@
             label19.TabIndex = 7;
             label19.Text = "جديد";
             // 
-            // textBox13
+            // text_Mokadam_Motadawal
             // 
-            textBox13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox13.Location = new Point(651, 39);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(100, 23);
-            textBox13.TabIndex = 15;
+            text_Mokadam_Motadawal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Mokadam_Motadawal.Location = new Point(651, 39);
+            text_Mokadam_Motadawal.Name = "text_Mokadam_Motadawal";
+            text_Mokadam_Motadawal.ReadOnly = true;
+            text_Mokadam_Motadawal.Size = new Size(100, 23);
+            text_Mokadam_Motadawal.TabIndex = 15;
+            text_Mokadam_Motadawal.TextChanged += text_Mokadam_TextChanged;
             // 
             // label20
             // 
@@ -936,30 +1035,30 @@
             comboBox6.Size = new Size(230, 23);
             comboBox6.TabIndex = 1;
             // 
-            // groupBox6
+            // group_MoeagalKhargALshahr
             // 
-            groupBox6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox6.Controls.Add(label25);
-            groupBox6.Controls.Add(comboBox7);
-            groupBox6.Controls.Add(textBox29);
-            groupBox6.Controls.Add(label42);
-            groupBox6.Controls.Add(label23);
-            groupBox6.Controls.Add(textBox30);
-            groupBox6.Controls.Add(label24);
-            groupBox6.Controls.Add(label39);
-            groupBox6.Controls.Add(label41);
-            groupBox6.Controls.Add(textBox31);
-            groupBox6.Controls.Add(textBox15);
-            groupBox6.Controls.Add(textBox16);
-            groupBox6.Controls.Add(textBox28);
-            groupBox6.Controls.Add(label40);
-            groupBox6.Location = new Point(334, 1265);
-            groupBox6.Name = "groupBox6";
-            groupBox6.Size = new Size(905, 168);
-            groupBox6.TabIndex = 27;
-            groupBox6.TabStop = false;
-            groupBox6.Text = "القضايا المؤجلةخارج الشهر";
-            groupBox6.UseCompatibleTextRendering = true;
+            group_MoeagalKhargALshahr.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_MoeagalKhargALshahr.Controls.Add(label25);
+            group_MoeagalKhargALshahr.Controls.Add(comboBox7);
+            group_MoeagalKhargALshahr.Controls.Add(text_MoeagalKhargALshahr_MadAgl);
+            group_MoeagalKhargALshahr.Controls.Add(label42);
+            group_MoeagalKhargALshahr.Controls.Add(label23);
+            group_MoeagalKhargALshahr.Controls.Add(text_MoeagalKhargALshahr_Total);
+            group_MoeagalKhargALshahr.Controls.Add(label24);
+            group_MoeagalKhargALshahr.Controls.Add(label39);
+            group_MoeagalKhargALshahr.Controls.Add(label41);
+            group_MoeagalKhargALshahr.Controls.Add(text_MoeagalKhargALshahr_Okhra);
+            group_MoeagalKhargALshahr.Controls.Add(text_MoeagalKhargALshahr_EadaLelMorafeah);
+            group_MoeagalKhargALshahr.Controls.Add(text_MoeagalKhargALshahr_MoagalLelTakrir);
+            group_MoeagalKhargALshahr.Controls.Add(text_MoeagalKhargALshahr_MahgouzLelhokm);
+            group_MoeagalKhargALshahr.Controls.Add(label40);
+            group_MoeagalKhargALshahr.Location = new Point(334, 1265);
+            group_MoeagalKhargALshahr.Name = "group_MoeagalKhargALshahr";
+            group_MoeagalKhargALshahr.Size = new Size(905, 168);
+            group_MoeagalKhargALshahr.TabIndex = 27;
+            group_MoeagalKhargALshahr.TabStop = false;
+            group_MoeagalKhargALshahr.Text = "القضايا المؤجلةخارج الشهر";
+            group_MoeagalKhargALshahr.UseCompatibleTextRendering = true;
             // 
             // label25
             // 
@@ -981,13 +1080,14 @@
             comboBox7.Size = new Size(230, 23);
             comboBox7.TabIndex = 1;
             // 
-            // textBox29
+            // text_MoeagalKhargALshahr_MadAgl
             // 
-            textBox29.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox29.Location = new Point(493, 32);
-            textBox29.Name = "textBox29";
-            textBox29.Size = new Size(117, 23);
-            textBox29.TabIndex = 28;
+            text_MoeagalKhargALshahr_MadAgl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoeagalKhargALshahr_MadAgl.Location = new Point(493, 32);
+            text_MoeagalKhargALshahr_MadAgl.Name = "text_MoeagalKhargALshahr_MadAgl";
+            text_MoeagalKhargALshahr_MadAgl.Size = new Size(117, 23);
+            text_MoeagalKhargALshahr_MadAgl.TabIndex = 28;
+            text_MoeagalKhargALshahr_MadAgl.TextChanged += text_MoeagalKhargALshahr_TextChanged;
             // 
             // label42
             // 
@@ -1009,13 +1109,14 @@
             label23.TabIndex = 8;
             label23.Text = "اعادة للمرافعة";
             // 
-            // textBox30
+            // text_MoeagalKhargALshahr_Total
             // 
-            textBox30.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox30.Location = new Point(691, 137);
-            textBox30.Name = "textBox30";
-            textBox30.Size = new Size(117, 23);
-            textBox30.TabIndex = 509;
+            text_MoeagalKhargALshahr_Total.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoeagalKhargALshahr_Total.Location = new Point(691, 137);
+            text_MoeagalKhargALshahr_Total.Name = "text_MoeagalKhargALshahr_Total";
+            text_MoeagalKhargALshahr_Total.ReadOnly = true;
+            text_MoeagalKhargALshahr_Total.Size = new Size(117, 23);
+            text_MoeagalKhargALshahr_Total.TabIndex = 509;
             // 
             // label24
             // 
@@ -1047,37 +1148,41 @@
             label41.TabIndex = 8;
             label41.Text = "الاجمالي";
             // 
-            // textBox31
+            // text_MoeagalKhargALshahr_Okhra
             // 
-            textBox31.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox31.Location = new Point(691, 94);
-            textBox31.Name = "textBox31";
-            textBox31.Size = new Size(117, 23);
-            textBox31.TabIndex = 31;
+            text_MoeagalKhargALshahr_Okhra.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoeagalKhargALshahr_Okhra.Location = new Point(691, 94);
+            text_MoeagalKhargALshahr_Okhra.Name = "text_MoeagalKhargALshahr_Okhra";
+            text_MoeagalKhargALshahr_Okhra.Size = new Size(117, 23);
+            text_MoeagalKhargALshahr_Okhra.TabIndex = 31;
+            text_MoeagalKhargALshahr_Okhra.TextChanged += text_MoeagalKhargALshahr_TextChanged;
             // 
-            // textBox15
+            // text_MoeagalKhargALshahr_EadaLelMorafeah
             // 
-            textBox15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox15.Location = new Point(691, 63);
-            textBox15.Name = "textBox15";
-            textBox15.Size = new Size(117, 23);
-            textBox15.TabIndex = 29;
+            text_MoeagalKhargALshahr_EadaLelMorafeah.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoeagalKhargALshahr_EadaLelMorafeah.Location = new Point(691, 63);
+            text_MoeagalKhargALshahr_EadaLelMorafeah.Name = "text_MoeagalKhargALshahr_EadaLelMorafeah";
+            text_MoeagalKhargALshahr_EadaLelMorafeah.Size = new Size(117, 23);
+            text_MoeagalKhargALshahr_EadaLelMorafeah.TabIndex = 29;
+            text_MoeagalKhargALshahr_EadaLelMorafeah.TextChanged += text_MoeagalKhargALshahr_TextChanged;
             // 
-            // textBox16
+            // text_MoeagalKhargALshahr_MoagalLelTakrir
             // 
-            textBox16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox16.Location = new Point(493, 63);
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(117, 23);
-            textBox16.TabIndex = 30;
+            text_MoeagalKhargALshahr_MoagalLelTakrir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoeagalKhargALshahr_MoagalLelTakrir.Location = new Point(493, 63);
+            text_MoeagalKhargALshahr_MoagalLelTakrir.Name = "text_MoeagalKhargALshahr_MoagalLelTakrir";
+            text_MoeagalKhargALshahr_MoagalLelTakrir.Size = new Size(117, 23);
+            text_MoeagalKhargALshahr_MoagalLelTakrir.TabIndex = 30;
+            text_MoeagalKhargALshahr_MoagalLelTakrir.TextChanged += text_MoeagalKhargALshahr_TextChanged;
             // 
-            // textBox28
+            // text_MoeagalKhargALshahr_MahgouzLelhokm
             // 
-            textBox28.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox28.Location = new Point(691, 32);
-            textBox28.Name = "textBox28";
-            textBox28.Size = new Size(117, 23);
-            textBox28.TabIndex = 27;
+            text_MoeagalKhargALshahr_MahgouzLelhokm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoeagalKhargALshahr_MahgouzLelhokm.Location = new Point(691, 32);
+            text_MoeagalKhargALshahr_MahgouzLelhokm.Name = "text_MoeagalKhargALshahr_MahgouzLelhokm";
+            text_MoeagalKhargALshahr_MahgouzLelhokm.Size = new Size(117, 23);
+            text_MoeagalKhargALshahr_MahgouzLelhokm.TabIndex = 27;
+            text_MoeagalKhargALshahr_MahgouzLelhokm.TextChanged += text_MoeagalKhargALshahr_TextChanged;
             // 
             // label40
             // 
@@ -1089,49 +1194,51 @@
             label40.TabIndex = 8;
             label40.Text = "مد اجل";
             // 
-            // groupBox7
+            // groupBox_MahkoumFih
             // 
-            groupBox7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox7.Controls.Add(textBox26);
-            groupBox7.Controls.Add(textBox24);
-            groupBox7.Controls.Add(label37);
-            groupBox7.Controls.Add(groupBox8);
-            groupBox7.Controls.Add(textBox27);
-            groupBox7.Controls.Add(label35);
-            groupBox7.Controls.Add(label38);
-            groupBox7.Controls.Add(label28);
-            groupBox7.Controls.Add(textBox23);
-            groupBox7.Controls.Add(comboBox8);
-            groupBox7.Controls.Add(label34);
-            groupBox7.Controls.Add(textBox17);
-            groupBox7.Controls.Add(textBox25);
-            groupBox7.Controls.Add(textBox18);
-            groupBox7.Controls.Add(label36);
-            groupBox7.Controls.Add(label26);
-            groupBox7.Controls.Add(label27);
-            groupBox7.Location = new Point(334, 923);
-            groupBox7.Name = "groupBox7";
-            groupBox7.Size = new Size(905, 325);
-            groupBox7.TabIndex = 17;
-            groupBox7.TabStop = false;
-            groupBox7.Text = "المحكوم فية";
-            groupBox7.UseCompatibleTextRendering = true;
+            groupBox_MahkoumFih.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            groupBox_MahkoumFih.Controls.Add(text_MahkoumFih_EnktaeSirAlKhsoma);
+            groupBox_MahkoumFih.Controls.Add(text_MahkoumFih_WakfGazaey);
+            groupBox_MahkoumFih.Controls.Add(label37);
+            groupBox_MahkoumFih.Controls.Add(group_Katey);
+            groupBox_MahkoumFih.Controls.Add(text_MahkoumFih_Total);
+            groupBox_MahkoumFih.Controls.Add(label35);
+            groupBox_MahkoumFih.Controls.Add(label38);
+            groupBox_MahkoumFih.Controls.Add(label28);
+            groupBox_MahkoumFih.Controls.Add(text_MahkoumFih_Ethbat);
+            groupBox_MahkoumFih.Controls.Add(comboBox8);
+            groupBox_MahkoumFih.Controls.Add(label34);
+            groupBox_MahkoumFih.Controls.Add(text_MahkoumFih_Farey);
+            groupBox_MahkoumFih.Controls.Add(text_MahkoumFih_WakfEtfaky);
+            groupBox_MahkoumFih.Controls.Add(text_MahkoumFih_WakfTaeliky);
+            groupBox_MahkoumFih.Controls.Add(label36);
+            groupBox_MahkoumFih.Controls.Add(label26);
+            groupBox_MahkoumFih.Controls.Add(label27);
+            groupBox_MahkoumFih.Location = new Point(334, 923);
+            groupBox_MahkoumFih.Name = "groupBox_MahkoumFih";
+            groupBox_MahkoumFih.Size = new Size(905, 325);
+            groupBox_MahkoumFih.TabIndex = 17;
+            groupBox_MahkoumFih.TabStop = false;
+            groupBox_MahkoumFih.Text = "المحكوم فية";
+            groupBox_MahkoumFih.UseCompatibleTextRendering = true;
             // 
-            // textBox26
+            // text_MahkoumFih_EnktaeSirAlKhsoma
             // 
-            textBox26.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox26.Location = new Point(254, 225);
-            textBox26.Name = "textBox26";
-            textBox26.Size = new Size(107, 23);
-            textBox26.TabIndex = 26;
+            text_MahkoumFih_EnktaeSirAlKhsoma.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_EnktaeSirAlKhsoma.Location = new Point(254, 225);
+            text_MahkoumFih_EnktaeSirAlKhsoma.Name = "text_MahkoumFih_EnktaeSirAlKhsoma";
+            text_MahkoumFih_EnktaeSirAlKhsoma.Size = new Size(107, 23);
+            text_MahkoumFih_EnktaeSirAlKhsoma.TabIndex = 26;
+            text_MahkoumFih_EnktaeSirAlKhsoma.TextChanged += text_MahkoumFih_TextChanged;
             // 
-            // textBox24
+            // text_MahkoumFih_WakfGazaey
             // 
-            textBox24.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox24.Location = new Point(254, 180);
-            textBox24.Name = "textBox24";
-            textBox24.Size = new Size(107, 23);
-            textBox24.TabIndex = 23;
+            text_MahkoumFih_WakfGazaey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_WakfGazaey.Location = new Point(254, 180);
+            text_MahkoumFih_WakfGazaey.Name = "text_MahkoumFih_WakfGazaey";
+            text_MahkoumFih_WakfGazaey.Size = new Size(107, 23);
+            text_MahkoumFih_WakfGazaey.TabIndex = 23;
+            text_MahkoumFih_WakfGazaey.TextChanged += text_MahkoumFih_TextChanged;
             // 
             // label37
             // 
@@ -1143,34 +1250,35 @@
             label37.TabIndex = 7;
             label37.Text = "انقطاع سير الخصومة";
             // 
-            // groupBox8
+            // group_Katey
             // 
-            groupBox8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox8.Controls.Add(textBox19);
-            groupBox8.Controls.Add(label29);
-            groupBox8.Controls.Add(textBox22);
-            groupBox8.Controls.Add(label33);
-            groupBox8.Controls.Add(textBox21);
-            groupBox8.Controls.Add(label32);
-            groupBox8.Controls.Add(textBox20);
-            groupBox8.Controls.Add(label30);
-            groupBox8.Controls.Add(label31);
-            groupBox8.Controls.Add(comboBox9);
-            groupBox8.Location = new Point(24, 45);
-            groupBox8.Name = "groupBox8";
-            groupBox8.Size = new Size(857, 100);
-            groupBox8.TabIndex = 3;
-            groupBox8.TabStop = false;
-            groupBox8.Text = "قطعي";
-            groupBox8.UseCompatibleTextRendering = true;
+            group_Katey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_Katey.Controls.Add(text_MahkoumFih_Katey_Solh);
+            group_Katey.Controls.Add(label29);
+            group_Katey.Controls.Add(text_MahkoumFih_Katey_Mawdoey);
+            group_Katey.Controls.Add(label33);
+            group_Katey.Controls.Add(text_MahkoumFih_Katey_Total);
+            group_Katey.Controls.Add(label32);
+            group_Katey.Controls.Add(text_MahkoumFih_Katey_Shakly);
+            group_Katey.Controls.Add(label30);
+            group_Katey.Controls.Add(label31);
+            group_Katey.Controls.Add(comboBox9);
+            group_Katey.Location = new Point(24, 45);
+            group_Katey.Name = "group_Katey";
+            group_Katey.Size = new Size(857, 100);
+            group_Katey.TabIndex = 3;
+            group_Katey.TabStop = false;
+            group_Katey.Text = "قطعي";
+            group_Katey.UseCompatibleTextRendering = true;
             // 
-            // textBox19
+            // text_MahkoumFih_Katey_Solh
             // 
-            textBox19.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox19.Location = new Point(230, 34);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(107, 23);
-            textBox19.TabIndex = 20;
+            text_MahkoumFih_Katey_Solh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_Katey_Solh.Location = new Point(230, 34);
+            text_MahkoumFih_Katey_Solh.Name = "text_MahkoumFih_Katey_Solh";
+            text_MahkoumFih_Katey_Solh.Size = new Size(107, 23);
+            text_MahkoumFih_Katey_Solh.TabIndex = 20;
+            text_MahkoumFih_Katey_Solh.TextChanged += text_MahkoumFih_TextChanged;
             // 
             // label29
             // 
@@ -1182,13 +1290,14 @@
             label29.TabIndex = 7;
             label29.Text = "صلح";
             // 
-            // textBox22
+            // text_MahkoumFih_Katey_Mawdoey
             // 
-            textBox22.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox22.Location = new Point(469, 31);
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(117, 23);
-            textBox22.TabIndex = 19;
+            text_MahkoumFih_Katey_Mawdoey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_Katey_Mawdoey.Location = new Point(469, 31);
+            text_MahkoumFih_Katey_Mawdoey.Name = "text_MahkoumFih_Katey_Mawdoey";
+            text_MahkoumFih_Katey_Mawdoey.Size = new Size(117, 23);
+            text_MahkoumFih_Katey_Mawdoey.TabIndex = 19;
+            text_MahkoumFih_Katey_Mawdoey.TextChanged += text_MahkoumFih_TextChanged;
             // 
             // label33
             // 
@@ -1200,13 +1309,14 @@
             label33.TabIndex = 8;
             label33.Text = "موضوعي";
             // 
-            // textBox21
+            // text_MahkoumFih_Katey_Total
             // 
-            textBox21.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox21.Location = new Point(667, 71);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(117, 23);
-            textBox21.TabIndex = 511;
+            text_MahkoumFih_Katey_Total.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_Katey_Total.Location = new Point(667, 71);
+            text_MahkoumFih_Katey_Total.Name = "text_MahkoumFih_Katey_Total";
+            text_MahkoumFih_Katey_Total.ReadOnly = true;
+            text_MahkoumFih_Katey_Total.Size = new Size(117, 23);
+            text_MahkoumFih_Katey_Total.TabIndex = 511;
             // 
             // label32
             // 
@@ -1218,13 +1328,14 @@
             label32.TabIndex = 8;
             label32.Text = "الاجمالي";
             // 
-            // textBox20
+            // text_MahkoumFih_Katey_Shakly
             // 
-            textBox20.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox20.Location = new Point(667, 31);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(117, 23);
-            textBox20.TabIndex = 18;
+            text_MahkoumFih_Katey_Shakly.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_Katey_Shakly.Location = new Point(667, 31);
+            text_MahkoumFih_Katey_Shakly.Name = "text_MahkoumFih_Katey_Shakly";
+            text_MahkoumFih_Katey_Shakly.Size = new Size(117, 23);
+            text_MahkoumFih_Katey_Shakly.TabIndex = 18;
+            text_MahkoumFih_Katey_Shakly.TextChanged += text_MahkoumFih_TextChanged;
             // 
             // label30
             // 
@@ -1256,13 +1367,14 @@
             comboBox9.Size = new Size(230, 23);
             comboBox9.TabIndex = 1;
             // 
-            // textBox27
+            // text_MahkoumFih_Total
             // 
-            textBox27.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox27.Location = new Point(691, 272);
-            textBox27.Name = "textBox27";
-            textBox27.Size = new Size(117, 23);
-            textBox27.TabIndex = 510;
+            text_MahkoumFih_Total.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_Total.Location = new Point(691, 272);
+            text_MahkoumFih_Total.Name = "text_MahkoumFih_Total";
+            text_MahkoumFih_Total.ReadOnly = true;
+            text_MahkoumFih_Total.Size = new Size(117, 23);
+            text_MahkoumFih_Total.TabIndex = 510;
             // 
             // label35
             // 
@@ -1294,13 +1406,14 @@
             label28.TabIndex = 1;
             label28.Text = "الجلسة";
             // 
-            // textBox23
+            // text_MahkoumFih_Ethbat
             // 
-            textBox23.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox23.Location = new Point(493, 177);
-            textBox23.Name = "textBox23";
-            textBox23.Size = new Size(117, 23);
-            textBox23.TabIndex = 22;
+            text_MahkoumFih_Ethbat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_Ethbat.Location = new Point(493, 177);
+            text_MahkoumFih_Ethbat.Name = "text_MahkoumFih_Ethbat";
+            text_MahkoumFih_Ethbat.Size = new Size(117, 23);
+            text_MahkoumFih_Ethbat.TabIndex = 22;
+            text_MahkoumFih_Ethbat.TextChanged += text_MahkoumFih_TextChanged;
             // 
             // comboBox8
             // 
@@ -1322,29 +1435,32 @@
             label34.TabIndex = 8;
             label34.Text = "الاثبات";
             // 
-            // textBox17
+            // text_MahkoumFih_Farey
             // 
-            textBox17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox17.Location = new Point(691, 177);
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(117, 23);
-            textBox17.TabIndex = 21;
+            text_MahkoumFih_Farey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_Farey.Location = new Point(691, 177);
+            text_MahkoumFih_Farey.Name = "text_MahkoumFih_Farey";
+            text_MahkoumFih_Farey.Size = new Size(117, 23);
+            text_MahkoumFih_Farey.TabIndex = 21;
+            text_MahkoumFih_Farey.TextChanged += text_MahkoumFih_TextChanged;
             // 
-            // textBox25
+            // text_MahkoumFih_WakfEtfaky
             // 
-            textBox25.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox25.Location = new Point(493, 217);
-            textBox25.Name = "textBox25";
-            textBox25.Size = new Size(117, 23);
-            textBox25.TabIndex = 25;
+            text_MahkoumFih_WakfEtfaky.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_WakfEtfaky.Location = new Point(493, 217);
+            text_MahkoumFih_WakfEtfaky.Name = "text_MahkoumFih_WakfEtfaky";
+            text_MahkoumFih_WakfEtfaky.Size = new Size(117, 23);
+            text_MahkoumFih_WakfEtfaky.TabIndex = 25;
+            text_MahkoumFih_WakfEtfaky.TextChanged += text_MahkoumFih_TextChanged;
             // 
-            // textBox18
+            // text_MahkoumFih_WakfTaeliky
             // 
-            textBox18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox18.Location = new Point(691, 217);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(117, 23);
-            textBox18.TabIndex = 24;
+            text_MahkoumFih_WakfTaeliky.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MahkoumFih_WakfTaeliky.Location = new Point(691, 217);
+            text_MahkoumFih_WakfTaeliky.Name = "text_MahkoumFih_WakfTaeliky";
+            text_MahkoumFih_WakfTaeliky.Size = new Size(117, 23);
+            text_MahkoumFih_WakfTaeliky.TabIndex = 24;
+            text_MahkoumFih_WakfTaeliky.TextChanged += text_MahkoumFih_TextChanged;
             // 
             // label36
             // 
@@ -1376,140 +1492,250 @@
             label27.TabIndex = 8;
             label27.Text = "وقف تعليقي";
             // 
-            // groupBox9
+            // groupBox_MoagalatAlaAshhorTalia
             // 
-            groupBox9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox9.Controls.Add(button4);
-            groupBox9.Controls.Add(button3);
-            groupBox9.Controls.Add(button5);
-            groupBox9.Controls.Add(button2);
-            groupBox9.Controls.Add(button1);
-            groupBox9.Controls.Add(comboBox15);
-            groupBox9.Controls.Add(comboBox14);
-            groupBox9.Controls.Add(comboBox13);
-            groupBox9.Controls.Add(comboBox12);
-            groupBox9.Controls.Add(comboBox11);
-            groupBox9.Controls.Add(label43);
-            groupBox9.Controls.Add(comboBox10);
-            groupBox9.Controls.Add(textBox32);
-            groupBox9.Controls.Add(label47);
-            groupBox9.Controls.Add(label44);
-            groupBox9.Controls.Add(label50);
-            groupBox9.Controls.Add(label46);
-            groupBox9.Controls.Add(label45);
-            groupBox9.Controls.Add(textBox33);
-            groupBox9.Controls.Add(label48);
-            groupBox9.Controls.Add(textBox34);
-            groupBox9.Controls.Add(textBox35);
-            groupBox9.Controls.Add(textBox37);
-            groupBox9.Controls.Add(label49);
-            groupBox9.Location = new Point(331, 1528);
-            groupBox9.Name = "groupBox9";
-            groupBox9.Size = new Size(905, 282);
-            groupBox9.TabIndex = 33;
-            groupBox9.TabStop = false;
-            groupBox9.Text = "الؤجلات على اشهر تالية";
-            groupBox9.UseCompatibleTextRendering = true;
+            groupBox_MoagalatAlaAshhorTalia.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_AlBaky_Count);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label162);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label159);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_MadAgal_Count);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label155);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label151);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_Ethbat_Count);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label13);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(btn_MoagalatAlaAshhorTalia_EadaLelMorafea);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(btn_MoagalatAlaAshhorTalia_MadAgal);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(btn_MoagalatAlaAshhorTalia_MahgouzLelhokm);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(btn_MoagalatAlaAshhorTalia_AlBaky);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(btn_MoagalatAlaAshhorTalia_Farey);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(comboBox_MoagalatAlaAshhorTalia_AlBaky);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(comboBox_MoagalatAlaAshhorTalia_MadAgal);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(comboBox_MoagalatAlaAshhorTalia_Farey);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label43);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(comboBox10);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_AlBaky);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label47);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label44);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label50);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label46);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label45);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_EadaLelMorafea);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label48);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_MadAgal);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_MahgouzLelhokm);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_Farey);
+            groupBox_MoagalatAlaAshhorTalia.Controls.Add(label49);
+            groupBox_MoagalatAlaAshhorTalia.Location = new Point(331, 1528);
+            groupBox_MoagalatAlaAshhorTalia.Name = "groupBox_MoagalatAlaAshhorTalia";
+            groupBox_MoagalatAlaAshhorTalia.Size = new Size(905, 308);
+            groupBox_MoagalatAlaAshhorTalia.TabIndex = 33;
+            groupBox_MoagalatAlaAshhorTalia.TabStop = false;
+            groupBox_MoagalatAlaAshhorTalia.Text = "الؤجلات على اشهر تالية";
+            groupBox_MoagalatAlaAshhorTalia.UseCompatibleTextRendering = true;
             // 
-            // button4
+            // text_MoagalatAlaAshhorTalia_AlBaky_Count
             // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Location = new Point(384, 160);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 44;
-            button4.Text = "اضافة";
-            button4.UseVisualStyleBackColor = true;
+            text_MoagalatAlaAshhorTalia_AlBaky_Count.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoagalatAlaAshhorTalia_AlBaky_Count.AutoSize = true;
+            text_MoagalatAlaAshhorTalia_AlBaky_Count.Location = new Point(218, 39);
+            text_MoagalatAlaAshhorTalia_AlBaky_Count.Name = "text_MoagalatAlaAshhorTalia_AlBaky_Count";
+            text_MoagalatAlaAshhorTalia_AlBaky_Count.Size = new Size(33, 15);
+            text_MoagalatAlaAshhorTalia_AlBaky_Count.TabIndex = 57;
+            text_MoagalatAlaAshhorTalia_AlBaky_Count.Text = "العدد";
             // 
-            // button3
+            // label162
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button3.Location = new Point(384, 120);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 41;
-            button3.Text = "اضافة";
-            button3.UseVisualStyleBackColor = true;
+            label162.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label162.AutoSize = true;
+            label162.Location = new Point(200, 19);
+            label162.Name = "label162";
+            label162.Size = new Size(78, 15);
+            label162.TabIndex = 56;
+            label162.Text = "باقي المؤجلات";
             // 
-            // button5
+            // text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count
             // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button5.Location = new Point(384, 80);
-            button5.Name = "button5";
-            button5.Size = new Size(75, 23);
-            button5.TabIndex = 38;
-            button5.Text = "اضافة";
-            button5.UseVisualStyleBackColor = true;
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count.AutoSize = true;
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count.Location = new Point(388, 42);
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count.Name = "text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count";
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count.Size = new Size(33, 15);
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count.TabIndex = 55;
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count.Text = "العدد";
             // 
-            // button2
+            // label159
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button2.Location = new Point(384, 210);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 47;
-            button2.Text = "اضافة";
-            button2.UseVisualStyleBackColor = true;
+            label159.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label159.AutoSize = true;
+            label159.Location = new Point(370, 19);
+            label159.Name = "label159";
+            label159.Size = new Size(76, 15);
+            label159.TabIndex = 54;
+            label159.Text = "اعادة للمرافعة";
             // 
-            // button1
+            // text_MoagalatAlaAshhorTalia_MadAgal_Count
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button1.Location = new Point(384, 40);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 35;
-            button1.Text = "اضافة";
-            button1.UseVisualStyleBackColor = true;
+            text_MoagalatAlaAshhorTalia_MadAgal_Count.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoagalatAlaAshhorTalia_MadAgal_Count.AutoSize = true;
+            text_MoagalatAlaAshhorTalia_MadAgal_Count.Location = new Point(530, 42);
+            text_MoagalatAlaAshhorTalia_MadAgal_Count.Name = "text_MoagalatAlaAshhorTalia_MadAgal_Count";
+            text_MoagalatAlaAshhorTalia_MadAgal_Count.Size = new Size(33, 15);
+            text_MoagalatAlaAshhorTalia_MadAgal_Count.TabIndex = 53;
+            text_MoagalatAlaAshhorTalia_MadAgal_Count.Text = "العدد";
             // 
-            // comboBox15
+            // label155
             // 
-            comboBox15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox15.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox15.FormattingEnabled = true;
-            comboBox15.Location = new Point(496, 211);
-            comboBox15.Name = "comboBox15";
-            comboBox15.Size = new Size(149, 23);
-            comboBox15.TabIndex = 46;
+            label155.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label155.AutoSize = true;
+            label155.Location = new Point(523, 19);
+            label155.Name = "label155";
+            label155.Size = new Size(41, 15);
+            label155.TabIndex = 52;
+            label155.Text = "مد اجل";
             // 
-            // comboBox14
+            // text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count
             // 
-            comboBox14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox14.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox14.FormattingEnabled = true;
-            comboBox14.Location = new Point(496, 165);
-            comboBox14.Name = "comboBox14";
-            comboBox14.Size = new Size(149, 23);
-            comboBox14.TabIndex = 43;
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count.AutoSize = true;
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count.Location = new Point(708, 39);
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count.Name = "text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count";
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count.Size = new Size(33, 15);
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count.TabIndex = 51;
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count.Text = "العدد";
             // 
-            // comboBox13
+            // label151
             // 
-            comboBox13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox13.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox13.FormattingEnabled = true;
-            comboBox13.Location = new Point(496, 120);
-            comboBox13.Name = "comboBox13";
-            comboBox13.Size = new Size(149, 23);
-            comboBox13.TabIndex = 40;
+            label151.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label151.AutoSize = true;
+            label151.Location = new Point(678, 19);
+            label151.Name = "label151";
+            label151.Size = new Size(70, 15);
+            label151.TabIndex = 50;
+            label151.Text = "محجوز للحكم";
             // 
-            // comboBox12
+            // text_MoagalatAlaAshhorTalia_Ethbat_Count
             // 
-            comboBox12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox12.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox12.FormattingEnabled = true;
-            comboBox12.Location = new Point(496, 80);
-            comboBox12.Name = "comboBox12";
-            comboBox12.Size = new Size(149, 23);
-            comboBox12.TabIndex = 37;
+            text_MoagalatAlaAshhorTalia_Ethbat_Count.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoagalatAlaAshhorTalia_Ethbat_Count.AutoSize = true;
+            text_MoagalatAlaAshhorTalia_Ethbat_Count.Location = new Point(829, 42);
+            text_MoagalatAlaAshhorTalia_Ethbat_Count.Name = "text_MoagalatAlaAshhorTalia_Ethbat_Count";
+            text_MoagalatAlaAshhorTalia_Ethbat_Count.Size = new Size(33, 15);
+            text_MoagalatAlaAshhorTalia_Ethbat_Count.TabIndex = 49;
+            text_MoagalatAlaAshhorTalia_Ethbat_Count.Text = "العدد";
             // 
-            // comboBox11
+            // label13
             // 
-            comboBox11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox11.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox11.FormattingEnabled = true;
-            comboBox11.Location = new Point(496, 40);
-            comboBox11.Name = "comboBox11";
-            comboBox11.Size = new Size(149, 23);
-            comboBox11.TabIndex = 34;
+            label13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label13.AutoSize = true;
+            label13.Location = new Point(802, 19);
+            label13.Name = "label13";
+            label13.Size = new Size(97, 15);
+            label13.TabIndex = 48;
+            label13.Text = "احكام فرعية واثبات";
+            // 
+            // btn_MoagalatAlaAshhorTalia_EadaLelMorafea
+            // 
+            btn_MoagalatAlaAshhorTalia_EadaLelMorafea.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_MoagalatAlaAshhorTalia_EadaLelMorafea.Location = new Point(384, 221);
+            btn_MoagalatAlaAshhorTalia_EadaLelMorafea.Name = "btn_MoagalatAlaAshhorTalia_EadaLelMorafea";
+            btn_MoagalatAlaAshhorTalia_EadaLelMorafea.Size = new Size(75, 23);
+            btn_MoagalatAlaAshhorTalia_EadaLelMorafea.TabIndex = 44;
+            btn_MoagalatAlaAshhorTalia_EadaLelMorafea.Text = "اضافة";
+            btn_MoagalatAlaAshhorTalia_EadaLelMorafea.UseVisualStyleBackColor = true;
+            // 
+            // btn_MoagalatAlaAshhorTalia_MadAgal
+            // 
+            btn_MoagalatAlaAshhorTalia_MadAgal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_MoagalatAlaAshhorTalia_MadAgal.Location = new Point(384, 181);
+            btn_MoagalatAlaAshhorTalia_MadAgal.Name = "btn_MoagalatAlaAshhorTalia_MadAgal";
+            btn_MoagalatAlaAshhorTalia_MadAgal.Size = new Size(75, 23);
+            btn_MoagalatAlaAshhorTalia_MadAgal.TabIndex = 41;
+            btn_MoagalatAlaAshhorTalia_MadAgal.Text = "اضافة";
+            btn_MoagalatAlaAshhorTalia_MadAgal.UseVisualStyleBackColor = true;
+            // 
+            // btn_MoagalatAlaAshhorTalia_MahgouzLelhokm
+            // 
+            btn_MoagalatAlaAshhorTalia_MahgouzLelhokm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_MoagalatAlaAshhorTalia_MahgouzLelhokm.Location = new Point(384, 141);
+            btn_MoagalatAlaAshhorTalia_MahgouzLelhokm.Name = "btn_MoagalatAlaAshhorTalia_MahgouzLelhokm";
+            btn_MoagalatAlaAshhorTalia_MahgouzLelhokm.Size = new Size(75, 23);
+            btn_MoagalatAlaAshhorTalia_MahgouzLelhokm.TabIndex = 38;
+            btn_MoagalatAlaAshhorTalia_MahgouzLelhokm.Text = "اضافة";
+            btn_MoagalatAlaAshhorTalia_MahgouzLelhokm.UseVisualStyleBackColor = true;
+            // 
+            // btn_MoagalatAlaAshhorTalia_AlBaky
+            // 
+            btn_MoagalatAlaAshhorTalia_AlBaky.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_MoagalatAlaAshhorTalia_AlBaky.Location = new Point(384, 271);
+            btn_MoagalatAlaAshhorTalia_AlBaky.Name = "btn_MoagalatAlaAshhorTalia_AlBaky";
+            btn_MoagalatAlaAshhorTalia_AlBaky.Size = new Size(75, 23);
+            btn_MoagalatAlaAshhorTalia_AlBaky.TabIndex = 47;
+            btn_MoagalatAlaAshhorTalia_AlBaky.Text = "اضافة";
+            btn_MoagalatAlaAshhorTalia_AlBaky.UseVisualStyleBackColor = true;
+            // 
+            // btn_MoagalatAlaAshhorTalia_Farey
+            // 
+            btn_MoagalatAlaAshhorTalia_Farey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_MoagalatAlaAshhorTalia_Farey.Location = new Point(384, 101);
+            btn_MoagalatAlaAshhorTalia_Farey.Name = "btn_MoagalatAlaAshhorTalia_Farey";
+            btn_MoagalatAlaAshhorTalia_Farey.Size = new Size(75, 23);
+            btn_MoagalatAlaAshhorTalia_Farey.TabIndex = 35;
+            btn_MoagalatAlaAshhorTalia_Farey.Text = "اضافة";
+            btn_MoagalatAlaAshhorTalia_Farey.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_MoagalatAlaAshhorTalia_AlBaky
+            // 
+            comboBox_MoagalatAlaAshhorTalia_AlBaky.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox_MoagalatAlaAshhorTalia_AlBaky.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_MoagalatAlaAshhorTalia_AlBaky.FormattingEnabled = true;
+            comboBox_MoagalatAlaAshhorTalia_AlBaky.Location = new Point(496, 272);
+            comboBox_MoagalatAlaAshhorTalia_AlBaky.Name = "comboBox_MoagalatAlaAshhorTalia_AlBaky";
+            comboBox_MoagalatAlaAshhorTalia_AlBaky.Size = new Size(149, 23);
+            comboBox_MoagalatAlaAshhorTalia_AlBaky.TabIndex = 46;
+            // 
+            // comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea
+            // 
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.FormattingEnabled = true;
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.Location = new Point(496, 226);
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.Name = "comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea";
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.Size = new Size(149, 23);
+            comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea.TabIndex = 43;
+            // 
+            // comboBox_MoagalatAlaAshhorTalia_MadAgal
+            // 
+            comboBox_MoagalatAlaAshhorTalia_MadAgal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox_MoagalatAlaAshhorTalia_MadAgal.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_MoagalatAlaAshhorTalia_MadAgal.FormattingEnabled = true;
+            comboBox_MoagalatAlaAshhorTalia_MadAgal.Location = new Point(496, 181);
+            comboBox_MoagalatAlaAshhorTalia_MadAgal.Name = "comboBox_MoagalatAlaAshhorTalia_MadAgal";
+            comboBox_MoagalatAlaAshhorTalia_MadAgal.Size = new Size(149, 23);
+            comboBox_MoagalatAlaAshhorTalia_MadAgal.TabIndex = 40;
+            // 
+            // comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm
+            // 
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.FormattingEnabled = true;
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.Location = new Point(496, 141);
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.Name = "comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm";
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.Size = new Size(149, 23);
+            comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.TabIndex = 37;
+            // 
+            // comboBox_MoagalatAlaAshhorTalia_Farey
+            // 
+            comboBox_MoagalatAlaAshhorTalia_Farey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox_MoagalatAlaAshhorTalia_Farey.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_MoagalatAlaAshhorTalia_Farey.FormattingEnabled = true;
+            comboBox_MoagalatAlaAshhorTalia_Farey.Location = new Point(496, 101);
+            comboBox_MoagalatAlaAshhorTalia_Farey.Name = "comboBox_MoagalatAlaAshhorTalia_Farey";
+            comboBox_MoagalatAlaAshhorTalia_Farey.Size = new Size(149, 23);
+            comboBox_MoagalatAlaAshhorTalia_Farey.TabIndex = 34;
             // 
             // label43
             // 
@@ -1531,19 +1757,19 @@
             comboBox10.Size = new Size(230, 23);
             comboBox10.TabIndex = 1;
             // 
-            // textBox32
+            // text_MoagalatAlaAshhorTalia_AlBaky
             // 
-            textBox32.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox32.Location = new Point(694, 211);
-            textBox32.Name = "textBox32";
-            textBox32.Size = new Size(117, 23);
-            textBox32.TabIndex = 45;
+            text_MoagalatAlaAshhorTalia_AlBaky.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoagalatAlaAshhorTalia_AlBaky.Location = new Point(694, 272);
+            text_MoagalatAlaAshhorTalia_AlBaky.Name = "text_MoagalatAlaAshhorTalia_AlBaky";
+            text_MoagalatAlaAshhorTalia_AlBaky.Size = new Size(117, 23);
+            text_MoagalatAlaAshhorTalia_AlBaky.TabIndex = 45;
             // 
             // label47
             // 
             label47.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label47.AutoSize = true;
-            label47.Location = new Point(858, 129);
+            label47.Location = new Point(858, 190);
             label47.Name = "label47";
             label47.Size = new Size(41, 15);
             label47.TabIndex = 8;
@@ -1552,7 +1778,7 @@
             // label44
             // 
             label44.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label44.Location = new Point(823, 37);
+            label44.Location = new Point(823, 98);
             label44.Name = "label44";
             label44.Size = new Size(76, 41);
             label44.TabIndex = 8;
@@ -1562,7 +1788,7 @@
             // 
             label50.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label50.AutoSize = true;
-            label50.Location = new Point(524, 87);
+            label50.Location = new Point(524, 148);
             label50.Name = "label50";
             label50.Size = new Size(35, 15);
             label50.TabIndex = 8;
@@ -1572,7 +1798,7 @@
             // 
             label46.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label46.AutoSize = true;
-            label46.Location = new Point(708, 17);
+            label46.Location = new Point(708, 78);
             label46.Name = "label46";
             label46.Size = new Size(33, 15);
             label46.TabIndex = 8;
@@ -1582,170 +1808,194 @@
             // 
             label45.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label45.AutoSize = true;
-            label45.Location = new Point(829, 78);
+            label45.Location = new Point(829, 139);
             label45.Name = "label45";
             label45.Size = new Size(70, 15);
             label45.TabIndex = 8;
             label45.Text = "محجوز للحكم";
             // 
-            // textBox33
+            // text_MoagalatAlaAshhorTalia_EadaLelMorafea
             // 
-            textBox33.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox33.Location = new Point(691, 166);
-            textBox33.Name = "textBox33";
-            textBox33.Size = new Size(117, 23);
-            textBox33.TabIndex = 42;
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea.Location = new Point(691, 227);
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea.Name = "text_MoagalatAlaAshhorTalia_EadaLelMorafea";
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea.Size = new Size(117, 23);
+            text_MoagalatAlaAshhorTalia_EadaLelMorafea.TabIndex = 42;
             // 
             // label48
             // 
             label48.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label48.AutoSize = true;
-            label48.Location = new Point(823, 166);
+            label48.Location = new Point(823, 227);
             label48.Name = "label48";
             label48.Size = new Size(76, 15);
             label48.TabIndex = 8;
             label48.Text = "اعادة للمرافعة";
+            label48.TextAlign = ContentAlignment.TopCenter;
             // 
-            // textBox34
+            // text_MoagalatAlaAshhorTalia_MadAgal
             // 
-            textBox34.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox34.Location = new Point(691, 123);
-            textBox34.Name = "textBox34";
-            textBox34.Size = new Size(117, 23);
-            textBox34.TabIndex = 39;
+            text_MoagalatAlaAshhorTalia_MadAgal.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoagalatAlaAshhorTalia_MadAgal.Location = new Point(691, 184);
+            text_MoagalatAlaAshhorTalia_MadAgal.Name = "text_MoagalatAlaAshhorTalia_MadAgal";
+            text_MoagalatAlaAshhorTalia_MadAgal.Size = new Size(117, 23);
+            text_MoagalatAlaAshhorTalia_MadAgal.TabIndex = 39;
             // 
-            // textBox35
+            // text_MoagalatAlaAshhorTalia_MahgouzLelhokm
             // 
-            textBox35.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox35.Location = new Point(691, 77);
-            textBox35.Name = "textBox35";
-            textBox35.Size = new Size(117, 23);
-            textBox35.TabIndex = 36;
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm.Location = new Point(691, 138);
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm.Name = "text_MoagalatAlaAshhorTalia_MahgouzLelhokm";
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm.Size = new Size(117, 23);
+            text_MoagalatAlaAshhorTalia_MahgouzLelhokm.TabIndex = 36;
             // 
-            // textBox37
+            // text_MoagalatAlaAshhorTalia_Farey
             // 
-            textBox37.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox37.Location = new Point(691, 37);
-            textBox37.Name = "textBox37";
-            textBox37.Size = new Size(117, 23);
-            textBox37.TabIndex = 33;
+            text_MoagalatAlaAshhorTalia_Farey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoagalatAlaAshhorTalia_Farey.Location = new Point(691, 98);
+            text_MoagalatAlaAshhorTalia_Farey.Name = "text_MoagalatAlaAshhorTalia_Farey";
+            text_MoagalatAlaAshhorTalia_Farey.Size = new Size(117, 23);
+            text_MoagalatAlaAshhorTalia_Farey.TabIndex = 33;
             // 
             // label49
             // 
             label49.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label49.AutoSize = true;
-            label49.Location = new Point(821, 217);
+            label49.Location = new Point(821, 278);
             label49.Name = "label49";
             label49.Size = new Size(78, 15);
             label49.TabIndex = 8;
             label49.Text = "باقي المؤجلات";
             // 
-            // groupBox10
+            // group_Tawzie
             // 
-            groupBox10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox10.Controls.Add(button46);
-            groupBox10.Controls.Add(groupBox17);
-            groupBox10.Controls.Add(groupBox16);
-            groupBox10.Controls.Add(groupBox15);
-            groupBox10.Controls.Add(groupBox11);
-            groupBox10.Controls.Add(comboBox22);
-            groupBox10.Controls.Add(label61);
-            groupBox10.Controls.Add(label60);
-            groupBox10.Controls.Add(label59);
-            groupBox10.Controls.Add(button6);
-            groupBox10.Controls.Add(button7);
-            groupBox10.Controls.Add(button8);
-            groupBox10.Controls.Add(button9);
-            groupBox10.Controls.Add(button10);
-            groupBox10.Controls.Add(comboBox16);
-            groupBox10.Controls.Add(comboBox17);
-            groupBox10.Controls.Add(comboBox18);
-            groupBox10.Controls.Add(comboBox19);
-            groupBox10.Controls.Add(comboBox20);
-            groupBox10.Controls.Add(label51);
-            groupBox10.Controls.Add(comboBox21);
-            groupBox10.Controls.Add(textBox36);
-            groupBox10.Controls.Add(label52);
-            groupBox10.Controls.Add(label53);
-            groupBox10.Controls.Add(label54);
-            groupBox10.Controls.Add(label55);
-            groupBox10.Controls.Add(label56);
-            groupBox10.Controls.Add(textBox38);
-            groupBox10.Controls.Add(label57);
-            groupBox10.Controls.Add(textBox39);
-            groupBox10.Controls.Add(textBox40);
-            groupBox10.Controls.Add(textBox41);
-            groupBox10.Controls.Add(label58);
-            groupBox10.Location = new Point(328, 1840);
-            groupBox10.Name = "groupBox10";
-            groupBox10.Size = new Size(905, 1441);
-            groupBox10.TabIndex = 48;
-            groupBox10.TabStop = false;
-            groupBox10.Text = "توزيع الاحكام على اعضاء الدائرة";
-            groupBox10.UseCompatibleTextRendering = true;
+            group_Tawzie.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_Tawzie.Controls.Add(tex_Tawzie_TotalMahkomFih);
+            group_Tawzie.Controls.Add(label60);
+            group_Tawzie.Controls.Add(btn_Tawzie_Add);
+            group_Tawzie.Controls.Add(group_Tawzie_Okhra);
+            group_Tawzie.Controls.Add(group_Tawzie_Ethbat);
+            group_Tawzie.Controls.Add(group_Tawzie_Farey);
+            group_Tawzie.Controls.Add(group_Tawzie_Katey);
+            group_Tawzie.Controls.Add(comboBox_Tawzie_Judje);
+            group_Tawzie.Controls.Add(Text_Tawzie_JudgeId);
+            group_Tawzie.Controls.Add(Text_Tawzie_Judge_Job);
+            group_Tawzie.Controls.Add(label59);
+            group_Tawzie.Controls.Add(button6);
+            group_Tawzie.Controls.Add(button7);
+            group_Tawzie.Controls.Add(button8);
+            group_Tawzie.Controls.Add(button9);
+            group_Tawzie.Controls.Add(button10);
+            group_Tawzie.Controls.Add(comboBox16);
+            group_Tawzie.Controls.Add(comboBox17);
+            group_Tawzie.Controls.Add(comboBox18);
+            group_Tawzie.Controls.Add(comboBox19);
+            group_Tawzie.Controls.Add(comboBox20);
+            group_Tawzie.Controls.Add(label51);
+            group_Tawzie.Controls.Add(comboBox21);
+            group_Tawzie.Controls.Add(textBox36);
+            group_Tawzie.Controls.Add(label52);
+            group_Tawzie.Controls.Add(label53);
+            group_Tawzie.Controls.Add(label54);
+            group_Tawzie.Controls.Add(label55);
+            group_Tawzie.Controls.Add(label56);
+            group_Tawzie.Controls.Add(textBox38);
+            group_Tawzie.Controls.Add(label57);
+            group_Tawzie.Controls.Add(textBox39);
+            group_Tawzie.Controls.Add(textBox40);
+            group_Tawzie.Controls.Add(textBox41);
+            group_Tawzie.Controls.Add(label58);
+            group_Tawzie.Location = new Point(330, 1842);
+            group_Tawzie.Name = "group_Tawzie";
+            group_Tawzie.Size = new Size(905, 1441);
+            group_Tawzie.TabIndex = 48;
+            group_Tawzie.TabStop = false;
+            group_Tawzie.Text = "توزيع الاحكام على اعضاء الدائرة";
+            group_Tawzie.UseCompatibleTextRendering = true;
             // 
-            // button46
+            // tex_Tawzie_TotalMahkomFih
             // 
-            button46.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button46.Location = new Point(736, 1259);
-            button46.Name = "button46";
-            button46.Size = new Size(75, 23);
-            button46.TabIndex = 74;
-            button46.Text = "اضافة";
-            button46.UseVisualStyleBackColor = true;
+            tex_Tawzie_TotalMahkomFih.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            tex_Tawzie_TotalMahkomFih.Location = new Point(31, 1309);
+            tex_Tawzie_TotalMahkomFih.Name = "tex_Tawzie_TotalMahkomFih";
+            tex_Tawzie_TotalMahkomFih.ReadOnly = true;
+            tex_Tawzie_TotalMahkomFih.Size = new Size(117, 23);
+            tex_Tawzie_TotalMahkomFih.TabIndex = 507;
             // 
-            // groupBox17
+            // label60
             // 
-            groupBox17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox17.Controls.Add(textBox103);
-            groupBox17.Controls.Add(label141);
-            groupBox17.Controls.Add(label145);
-            groupBox17.Controls.Add(textBox107);
-            groupBox17.Controls.Add(label148);
-            groupBox17.Controls.Add(textBox108);
-            groupBox17.Controls.Add(label149);
-            groupBox17.Controls.Add(textBox109);
-            groupBox17.Controls.Add(label150);
-            groupBox17.Controls.Add(textBox110);
-            groupBox17.Controls.Add(button41);
-            groupBox17.Controls.Add(button42);
-            groupBox17.Controls.Add(button43);
-            groupBox17.Controls.Add(button44);
-            groupBox17.Controls.Add(button45);
-            groupBox17.Controls.Add(comboBox59);
-            groupBox17.Controls.Add(comboBox60);
-            groupBox17.Controls.Add(comboBox61);
-            groupBox17.Controls.Add(comboBox62);
-            groupBox17.Controls.Add(comboBox63);
-            groupBox17.Controls.Add(label110);
-            groupBox17.Controls.Add(comboBox64);
-            groupBox17.Controls.Add(textBox72);
-            groupBox17.Controls.Add(label111);
-            groupBox17.Controls.Add(label112);
-            groupBox17.Controls.Add(label113);
-            groupBox17.Controls.Add(label114);
-            groupBox17.Controls.Add(label115);
-            groupBox17.Controls.Add(textBox73);
-            groupBox17.Controls.Add(label116);
-            groupBox17.Controls.Add(textBox74);
-            groupBox17.Controls.Add(textBox75);
-            groupBox17.Controls.Add(textBox76);
-            groupBox17.Controls.Add(label117);
-            groupBox17.Location = new Point(51, 1049);
-            groupBox17.Name = "groupBox17";
-            groupBox17.Size = new Size(823, 194);
-            groupBox17.TabIndex = 70;
-            groupBox17.TabStop = false;
-            groupBox17.Text = "اخرى";
-            groupBox17.UseCompatibleTextRendering = true;
+            label60.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label60.AutoSize = true;
+            label60.Location = new Point(51, 1278);
+            label60.Name = "label60";
+            label60.Size = new Size(93, 15);
+            label60.TabIndex = 506;
+            label60.Text = "جملة المحكوم فيه";
             // 
-            // textBox103
+            // btn_Tawzie_Add
             // 
-            textBox103.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox103.Location = new Point(599, 131);
-            textBox103.Name = "textBox103";
-            textBox103.Size = new Size(117, 23);
-            textBox103.TabIndex = 505;
+            btn_Tawzie_Add.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_Tawzie_Add.Location = new Point(736, 1259);
+            btn_Tawzie_Add.Name = "btn_Tawzie_Add";
+            btn_Tawzie_Add.Size = new Size(75, 23);
+            btn_Tawzie_Add.TabIndex = 74;
+            btn_Tawzie_Add.Text = "اضافة";
+            btn_Tawzie_Add.UseVisualStyleBackColor = true;
+            // 
+            // group_Tawzie_Okhra
+            // 
+            group_Tawzie_Okhra.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_Tawzie_Okhra.Controls.Add(text_Tawzie_Okhra_Total);
+            group_Tawzie_Okhra.Controls.Add(label141);
+            group_Tawzie_Okhra.Controls.Add(label145);
+            group_Tawzie_Okhra.Controls.Add(text_Tawzie_Okhra_Enktae);
+            group_Tawzie_Okhra.Controls.Add(label148);
+            group_Tawzie_Okhra.Controls.Add(text_Tawzie_Okhra_WakfTaeliky);
+            group_Tawzie_Okhra.Controls.Add(label149);
+            group_Tawzie_Okhra.Controls.Add(text_Tawzie_Okhra_WakfEtfaky);
+            group_Tawzie_Okhra.Controls.Add(label150);
+            group_Tawzie_Okhra.Controls.Add(text_Tawzie_Okhra_WakfGzaey);
+            group_Tawzie_Okhra.Controls.Add(button41);
+            group_Tawzie_Okhra.Controls.Add(button42);
+            group_Tawzie_Okhra.Controls.Add(button43);
+            group_Tawzie_Okhra.Controls.Add(button44);
+            group_Tawzie_Okhra.Controls.Add(button45);
+            group_Tawzie_Okhra.Controls.Add(comboBox59);
+            group_Tawzie_Okhra.Controls.Add(comboBox60);
+            group_Tawzie_Okhra.Controls.Add(comboBox61);
+            group_Tawzie_Okhra.Controls.Add(comboBox62);
+            group_Tawzie_Okhra.Controls.Add(comboBox63);
+            group_Tawzie_Okhra.Controls.Add(label110);
+            group_Tawzie_Okhra.Controls.Add(comboBox64);
+            group_Tawzie_Okhra.Controls.Add(textBox72);
+            group_Tawzie_Okhra.Controls.Add(label111);
+            group_Tawzie_Okhra.Controls.Add(label112);
+            group_Tawzie_Okhra.Controls.Add(label113);
+            group_Tawzie_Okhra.Controls.Add(label114);
+            group_Tawzie_Okhra.Controls.Add(label115);
+            group_Tawzie_Okhra.Controls.Add(textBox73);
+            group_Tawzie_Okhra.Controls.Add(label116);
+            group_Tawzie_Okhra.Controls.Add(textBox74);
+            group_Tawzie_Okhra.Controls.Add(textBox75);
+            group_Tawzie_Okhra.Controls.Add(textBox76);
+            group_Tawzie_Okhra.Controls.Add(label117);
+            group_Tawzie_Okhra.Location = new Point(51, 1049);
+            group_Tawzie_Okhra.Name = "group_Tawzie_Okhra";
+            group_Tawzie_Okhra.Size = new Size(823, 194);
+            group_Tawzie_Okhra.TabIndex = 70;
+            group_Tawzie_Okhra.TabStop = false;
+            group_Tawzie_Okhra.Text = "اخرى";
+            group_Tawzie_Okhra.UseCompatibleTextRendering = true;
+            // 
+            // text_Tawzie_Okhra_Total
+            // 
+            text_Tawzie_Okhra_Total.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Okhra_Total.Location = new Point(599, 131);
+            text_Tawzie_Okhra_Total.Name = "text_Tawzie_Okhra_Total";
+            text_Tawzie_Okhra_Total.ReadOnly = true;
+            text_Tawzie_Okhra_Total.Size = new Size(117, 23);
+            text_Tawzie_Okhra_Total.TabIndex = 505;
+            text_Tawzie_Okhra_Total.TextChanged += text_Tawzie_Total_TextChanged;
             // 
             // label141
             // 
@@ -1767,13 +2017,14 @@
             label145.TabIndex = 72;
             label145.Text = "وقف تعليقي";
             // 
-            // textBox107
+            // text_Tawzie_Okhra_Enktae
             // 
-            textBox107.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox107.Location = new Point(304, 89);
-            textBox107.Name = "textBox107";
-            textBox107.Size = new Size(117, 23);
-            textBox107.TabIndex = 73;
+            text_Tawzie_Okhra_Enktae.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Okhra_Enktae.Location = new Point(304, 89);
+            text_Tawzie_Okhra_Enktae.Name = "text_Tawzie_Okhra_Enktae";
+            text_Tawzie_Okhra_Enktae.Size = new Size(117, 23);
+            text_Tawzie_Okhra_Enktae.TabIndex = 73;
+            text_Tawzie_Okhra_Enktae.TextChanged += text_Tawzie_Okhra_TextChanged;
             // 
             // label148
             // 
@@ -1785,13 +2036,14 @@
             label148.TabIndex = 73;
             label148.Text = "انقطاع";
             // 
-            // textBox108
+            // text_Tawzie_Okhra_WakfTaeliky
             // 
-            textBox108.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox108.Location = new Point(304, 46);
-            textBox108.Name = "textBox108";
-            textBox108.Size = new Size(117, 23);
-            textBox108.TabIndex = 71;
+            text_Tawzie_Okhra_WakfTaeliky.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Okhra_WakfTaeliky.Location = new Point(304, 46);
+            text_Tawzie_Okhra_WakfTaeliky.Name = "text_Tawzie_Okhra_WakfTaeliky";
+            text_Tawzie_Okhra_WakfTaeliky.Size = new Size(117, 23);
+            text_Tawzie_Okhra_WakfTaeliky.TabIndex = 71;
+            text_Tawzie_Okhra_WakfTaeliky.TextChanged += text_Tawzie_Okhra_TextChanged;
             // 
             // label149
             // 
@@ -1803,13 +2055,14 @@
             label149.TabIndex = 68;
             label149.Text = "وقف جزائي";
             // 
-            // textBox109
+            // text_Tawzie_Okhra_WakfEtfaky
             // 
-            textBox109.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox109.Location = new Point(599, 86);
-            textBox109.Name = "textBox109";
-            textBox109.Size = new Size(117, 23);
-            textBox109.TabIndex = 72;
+            text_Tawzie_Okhra_WakfEtfaky.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Okhra_WakfEtfaky.Location = new Point(599, 86);
+            text_Tawzie_Okhra_WakfEtfaky.Name = "text_Tawzie_Okhra_WakfEtfaky";
+            text_Tawzie_Okhra_WakfEtfaky.Size = new Size(117, 23);
+            text_Tawzie_Okhra_WakfEtfaky.TabIndex = 72;
+            text_Tawzie_Okhra_WakfEtfaky.TextChanged += text_Tawzie_Okhra_TextChanged;
             // 
             // label150
             // 
@@ -1821,13 +2074,14 @@
             label150.TabIndex = 69;
             label150.Text = "وقف اتفاقي";
             // 
-            // textBox110
+            // text_Tawzie_Okhra_WakfGzaey
             // 
-            textBox110.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox110.Location = new Point(599, 43);
-            textBox110.Name = "textBox110";
-            textBox110.Size = new Size(117, 23);
-            textBox110.TabIndex = 70;
+            text_Tawzie_Okhra_WakfGzaey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Okhra_WakfGzaey.Location = new Point(599, 43);
+            text_Tawzie_Okhra_WakfGzaey.Name = "text_Tawzie_Okhra_WakfGzaey";
+            text_Tawzie_Okhra_WakfGzaey.Size = new Size(117, 23);
+            text_Tawzie_Okhra_WakfGzaey.TabIndex = 70;
+            text_Tawzie_Okhra_WakfGzaey.TextChanged += text_Tawzie_Okhra_TextChanged;
             // 
             // button41
             // 
@@ -2058,62 +2312,64 @@
             label117.TabIndex = 8;
             label117.Text = "باقي المؤجلات";
             // 
-            // groupBox16
+            // group_Tawzie_Ethbat
             // 
-            groupBox16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox16.Controls.Add(textBox99);
-            groupBox16.Controls.Add(label139);
-            groupBox16.Controls.Add(label140);
-            groupBox16.Controls.Add(label142);
-            groupBox16.Controls.Add(textBox100);
-            groupBox16.Controls.Add(label143);
-            groupBox16.Controls.Add(textBox101);
-            groupBox16.Controls.Add(textBox102);
-            groupBox16.Controls.Add(label144);
-            groupBox16.Controls.Add(label146);
-            groupBox16.Controls.Add(textBox104);
-            groupBox16.Controls.Add(label147);
-            groupBox16.Controls.Add(textBox105);
-            groupBox16.Controls.Add(textBox106);
-            groupBox16.Controls.Add(button36);
-            groupBox16.Controls.Add(button37);
-            groupBox16.Controls.Add(button38);
-            groupBox16.Controls.Add(button39);
-            groupBox16.Controls.Add(button40);
-            groupBox16.Controls.Add(comboBox53);
-            groupBox16.Controls.Add(comboBox54);
-            groupBox16.Controls.Add(comboBox55);
-            groupBox16.Controls.Add(comboBox56);
-            groupBox16.Controls.Add(comboBox57);
-            groupBox16.Controls.Add(label102);
-            groupBox16.Controls.Add(comboBox58);
-            groupBox16.Controls.Add(textBox67);
-            groupBox16.Controls.Add(label103);
-            groupBox16.Controls.Add(label104);
-            groupBox16.Controls.Add(label105);
-            groupBox16.Controls.Add(label106);
-            groupBox16.Controls.Add(label107);
-            groupBox16.Controls.Add(textBox68);
-            groupBox16.Controls.Add(label108);
-            groupBox16.Controls.Add(textBox69);
-            groupBox16.Controls.Add(textBox70);
-            groupBox16.Controls.Add(textBox71);
-            groupBox16.Controls.Add(label109);
-            groupBox16.Location = new Point(53, 839);
-            groupBox16.Name = "groupBox16";
-            groupBox16.Size = new Size(823, 194);
-            groupBox16.TabIndex = 66;
-            groupBox16.TabStop = false;
-            groupBox16.Text = "اثبات";
-            groupBox16.UseCompatibleTextRendering = true;
+            group_Tawzie_Ethbat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_Tawzie_Ethbat.Controls.Add(text_Tawzie_Ethbat_Total);
+            group_Tawzie_Ethbat.Controls.Add(label139);
+            group_Tawzie_Ethbat.Controls.Add(label140);
+            group_Tawzie_Ethbat.Controls.Add(label142);
+            group_Tawzie_Ethbat.Controls.Add(text_Tawzie_Ethbat_HelfYamin);
+            group_Tawzie_Ethbat.Controls.Add(label143);
+            group_Tawzie_Ethbat.Controls.Add(text_Tawzie_Ethbat_Tahkik);
+            group_Tawzie_Ethbat.Controls.Add(text_Tawzie_Ethbat_NadbKhabir);
+            group_Tawzie_Ethbat.Controls.Add(label144);
+            group_Tawzie_Ethbat.Controls.Add(label146);
+            group_Tawzie_Ethbat.Controls.Add(text_Tawzie_Ethbat_Estgwab);
+            group_Tawzie_Ethbat.Controls.Add(label147);
+            group_Tawzie_Ethbat.Controls.Add(text_Tawzie_Ethbat_EadaLelKhabir);
+            group_Tawzie_Ethbat.Controls.Add(text_Tawzie_Ethbat_NadbHakmin);
+            group_Tawzie_Ethbat.Controls.Add(button36);
+            group_Tawzie_Ethbat.Controls.Add(button37);
+            group_Tawzie_Ethbat.Controls.Add(button38);
+            group_Tawzie_Ethbat.Controls.Add(button39);
+            group_Tawzie_Ethbat.Controls.Add(button40);
+            group_Tawzie_Ethbat.Controls.Add(comboBox53);
+            group_Tawzie_Ethbat.Controls.Add(comboBox54);
+            group_Tawzie_Ethbat.Controls.Add(comboBox55);
+            group_Tawzie_Ethbat.Controls.Add(comboBox56);
+            group_Tawzie_Ethbat.Controls.Add(comboBox57);
+            group_Tawzie_Ethbat.Controls.Add(label102);
+            group_Tawzie_Ethbat.Controls.Add(comboBox58);
+            group_Tawzie_Ethbat.Controls.Add(textBox67);
+            group_Tawzie_Ethbat.Controls.Add(label103);
+            group_Tawzie_Ethbat.Controls.Add(label104);
+            group_Tawzie_Ethbat.Controls.Add(label105);
+            group_Tawzie_Ethbat.Controls.Add(label106);
+            group_Tawzie_Ethbat.Controls.Add(label107);
+            group_Tawzie_Ethbat.Controls.Add(textBox68);
+            group_Tawzie_Ethbat.Controls.Add(label108);
+            group_Tawzie_Ethbat.Controls.Add(textBox69);
+            group_Tawzie_Ethbat.Controls.Add(textBox70);
+            group_Tawzie_Ethbat.Controls.Add(textBox71);
+            group_Tawzie_Ethbat.Controls.Add(label109);
+            group_Tawzie_Ethbat.Location = new Point(53, 839);
+            group_Tawzie_Ethbat.Name = "group_Tawzie_Ethbat";
+            group_Tawzie_Ethbat.Size = new Size(823, 194);
+            group_Tawzie_Ethbat.TabIndex = 66;
+            group_Tawzie_Ethbat.TabStop = false;
+            group_Tawzie_Ethbat.Text = "اثبات";
+            group_Tawzie_Ethbat.UseCompatibleTextRendering = true;
             // 
-            // textBox99
+            // text_Tawzie_Ethbat_Total
             // 
-            textBox99.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox99.Location = new Point(597, 156);
-            textBox99.Name = "textBox99";
-            textBox99.Size = new Size(117, 23);
-            textBox99.TabIndex = 504;
+            text_Tawzie_Ethbat_Total.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Ethbat_Total.Location = new Point(597, 156);
+            text_Tawzie_Ethbat_Total.Name = "text_Tawzie_Ethbat_Total";
+            text_Tawzie_Ethbat_Total.ReadOnly = true;
+            text_Tawzie_Ethbat_Total.Size = new Size(117, 23);
+            text_Tawzie_Ethbat_Total.TabIndex = 504;
+            text_Tawzie_Ethbat_Total.TextChanged += text_Tawzie_Total_TextChanged;
             // 
             // label139
             // 
@@ -2145,13 +2401,14 @@
             label142.TabIndex = 60;
             label142.Text = "ندب خبير";
             // 
-            // textBox100
+            // text_Tawzie_Ethbat_HelfYamin
             // 
-            textBox100.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox100.Location = new Point(302, 114);
-            textBox100.Name = "textBox100";
-            textBox100.Size = new Size(117, 23);
-            textBox100.TabIndex = 69;
+            text_Tawzie_Ethbat_HelfYamin.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Ethbat_HelfYamin.Location = new Point(302, 114);
+            text_Tawzie_Ethbat_HelfYamin.Name = "text_Tawzie_Ethbat_HelfYamin";
+            text_Tawzie_Ethbat_HelfYamin.Size = new Size(117, 23);
+            text_Tawzie_Ethbat_HelfYamin.TabIndex = 69;
+            text_Tawzie_Ethbat_HelfYamin.TextChanged += text_Tawzie_Ethbat_TextChanged;
             // 
             // label143
             // 
@@ -2163,21 +2420,23 @@
             label143.TabIndex = 61;
             label143.Text = "حلف يمين";
             // 
-            // textBox101
+            // text_Tawzie_Ethbat_Tahkik
             // 
-            textBox101.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox101.Location = new Point(302, 71);
-            textBox101.Name = "textBox101";
-            textBox101.Size = new Size(117, 23);
-            textBox101.TabIndex = 67;
+            text_Tawzie_Ethbat_Tahkik.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Ethbat_Tahkik.Location = new Point(302, 71);
+            text_Tawzie_Ethbat_Tahkik.Name = "text_Tawzie_Ethbat_Tahkik";
+            text_Tawzie_Ethbat_Tahkik.Size = new Size(117, 23);
+            text_Tawzie_Ethbat_Tahkik.TabIndex = 67;
+            text_Tawzie_Ethbat_Tahkik.TextChanged += text_Tawzie_Ethbat_TextChanged;
             // 
-            // textBox102
+            // text_Tawzie_Ethbat_NadbKhabir
             // 
-            textBox102.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox102.Location = new Point(302, 25);
-            textBox102.Name = "textBox102";
-            textBox102.Size = new Size(117, 23);
-            textBox102.TabIndex = 65;
+            text_Tawzie_Ethbat_NadbKhabir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Ethbat_NadbKhabir.Location = new Point(302, 25);
+            text_Tawzie_Ethbat_NadbKhabir.Name = "text_Tawzie_Ethbat_NadbKhabir";
+            text_Tawzie_Ethbat_NadbKhabir.Size = new Size(117, 23);
+            text_Tawzie_Ethbat_NadbKhabir.TabIndex = 65;
+            text_Tawzie_Ethbat_NadbKhabir.TextChanged += text_Tawzie_Ethbat_TextChanged;
             // 
             // label144
             // 
@@ -2200,13 +2459,14 @@
             label146.TabIndex = 52;
             label146.Text = "ندب حكمين";
             // 
-            // textBox104
+            // text_Tawzie_Ethbat_Estgwab
             // 
-            textBox104.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox104.Location = new Point(597, 111);
-            textBox104.Name = "textBox104";
-            textBox104.Size = new Size(117, 23);
-            textBox104.TabIndex = 68;
+            text_Tawzie_Ethbat_Estgwab.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Ethbat_Estgwab.Location = new Point(597, 111);
+            text_Tawzie_Ethbat_Estgwab.Name = "text_Tawzie_Ethbat_Estgwab";
+            text_Tawzie_Ethbat_Estgwab.Size = new Size(117, 23);
+            text_Tawzie_Ethbat_Estgwab.TabIndex = 68;
+            text_Tawzie_Ethbat_Estgwab.TextChanged += text_Tawzie_Ethbat_TextChanged;
             // 
             // label147
             // 
@@ -2218,21 +2478,23 @@
             label147.TabIndex = 53;
             label147.Text = "استجواب";
             // 
-            // textBox105
+            // text_Tawzie_Ethbat_EadaLelKhabir
             // 
-            textBox105.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox105.Location = new Point(597, 68);
-            textBox105.Name = "textBox105";
-            textBox105.Size = new Size(117, 23);
-            textBox105.TabIndex = 66;
+            text_Tawzie_Ethbat_EadaLelKhabir.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Ethbat_EadaLelKhabir.Location = new Point(597, 68);
+            text_Tawzie_Ethbat_EadaLelKhabir.Name = "text_Tawzie_Ethbat_EadaLelKhabir";
+            text_Tawzie_Ethbat_EadaLelKhabir.Size = new Size(117, 23);
+            text_Tawzie_Ethbat_EadaLelKhabir.TabIndex = 66;
+            text_Tawzie_Ethbat_EadaLelKhabir.TextChanged += text_Tawzie_Ethbat_TextChanged;
             // 
-            // textBox106
+            // text_Tawzie_Ethbat_NadbHakmin
             // 
-            textBox106.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox106.Location = new Point(597, 22);
-            textBox106.Name = "textBox106";
-            textBox106.Size = new Size(117, 23);
-            textBox106.TabIndex = 64;
+            text_Tawzie_Ethbat_NadbHakmin.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Ethbat_NadbHakmin.Location = new Point(597, 22);
+            text_Tawzie_Ethbat_NadbHakmin.Name = "text_Tawzie_Ethbat_NadbHakmin";
+            text_Tawzie_Ethbat_NadbHakmin.Size = new Size(117, 23);
+            text_Tawzie_Ethbat_NadbHakmin.TabIndex = 64;
+            text_Tawzie_Ethbat_NadbHakmin.TextChanged += text_Tawzie_Ethbat_TextChanged;
             // 
             // button36
             // 
@@ -2463,49 +2725,50 @@
             label109.TabIndex = 8;
             label109.Text = "باقي المؤجلات";
             // 
-            // groupBox15
+            // group_Tawzie_Farey
             // 
-            groupBox15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox15.Controls.Add(textBox98);
-            groupBox15.Controls.Add(button31);
-            groupBox15.Controls.Add(button32);
-            groupBox15.Controls.Add(button33);
-            groupBox15.Controls.Add(button34);
-            groupBox15.Controls.Add(button35);
-            groupBox15.Controls.Add(comboBox47);
-            groupBox15.Controls.Add(comboBox48);
-            groupBox15.Controls.Add(comboBox49);
-            groupBox15.Controls.Add(comboBox50);
-            groupBox15.Controls.Add(comboBox51);
-            groupBox15.Controls.Add(label94);
-            groupBox15.Controls.Add(comboBox52);
-            groupBox15.Controls.Add(textBox62);
-            groupBox15.Controls.Add(label95);
-            groupBox15.Controls.Add(label96);
-            groupBox15.Controls.Add(label97);
-            groupBox15.Controls.Add(label98);
-            groupBox15.Controls.Add(label99);
-            groupBox15.Controls.Add(textBox63);
-            groupBox15.Controls.Add(label100);
-            groupBox15.Controls.Add(textBox64);
-            groupBox15.Controls.Add(textBox65);
-            groupBox15.Controls.Add(textBox66);
-            groupBox15.Controls.Add(label101);
-            groupBox15.Location = new Point(31, 709);
-            groupBox15.Name = "groupBox15";
-            groupBox15.Size = new Size(845, 109);
-            groupBox15.TabIndex = 64;
-            groupBox15.TabStop = false;
-            groupBox15.Text = "فرعي";
-            groupBox15.UseCompatibleTextRendering = true;
+            group_Tawzie_Farey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_Tawzie_Farey.Controls.Add(text_Tawzie_Farey);
+            group_Tawzie_Farey.Controls.Add(button31);
+            group_Tawzie_Farey.Controls.Add(button32);
+            group_Tawzie_Farey.Controls.Add(button33);
+            group_Tawzie_Farey.Controls.Add(button34);
+            group_Tawzie_Farey.Controls.Add(button35);
+            group_Tawzie_Farey.Controls.Add(comboBox47);
+            group_Tawzie_Farey.Controls.Add(comboBox48);
+            group_Tawzie_Farey.Controls.Add(comboBox49);
+            group_Tawzie_Farey.Controls.Add(comboBox50);
+            group_Tawzie_Farey.Controls.Add(comboBox51);
+            group_Tawzie_Farey.Controls.Add(label94);
+            group_Tawzie_Farey.Controls.Add(comboBox52);
+            group_Tawzie_Farey.Controls.Add(textBox62);
+            group_Tawzie_Farey.Controls.Add(label95);
+            group_Tawzie_Farey.Controls.Add(label96);
+            group_Tawzie_Farey.Controls.Add(label97);
+            group_Tawzie_Farey.Controls.Add(label98);
+            group_Tawzie_Farey.Controls.Add(label99);
+            group_Tawzie_Farey.Controls.Add(textBox63);
+            group_Tawzie_Farey.Controls.Add(label100);
+            group_Tawzie_Farey.Controls.Add(textBox64);
+            group_Tawzie_Farey.Controls.Add(textBox65);
+            group_Tawzie_Farey.Controls.Add(textBox66);
+            group_Tawzie_Farey.Controls.Add(label101);
+            group_Tawzie_Farey.Location = new Point(31, 709);
+            group_Tawzie_Farey.Name = "group_Tawzie_Farey";
+            group_Tawzie_Farey.Size = new Size(845, 109);
+            group_Tawzie_Farey.TabIndex = 64;
+            group_Tawzie_Farey.TabStop = false;
+            group_Tawzie_Farey.Text = "فرعي";
+            group_Tawzie_Farey.UseCompatibleTextRendering = true;
             // 
-            // textBox98
+            // text_Tawzie_Farey
             // 
-            textBox98.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox98.Location = new Point(500, 49);
-            textBox98.Name = "textBox98";
-            textBox98.Size = new Size(165, 23);
-            textBox98.TabIndex = 63;
+            text_Tawzie_Farey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Farey.Location = new Point(500, 49);
+            text_Tawzie_Farey.Name = "text_Tawzie_Farey";
+            text_Tawzie_Farey.Size = new Size(165, 23);
+            text_Tawzie_Farey.TabIndex = 63;
+            text_Tawzie_Farey.TextChanged += text_Tawzie_Farey_TextChanged;
             // 
             // button31
             // 
@@ -2736,87 +2999,88 @@
             label101.TabIndex = 8;
             label101.Text = "باقي المؤجلات";
             // 
-            // groupBox11
+            // group_Tawzie_Katey
             // 
-            groupBox11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox11.Controls.Add(groupBox14);
-            groupBox11.Controls.Add(groupBox13);
-            groupBox11.Controls.Add(groupBox12);
-            groupBox11.Controls.Add(button11);
-            groupBox11.Controls.Add(button12);
-            groupBox11.Controls.Add(button13);
-            groupBox11.Controls.Add(button14);
-            groupBox11.Controls.Add(button15);
-            groupBox11.Controls.Add(comboBox23);
-            groupBox11.Controls.Add(comboBox24);
-            groupBox11.Controls.Add(comboBox25);
-            groupBox11.Controls.Add(comboBox26);
-            groupBox11.Controls.Add(comboBox27);
-            groupBox11.Controls.Add(label62);
-            groupBox11.Controls.Add(comboBox28);
-            groupBox11.Controls.Add(textBox42);
-            groupBox11.Controls.Add(label63);
-            groupBox11.Controls.Add(label64);
-            groupBox11.Controls.Add(label65);
-            groupBox11.Controls.Add(label66);
-            groupBox11.Controls.Add(label67);
-            groupBox11.Controls.Add(textBox43);
-            groupBox11.Controls.Add(label68);
-            groupBox11.Controls.Add(textBox44);
-            groupBox11.Controls.Add(textBox45);
-            groupBox11.Controls.Add(textBox46);
-            groupBox11.Controls.Add(label69);
-            groupBox11.Location = new Point(30, 100);
-            groupBox11.Name = "groupBox11";
-            groupBox11.Size = new Size(857, 582);
-            groupBox11.TabIndex = 46;
-            groupBox11.TabStop = false;
-            groupBox11.Text = "قطعي";
-            groupBox11.UseCompatibleTextRendering = true;
+            group_Tawzie_Katey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_Tawzie_Katey.Controls.Add(group_Tawzie_Katey_Solh);
+            group_Tawzie_Katey.Controls.Add(group_Tawzie_Katey_Mawdoey);
+            group_Tawzie_Katey.Controls.Add(group_Tawzie_Katey_Shakly);
+            group_Tawzie_Katey.Controls.Add(button11);
+            group_Tawzie_Katey.Controls.Add(button12);
+            group_Tawzie_Katey.Controls.Add(button13);
+            group_Tawzie_Katey.Controls.Add(button14);
+            group_Tawzie_Katey.Controls.Add(button15);
+            group_Tawzie_Katey.Controls.Add(comboBox23);
+            group_Tawzie_Katey.Controls.Add(comboBox24);
+            group_Tawzie_Katey.Controls.Add(comboBox25);
+            group_Tawzie_Katey.Controls.Add(comboBox26);
+            group_Tawzie_Katey.Controls.Add(comboBox27);
+            group_Tawzie_Katey.Controls.Add(label62);
+            group_Tawzie_Katey.Controls.Add(comboBox28);
+            group_Tawzie_Katey.Controls.Add(textBox42);
+            group_Tawzie_Katey.Controls.Add(label63);
+            group_Tawzie_Katey.Controls.Add(label64);
+            group_Tawzie_Katey.Controls.Add(label65);
+            group_Tawzie_Katey.Controls.Add(label66);
+            group_Tawzie_Katey.Controls.Add(label67);
+            group_Tawzie_Katey.Controls.Add(textBox43);
+            group_Tawzie_Katey.Controls.Add(label68);
+            group_Tawzie_Katey.Controls.Add(textBox44);
+            group_Tawzie_Katey.Controls.Add(textBox45);
+            group_Tawzie_Katey.Controls.Add(textBox46);
+            group_Tawzie_Katey.Controls.Add(label69);
+            group_Tawzie_Katey.Location = new Point(30, 100);
+            group_Tawzie_Katey.Name = "group_Tawzie_Katey";
+            group_Tawzie_Katey.Size = new Size(857, 582);
+            group_Tawzie_Katey.TabIndex = 46;
+            group_Tawzie_Katey.TabStop = false;
+            group_Tawzie_Katey.Text = "قطعي";
+            group_Tawzie_Katey.UseCompatibleTextRendering = true;
             // 
-            // groupBox14
+            // group_Tawzie_Katey_Solh
             // 
-            groupBox14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox14.Controls.Add(textBox97);
-            groupBox14.Controls.Add(button26);
-            groupBox14.Controls.Add(button27);
-            groupBox14.Controls.Add(button28);
-            groupBox14.Controls.Add(button29);
-            groupBox14.Controls.Add(button30);
-            groupBox14.Controls.Add(comboBox41);
-            groupBox14.Controls.Add(comboBox42);
-            groupBox14.Controls.Add(comboBox43);
-            groupBox14.Controls.Add(comboBox44);
-            groupBox14.Controls.Add(comboBox45);
-            groupBox14.Controls.Add(label86);
-            groupBox14.Controls.Add(comboBox46);
-            groupBox14.Controls.Add(textBox57);
-            groupBox14.Controls.Add(label87);
-            groupBox14.Controls.Add(label88);
-            groupBox14.Controls.Add(label89);
-            groupBox14.Controls.Add(label90);
-            groupBox14.Controls.Add(label91);
-            groupBox14.Controls.Add(textBox58);
-            groupBox14.Controls.Add(label92);
-            groupBox14.Controls.Add(textBox59);
-            groupBox14.Controls.Add(textBox60);
-            groupBox14.Controls.Add(textBox61);
-            groupBox14.Controls.Add(label93);
-            groupBox14.Location = new Point(21, 498);
-            groupBox14.Name = "groupBox14";
-            groupBox14.Size = new Size(823, 67);
-            groupBox14.TabIndex = 62;
-            groupBox14.TabStop = false;
-            groupBox14.Text = "صلح";
-            groupBox14.UseCompatibleTextRendering = true;
+            group_Tawzie_Katey_Solh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_Tawzie_Katey_Solh.Controls.Add(text_Tawzie_Katey_Solh);
+            group_Tawzie_Katey_Solh.Controls.Add(button26);
+            group_Tawzie_Katey_Solh.Controls.Add(button27);
+            group_Tawzie_Katey_Solh.Controls.Add(button28);
+            group_Tawzie_Katey_Solh.Controls.Add(button29);
+            group_Tawzie_Katey_Solh.Controls.Add(button30);
+            group_Tawzie_Katey_Solh.Controls.Add(comboBox41);
+            group_Tawzie_Katey_Solh.Controls.Add(comboBox42);
+            group_Tawzie_Katey_Solh.Controls.Add(comboBox43);
+            group_Tawzie_Katey_Solh.Controls.Add(comboBox44);
+            group_Tawzie_Katey_Solh.Controls.Add(comboBox45);
+            group_Tawzie_Katey_Solh.Controls.Add(label86);
+            group_Tawzie_Katey_Solh.Controls.Add(comboBox46);
+            group_Tawzie_Katey_Solh.Controls.Add(textBox57);
+            group_Tawzie_Katey_Solh.Controls.Add(label87);
+            group_Tawzie_Katey_Solh.Controls.Add(label88);
+            group_Tawzie_Katey_Solh.Controls.Add(label89);
+            group_Tawzie_Katey_Solh.Controls.Add(label90);
+            group_Tawzie_Katey_Solh.Controls.Add(label91);
+            group_Tawzie_Katey_Solh.Controls.Add(textBox58);
+            group_Tawzie_Katey_Solh.Controls.Add(label92);
+            group_Tawzie_Katey_Solh.Controls.Add(textBox59);
+            group_Tawzie_Katey_Solh.Controls.Add(textBox60);
+            group_Tawzie_Katey_Solh.Controls.Add(textBox61);
+            group_Tawzie_Katey_Solh.Controls.Add(label93);
+            group_Tawzie_Katey_Solh.Location = new Point(21, 498);
+            group_Tawzie_Katey_Solh.Name = "group_Tawzie_Katey_Solh";
+            group_Tawzie_Katey_Solh.Size = new Size(823, 67);
+            group_Tawzie_Katey_Solh.TabIndex = 62;
+            group_Tawzie_Katey_Solh.TabStop = false;
+            group_Tawzie_Katey_Solh.Text = "صلح";
+            group_Tawzie_Katey_Solh.UseCompatibleTextRendering = true;
             // 
-            // textBox97
+            // text_Tawzie_Katey_Solh
             // 
-            textBox97.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox97.Location = new Point(480, 22);
-            textBox97.Name = "textBox97";
-            textBox97.Size = new Size(165, 23);
-            textBox97.TabIndex = 62;
+            text_Tawzie_Katey_Solh.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Solh.Location = new Point(480, 22);
+            text_Tawzie_Katey_Solh.Name = "text_Tawzie_Katey_Solh";
+            text_Tawzie_Katey_Solh.Size = new Size(165, 23);
+            text_Tawzie_Katey_Solh.TabIndex = 62;
+            text_Tawzie_Katey_Solh.TextChanged += text_Tawzie_Katey_Solh_TextChanged;
             // 
             // button26
             // 
@@ -3047,60 +3311,60 @@
             label93.TabIndex = 8;
             label93.Text = "باقي المؤجلات";
             // 
-            // groupBox13
+            // group_Tawzie_Katey_Mawdoey
             // 
-            groupBox13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox13.Controls.Add(label136);
-            groupBox13.Controls.Add(textBox94);
-            groupBox13.Controls.Add(label137);
-            groupBox13.Controls.Add(textBox95);
-            groupBox13.Controls.Add(label128);
-            groupBox13.Controls.Add(label129);
-            groupBox13.Controls.Add(label130);
-            groupBox13.Controls.Add(textBox86);
-            groupBox13.Controls.Add(label131);
-            groupBox13.Controls.Add(textBox87);
-            groupBox13.Controls.Add(textBox88);
-            groupBox13.Controls.Add(textBox89);
-            groupBox13.Controls.Add(label132);
-            groupBox13.Controls.Add(label133);
-            groupBox13.Controls.Add(label134);
-            groupBox13.Controls.Add(textBox90);
-            groupBox13.Controls.Add(label135);
-            groupBox13.Controls.Add(textBox91);
-            groupBox13.Controls.Add(textBox92);
-            groupBox13.Controls.Add(textBox93);
-            groupBox13.Controls.Add(button21);
-            groupBox13.Controls.Add(button22);
-            groupBox13.Controls.Add(button23);
-            groupBox13.Controls.Add(button24);
-            groupBox13.Controls.Add(button25);
-            groupBox13.Controls.Add(comboBox35);
-            groupBox13.Controls.Add(comboBox36);
-            groupBox13.Controls.Add(comboBox37);
-            groupBox13.Controls.Add(comboBox38);
-            groupBox13.Controls.Add(comboBox39);
-            groupBox13.Controls.Add(label78);
-            groupBox13.Controls.Add(comboBox40);
-            groupBox13.Controls.Add(textBox52);
-            groupBox13.Controls.Add(label79);
-            groupBox13.Controls.Add(label80);
-            groupBox13.Controls.Add(label81);
-            groupBox13.Controls.Add(label82);
-            groupBox13.Controls.Add(label83);
-            groupBox13.Controls.Add(textBox53);
-            groupBox13.Controls.Add(label84);
-            groupBox13.Controls.Add(textBox54);
-            groupBox13.Controls.Add(textBox55);
-            groupBox13.Controls.Add(textBox56);
-            groupBox13.Controls.Add(label85);
-            groupBox13.Location = new Point(23, 252);
-            groupBox13.Name = "groupBox13";
-            groupBox13.Size = new Size(823, 248);
-            groupBox13.TabIndex = 54;
-            groupBox13.TabStop = false;
-            groupBox13.Text = "موضوعي";
-            groupBox13.UseCompatibleTextRendering = true;
+            group_Tawzie_Katey_Mawdoey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label136);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_Total);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label137);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label128);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label129);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label130);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label131);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_Okhrah);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_AdamGwaz);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_Rafd);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label132);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label133);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label134);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label135);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_Enkeda);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_RafdBehaltha);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_Kobol);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(button21);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(button22);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(button23);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(button24);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(button25);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox35);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox36);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox37);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox38);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox39);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label78);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox40);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(textBox52);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label79);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label80);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label81);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label82);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label83);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(textBox53);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label84);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(textBox54);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(textBox55);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(textBox56);
+            group_Tawzie_Katey_Mawdoey.Controls.Add(label85);
+            group_Tawzie_Katey_Mawdoey.Location = new Point(23, 252);
+            group_Tawzie_Katey_Mawdoey.Name = "group_Tawzie_Katey_Mawdoey";
+            group_Tawzie_Katey_Mawdoey.Size = new Size(823, 248);
+            group_Tawzie_Katey_Mawdoey.TabIndex = 54;
+            group_Tawzie_Katey_Mawdoey.TabStop = false;
+            group_Tawzie_Katey_Mawdoey.Text = "موضوعي";
+            group_Tawzie_Katey_Mawdoey.UseCompatibleTextRendering = true;
             // 
             // label136
             // 
@@ -3111,13 +3375,15 @@
             label136.TabIndex = 45;
             label136.Text = "الغاء واستمرار في التنفيذ";
             // 
-            // textBox94
+            // text_Tawzie_Katey_Mawdoey_Total
             // 
-            textBox94.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox94.Location = new Point(597, 223);
-            textBox94.Name = "textBox94";
-            textBox94.Size = new Size(117, 23);
-            textBox94.TabIndex = 502;
+            text_Tawzie_Katey_Mawdoey_Total.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Mawdoey_Total.Location = new Point(597, 223);
+            text_Tawzie_Katey_Mawdoey_Total.Name = "text_Tawzie_Katey_Mawdoey_Total";
+            text_Tawzie_Katey_Mawdoey_Total.ReadOnly = true;
+            text_Tawzie_Katey_Mawdoey_Total.Size = new Size(117, 23);
+            text_Tawzie_Katey_Mawdoey_Total.TabIndex = 502;
+            text_Tawzie_Katey_Mawdoey_Total.TextChanged += text_Tawzie_Total_TextChanged;
             // 
             // label137
             // 
@@ -3129,13 +3395,14 @@
             label137.TabIndex = 46;
             label137.Text = "الاجمالي";
             // 
-            // textBox95
+            // text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz
             // 
-            textBox95.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox95.Location = new Point(597, 180);
-            textBox95.Name = "textBox95";
-            textBox95.Size = new Size(117, 23);
-            textBox95.TabIndex = 62;
+            text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz.Location = new Point(597, 180);
+            text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz.Name = "text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz";
+            text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz.Size = new Size(117, 23);
+            text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz.TabIndex = 62;
+            text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz.TextChanged += text_Tawzie_Katey_Mawdoey_TextChanged;
             // 
             // label128
             // 
@@ -3166,13 +3433,14 @@
             label130.TabIndex = 39;
             label130.Text = "عدم جواز لسابقة الفصل فيها";
             // 
-            // textBox86
+            // text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz
             // 
-            textBox86.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox86.Location = new Point(302, 154);
-            textBox86.Name = "textBox86";
-            textBox86.Size = new Size(117, 23);
-            textBox86.TabIndex = 61;
+            text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz.Location = new Point(302, 154);
+            text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz.Name = "text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz";
+            text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz.Size = new Size(117, 23);
+            text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz.TabIndex = 61;
+            text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz.TextChanged += text_Tawzie_Katey_Mawdoey_TextChanged;
             // 
             // label131
             // 
@@ -3184,29 +3452,32 @@
             label131.TabIndex = 40;
             label131.Text = "الغاء ووقف تنفيذ";
             // 
-            // textBox87
+            // text_Tawzie_Katey_Mawdoey_Okhrah
             // 
-            textBox87.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox87.Location = new Point(302, 111);
-            textBox87.Name = "textBox87";
-            textBox87.Size = new Size(117, 23);
-            textBox87.TabIndex = 59;
+            text_Tawzie_Katey_Mawdoey_Okhrah.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Mawdoey_Okhrah.Location = new Point(302, 111);
+            text_Tawzie_Katey_Mawdoey_Okhrah.Name = "text_Tawzie_Katey_Mawdoey_Okhrah";
+            text_Tawzie_Katey_Mawdoey_Okhrah.Size = new Size(117, 23);
+            text_Tawzie_Katey_Mawdoey_Okhrah.TabIndex = 59;
+            text_Tawzie_Katey_Mawdoey_Okhrah.TextChanged += text_Tawzie_Katey_Mawdoey_TextChanged;
             // 
-            // textBox88
+            // text_Tawzie_Katey_Mawdoey_AdamGwaz
             // 
-            textBox88.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox88.Location = new Point(302, 65);
-            textBox88.Name = "textBox88";
-            textBox88.Size = new Size(117, 23);
-            textBox88.TabIndex = 57;
+            text_Tawzie_Katey_Mawdoey_AdamGwaz.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Mawdoey_AdamGwaz.Location = new Point(302, 65);
+            text_Tawzie_Katey_Mawdoey_AdamGwaz.Name = "text_Tawzie_Katey_Mawdoey_AdamGwaz";
+            text_Tawzie_Katey_Mawdoey_AdamGwaz.Size = new Size(117, 23);
+            text_Tawzie_Katey_Mawdoey_AdamGwaz.TabIndex = 57;
+            text_Tawzie_Katey_Mawdoey_AdamGwaz.TextChanged += text_Tawzie_Katey_Mawdoey_TextChanged;
             // 
-            // textBox89
+            // text_Tawzie_Katey_Mawdoey_Rafd
             // 
-            textBox89.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox89.Location = new Point(302, 25);
-            textBox89.Name = "textBox89";
-            textBox89.Size = new Size(117, 23);
-            textBox89.TabIndex = 55;
+            text_Tawzie_Katey_Mawdoey_Rafd.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Mawdoey_Rafd.Location = new Point(302, 25);
+            text_Tawzie_Katey_Mawdoey_Rafd.Name = "text_Tawzie_Katey_Mawdoey_Rafd";
+            text_Tawzie_Katey_Mawdoey_Rafd.Size = new Size(117, 23);
+            text_Tawzie_Katey_Mawdoey_Rafd.TabIndex = 55;
+            text_Tawzie_Katey_Mawdoey_Rafd.TextChanged += text_Tawzie_Katey_Mawdoey_TextChanged;
             // 
             // label132
             // 
@@ -3237,13 +3508,14 @@
             label134.TabIndex = 31;
             label134.Text = "رفض بحالتها";
             // 
-            // textBox90
+            // text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas
             // 
-            textBox90.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox90.Location = new Point(597, 151);
-            textBox90.Name = "textBox90";
-            textBox90.Size = new Size(117, 23);
-            textBox90.TabIndex = 60;
+            text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas.Location = new Point(597, 151);
+            text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas.Name = "text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas";
+            text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas.Size = new Size(117, 23);
+            text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas.TabIndex = 60;
+            text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas.TextChanged += text_Tawzie_Katey_Mawdoey_TextChanged;
             // 
             // label135
             // 
@@ -3254,29 +3526,32 @@
             label135.TabIndex = 32;
             label135.Text = "الغاء وعدم اختصاص";
             // 
-            // textBox91
+            // text_Tawzie_Katey_Mawdoey_Enkeda
             // 
-            textBox91.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox91.Location = new Point(597, 108);
-            textBox91.Name = "textBox91";
-            textBox91.Size = new Size(117, 23);
-            textBox91.TabIndex = 58;
+            text_Tawzie_Katey_Mawdoey_Enkeda.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Mawdoey_Enkeda.Location = new Point(597, 108);
+            text_Tawzie_Katey_Mawdoey_Enkeda.Name = "text_Tawzie_Katey_Mawdoey_Enkeda";
+            text_Tawzie_Katey_Mawdoey_Enkeda.Size = new Size(117, 23);
+            text_Tawzie_Katey_Mawdoey_Enkeda.TabIndex = 58;
+            text_Tawzie_Katey_Mawdoey_Enkeda.TextChanged += text_Tawzie_Katey_Mawdoey_TextChanged;
             // 
-            // textBox92
+            // text_Tawzie_Katey_Mawdoey_RafdBehaltha
             // 
-            textBox92.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox92.Location = new Point(597, 62);
-            textBox92.Name = "textBox92";
-            textBox92.Size = new Size(117, 23);
-            textBox92.TabIndex = 56;
+            text_Tawzie_Katey_Mawdoey_RafdBehaltha.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Mawdoey_RafdBehaltha.Location = new Point(597, 62);
+            text_Tawzie_Katey_Mawdoey_RafdBehaltha.Name = "text_Tawzie_Katey_Mawdoey_RafdBehaltha";
+            text_Tawzie_Katey_Mawdoey_RafdBehaltha.Size = new Size(117, 23);
+            text_Tawzie_Katey_Mawdoey_RafdBehaltha.TabIndex = 56;
+            text_Tawzie_Katey_Mawdoey_RafdBehaltha.TextChanged += text_Tawzie_Katey_Mawdoey_TextChanged;
             // 
-            // textBox93
+            // text_Tawzie_Katey_Mawdoey_Kobol
             // 
-            textBox93.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox93.Location = new Point(597, 22);
-            textBox93.Name = "textBox93";
-            textBox93.Size = new Size(117, 23);
-            textBox93.TabIndex = 54;
+            text_Tawzie_Katey_Mawdoey_Kobol.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Mawdoey_Kobol.Location = new Point(597, 22);
+            text_Tawzie_Katey_Mawdoey_Kobol.Name = "text_Tawzie_Katey_Mawdoey_Kobol";
+            text_Tawzie_Katey_Mawdoey_Kobol.Size = new Size(117, 23);
+            text_Tawzie_Katey_Mawdoey_Kobol.TabIndex = 54;
+            text_Tawzie_Katey_Mawdoey_Kobol.TextChanged += text_Tawzie_Katey_Mawdoey_TextChanged;
             // 
             // button21
             // 
@@ -3507,66 +3782,68 @@
             label85.TabIndex = 8;
             label85.Text = "باقي المؤجلات";
             // 
-            // groupBox12
+            // group_Tawzie_Katey_Shakly
             // 
-            groupBox12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox12.Controls.Add(textBox96);
-            groupBox12.Controls.Add(label138);
-            groupBox12.Controls.Add(label124);
-            groupBox12.Controls.Add(label125);
-            groupBox12.Controls.Add(label126);
-            groupBox12.Controls.Add(textBox81);
-            groupBox12.Controls.Add(label127);
-            groupBox12.Controls.Add(textBox83);
-            groupBox12.Controls.Add(textBox84);
-            groupBox12.Controls.Add(textBox85);
-            groupBox12.Controls.Add(label119);
-            groupBox12.Controls.Add(label120);
-            groupBox12.Controls.Add(label122);
-            groupBox12.Controls.Add(textBox77);
-            groupBox12.Controls.Add(label123);
-            groupBox12.Controls.Add(textBox78);
-            groupBox12.Controls.Add(textBox79);
-            groupBox12.Controls.Add(textBox80);
-            groupBox12.Controls.Add(button16);
-            groupBox12.Controls.Add(button17);
-            groupBox12.Controls.Add(button18);
-            groupBox12.Controls.Add(button19);
-            groupBox12.Controls.Add(button20);
-            groupBox12.Controls.Add(comboBox29);
-            groupBox12.Controls.Add(comboBox30);
-            groupBox12.Controls.Add(comboBox31);
-            groupBox12.Controls.Add(comboBox32);
-            groupBox12.Controls.Add(comboBox33);
-            groupBox12.Controls.Add(label70);
-            groupBox12.Controls.Add(comboBox34);
-            groupBox12.Controls.Add(textBox47);
-            groupBox12.Controls.Add(label71);
-            groupBox12.Controls.Add(label72);
-            groupBox12.Controls.Add(label73);
-            groupBox12.Controls.Add(label74);
-            groupBox12.Controls.Add(label75);
-            groupBox12.Controls.Add(textBox48);
-            groupBox12.Controls.Add(label76);
-            groupBox12.Controls.Add(textBox49);
-            groupBox12.Controls.Add(textBox50);
-            groupBox12.Controls.Add(textBox51);
-            groupBox12.Controls.Add(label77);
-            groupBox12.Location = new Point(21, 38);
-            groupBox12.Name = "groupBox12";
-            groupBox12.Size = new Size(823, 219);
-            groupBox12.TabIndex = 46;
-            groupBox12.TabStop = false;
-            groupBox12.Text = "شكلي";
-            groupBox12.UseCompatibleTextRendering = true;
+            group_Tawzie_Katey_Shakly.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_Total);
+            group_Tawzie_Katey_Shakly.Controls.Add(label138);
+            group_Tawzie_Katey_Shakly.Controls.Add(label124);
+            group_Tawzie_Katey_Shakly.Controls.Add(label125);
+            group_Tawzie_Katey_Shakly.Controls.Add(label126);
+            group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_Okhrah);
+            group_Tawzie_Katey_Shakly.Controls.Add(label127);
+            group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_EnedamAlKhsoma);
+            group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_SkotAlKhsoma);
+            group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_adamEkhtsas);
+            group_Tawzie_Katey_Shakly.Controls.Add(label119);
+            group_Tawzie_Katey_Shakly.Controls.Add(label120);
+            group_Tawzie_Katey_Shakly.Controls.Add(label122);
+            group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_KanLamTakon);
+            group_Tawzie_Katey_Shakly.Controls.Add(label123);
+            group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_TarkAlKhsoma);
+            group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_SkotAlhak);
+            group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_AdamKbol);
+            group_Tawzie_Katey_Shakly.Controls.Add(button16);
+            group_Tawzie_Katey_Shakly.Controls.Add(button17);
+            group_Tawzie_Katey_Shakly.Controls.Add(button18);
+            group_Tawzie_Katey_Shakly.Controls.Add(button19);
+            group_Tawzie_Katey_Shakly.Controls.Add(button20);
+            group_Tawzie_Katey_Shakly.Controls.Add(comboBox29);
+            group_Tawzie_Katey_Shakly.Controls.Add(comboBox30);
+            group_Tawzie_Katey_Shakly.Controls.Add(comboBox31);
+            group_Tawzie_Katey_Shakly.Controls.Add(comboBox32);
+            group_Tawzie_Katey_Shakly.Controls.Add(comboBox33);
+            group_Tawzie_Katey_Shakly.Controls.Add(label70);
+            group_Tawzie_Katey_Shakly.Controls.Add(comboBox34);
+            group_Tawzie_Katey_Shakly.Controls.Add(textBox47);
+            group_Tawzie_Katey_Shakly.Controls.Add(label71);
+            group_Tawzie_Katey_Shakly.Controls.Add(label72);
+            group_Tawzie_Katey_Shakly.Controls.Add(label73);
+            group_Tawzie_Katey_Shakly.Controls.Add(label74);
+            group_Tawzie_Katey_Shakly.Controls.Add(label75);
+            group_Tawzie_Katey_Shakly.Controls.Add(textBox48);
+            group_Tawzie_Katey_Shakly.Controls.Add(label76);
+            group_Tawzie_Katey_Shakly.Controls.Add(textBox49);
+            group_Tawzie_Katey_Shakly.Controls.Add(textBox50);
+            group_Tawzie_Katey_Shakly.Controls.Add(textBox51);
+            group_Tawzie_Katey_Shakly.Controls.Add(label77);
+            group_Tawzie_Katey_Shakly.Location = new Point(21, 38);
+            group_Tawzie_Katey_Shakly.Name = "group_Tawzie_Katey_Shakly";
+            group_Tawzie_Katey_Shakly.Size = new Size(823, 219);
+            group_Tawzie_Katey_Shakly.TabIndex = 46;
+            group_Tawzie_Katey_Shakly.TabStop = false;
+            group_Tawzie_Katey_Shakly.Text = "شكلي";
+            group_Tawzie_Katey_Shakly.UseCompatibleTextRendering = true;
             // 
-            // textBox96
+            // text_Tawzie_Katey_Shakly_Total
             // 
-            textBox96.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox96.Location = new Point(599, 196);
-            textBox96.Name = "textBox96";
-            textBox96.Size = new Size(117, 23);
-            textBox96.TabIndex = 501;
+            text_Tawzie_Katey_Shakly_Total.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Shakly_Total.Location = new Point(599, 196);
+            text_Tawzie_Katey_Shakly_Total.Name = "text_Tawzie_Katey_Shakly_Total";
+            text_Tawzie_Katey_Shakly_Total.ReadOnly = true;
+            text_Tawzie_Katey_Shakly_Total.Size = new Size(117, 23);
+            text_Tawzie_Katey_Shakly_Total.TabIndex = 501;
+            text_Tawzie_Katey_Shakly_Total.TextChanged += text_Tawzie_Total_TextChanged;
             // 
             // label138
             // 
@@ -3607,13 +3884,14 @@
             label126.TabIndex = 23;
             label126.Text = "سقوط الخصومة وانقضائها";
             // 
-            // textBox81
+            // text_Tawzie_Katey_Shakly_Okhrah
             // 
-            textBox81.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox81.Location = new Point(304, 154);
-            textBox81.Name = "textBox81";
-            textBox81.Size = new Size(117, 23);
-            textBox81.TabIndex = 53;
+            text_Tawzie_Katey_Shakly_Okhrah.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Shakly_Okhrah.Location = new Point(304, 154);
+            text_Tawzie_Katey_Shakly_Okhrah.Name = "text_Tawzie_Katey_Shakly_Okhrah";
+            text_Tawzie_Katey_Shakly_Okhrah.Size = new Size(117, 23);
+            text_Tawzie_Katey_Shakly_Okhrah.TabIndex = 53;
+            text_Tawzie_Katey_Shakly_Okhrah.TextChanged += text_Tawzie_Katey_Shakly_TextChanged;
             // 
             // label127
             // 
@@ -3625,29 +3903,32 @@
             label127.TabIndex = 24;
             label127.Text = "اخرى";
             // 
-            // textBox83
+            // text_Tawzie_Katey_Shakly_EnedamAlKhsoma
             // 
-            textBox83.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox83.Location = new Point(304, 111);
-            textBox83.Name = "textBox83";
-            textBox83.Size = new Size(117, 23);
-            textBox83.TabIndex = 51;
+            text_Tawzie_Katey_Shakly_EnedamAlKhsoma.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Shakly_EnedamAlKhsoma.Location = new Point(304, 111);
+            text_Tawzie_Katey_Shakly_EnedamAlKhsoma.Name = "text_Tawzie_Katey_Shakly_EnedamAlKhsoma";
+            text_Tawzie_Katey_Shakly_EnedamAlKhsoma.Size = new Size(117, 23);
+            text_Tawzie_Katey_Shakly_EnedamAlKhsoma.TabIndex = 51;
+            text_Tawzie_Katey_Shakly_EnedamAlKhsoma.TextChanged += text_Tawzie_Katey_Shakly_TextChanged;
             // 
-            // textBox84
+            // text_Tawzie_Katey_Shakly_SkotAlKhsoma
             // 
-            textBox84.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox84.Location = new Point(304, 65);
-            textBox84.Name = "textBox84";
-            textBox84.Size = new Size(117, 23);
-            textBox84.TabIndex = 49;
+            text_Tawzie_Katey_Shakly_SkotAlKhsoma.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Shakly_SkotAlKhsoma.Location = new Point(304, 65);
+            text_Tawzie_Katey_Shakly_SkotAlKhsoma.Name = "text_Tawzie_Katey_Shakly_SkotAlKhsoma";
+            text_Tawzie_Katey_Shakly_SkotAlKhsoma.Size = new Size(117, 23);
+            text_Tawzie_Katey_Shakly_SkotAlKhsoma.TabIndex = 49;
+            text_Tawzie_Katey_Shakly_SkotAlKhsoma.TextChanged += text_Tawzie_Katey_Shakly_TextChanged;
             // 
-            // textBox85
+            // text_Tawzie_Katey_Shakly_adamEkhtsas
             // 
-            textBox85.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox85.Location = new Point(304, 25);
-            textBox85.Name = "textBox85";
-            textBox85.Size = new Size(117, 23);
-            textBox85.TabIndex = 47;
+            text_Tawzie_Katey_Shakly_adamEkhtsas.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Shakly_adamEkhtsas.Location = new Point(304, 25);
+            text_Tawzie_Katey_Shakly_adamEkhtsas.Name = "text_Tawzie_Katey_Shakly_adamEkhtsas";
+            text_Tawzie_Katey_Shakly_adamEkhtsas.Size = new Size(117, 23);
+            text_Tawzie_Katey_Shakly_adamEkhtsas.TabIndex = 47;
+            text_Tawzie_Katey_Shakly_adamEkhtsas.TextChanged += text_Tawzie_Katey_Shakly_TextChanged;
             // 
             // label119
             // 
@@ -3679,13 +3960,14 @@
             label122.TabIndex = 15;
             label122.Text = "سقوط الحق في رفع الدعوى";
             // 
-            // textBox77
+            // text_Tawzie_Katey_Shakly_KanLamTakon
             // 
-            textBox77.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox77.Location = new Point(599, 151);
-            textBox77.Name = "textBox77";
-            textBox77.Size = new Size(117, 23);
-            textBox77.TabIndex = 52;
+            text_Tawzie_Katey_Shakly_KanLamTakon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Shakly_KanLamTakon.Location = new Point(599, 151);
+            text_Tawzie_Katey_Shakly_KanLamTakon.Name = "text_Tawzie_Katey_Shakly_KanLamTakon";
+            text_Tawzie_Katey_Shakly_KanLamTakon.Size = new Size(117, 23);
+            text_Tawzie_Katey_Shakly_KanLamTakon.TabIndex = 52;
+            text_Tawzie_Katey_Shakly_KanLamTakon.TextChanged += text_Tawzie_Katey_Shakly_TextChanged;
             // 
             // label123
             // 
@@ -3697,29 +3979,32 @@
             label123.TabIndex = 16;
             label123.Text = "كأن لم تكن";
             // 
-            // textBox78
+            // text_Tawzie_Katey_Shakly_TarkAlKhsoma
             // 
-            textBox78.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox78.Location = new Point(599, 108);
-            textBox78.Name = "textBox78";
-            textBox78.Size = new Size(117, 23);
-            textBox78.TabIndex = 50;
+            text_Tawzie_Katey_Shakly_TarkAlKhsoma.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Shakly_TarkAlKhsoma.Location = new Point(599, 108);
+            text_Tawzie_Katey_Shakly_TarkAlKhsoma.Name = "text_Tawzie_Katey_Shakly_TarkAlKhsoma";
+            text_Tawzie_Katey_Shakly_TarkAlKhsoma.Size = new Size(117, 23);
+            text_Tawzie_Katey_Shakly_TarkAlKhsoma.TabIndex = 50;
+            text_Tawzie_Katey_Shakly_TarkAlKhsoma.TextChanged += text_Tawzie_Katey_Shakly_TextChanged;
             // 
-            // textBox79
+            // text_Tawzie_Katey_Shakly_SkotAlhak
             // 
-            textBox79.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox79.Location = new Point(599, 62);
-            textBox79.Name = "textBox79";
-            textBox79.Size = new Size(117, 23);
-            textBox79.TabIndex = 48;
+            text_Tawzie_Katey_Shakly_SkotAlhak.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Shakly_SkotAlhak.Location = new Point(599, 62);
+            text_Tawzie_Katey_Shakly_SkotAlhak.Name = "text_Tawzie_Katey_Shakly_SkotAlhak";
+            text_Tawzie_Katey_Shakly_SkotAlhak.Size = new Size(117, 23);
+            text_Tawzie_Katey_Shakly_SkotAlhak.TabIndex = 48;
+            text_Tawzie_Katey_Shakly_SkotAlhak.TextChanged += text_Tawzie_Katey_Shakly_TextChanged;
             // 
-            // textBox80
+            // text_Tawzie_Katey_Shakly_AdamKbol
             // 
-            textBox80.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox80.Location = new Point(599, 22);
-            textBox80.Name = "textBox80";
-            textBox80.Size = new Size(117, 23);
-            textBox80.TabIndex = 46;
+            text_Tawzie_Katey_Shakly_AdamKbol.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_Tawzie_Katey_Shakly_AdamKbol.Location = new Point(599, 22);
+            text_Tawzie_Katey_Shakly_AdamKbol.Name = "text_Tawzie_Katey_Shakly_AdamKbol";
+            text_Tawzie_Katey_Shakly_AdamKbol.Size = new Size(117, 23);
+            text_Tawzie_Katey_Shakly_AdamKbol.TabIndex = 46;
+            text_Tawzie_Katey_Shakly_AdamKbol.TextChanged += text_Tawzie_Katey_Shakly_TextChanged;
             // 
             // button16
             // 
@@ -4179,35 +4464,33 @@
             label69.TabIndex = 8;
             label69.Text = "باقي المؤجلات";
             // 
-            // comboBox22
+            // comboBox_Tawzie_Judje
             // 
-            comboBox22.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox22.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox22.FormattingEnabled = true;
-            comboBox22.Location = new Point(493, 37);
-            comboBox22.Name = "comboBox22";
-            comboBox22.Size = new Size(251, 23);
-            comboBox22.TabIndex = 45;
+            comboBox_Tawzie_Judje.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            comboBox_Tawzie_Judje.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_Tawzie_Judje.FormattingEnabled = true;
+            comboBox_Tawzie_Judje.Location = new Point(493, 37);
+            comboBox_Tawzie_Judje.Name = "comboBox_Tawzie_Judje";
+            comboBox_Tawzie_Judje.Size = new Size(251, 23);
+            comboBox_Tawzie_Judje.TabIndex = 45;
             // 
-            // label61
+            // Text_Tawzie_JudgeId
             // 
-            label61.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label61.AutoSize = true;
-            label61.Location = new Point(215, 37);
-            label61.Name = "label61";
-            label61.Size = new Size(70, 15);
-            label61.TabIndex = 13;
-            label61.Text = "محجوز للحكم";
+            Text_Tawzie_JudgeId.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Text_Tawzie_JudgeId.AutoSize = true;
+            Text_Tawzie_JudgeId.Location = new Point(153, 41);
+            Text_Tawzie_JudgeId.Name = "Text_Tawzie_JudgeId";
+            Text_Tawzie_JudgeId.Size = new Size(0, 15);
+            Text_Tawzie_JudgeId.TabIndex = 13;
             // 
-            // label60
+            // Text_Tawzie_Judge_Job
             // 
-            label60.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label60.AutoSize = true;
-            label60.Location = new Point(387, 37);
-            label60.Name = "label60";
-            label60.Size = new Size(70, 15);
-            label60.TabIndex = 13;
-            label60.Text = "محجوز للحكم";
+            Text_Tawzie_Judge_Job.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            Text_Tawzie_Judge_Job.Location = new Point(280, 37);
+            Text_Tawzie_Judge_Job.Name = "Text_Tawzie_Judge_Job";
+            Text_Tawzie_Judge_Job.Size = new Size(207, 23);
+            Text_Tawzie_Judge_Job.TabIndex = 13;
+            Text_Tawzie_Judge_Job.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label59
             // 
@@ -4215,9 +4498,9 @@
             label59.AutoSize = true;
             label59.Location = new Point(826, 40);
             label59.Name = "label59";
-            label59.Size = new Size(70, 15);
+            label59.Size = new Size(42, 15);
             label59.TabIndex = 13;
-            label59.Text = "محجوز للحكم";
+            label59.Text = "القاضي";
             // 
             // button6
             // 
@@ -4448,40 +4731,40 @@
             label58.TabIndex = 8;
             label58.Text = "باقي المؤجلات";
             // 
-            // button47
+            // btn_Save
             // 
-            button47.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button47.Location = new Point(858, 3394);
-            button47.Name = "button47";
-            button47.Size = new Size(75, 23);
-            button47.TabIndex = 76;
-            button47.Text = "حفظ";
-            button47.UseVisualStyleBackColor = true;
+            btn_Save.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_Save.Location = new Point(858, 3394);
+            btn_Save.Name = "btn_Save";
+            btn_Save.Size = new Size(75, 23);
+            btn_Save.TabIndex = 76;
+            btn_Save.Text = "حفظ";
+            btn_Save.UseVisualStyleBackColor = true;
             // 
-            // button48
+            // btn_Delete
             // 
-            button48.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button48.Location = new Point(978, 3394);
-            button48.Name = "button48";
-            button48.Size = new Size(75, 23);
-            button48.TabIndex = 75;
-            button48.Text = "حذف";
-            button48.UseVisualStyleBackColor = true;
+            btn_Delete.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_Delete.Location = new Point(978, 3394);
+            btn_Delete.Name = "btn_Delete";
+            btn_Delete.Size = new Size(75, 23);
+            btn_Delete.TabIndex = 75;
+            btn_Delete.Text = "حذف";
+            btn_Delete.UseVisualStyleBackColor = true;
             // 
-            // groupBox18
+            // groupBox_MoeadMenAlKhobraa
             // 
-            groupBox18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox18.Controls.Add(label118);
-            groupBox18.Controls.Add(comboBox65);
-            groupBox18.Controls.Add(label121);
-            groupBox18.Controls.Add(textBox82);
-            groupBox18.Location = new Point(334, 1438);
-            groupBox18.Name = "groupBox18";
-            groupBox18.Size = new Size(902, 84);
-            groupBox18.TabIndex = 32;
-            groupBox18.TabStop = false;
-            groupBox18.Text = "معاد من الخبراء";
-            groupBox18.UseCompatibleTextRendering = true;
+            groupBox_MoeadMenAlKhobraa.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            groupBox_MoeadMenAlKhobraa.Controls.Add(label118);
+            groupBox_MoeadMenAlKhobraa.Controls.Add(comboBox65);
+            groupBox_MoeadMenAlKhobraa.Controls.Add(label121);
+            groupBox_MoeadMenAlKhobraa.Controls.Add(text_MoeadMenAlKhobraa);
+            groupBox_MoeadMenAlKhobraa.Location = new Point(334, 1438);
+            groupBox_MoeadMenAlKhobraa.Name = "groupBox_MoeadMenAlKhobraa";
+            groupBox_MoeadMenAlKhobraa.Size = new Size(902, 84);
+            groupBox_MoeadMenAlKhobraa.TabIndex = 32;
+            groupBox_MoeadMenAlKhobraa.TabStop = false;
+            groupBox_MoeadMenAlKhobraa.Text = "معاد من الخبراء";
+            groupBox_MoeadMenAlKhobraa.UseCompatibleTextRendering = true;
             // 
             // label118
             // 
@@ -4513,28 +4796,28 @@
             label121.TabIndex = 8;
             label121.Text = "معاد من الخبراء";
             // 
-            // textBox82
+            // text_MoeadMenAlKhobraa
             // 
-            textBox82.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox82.Location = new Point(688, 32);
-            textBox82.Name = "textBox82";
-            textBox82.Size = new Size(117, 23);
-            textBox82.TabIndex = 32;
+            text_MoeadMenAlKhobraa.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_MoeadMenAlKhobraa.Location = new Point(688, 32);
+            text_MoeadMenAlKhobraa.Name = "text_MoeadMenAlKhobraa";
+            text_MoeadMenAlKhobraa.Size = new Size(117, 23);
+            text_MoeadMenAlKhobraa.TabIndex = 32;
             // 
             // StatisticsAddUserControl
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(groupBox9);
-            Controls.Add(groupBox18);
-            Controls.Add(button48);
-            Controls.Add(button47);
-            Controls.Add(groupBox10);
-            Controls.Add(groupBox5);
-            Controls.Add(groupBox7);
-            Controls.Add(groupBox6);
-            Controls.Add(groupBox4);
-            Controls.Add(groupBox2);
+            Controls.Add(groupBox_MoagalatAlaAshhorTalia);
+            Controls.Add(groupBox_MoeadMenAlKhobraa);
+            Controls.Add(btn_Delete);
+            Controls.Add(btn_Save);
+            Controls.Add(group_Tawzie);
+            Controls.Add(group_Mokadam);
+            Controls.Add(groupBox_MahkoumFih);
+            Controls.Add(group_MoeagalKhargALshahr);
+            Controls.Add(groupBox_Ehalah);
+            Controls.Add(groupBox_Motdawal);
             Controls.Add(groupBox1);
             Controls.Add(panel1);
             Name = "StatisticsAddUserControl";
@@ -4545,40 +4828,40 @@
             panel1.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            groupBox3.ResumeLayout(false);
-            groupBox3.PerformLayout();
-            groupBox4.ResumeLayout(false);
-            groupBox4.PerformLayout();
-            groupBox5.ResumeLayout(false);
-            groupBox5.PerformLayout();
-            groupBox6.ResumeLayout(false);
-            groupBox6.PerformLayout();
-            groupBox7.ResumeLayout(false);
-            groupBox7.PerformLayout();
-            groupBox8.ResumeLayout(false);
-            groupBox8.PerformLayout();
-            groupBox9.ResumeLayout(false);
-            groupBox9.PerformLayout();
-            groupBox10.ResumeLayout(false);
-            groupBox10.PerformLayout();
-            groupBox17.ResumeLayout(false);
-            groupBox17.PerformLayout();
-            groupBox16.ResumeLayout(false);
-            groupBox16.PerformLayout();
-            groupBox15.ResumeLayout(false);
-            groupBox15.PerformLayout();
-            groupBox11.ResumeLayout(false);
-            groupBox11.PerformLayout();
-            groupBox14.ResumeLayout(false);
-            groupBox14.PerformLayout();
-            groupBox13.ResumeLayout(false);
-            groupBox13.PerformLayout();
-            groupBox12.ResumeLayout(false);
-            groupBox12.PerformLayout();
-            groupBox18.ResumeLayout(false);
-            groupBox18.PerformLayout();
+            groupBox_Motdawal.ResumeLayout(false);
+            groupBox_Motdawal.PerformLayout();
+            groupBox_Taksir.ResumeLayout(false);
+            groupBox_Taksir.PerformLayout();
+            groupBox_Ehalah.ResumeLayout(false);
+            groupBox_Ehalah.PerformLayout();
+            group_Mokadam.ResumeLayout(false);
+            group_Mokadam.PerformLayout();
+            group_MoeagalKhargALshahr.ResumeLayout(false);
+            group_MoeagalKhargALshahr.PerformLayout();
+            groupBox_MahkoumFih.ResumeLayout(false);
+            groupBox_MahkoumFih.PerformLayout();
+            group_Katey.ResumeLayout(false);
+            group_Katey.PerformLayout();
+            groupBox_MoagalatAlaAshhorTalia.ResumeLayout(false);
+            groupBox_MoagalatAlaAshhorTalia.PerformLayout();
+            group_Tawzie.ResumeLayout(false);
+            group_Tawzie.PerformLayout();
+            group_Tawzie_Okhra.ResumeLayout(false);
+            group_Tawzie_Okhra.PerformLayout();
+            group_Tawzie_Ethbat.ResumeLayout(false);
+            group_Tawzie_Ethbat.PerformLayout();
+            group_Tawzie_Farey.ResumeLayout(false);
+            group_Tawzie_Farey.PerformLayout();
+            group_Tawzie_Katey.ResumeLayout(false);
+            group_Tawzie_Katey.PerformLayout();
+            group_Tawzie_Katey_Solh.ResumeLayout(false);
+            group_Tawzie_Katey_Solh.PerformLayout();
+            group_Tawzie_Katey_Mawdoey.ResumeLayout(false);
+            group_Tawzie_Katey_Mawdoey.PerformLayout();
+            group_Tawzie_Katey_Shakly.ResumeLayout(false);
+            group_Tawzie_Katey_Shakly.PerformLayout();
+            groupBox_MoeadMenAlKhobraa.ResumeLayout(false);
+            groupBox_MoeadMenAlKhobraa.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -4592,117 +4875,117 @@
         private GroupBox groupBox1;
         private Label label3;
         private ComboBox comboBox_CaseYear;
-        private GroupBox groupBox2;
-        private TextBox textBox4;
+        private GroupBox groupBox_Motdawal;
+        private TextBox text_Motdawal_MoagalMenAlWakfGazaey;
         private Label label8;
-        private TextBox textBox3;
+        private TextBox text_Motdawal_MogalMenALWakfRad;
         private Label label7;
-        private TextBox textBox2;
+        private TextBox text_Motdawal_MogadadMenAlShatb;
         private Label label6;
-        private TextBox textBox1;
+        private TextBox text_Motdawal_MoagalSabek;
         private Label label5;
         private ComboBox comboBox2;
-        private GroupBox groupBox3;
+        private GroupBox groupBox_Taksir;
         private Label label14;
-        private TextBox textBox9;
-        private ComboBox comboBox4;
+        private TextBox Text_Taksir_Count;
+        private ComboBox comboBox_Taksir_Month;
         private Label label15;
         private ComboBox comboBox3;
-        private TextBox textBox8;
+        private TextBox text_Motdawal_MoadFromEstenaf;
         private Label label12;
-        private TextBox textBox6;
+        private TextBox text_Motdawal_MoagalMenAlWakfEtfaky;
         private Label label10;
-        private TextBox textBox7;
-        private TextBox textBox5;
+        private TextBox text_Motdawal_MoagalMenAlEnktae;
+        private TextBox text_Motdawal_MoagalMenAlWakfTaeliky;
         private Label label11;
         private Label label9;
-        private GroupBox groupBox4;
-        private TextBox textBox10;
+        private GroupBox groupBox_Ehalah;
+        private TextBox text__Ehalah_To;
         private Label label17;
-        private TextBox textBox11;
+        private TextBox text__Ehalah_From;
         private Label label18;
         private Label label16;
         private ComboBox comboBox5;
-        private GroupBox groupBox5;
-        private TextBox textBox14;
-        private TextBox textBox12;
+        private GroupBox group_Mokadam;
+        private TextBox text_Mokadam_Total;
+        private TextBox text_Mokadam_New;
         private Label label22;
         private Label label19;
-        private TextBox textBox13;
+        private TextBox text_Mokadam_Motadawal;
         private Label label20;
         private Label label21;
         private ComboBox comboBox6;
-        private GroupBox groupBox6;
+        private GroupBox group_MoeagalKhargALshahr;
         private Label label25;
         private ComboBox comboBox7;
-        private GroupBox groupBox7;
-        private GroupBox groupBox8;
-        private TextBox textBox19;
+        private GroupBox groupBox_MahkoumFih;
+        private GroupBox group_Katey;
+        private TextBox text_MahkoumFih_Katey_Solh;
         private Label label29;
-        private TextBox textBox22;
+        private TextBox text_MahkoumFih_Katey_Mawdoey;
         private Label label33;
-        private TextBox textBox21;
+        private TextBox text_MahkoumFih_Katey_Total;
         private Label label32;
-        private TextBox textBox20;
+        private TextBox text_MahkoumFih_Katey_Shakly;
         private Label label30;
         private Label label31;
         private ComboBox comboBox9;
         private Label label28;
         private ComboBox comboBox8;
-        private TextBox textBox26;
-        private TextBox textBox24;
+        private TextBox text_MahkoumFih_EnktaeSirAlKhsoma;
+        private TextBox text_MahkoumFih_WakfGazaey;
         private Label label37;
-        private TextBox textBox27;
+        private TextBox text_MahkoumFih_Total;
         private Label label35;
         private Label label38;
-        private TextBox textBox23;
+        private TextBox text_MahkoumFih_Ethbat;
         private Label label34;
-        private TextBox textBox17;
-        private TextBox textBox25;
-        private TextBox textBox18;
+        private TextBox text_MahkoumFih_Farey;
+        private TextBox text_MahkoumFih_WakfEtfaky;
+        private TextBox text_MahkoumFih_WakfTaeliky;
         private Label label36;
         private Label label26;
         private Label label27;
-        private TextBox textBox29;
+        private TextBox text_MoeagalKhargALshahr_MadAgl;
         private Label label42;
         private Label label23;
-        private TextBox textBox30;
+        private TextBox text_MoeagalKhargALshahr_Total;
         private Label label24;
         private Label label39;
         private Label label41;
-        private TextBox textBox31;
-        private TextBox textBox15;
-        private TextBox textBox16;
-        private TextBox textBox28;
+        private TextBox text_MoeagalKhargALshahr_Okhra;
+        private TextBox text_MoeagalKhargALshahr_EadaLelMorafeah;
+        private TextBox text_MoeagalKhargALshahr_MoagalLelTakrir;
+        private TextBox text_MoeagalKhargALshahr_MahgouzLelhokm;
         private Label label40;
-        private GroupBox groupBox9;
-        private ComboBox comboBox14;
-        private ComboBox comboBox13;
-        private ComboBox comboBox12;
-        private ComboBox comboBox11;
+        private GroupBox groupBox_MoagalatAlaAshhorTalia;
+        private ComboBox comboBox_MoagalatAlaAshhorTalia_EadaLelMorafea;
+        private ComboBox comboBox_MoagalatAlaAshhorTalia_MadAgal;
+        private ComboBox comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm;
+        private ComboBox comboBox_MoagalatAlaAshhorTalia_Farey;
         private Label label43;
         private ComboBox comboBox10;
-        private TextBox textBox32;
+        private TextBox text_MoagalatAlaAshhorTalia_AlBaky;
         private Label label44;
         private Label label45;
-        private TextBox textBox33;
+        private TextBox text_MoagalatAlaAshhorTalia_EadaLelMorafea;
         private Label label48;
-        private TextBox textBox34;
-        private TextBox textBox35;
-        private TextBox textBox37;
+        private TextBox text_MoagalatAlaAshhorTalia_MadAgal;
+        private TextBox text_MoagalatAlaAshhorTalia_MahgouzLelhokm;
+        private TextBox text_MoagalatAlaAshhorTalia_Farey;
         private Label label49;
-        private Button button4;
-        private Button button3;
-        private Button button5;
-        private Button button2;
-        private Button button1;
-        private ComboBox comboBox15;
+        private Button btn_MoagalatAlaAshhorTalia_EadaLelMorafea;
+        private Button btn_MoagalatAlaAshhorTalia_MadAgal;
+        private Button btn_MoagalatAlaAshhorTalia_MahgouzLelhokm;
+        private Button btn_MoagalatAlaAshhorTalia_AlBaky;
+        private Button btn_MoagalatAlaAshhorTalia_Farey;
+        private ComboBox comboBox_MoagalatAlaAshhorTalia_AlBaky;
         private Label label47;
         private Label label50;
         private Label label46;
-        private GroupBox groupBox10;
-        private GroupBox groupBox11;
-        private GroupBox groupBox13;
+        private GroupBox group_Tawzie;
+        private GroupBox group_Tawzie_Katey;
+        private GroupBox group_Tawzie_Katey_Mawdoey;
         private Button button21;
         private Button button22;
         private Button button23;
@@ -4727,7 +5010,7 @@
         private TextBox textBox55;
         private TextBox textBox56;
         private Label label85;
-        private GroupBox groupBox12;
+        private GroupBox group_Tawzie_Katey_Shakly;
         private Button button16;
         private Button button17;
         private Button button18;
@@ -4776,9 +5059,9 @@
         private TextBox textBox45;
         private TextBox textBox46;
         private Label label69;
-        private ComboBox comboBox22;
-        private Label label61;
-        private Label label60;
+        private ComboBox comboBox_Tawzie_Judje;
+        private Label Text_Tawzie_JudgeId;
+        private Label Text_Tawzie_Judge_Job;
         private Label label59;
         private Button button6;
         private Button button7;
@@ -4804,8 +5087,8 @@
         private TextBox textBox40;
         private TextBox textBox41;
         private Label label58;
-        private Button button46;
-        private GroupBox groupBox17;
+        private Button btn_Tawzie_Add;
+        private GroupBox group_Tawzie_Okhra;
         private Button button41;
         private Button button42;
         private Button button43;
@@ -4830,7 +5113,7 @@
         private TextBox textBox75;
         private TextBox textBox76;
         private Label label117;
-        private GroupBox groupBox16;
+        private GroupBox group_Tawzie_Ethbat;
         private Button button36;
         private Button button37;
         private Button button38;
@@ -4855,7 +5138,7 @@
         private TextBox textBox70;
         private TextBox textBox71;
         private Label label109;
-        private GroupBox groupBox15;
+        private GroupBox group_Tawzie_Farey;
         private Button button31;
         private Button button32;
         private Button button33;
@@ -4880,7 +5163,7 @@
         private TextBox textBox65;
         private TextBox textBox66;
         private Label label101;
-        private GroupBox groupBox14;
+        private GroupBox group_Tawzie_Katey_Solh;
         private Button button26;
         private Button button27;
         private Button button28;
@@ -4905,76 +5188,94 @@
         private TextBox textBox60;
         private TextBox textBox61;
         private Label label93;
-        private Button button47;
-        private Button button48;
-        private GroupBox groupBox18;
+        private Button btn_Save;
+        private Button btn_Delete;
+        private GroupBox groupBox_MoeadMenAlKhobraa;
         private Label label118;
         private ComboBox comboBox65;
         private Label label121;
-        private TextBox textBox82;
+        private TextBox text_MoeadMenAlKhobraa;
         private Label label124;
         private Label label125;
         private Label label126;
-        private TextBox textBox81;
+        private TextBox text_Tawzie_Katey_Shakly_Okhrah;
         private Label label127;
-        private TextBox textBox83;
-        private TextBox textBox84;
-        private TextBox textBox85;
+        private TextBox text_Tawzie_Katey_Shakly_EnedamAlKhsoma;
+        private TextBox text_Tawzie_Katey_Shakly_SkotAlKhsoma;
+        private TextBox text_Tawzie_Katey_Shakly_adamEkhtsas;
         private Label label119;
         private Label label120;
         private Label label122;
-        private TextBox textBox77;
+        private TextBox text_Tawzie_Katey_Shakly_KanLamTakon;
         private Label label123;
-        private TextBox textBox78;
-        private TextBox textBox79;
-        private TextBox textBox80;
+        private TextBox text_Tawzie_Katey_Shakly_TarkAlKhsoma;
+        private TextBox text_Tawzie_Katey_Shakly_SkotAlhak;
+        private TextBox text_Tawzie_Katey_Shakly_AdamKbol;
         private Label label136;
-        private TextBox textBox94;
+        private TextBox text_Tawzie_Katey_Mawdoey_Total;
         private Label label137;
-        private TextBox textBox95;
+        private TextBox text_Tawzie_Katey_Mawdoey_ElghaaWaEstmrarTanfiz;
         private Label label128;
         private Label label129;
         private Label label130;
-        private TextBox textBox86;
+        private TextBox text_Tawzie_Katey_Mawdoey_ElghaaWaWakfTanfiz;
         private Label label131;
-        private TextBox textBox87;
-        private TextBox textBox88;
-        private TextBox textBox89;
+        private TextBox text_Tawzie_Katey_Mawdoey_Okhrah;
+        private TextBox text_Tawzie_Katey_Mawdoey_AdamGwaz;
+        private TextBox text_Tawzie_Katey_Mawdoey_Rafd;
         private Label label132;
         private Label label133;
         private Label label134;
-        private TextBox textBox90;
+        private TextBox text_Tawzie_Katey_Mawdoey_ElghaWaAdamEkhtsas;
         private Label label135;
-        private TextBox textBox91;
-        private TextBox textBox92;
-        private TextBox textBox93;
-        private TextBox textBox96;
+        private TextBox text_Tawzie_Katey_Mawdoey_Enkeda;
+        private TextBox text_Tawzie_Katey_Mawdoey_RafdBehaltha;
+        private TextBox text_Tawzie_Katey_Mawdoey_Kobol;
+        private TextBox text_Tawzie_Katey_Shakly_Total;
         private Label label138;
-        private TextBox textBox99;
+        private TextBox text_Tawzie_Ethbat_Total;
         private Label label139;
         private Label label140;
         private Label label142;
-        private TextBox textBox100;
+        private TextBox text_Tawzie_Ethbat_HelfYamin;
         private Label label143;
-        private TextBox textBox101;
-        private TextBox textBox102;
+        private TextBox text_Tawzie_Ethbat_Tahkik;
+        private TextBox text_Tawzie_Ethbat_NadbKhabir;
         private Label label144;
         private Label label146;
-        private TextBox textBox104;
+        private TextBox text_Tawzie_Ethbat_Estgwab;
         private Label label147;
-        private TextBox textBox105;
-        private TextBox textBox106;
-        private TextBox textBox98;
-        private TextBox textBox97;
-        private TextBox textBox103;
+        private TextBox text_Tawzie_Ethbat_EadaLelKhabir;
+        private TextBox text_Tawzie_Ethbat_NadbHakmin;
+        private TextBox text_Tawzie_Farey;
+        private TextBox text_Tawzie_Katey_Solh;
+        private TextBox text_Tawzie_Okhra_Total;
         private Label label141;
         private Label label145;
-        private TextBox textBox107;
+        private TextBox text_Tawzie_Okhra_Enktae;
         private Label label148;
-        private TextBox textBox108;
+        private TextBox text_Tawzie_Okhra_WakfTaeliky;
         private Label label149;
-        private TextBox textBox109;
+        private TextBox text_Tawzie_Okhra_WakfEtfaky;
         private Label label150;
-        private TextBox textBox110;
+        private TextBox text_Tawzie_Okhra_WakfGzaey;
+        private Label Text_CircleMasterType;
+        private Label Text_Month;
+        private Label Text_CircleCtogry;
+        private Label Text_SupCourt;
+        private Label Text_Year;
+        private Label Text_SuperCourt;
+        private Label text_MoagalatAlaAshhorTalia_AlBaky_Count;
+        private Label label162;
+        private Label text_MoagalatAlaAshhorTalia_EadaLelMorafea_Count;
+        private Label label159;
+        private Label text_MoagalatAlaAshhorTalia_MadAgal_Count;
+        private Label label155;
+        private Label text_MoagalatAlaAshhorTalia_MahgouzLelhokm_Count;
+        private Label label151;
+        private Label text_MoagalatAlaAshhorTalia_Ethbat_Count;
+        private Label label13;
+        private TextBox tex_Tawzie_TotalMahkomFih;
+        private Label label60;
     }
 }

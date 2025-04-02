@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace StatisticsAPP.Forms.StatisticsForms
 {
@@ -82,7 +83,13 @@ namespace StatisticsAPP.Forms.StatisticsForms
                 Month = comboBox_Month.SelectedIndex + 1,
                 SupCourtId = ((SupCourt)comboBox_SupCourt.SelectedItem).Id,
                 SuperCourtId = ((SuperCourt)comboBox_SuperCourt.SelectedItem).Id,
-                Year = Convert.ToInt32(comboBox_Year.SelectedItem)
+                Year = Convert.ToInt32(comboBox_Year.SelectedItem),
+                SuperCourtName = ((SuperCourt)comboBox_SuperCourt.SelectedItem).Name,
+                SupCourtName = ((SupCourt)comboBox_SupCourt.SelectedItem).Name,
+                CircleCtogryName= ((CircleCategory)comboBox_CircleCategory.SelectedItem).Name,
+                CircleMasterTypeName = ((CircleMasterType)comboBox_CircleMasterType.SelectedItem).Name
+
+
 
             };
 
@@ -92,8 +99,19 @@ namespace StatisticsAPP.Forms.StatisticsForms
 
         private void StatisticsAddConfigurationForm_Load(object sender, EventArgs e)
         {
-            comboBox_Year.Items.AddRange(new object[] { 2023, 2024, 2025 });
-            comboBox_Month.Items.AddRange(months.Keys.ToArray());
+            comboBox_Year.Items.AddRange(new object[] { DateTime.Now.AddYears(-2).Year, DateTime.Now.AddYears(-1).Year, DateTime.Now.Year });
+            comboBox_Year.SelectedItem = DateTime.Now.AddMonths(-1).Year;
+            comboBox_Month.DataSource = new BindingSource(months, null);
+            comboBox_Month.DisplayMember = "Key";
+            comboBox_Month.ValueMember = "Value";
+
+            int previousMonth = DateTime.Now.Month - 1;
+            if (previousMonth == 0) // إذا كان الشهر الحالي يناير، فالسابق ديسمبر
+                previousMonth = 12;
+
+            // تعيين القيمة الافتراضية بناءً على الشهر السابق
+            comboBox_Month.SelectedValue = previousMonth;
+
             if (usersuperCourts.Count <= 0 || supCourts.Count <= 0)
             {
                 MessageBox.Show("Not authorized");

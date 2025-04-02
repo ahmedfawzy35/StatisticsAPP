@@ -3,6 +3,7 @@ using StatisticsAPP.Forms.CircleForms;
 using StatisticsAPP.Forms.CourtsForms;
 using StatisticsAPP.Forms.StatisticsForms;
 using StatisticsAPP.Seeds;
+using StatisticsAPP.Servicies.StatisticsCervicies.DTOS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -64,41 +65,118 @@ namespace StatisticsAPP.Forms.MainForm
             return a;
 
         }
+        int is_exitsAddStatstics(StatisticsFormConfig config)
+        {
+            int a = -1;
+            for (int i = 0; i < tabControl1.TabPages.Count; i++)
+            {
+
+                if (tabControl1.TabPages[i].Controls.OfType<StatisticsAddForm>().ToList().Count > 0 )
+                {
+
+                    var frm = tabControl1.TabPages[i].Controls.OfType<StatisticsAddForm>().ToList().First();
+                    if (frm._Config!.SupCourtId == config.SupCourtId &&
+                        frm._Config.SuperCourtId == config.SuperCourtId &&
+                        frm._Config.CircleCtogryId == config.CircleCtogryId &&
+                        frm._Config.CircleMasterTypeId == config.CircleMasterTypeId &&
+                        frm._Config.Year == config.Year &&
+                        frm._Config.Month == config.Month 
+
+                        )
+                    {
+
+                        tabControl1.SelectTab(i);
+                        a = i; break;
+
+                    }
+                }
+            }
+
+            return a;
+
+        }
+        int CountAddStatstics()
+        {
+            int a = 0;
+            for (int i = 0; i < tabControl1.TabPages.Count; i++)
+            {
+
+                if (tabControl1.TabPages[i].Controls.OfType<StatisticsAddForm>().ToList().Count > 0)
+                {
+
+                  a++;
+                }
+            }
+
+            return a;
+
+        }
         #endregion
         #region Tab Control
         public void ShowForm(string x, Form frm)
         {
-            //if (!MyServicies.checkPermissionsManager.CheckCreatePermission(MyStrings.ModulsName.Product))
-            //{
-            //    System.Windows.MessageBox.Show("الاجراء غير مصرح به  " + Environment.NewLine+ Permissions.Creat(MyStrings.ModulsName.Product));
-            //    return;
-            //}
-
+         
             int select = is_exits(x);
             if (select == -1)
             {
                 frm.TopLevel = false;
                 frm.Visible = true;
-                //frm.BackColor = MyColors.MasterBackColor;
                 frm.FormBorderStyle = FormBorderStyle.None;
                 frm.Dock = DockStyle.Fill;
-                //frm.Height = 2000;
                 int index1 = tabControl1.TabPages.Count;
                 TabPage xtab = new TabPage
                 {
                     Name = frm.Name,
                     Text = x,
-                    //BackColor = MyColors.MasterBackColor,
 
                 };
                 tabControl1.TabPages.Add(xtab);
                 tabControl1.TabPages[index1].AutoScroll = true;
-                //tabControl1.TabPages[index1].Height = 1000;
-
-                //tabControl1.TabPages[index1].AutoScrollMinSize = new System.Drawing.Size(1000, 2000);
+               
 
                 tabControl1.TabPages[index1].Controls.Clear();
                 tabControl1.TabPages[index1].Text = x;
+                tabControl1.TabPages[index1].RightToLeft = RightToLeft.Yes;
+                tabControl1.TabPages[index1].Controls.Add(frm);
+                tabControl1.TabPages[index1].Name = frm.Name;
+                tabControl1.SelectTab(index1);
+                return;
+
+            }
+            else
+            {
+                tabControl1.SelectTab(select);
+            }
+        }
+        public void ShowFormAddStatistcs(string x, StatisticsAddForm frm)
+        {
+
+            int select = is_exitsAddStatstics(frm._Config!);
+            int count = CountAddStatstics();
+            if (count > 2) 
+            {
+                MessageBox.Show("تم فتح ثلاثة نوافذ لاضافة احصائية وهو الحد الاقصي اغلق احد النوافذ");
+                return;
+            }
+            if (select == -1)
+            {
+                frm.TopLevel = false;
+                frm.Visible = true;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                frm.Dock = DockStyle.Fill;
+                int index1 = tabControl1.TabPages.Count;
+                TabPage xtab = new TabPage
+                {
+                    Name = frm.Name,
+                    Text = $"{x}  -  ({count + 1})",
+
+                };
+                tabControl1.TabPages.Add(xtab);
+                tabControl1.TabPages[index1].AutoScroll = true;
+
+
+                tabControl1.TabPages[index1].Controls.Clear();
+                tabControl1.TabPages[index1].Text = $"{x}  -  ({count + 1})";
                 tabControl1.TabPages[index1].RightToLeft = RightToLeft.Yes;
                 tabControl1.TabPages[index1].Controls.Add(frm);
                 tabControl1.TabPages[index1].Name = frm.Name;
@@ -287,7 +365,7 @@ namespace StatisticsAPP.Forms.MainForm
                 var config = frm.FormConfig;
                 StatisticsAddForm frm2 = new StatisticsAddForm(config!);
                 frm2._Config = config;
-                ShowForm("ايام الانعقاد",frm2);
+                ShowFormAddStatistcs("اضافة احصائية",frm2);
 
             }
 
