@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
             panel1 = new Panel();
             label2 = new Label();
             comboBox_CircleDays = new ComboBox();
@@ -67,14 +69,11 @@
             label6 = new Label();
             text_Motdawal_MoagalSabek = new TextBox();
             label5 = new Label();
-            comboBox2 = new ComboBox();
             CustomGroupBox_Ehalah = new CustomGroupBox();
             text__Ehalah_To = new TextBox();
             label17 = new Label();
             text__Ehalah_From = new TextBox();
             label18 = new Label();
-            label16 = new Label();
-            comboBox5 = new ComboBox();
             group_Mokadam = new CustomGroupBox();
             text_Mokadam_Total = new TextBox();
             text_Mokadam_New = new TextBox();
@@ -82,11 +81,7 @@
             label19 = new Label();
             text_Mokadam_Motadawal = new TextBox();
             label20 = new Label();
-            label21 = new Label();
-            comboBox6 = new ComboBox();
             group_MoeagalKhargALshahr = new CustomGroupBox();
-            label25 = new Label();
-            comboBox7 = new ComboBox();
             text_MoeagalKhargALshahr_MadAgl = new TextBox();
             label42 = new Label();
             label23 = new Label();
@@ -112,14 +107,10 @@
             label32 = new Label();
             text_MahkoumFih_Katey_Shakly = new TextBox();
             label30 = new Label();
-            label31 = new Label();
-            comboBox9 = new ComboBox();
             text_MahkoumFih_Total = new TextBox();
             label35 = new Label();
             label38 = new Label();
-            label28 = new Label();
             text_MahkoumFih_Ethbat = new TextBox();
-            comboBox8 = new ComboBox();
             label34 = new Label();
             text_MahkoumFih_Farey = new TextBox();
             text_MahkoumFih_WakfEtfaky = new TextBox();
@@ -152,12 +143,10 @@
             comboBox_MoagalatAlaAshhorTalia_MadAgal = new ComboBox();
             comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm = new ComboBox();
             comboBox_MoagalatAlaAshhorTalia_Farey = new ComboBox();
-            label43 = new Label();
-            comboBox10 = new ComboBox();
             text_MoagalatAlaAshhorTalia_AlBaky = new TextBox();
             label47 = new Label();
             label44 = new Label();
-            label50 = new Label();
+            label4 = new Label();
             label46 = new Label();
             label45 = new Label();
             text_MoagalatAlaAshhorTalia_EadaLelMorafea = new TextBox();
@@ -170,7 +159,11 @@
             dataGridView1 = new DataGridView();
             delete = new DataGridViewButtonColumn();
             Edit = new DataGridViewButtonColumn();
+            text_ahkamKadi2 = new TextBox();
+            text_ahkamKadi1 = new TextBox();
             tex_Tawzie_TotalMahkomFih = new TextBox();
+            label152 = new Label();
+            label61 = new Label();
             label60 = new Label();
             btn_Tawzie_Add = new Button();
             group_Tawzie_Okhra = new CustomGroupBox();
@@ -184,30 +177,6 @@
             text_Tawzie_Okhra_WakfEtfaky = new TextBox();
             label150 = new Label();
             text_Tawzie_Okhra_WakfGzaey = new TextBox();
-            button41 = new Button();
-            button42 = new Button();
-            button43 = new Button();
-            button44 = new Button();
-            button45 = new Button();
-            comboBox59 = new ComboBox();
-            comboBox60 = new ComboBox();
-            comboBox61 = new ComboBox();
-            comboBox62 = new ComboBox();
-            comboBox63 = new ComboBox();
-            label110 = new Label();
-            comboBox64 = new ComboBox();
-            textBox72 = new TextBox();
-            label111 = new Label();
-            label112 = new Label();
-            label113 = new Label();
-            label114 = new Label();
-            label115 = new Label();
-            textBox73 = new TextBox();
-            label116 = new Label();
-            textBox74 = new TextBox();
-            textBox75 = new TextBox();
-            textBox76 = new TextBox();
-            label117 = new Label();
             group_Tawzie_Ethbat = new CustomGroupBox();
             text_Tawzie_Ethbat_Total = new TextBox();
             label139 = new Label();
@@ -223,83 +192,11 @@
             label147 = new Label();
             text_Tawzie_Ethbat_EadaLelKhabir = new TextBox();
             text_Tawzie_Ethbat_NadbHakmin = new TextBox();
-            button36 = new Button();
-            button37 = new Button();
-            button38 = new Button();
-            button39 = new Button();
-            button40 = new Button();
-            comboBox53 = new ComboBox();
-            comboBox54 = new ComboBox();
-            comboBox55 = new ComboBox();
-            comboBox56 = new ComboBox();
-            comboBox57 = new ComboBox();
-            label102 = new Label();
-            comboBox58 = new ComboBox();
-            textBox67 = new TextBox();
-            label103 = new Label();
-            label104 = new Label();
-            label105 = new Label();
-            label106 = new Label();
-            label107 = new Label();
-            textBox68 = new TextBox();
-            label108 = new Label();
-            textBox69 = new TextBox();
-            textBox70 = new TextBox();
-            textBox71 = new TextBox();
-            label109 = new Label();
             group_Tawzie_Farey = new CustomGroupBox();
             text_Tawzie_Farey = new TextBox();
-            button31 = new Button();
-            button32 = new Button();
-            button33 = new Button();
-            button34 = new Button();
-            button35 = new Button();
-            comboBox47 = new ComboBox();
-            comboBox48 = new ComboBox();
-            comboBox49 = new ComboBox();
-            comboBox50 = new ComboBox();
-            comboBox51 = new ComboBox();
-            label94 = new Label();
-            comboBox52 = new ComboBox();
-            textBox62 = new TextBox();
-            label95 = new Label();
-            label96 = new Label();
-            label97 = new Label();
-            label98 = new Label();
-            label99 = new Label();
-            textBox63 = new TextBox();
-            label100 = new Label();
-            textBox64 = new TextBox();
-            textBox65 = new TextBox();
-            textBox66 = new TextBox();
-            label101 = new Label();
             group_Tawzie_Katey = new CustomGroupBox();
             group_Tawzie_Katey_Solh = new CustomGroupBox();
             text_Tawzie_Katey_Solh = new TextBox();
-            button26 = new Button();
-            button27 = new Button();
-            button28 = new Button();
-            button29 = new Button();
-            button30 = new Button();
-            comboBox41 = new ComboBox();
-            comboBox42 = new ComboBox();
-            comboBox43 = new ComboBox();
-            comboBox44 = new ComboBox();
-            comboBox45 = new ComboBox();
-            label86 = new Label();
-            comboBox46 = new ComboBox();
-            textBox57 = new TextBox();
-            label87 = new Label();
-            label88 = new Label();
-            label89 = new Label();
-            label90 = new Label();
-            label91 = new Label();
-            textBox58 = new TextBox();
-            label92 = new Label();
-            textBox59 = new TextBox();
-            textBox60 = new TextBox();
-            textBox61 = new TextBox();
-            label93 = new Label();
             group_Tawzie_Katey_Mawdoey = new CustomGroupBox();
             label136 = new Label();
             text_Tawzie_Katey_Mawdoey_Total = new TextBox();
@@ -321,30 +218,6 @@
             text_Tawzie_Katey_Mawdoey_Enkeda = new TextBox();
             text_Tawzie_Katey_Mawdoey_RafdBehaltha = new TextBox();
             text_Tawzie_Katey_Mawdoey_Kobol = new TextBox();
-            button21 = new Button();
-            button22 = new Button();
-            button23 = new Button();
-            button24 = new Button();
-            button25 = new Button();
-            comboBox35 = new ComboBox();
-            comboBox36 = new ComboBox();
-            comboBox37 = new ComboBox();
-            comboBox38 = new ComboBox();
-            comboBox39 = new ComboBox();
-            label78 = new Label();
-            comboBox40 = new ComboBox();
-            textBox52 = new TextBox();
-            label79 = new Label();
-            label80 = new Label();
-            label81 = new Label();
-            label82 = new Label();
-            label83 = new Label();
-            textBox53 = new TextBox();
-            label84 = new Label();
-            textBox54 = new TextBox();
-            textBox55 = new TextBox();
-            textBox56 = new TextBox();
-            label85 = new Label();
             group_Tawzie_Katey_Shakly = new CustomGroupBox();
             text_Tawzie_Katey_Shakly_Total = new TextBox();
             label138 = new Label();
@@ -364,90 +237,15 @@
             text_Tawzie_Katey_Shakly_TarkAlKhsoma = new TextBox();
             text_Tawzie_Katey_Shakly_SkotAlhak = new TextBox();
             text_Tawzie_Katey_Shakly_AdamKbol = new TextBox();
-            button16 = new Button();
-            button17 = new Button();
-            button18 = new Button();
-            button19 = new Button();
-            button20 = new Button();
-            comboBox29 = new ComboBox();
-            comboBox30 = new ComboBox();
-            comboBox31 = new ComboBox();
-            comboBox32 = new ComboBox();
-            comboBox33 = new ComboBox();
-            label70 = new Label();
-            comboBox34 = new ComboBox();
-            textBox47 = new TextBox();
-            label71 = new Label();
-            label72 = new Label();
-            label73 = new Label();
-            label74 = new Label();
-            label75 = new Label();
-            textBox48 = new TextBox();
-            label76 = new Label();
-            textBox49 = new TextBox();
-            textBox50 = new TextBox();
-            textBox51 = new TextBox();
-            label77 = new Label();
-            button11 = new Button();
-            button12 = new Button();
-            button13 = new Button();
-            button14 = new Button();
-            button15 = new Button();
-            comboBox23 = new ComboBox();
-            comboBox24 = new ComboBox();
-            comboBox25 = new ComboBox();
-            comboBox26 = new ComboBox();
-            comboBox27 = new ComboBox();
-            label62 = new Label();
-            comboBox28 = new ComboBox();
-            textBox42 = new TextBox();
-            label63 = new Label();
-            label64 = new Label();
-            label65 = new Label();
-            label66 = new Label();
-            label67 = new Label();
-            textBox43 = new TextBox();
-            label68 = new Label();
-            textBox44 = new TextBox();
-            textBox45 = new TextBox();
-            textBox46 = new TextBox();
-            label69 = new Label();
             comboBox_Tawzie_Judje = new ComboBox();
             Text_Tawzie_JudgeId = new Label();
             Text_Tawzie_Judge_Job = new Label();
             label59 = new Label();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
-            button9 = new Button();
-            button10 = new Button();
-            comboBox16 = new ComboBox();
-            comboBox17 = new ComboBox();
-            comboBox18 = new ComboBox();
-            comboBox19 = new ComboBox();
-            comboBox20 = new ComboBox();
-            label51 = new Label();
-            comboBox21 = new ComboBox();
-            textBox36 = new TextBox();
-            label52 = new Label();
-            label53 = new Label();
-            label54 = new Label();
-            label55 = new Label();
-            label56 = new Label();
-            textBox38 = new TextBox();
-            label57 = new Label();
-            textBox39 = new TextBox();
-            textBox40 = new TextBox();
-            textBox41 = new TextBox();
-            label58 = new Label();
             btn_Save = new Button();
             btn_Delete = new Button();
             CustomGroupBox_MoeadMenAlKhobraa = new CustomGroupBox();
-            label118 = new Label();
-            comboBox65 = new ComboBox();
             label121 = new Label();
             text_MoeadMenAlKhobraa = new TextBox();
-            label4 = new Label();
             panel1.SuspendLayout();
             CustomGroupBox1.SuspendLayout();
             CustomGroupBox_Motdawal.SuspendLayout();
@@ -662,7 +460,6 @@
             CustomGroupBox_Motdawal.Controls.Add(label6);
             CustomGroupBox_Motdawal.Controls.Add(text_Motdawal_MoagalSabek);
             CustomGroupBox_Motdawal.Controls.Add(label5);
-            CustomGroupBox_Motdawal.Controls.Add(comboBox2);
             CustomGroupBox_Motdawal.ForeColor = Color.Black;
             CustomGroupBox_Motdawal.Location = new Point(331, 394);
             CustomGroupBox_Motdawal.Margin = new Padding(3, 5, 3, 5);
@@ -909,17 +706,6 @@
             label5.TabIndex = 1;
             label5.Text = "مؤجل سابق";
             // 
-            // comboBox2
-            // 
-            comboBox2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(1229, 62);
-            comboBox2.Margin = new Padding(3, 5, 3, 5);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(230, 32);
-            comboBox2.TabIndex = 1;
-            // 
             // CustomGroupBox_Ehalah
             // 
             CustomGroupBox_Ehalah.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -931,8 +717,6 @@
             CustomGroupBox_Ehalah.Controls.Add(label17);
             CustomGroupBox_Ehalah.Controls.Add(text__Ehalah_From);
             CustomGroupBox_Ehalah.Controls.Add(label18);
-            CustomGroupBox_Ehalah.Controls.Add(label16);
-            CustomGroupBox_Ehalah.Controls.Add(comboBox5);
             CustomGroupBox_Ehalah.ForeColor = Color.Black;
             CustomGroupBox_Ehalah.Location = new Point(334, 968);
             CustomGroupBox_Ehalah.Margin = new Padding(3, 5, 3, 5);
@@ -986,27 +770,6 @@
             label18.TabIndex = 8;
             label18.Text = "احالة من";
             // 
-            // label16
-            // 
-            label16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label16.AutoSize = true;
-            label16.Location = new Point(1507, 75);
-            label16.Name = "label16";
-            label16.Size = new Size(56, 26);
-            label16.TabIndex = 1;
-            label16.Text = "الجلسة";
-            // 
-            // comboBox5
-            // 
-            comboBox5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox5.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(1229, 62);
-            comboBox5.Margin = new Padding(3, 5, 3, 5);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(230, 32);
-            comboBox5.TabIndex = 1;
-            // 
             // group_Mokadam
             // 
             group_Mokadam.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -1020,8 +783,6 @@
             group_Mokadam.Controls.Add(label19);
             group_Mokadam.Controls.Add(text_Mokadam_Motadawal);
             group_Mokadam.Controls.Add(label20);
-            group_Mokadam.Controls.Add(label21);
-            group_Mokadam.Controls.Add(comboBox6);
             group_Mokadam.ForeColor = Color.Black;
             group_Mokadam.Location = new Point(334, 1138);
             group_Mokadam.Margin = new Padding(3, 5, 3, 5);
@@ -1096,27 +857,6 @@
             label20.TabIndex = 8;
             label20.Text = "متداول";
             // 
-            // label21
-            // 
-            label21.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label21.AutoSize = true;
-            label21.Location = new Point(1507, 75);
-            label21.Name = "label21";
-            label21.Size = new Size(56, 26);
-            label21.TabIndex = 1;
-            label21.Text = "الجلسة";
-            // 
-            // comboBox6
-            // 
-            comboBox6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox6.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox6.FormattingEnabled = true;
-            comboBox6.Location = new Point(1229, 62);
-            comboBox6.Margin = new Padding(3, 5, 3, 5);
-            comboBox6.Name = "comboBox6";
-            comboBox6.Size = new Size(230, 32);
-            comboBox6.TabIndex = 1;
-            // 
             // group_MoeagalKhargALshahr
             // 
             group_MoeagalKhargALshahr.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -1124,8 +864,6 @@
             group_MoeagalKhargALshahr.BorderColor = Color.Blue;
             group_MoeagalKhargALshahr.BorderRadius = 28;
             group_MoeagalKhargALshahr.BorderThickness = 2;
-            group_MoeagalKhargALshahr.Controls.Add(label25);
-            group_MoeagalKhargALshahr.Controls.Add(comboBox7);
             group_MoeagalKhargALshahr.Controls.Add(text_MoeagalKhargALshahr_MadAgl);
             group_MoeagalKhargALshahr.Controls.Add(label42);
             group_MoeagalKhargALshahr.Controls.Add(label23);
@@ -1151,27 +889,6 @@
             group_MoeagalKhargALshahr.TitleBackgroundColor = Color.Yellow;
             group_MoeagalKhargALshahr.TitleFontSize = 12F;
             group_MoeagalKhargALshahr.UseCompatibleTextRendering = true;
-            // 
-            // label25
-            // 
-            label25.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label25.AutoSize = true;
-            label25.Location = new Point(1507, 75);
-            label25.Name = "label25";
-            label25.Size = new Size(56, 26);
-            label25.TabIndex = 1;
-            label25.Text = "الجلسة";
-            // 
-            // comboBox7
-            // 
-            comboBox7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox7.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox7.FormattingEnabled = true;
-            comboBox7.Location = new Point(1229, 62);
-            comboBox7.Margin = new Padding(3, 5, 3, 5);
-            comboBox7.Name = "comboBox7";
-            comboBox7.Size = new Size(230, 32);
-            comboBox7.TabIndex = 1;
             // 
             // text_MoeagalKhargALshahr_MadAgl
             // 
@@ -1307,9 +1024,7 @@
             CustomGroupBox_MahkoumFih.Controls.Add(text_MahkoumFih_Total);
             CustomGroupBox_MahkoumFih.Controls.Add(label35);
             CustomGroupBox_MahkoumFih.Controls.Add(label38);
-            CustomGroupBox_MahkoumFih.Controls.Add(label28);
             CustomGroupBox_MahkoumFih.Controls.Add(text_MahkoumFih_Ethbat);
-            CustomGroupBox_MahkoumFih.Controls.Add(comboBox8);
             CustomGroupBox_MahkoumFih.Controls.Add(label34);
             CustomGroupBox_MahkoumFih.Controls.Add(text_MahkoumFih_Farey);
             CustomGroupBox_MahkoumFih.Controls.Add(text_MahkoumFih_WakfEtfaky);
@@ -1376,8 +1091,6 @@
             group_Katey.Controls.Add(label32);
             group_Katey.Controls.Add(text_MahkoumFih_Katey_Shakly);
             group_Katey.Controls.Add(label30);
-            group_Katey.Controls.Add(label31);
-            group_Katey.Controls.Add(comboBox9);
             group_Katey.ForeColor = Color.Black;
             group_Katey.Location = new Point(24, 72);
             group_Katey.Margin = new Padding(3, 5, 3, 5);
@@ -1472,27 +1185,6 @@
             label30.TabIndex = 8;
             label30.Text = "شكلي";
             // 
-            // label31
-            // 
-            label31.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label31.AutoSize = true;
-            label31.Location = new Point(1459, 75);
-            label31.Name = "label31";
-            label31.Size = new Size(56, 26);
-            label31.TabIndex = 1;
-            label31.Text = "الجلسة";
-            // 
-            // comboBox9
-            // 
-            comboBox9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox9.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox9.FormattingEnabled = true;
-            comboBox9.Location = new Point(1181, 62);
-            comboBox9.Margin = new Padding(3, 5, 3, 5);
-            comboBox9.Name = "comboBox9";
-            comboBox9.Size = new Size(230, 32);
-            comboBox9.TabIndex = 1;
-            // 
             // text_MahkoumFih_Total
             // 
             text_MahkoumFih_Total.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -1523,16 +1215,6 @@
             label38.TabIndex = 8;
             label38.Text = "الاجمالي";
             // 
-            // label28
-            // 
-            label28.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label28.AutoSize = true;
-            label28.Location = new Point(1507, 75);
-            label28.Name = "label28";
-            label28.Size = new Size(56, 26);
-            label28.TabIndex = 1;
-            label28.Text = "الجلسة";
-            // 
             // text_MahkoumFih_Ethbat
             // 
             text_MahkoumFih_Ethbat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -1542,17 +1224,6 @@
             text_MahkoumFih_Ethbat.Size = new Size(117, 32);
             text_MahkoumFih_Ethbat.TabIndex = 22;
             text_MahkoumFih_Ethbat.TextChanged += text_MahkoumFih_TextChanged;
-            // 
-            // comboBox8
-            // 
-            comboBox8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox8.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox8.FormattingEnabled = true;
-            comboBox8.Location = new Point(1229, 62);
-            comboBox8.Margin = new Padding(3, 5, 3, 5);
-            comboBox8.Name = "comboBox8";
-            comboBox8.Size = new Size(230, 32);
-            comboBox8.TabIndex = 1;
             // 
             // label34
             // 
@@ -1654,12 +1325,9 @@
             CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(comboBox_MoagalatAlaAshhorTalia_MadAgal);
             CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm);
             CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(comboBox_MoagalatAlaAshhorTalia_Farey);
-            CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(label43);
-            CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(comboBox10);
             CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(text_MoagalatAlaAshhorTalia_AlBaky);
             CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(label47);
             CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(label44);
-            CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(label50);
             CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(label4);
             CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(label46);
             CustomGroupBox_MoagalatAlaAshhorTalia.Controls.Add(label45);
@@ -1685,13 +1353,35 @@
             // 
             // dataGridView_DelayCacesForMonth
             // 
+            dataGridView_DelayCacesForMonth.AllowUserToAddRows = false;
             dataGridView_DelayCacesForMonth.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView_DelayCacesForMonth.BorderStyle = BorderStyle.None;
+            dataGridView_DelayCacesForMonth.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dataGridView_DelayCacesForMonth.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = Color.FromArgb(45, 45, 48);
+            dataGridViewCellStyle13.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewCellStyle13.ForeColor = Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
+            dataGridView_DelayCacesForMonth.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             dataGridView_DelayCacesForMonth.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView_DelayCacesForMonth.ColumnHeadersVisible = false;
             dataGridView_DelayCacesForMonth.Columns.AddRange(new DataGridViewColumn[] { Column1 });
+            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = Color.White;
+            dataGridViewCellStyle14.Font = new Font("Cairo", 10F, FontStyle.Bold);
+            dataGridViewCellStyle14.ForeColor = Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = Color.FromArgb(0, 120, 215);
+            dataGridViewCellStyle14.SelectionForeColor = Color.White;
+            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
+            dataGridView_DelayCacesForMonth.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridView_DelayCacesForMonth.EnableHeadersVisualStyles = false;
             dataGridView_DelayCacesForMonth.Location = new Point(4, 91);
             dataGridView_DelayCacesForMonth.Margin = new Padding(3, 5, 3, 5);
             dataGridView_DelayCacesForMonth.Name = "dataGridView_DelayCacesForMonth";
+            dataGridView_DelayCacesForMonth.ReadOnly = true;
             dataGridView_DelayCacesForMonth.RowHeadersVisible = false;
             dataGridView_DelayCacesForMonth.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView_DelayCacesForMonth.Size = new Size(374, 395);
@@ -1701,6 +1391,7 @@
             // 
             Column1.HeaderText = "حذف";
             Column1.Name = "Column1";
+            Column1.ReadOnly = true;
             Column1.Text = "حذف";
             Column1.UseColumnTextForButtonValue = true;
             // 
@@ -1934,27 +1625,6 @@
             comboBox_MoagalatAlaAshhorTalia_Farey.Size = new Size(149, 32);
             comboBox_MoagalatAlaAshhorTalia_Farey.TabIndex = 34;
             // 
-            // label43
-            // 
-            label43.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label43.AutoSize = true;
-            label43.Location = new Point(1507, 75);
-            label43.Name = "label43";
-            label43.Size = new Size(56, 26);
-            label43.TabIndex = 1;
-            label43.Text = "الجلسة";
-            // 
-            // comboBox10
-            // 
-            comboBox10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox10.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox10.FormattingEnabled = true;
-            comboBox10.Location = new Point(1229, 62);
-            comboBox10.Margin = new Padding(3, 5, 3, 5);
-            comboBox10.Name = "comboBox10";
-            comboBox10.Size = new Size(230, 32);
-            comboBox10.TabIndex = 1;
-            // 
             // text_MoagalatAlaAshhorTalia_AlBaky
             // 
             text_MoagalatAlaAshhorTalia_AlBaky.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -1983,15 +1653,15 @@
             label44.TabIndex = 8;
             label44.Text = "احكام فرعية واثبات";
             // 
-            // label50
+            // label4
             // 
-            label50.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label50.AutoSize = true;
-            label50.Location = new Point(524, 237);
-            label50.Name = "label50";
-            label50.Size = new Size(48, 26);
-            label50.TabIndex = 8;
-            label50.Text = "الشهر";
+            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label4.AutoSize = true;
+            label4.Location = new Point(530, 125);
+            label4.Name = "label4";
+            label4.Size = new Size(48, 26);
+            label4.TabIndex = 8;
+            label4.Text = "الشهر";
             // 
             // label46
             // 
@@ -2076,7 +1746,11 @@
             group_Tawzie.BorderRadius = 28;
             group_Tawzie.BorderThickness = 2;
             group_Tawzie.Controls.Add(dataGridView1);
+            group_Tawzie.Controls.Add(text_ahkamKadi2);
+            group_Tawzie.Controls.Add(text_ahkamKadi1);
             group_Tawzie.Controls.Add(tex_Tawzie_TotalMahkomFih);
+            group_Tawzie.Controls.Add(label152);
+            group_Tawzie.Controls.Add(label61);
             group_Tawzie.Controls.Add(label60);
             group_Tawzie.Controls.Add(btn_Tawzie_Add);
             group_Tawzie.Controls.Add(group_Tawzie_Okhra);
@@ -2087,30 +1761,6 @@
             group_Tawzie.Controls.Add(Text_Tawzie_JudgeId);
             group_Tawzie.Controls.Add(Text_Tawzie_Judge_Job);
             group_Tawzie.Controls.Add(label59);
-            group_Tawzie.Controls.Add(button6);
-            group_Tawzie.Controls.Add(button7);
-            group_Tawzie.Controls.Add(button8);
-            group_Tawzie.Controls.Add(button9);
-            group_Tawzie.Controls.Add(button10);
-            group_Tawzie.Controls.Add(comboBox16);
-            group_Tawzie.Controls.Add(comboBox17);
-            group_Tawzie.Controls.Add(comboBox18);
-            group_Tawzie.Controls.Add(comboBox19);
-            group_Tawzie.Controls.Add(comboBox20);
-            group_Tawzie.Controls.Add(label51);
-            group_Tawzie.Controls.Add(comboBox21);
-            group_Tawzie.Controls.Add(textBox36);
-            group_Tawzie.Controls.Add(label52);
-            group_Tawzie.Controls.Add(label53);
-            group_Tawzie.Controls.Add(label54);
-            group_Tawzie.Controls.Add(label55);
-            group_Tawzie.Controls.Add(label56);
-            group_Tawzie.Controls.Add(textBox38);
-            group_Tawzie.Controls.Add(label57);
-            group_Tawzie.Controls.Add(textBox39);
-            group_Tawzie.Controls.Add(textBox40);
-            group_Tawzie.Controls.Add(textBox41);
-            group_Tawzie.Controls.Add(label58);
             group_Tawzie.ForeColor = Color.Black;
             group_Tawzie.Location = new Point(330, 2947);
             group_Tawzie.Margin = new Padding(3, 5, 3, 5);
@@ -2141,9 +1791,9 @@
             // 
             // delete
             // 
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 128, 128);
-            delete.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle15.BackColor = Color.FromArgb(255, 128, 128);
+            delete.DefaultCellStyle = dataGridViewCellStyle15;
             delete.HeaderText = "حذف";
             delete.Name = "delete";
             delete.Text = "حذف";
@@ -2151,29 +1801,69 @@
             // 
             // Edit
             // 
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(128, 255, 128);
-            Edit.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = Color.FromArgb(128, 255, 128);
+            Edit.DefaultCellStyle = dataGridViewCellStyle16;
             Edit.HeaderText = "تعديل";
             Edit.Name = "Edit";
             Edit.Text = "تعديل";
             Edit.UseColumnTextForButtonValue = true;
             // 
+            // text_ahkamKadi2
+            // 
+            text_ahkamKadi2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_ahkamKadi2.Location = new Point(41, 2251);
+            text_ahkamKadi2.Margin = new Padding(3, 5, 3, 5);
+            text_ahkamKadi2.Name = "text_ahkamKadi2";
+            text_ahkamKadi2.ReadOnly = true;
+            text_ahkamKadi2.Size = new Size(117, 32);
+            text_ahkamKadi2.TabIndex = 507;
+            // 
+            // text_ahkamKadi1
+            // 
+            text_ahkamKadi1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            text_ahkamKadi1.Location = new Point(41, 2158);
+            text_ahkamKadi1.Margin = new Padding(3, 5, 3, 5);
+            text_ahkamKadi1.Name = "text_ahkamKadi1";
+            text_ahkamKadi1.ReadOnly = true;
+            text_ahkamKadi1.Size = new Size(117, 32);
+            text_ahkamKadi1.TabIndex = 507;
+            // 
             // tex_Tawzie_TotalMahkomFih
             // 
             tex_Tawzie_TotalMahkomFih.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            tex_Tawzie_TotalMahkomFih.Location = new Point(31, 2094);
+            tex_Tawzie_TotalMahkomFih.Location = new Point(41, 2078);
             tex_Tawzie_TotalMahkomFih.Margin = new Padding(3, 5, 3, 5);
             tex_Tawzie_TotalMahkomFih.Name = "tex_Tawzie_TotalMahkomFih";
             tex_Tawzie_TotalMahkomFih.ReadOnly = true;
             tex_Tawzie_TotalMahkomFih.Size = new Size(117, 32);
             tex_Tawzie_TotalMahkomFih.TabIndex = 507;
             // 
+            // label152
+            // 
+            label152.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label152.AutoSize = true;
+            label152.Location = new Point(41, 2220);
+            label152.Name = "label152";
+            label152.Size = new Size(100, 26);
+            label152.TabIndex = 506;
+            label152.Text = "احكام قاضي 2";
+            // 
+            // label61
+            // 
+            label61.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label61.AutoSize = true;
+            label61.Location = new Point(41, 2127);
+            label61.Name = "label61";
+            label61.Size = new Size(97, 26);
+            label61.TabIndex = 506;
+            label61.Text = "احكام قاضي 1";
+            // 
             // label60
             // 
             label60.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label60.AutoSize = true;
-            label60.Location = new Point(51, 2045);
+            label60.Location = new Point(41, 2047);
             label60.Name = "label60";
             label60.Size = new Size(129, 26);
             label60.TabIndex = 506;
@@ -2207,30 +1897,6 @@
             group_Tawzie_Okhra.Controls.Add(text_Tawzie_Okhra_WakfEtfaky);
             group_Tawzie_Okhra.Controls.Add(label150);
             group_Tawzie_Okhra.Controls.Add(text_Tawzie_Okhra_WakfGzaey);
-            group_Tawzie_Okhra.Controls.Add(button41);
-            group_Tawzie_Okhra.Controls.Add(button42);
-            group_Tawzie_Okhra.Controls.Add(button43);
-            group_Tawzie_Okhra.Controls.Add(button44);
-            group_Tawzie_Okhra.Controls.Add(button45);
-            group_Tawzie_Okhra.Controls.Add(comboBox59);
-            group_Tawzie_Okhra.Controls.Add(comboBox60);
-            group_Tawzie_Okhra.Controls.Add(comboBox61);
-            group_Tawzie_Okhra.Controls.Add(comboBox62);
-            group_Tawzie_Okhra.Controls.Add(comboBox63);
-            group_Tawzie_Okhra.Controls.Add(label110);
-            group_Tawzie_Okhra.Controls.Add(comboBox64);
-            group_Tawzie_Okhra.Controls.Add(textBox72);
-            group_Tawzie_Okhra.Controls.Add(label111);
-            group_Tawzie_Okhra.Controls.Add(label112);
-            group_Tawzie_Okhra.Controls.Add(label113);
-            group_Tawzie_Okhra.Controls.Add(label114);
-            group_Tawzie_Okhra.Controls.Add(label115);
-            group_Tawzie_Okhra.Controls.Add(textBox73);
-            group_Tawzie_Okhra.Controls.Add(label116);
-            group_Tawzie_Okhra.Controls.Add(textBox74);
-            group_Tawzie_Okhra.Controls.Add(textBox75);
-            group_Tawzie_Okhra.Controls.Add(textBox76);
-            group_Tawzie_Okhra.Controls.Add(label117);
             group_Tawzie_Okhra.ForeColor = Color.Black;
             group_Tawzie_Okhra.Location = new Point(51, 1678);
             group_Tawzie_Okhra.Margin = new Padding(3, 5, 3, 5);
@@ -2346,251 +2012,6 @@
             text_Tawzie_Okhra_WakfGzaey.TabIndex = 70;
             text_Tawzie_Okhra_WakfGzaey.TextChanged += text_Tawzie_Okhra_TextChanged;
             // 
-            // button41
-            // 
-            button41.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button41.Location = new Point(3533, 358);
-            button41.Margin = new Padding(3, 5, 3, 5);
-            button41.Name = "button41";
-            button41.Size = new Size(75, 37);
-            button41.TabIndex = 12;
-            button41.Text = "اضافة";
-            button41.UseVisualStyleBackColor = true;
-            // 
-            // button42
-            // 
-            button42.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button42.Location = new Point(3533, 294);
-            button42.Margin = new Padding(3, 5, 3, 5);
-            button42.Name = "button42";
-            button42.Size = new Size(75, 37);
-            button42.TabIndex = 12;
-            button42.Text = "اضافة";
-            button42.UseVisualStyleBackColor = true;
-            // 
-            // button43
-            // 
-            button43.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button43.Location = new Point(3533, 230);
-            button43.Margin = new Padding(3, 5, 3, 5);
-            button43.Name = "button43";
-            button43.Size = new Size(75, 37);
-            button43.TabIndex = 12;
-            button43.Text = "اضافة";
-            button43.UseVisualStyleBackColor = true;
-            // 
-            // button44
-            // 
-            button44.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button44.Location = new Point(3533, 438);
-            button44.Margin = new Padding(3, 5, 3, 5);
-            button44.Name = "button44";
-            button44.Size = new Size(75, 37);
-            button44.TabIndex = 12;
-            button44.Text = "اضافة";
-            button44.UseVisualStyleBackColor = true;
-            // 
-            // button45
-            // 
-            button45.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button45.Location = new Point(3533, 166);
-            button45.Margin = new Padding(3, 5, 3, 5);
-            button45.Name = "button45";
-            button45.Size = new Size(75, 37);
-            button45.TabIndex = 12;
-            button45.Text = "اضافة";
-            button45.UseVisualStyleBackColor = true;
-            // 
-            // comboBox59
-            // 
-            comboBox59.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox59.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox59.FormattingEnabled = true;
-            comboBox59.Location = new Point(3645, 440);
-            comboBox59.Margin = new Padding(3, 5, 3, 5);
-            comboBox59.Name = "comboBox59";
-            comboBox59.Size = new Size(149, 32);
-            comboBox59.TabIndex = 11;
-            // 
-            // comboBox60
-            // 
-            comboBox60.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox60.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox60.FormattingEnabled = true;
-            comboBox60.Location = new Point(3645, 366);
-            comboBox60.Margin = new Padding(3, 5, 3, 5);
-            comboBox60.Name = "comboBox60";
-            comboBox60.Size = new Size(149, 32);
-            comboBox60.TabIndex = 11;
-            // 
-            // comboBox61
-            // 
-            comboBox61.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox61.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox61.FormattingEnabled = true;
-            comboBox61.Location = new Point(3645, 294);
-            comboBox61.Margin = new Padding(3, 5, 3, 5);
-            comboBox61.Name = "comboBox61";
-            comboBox61.Size = new Size(149, 32);
-            comboBox61.TabIndex = 11;
-            // 
-            // comboBox62
-            // 
-            comboBox62.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox62.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox62.FormattingEnabled = true;
-            comboBox62.Location = new Point(3645, 230);
-            comboBox62.Margin = new Padding(3, 5, 3, 5);
-            comboBox62.Name = "comboBox62";
-            comboBox62.Size = new Size(149, 32);
-            comboBox62.TabIndex = 11;
-            // 
-            // comboBox63
-            // 
-            comboBox63.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox63.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox63.FormattingEnabled = true;
-            comboBox63.Location = new Point(3645, 166);
-            comboBox63.Margin = new Padding(3, 5, 3, 5);
-            comboBox63.Name = "comboBox63";
-            comboBox63.Size = new Size(149, 32);
-            comboBox63.TabIndex = 11;
-            // 
-            // label110
-            // 
-            label110.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label110.AutoSize = true;
-            label110.Location = new Point(4656, 75);
-            label110.Name = "label110";
-            label110.Size = new Size(56, 26);
-            label110.TabIndex = 1;
-            label110.Text = "الجلسة";
-            // 
-            // comboBox64
-            // 
-            comboBox64.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox64.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox64.FormattingEnabled = true;
-            comboBox64.Location = new Point(4378, 62);
-            comboBox64.Margin = new Padding(3, 5, 3, 5);
-            comboBox64.Name = "comboBox64";
-            comboBox64.Size = new Size(230, 32);
-            comboBox64.TabIndex = 1;
-            // 
-            // textBox72
-            // 
-            textBox72.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox72.Location = new Point(3843, 440);
-            textBox72.Margin = new Padding(3, 5, 3, 5);
-            textBox72.Name = "textBox72";
-            textBox72.Size = new Size(117, 32);
-            textBox72.TabIndex = 10;
-            // 
-            // label111
-            // 
-            label111.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label111.AutoSize = true;
-            label111.Location = new Point(4007, 309);
-            label111.Name = "label111";
-            label111.Size = new Size(54, 26);
-            label111.TabIndex = 8;
-            label111.Text = "مد اجل";
-            // 
-            // label112
-            // 
-            label112.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label112.Location = new Point(3972, 162);
-            label112.Name = "label112";
-            label112.Size = new Size(76, 66);
-            label112.TabIndex = 8;
-            label112.Text = "احكام فرعية واثبات";
-            // 
-            // label113
-            // 
-            label113.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label113.AutoSize = true;
-            label113.Location = new Point(3673, 115);
-            label113.Name = "label113";
-            label113.Size = new Size(48, 26);
-            label113.TabIndex = 8;
-            label113.Text = "الشهر";
-            // 
-            // label114
-            // 
-            label114.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label114.AutoSize = true;
-            label114.Location = new Point(3857, 115);
-            label114.Name = "label114";
-            label114.Size = new Size(44, 26);
-            label114.TabIndex = 8;
-            label114.Text = "العدد";
-            // 
-            // label115
-            // 
-            label115.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label115.AutoSize = true;
-            label115.Location = new Point(3978, 227);
-            label115.Name = "label115";
-            label115.Size = new Size(94, 26);
-            label115.TabIndex = 8;
-            label115.Text = "محجوز للحكم";
-            // 
-            // textBox73
-            // 
-            textBox73.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox73.Location = new Point(3840, 368);
-            textBox73.Margin = new Padding(3, 5, 3, 5);
-            textBox73.Name = "textBox73";
-            textBox73.Size = new Size(117, 32);
-            textBox73.TabIndex = 10;
-            // 
-            // label116
-            // 
-            label116.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label116.AutoSize = true;
-            label116.Location = new Point(3972, 368);
-            label116.Name = "label116";
-            label116.Size = new Size(103, 26);
-            label116.TabIndex = 8;
-            label116.Text = "اعادة للمرافعة";
-            // 
-            // textBox74
-            // 
-            textBox74.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox74.Location = new Point(3840, 299);
-            textBox74.Margin = new Padding(3, 5, 3, 5);
-            textBox74.Name = "textBox74";
-            textBox74.Size = new Size(117, 32);
-            textBox74.TabIndex = 10;
-            // 
-            // textBox75
-            // 
-            textBox75.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox75.Location = new Point(3840, 226);
-            textBox75.Margin = new Padding(3, 5, 3, 5);
-            textBox75.Name = "textBox75";
-            textBox75.Size = new Size(117, 32);
-            textBox75.TabIndex = 10;
-            // 
-            // textBox76
-            // 
-            textBox76.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox76.Location = new Point(3840, 162);
-            textBox76.Margin = new Padding(3, 5, 3, 5);
-            textBox76.Name = "textBox76";
-            textBox76.Size = new Size(117, 32);
-            textBox76.TabIndex = 10;
-            // 
-            // label117
-            // 
-            label117.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label117.AutoSize = true;
-            label117.Location = new Point(3970, 450);
-            label117.Name = "label117";
-            label117.Size = new Size(100, 26);
-            label117.TabIndex = 8;
-            label117.Text = "باقي المؤجلات";
-            // 
             // group_Tawzie_Ethbat
             // 
             group_Tawzie_Ethbat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -2612,30 +2033,6 @@
             group_Tawzie_Ethbat.Controls.Add(label147);
             group_Tawzie_Ethbat.Controls.Add(text_Tawzie_Ethbat_EadaLelKhabir);
             group_Tawzie_Ethbat.Controls.Add(text_Tawzie_Ethbat_NadbHakmin);
-            group_Tawzie_Ethbat.Controls.Add(button36);
-            group_Tawzie_Ethbat.Controls.Add(button37);
-            group_Tawzie_Ethbat.Controls.Add(button38);
-            group_Tawzie_Ethbat.Controls.Add(button39);
-            group_Tawzie_Ethbat.Controls.Add(button40);
-            group_Tawzie_Ethbat.Controls.Add(comboBox53);
-            group_Tawzie_Ethbat.Controls.Add(comboBox54);
-            group_Tawzie_Ethbat.Controls.Add(comboBox55);
-            group_Tawzie_Ethbat.Controls.Add(comboBox56);
-            group_Tawzie_Ethbat.Controls.Add(comboBox57);
-            group_Tawzie_Ethbat.Controls.Add(label102);
-            group_Tawzie_Ethbat.Controls.Add(comboBox58);
-            group_Tawzie_Ethbat.Controls.Add(textBox67);
-            group_Tawzie_Ethbat.Controls.Add(label103);
-            group_Tawzie_Ethbat.Controls.Add(label104);
-            group_Tawzie_Ethbat.Controls.Add(label105);
-            group_Tawzie_Ethbat.Controls.Add(label106);
-            group_Tawzie_Ethbat.Controls.Add(label107);
-            group_Tawzie_Ethbat.Controls.Add(textBox68);
-            group_Tawzie_Ethbat.Controls.Add(label108);
-            group_Tawzie_Ethbat.Controls.Add(textBox69);
-            group_Tawzie_Ethbat.Controls.Add(textBox70);
-            group_Tawzie_Ethbat.Controls.Add(textBox71);
-            group_Tawzie_Ethbat.Controls.Add(label109);
             group_Tawzie_Ethbat.ForeColor = Color.Black;
             group_Tawzie_Ethbat.Location = new Point(53, 1342);
             group_Tawzie_Ethbat.Margin = new Padding(3, 5, 3, 5);
@@ -2792,251 +2189,6 @@
             text_Tawzie_Ethbat_NadbHakmin.TabIndex = 64;
             text_Tawzie_Ethbat_NadbHakmin.TextChanged += text_Tawzie_Ethbat_TextChanged;
             // 
-            // button36
-            // 
-            button36.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button36.Location = new Point(2910, 358);
-            button36.Margin = new Padding(3, 5, 3, 5);
-            button36.Name = "button36";
-            button36.Size = new Size(75, 37);
-            button36.TabIndex = 12;
-            button36.Text = "اضافة";
-            button36.UseVisualStyleBackColor = true;
-            // 
-            // button37
-            // 
-            button37.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button37.Location = new Point(2910, 294);
-            button37.Margin = new Padding(3, 5, 3, 5);
-            button37.Name = "button37";
-            button37.Size = new Size(75, 37);
-            button37.TabIndex = 12;
-            button37.Text = "اضافة";
-            button37.UseVisualStyleBackColor = true;
-            // 
-            // button38
-            // 
-            button38.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button38.Location = new Point(2910, 230);
-            button38.Margin = new Padding(3, 5, 3, 5);
-            button38.Name = "button38";
-            button38.Size = new Size(75, 37);
-            button38.TabIndex = 12;
-            button38.Text = "اضافة";
-            button38.UseVisualStyleBackColor = true;
-            // 
-            // button39
-            // 
-            button39.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button39.Location = new Point(2910, 438);
-            button39.Margin = new Padding(3, 5, 3, 5);
-            button39.Name = "button39";
-            button39.Size = new Size(75, 37);
-            button39.TabIndex = 12;
-            button39.Text = "اضافة";
-            button39.UseVisualStyleBackColor = true;
-            // 
-            // button40
-            // 
-            button40.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button40.Location = new Point(2910, 166);
-            button40.Margin = new Padding(3, 5, 3, 5);
-            button40.Name = "button40";
-            button40.Size = new Size(75, 37);
-            button40.TabIndex = 12;
-            button40.Text = "اضافة";
-            button40.UseVisualStyleBackColor = true;
-            // 
-            // comboBox53
-            // 
-            comboBox53.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox53.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox53.FormattingEnabled = true;
-            comboBox53.Location = new Point(3022, 440);
-            comboBox53.Margin = new Padding(3, 5, 3, 5);
-            comboBox53.Name = "comboBox53";
-            comboBox53.Size = new Size(149, 32);
-            comboBox53.TabIndex = 11;
-            // 
-            // comboBox54
-            // 
-            comboBox54.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox54.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox54.FormattingEnabled = true;
-            comboBox54.Location = new Point(3022, 366);
-            comboBox54.Margin = new Padding(3, 5, 3, 5);
-            comboBox54.Name = "comboBox54";
-            comboBox54.Size = new Size(149, 32);
-            comboBox54.TabIndex = 11;
-            // 
-            // comboBox55
-            // 
-            comboBox55.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox55.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox55.FormattingEnabled = true;
-            comboBox55.Location = new Point(3022, 294);
-            comboBox55.Margin = new Padding(3, 5, 3, 5);
-            comboBox55.Name = "comboBox55";
-            comboBox55.Size = new Size(149, 32);
-            comboBox55.TabIndex = 11;
-            // 
-            // comboBox56
-            // 
-            comboBox56.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox56.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox56.FormattingEnabled = true;
-            comboBox56.Location = new Point(3022, 230);
-            comboBox56.Margin = new Padding(3, 5, 3, 5);
-            comboBox56.Name = "comboBox56";
-            comboBox56.Size = new Size(149, 32);
-            comboBox56.TabIndex = 11;
-            // 
-            // comboBox57
-            // 
-            comboBox57.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox57.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox57.FormattingEnabled = true;
-            comboBox57.Location = new Point(3022, 166);
-            comboBox57.Margin = new Padding(3, 5, 3, 5);
-            comboBox57.Name = "comboBox57";
-            comboBox57.Size = new Size(149, 32);
-            comboBox57.TabIndex = 11;
-            // 
-            // label102
-            // 
-            label102.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label102.AutoSize = true;
-            label102.Location = new Point(4033, 75);
-            label102.Name = "label102";
-            label102.Size = new Size(56, 26);
-            label102.TabIndex = 1;
-            label102.Text = "الجلسة";
-            // 
-            // comboBox58
-            // 
-            comboBox58.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox58.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox58.FormattingEnabled = true;
-            comboBox58.Location = new Point(3755, 62);
-            comboBox58.Margin = new Padding(3, 5, 3, 5);
-            comboBox58.Name = "comboBox58";
-            comboBox58.Size = new Size(230, 32);
-            comboBox58.TabIndex = 1;
-            // 
-            // textBox67
-            // 
-            textBox67.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox67.Location = new Point(3220, 440);
-            textBox67.Margin = new Padding(3, 5, 3, 5);
-            textBox67.Name = "textBox67";
-            textBox67.Size = new Size(117, 32);
-            textBox67.TabIndex = 10;
-            // 
-            // label103
-            // 
-            label103.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label103.AutoSize = true;
-            label103.Location = new Point(3384, 309);
-            label103.Name = "label103";
-            label103.Size = new Size(54, 26);
-            label103.TabIndex = 8;
-            label103.Text = "مد اجل";
-            // 
-            // label104
-            // 
-            label104.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label104.Location = new Point(3349, 162);
-            label104.Name = "label104";
-            label104.Size = new Size(76, 66);
-            label104.TabIndex = 8;
-            label104.Text = "احكام فرعية واثبات";
-            // 
-            // label105
-            // 
-            label105.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label105.AutoSize = true;
-            label105.Location = new Point(3050, 115);
-            label105.Name = "label105";
-            label105.Size = new Size(48, 26);
-            label105.TabIndex = 8;
-            label105.Text = "الشهر";
-            // 
-            // label106
-            // 
-            label106.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label106.AutoSize = true;
-            label106.Location = new Point(3234, 115);
-            label106.Name = "label106";
-            label106.Size = new Size(44, 26);
-            label106.TabIndex = 8;
-            label106.Text = "العدد";
-            // 
-            // label107
-            // 
-            label107.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label107.AutoSize = true;
-            label107.Location = new Point(3355, 227);
-            label107.Name = "label107";
-            label107.Size = new Size(94, 26);
-            label107.TabIndex = 8;
-            label107.Text = "محجوز للحكم";
-            // 
-            // textBox68
-            // 
-            textBox68.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox68.Location = new Point(3217, 368);
-            textBox68.Margin = new Padding(3, 5, 3, 5);
-            textBox68.Name = "textBox68";
-            textBox68.Size = new Size(117, 32);
-            textBox68.TabIndex = 10;
-            // 
-            // label108
-            // 
-            label108.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label108.AutoSize = true;
-            label108.Location = new Point(3349, 368);
-            label108.Name = "label108";
-            label108.Size = new Size(103, 26);
-            label108.TabIndex = 8;
-            label108.Text = "اعادة للمرافعة";
-            // 
-            // textBox69
-            // 
-            textBox69.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox69.Location = new Point(3217, 299);
-            textBox69.Margin = new Padding(3, 5, 3, 5);
-            textBox69.Name = "textBox69";
-            textBox69.Size = new Size(117, 32);
-            textBox69.TabIndex = 10;
-            // 
-            // textBox70
-            // 
-            textBox70.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox70.Location = new Point(3217, 226);
-            textBox70.Margin = new Padding(3, 5, 3, 5);
-            textBox70.Name = "textBox70";
-            textBox70.Size = new Size(117, 32);
-            textBox70.TabIndex = 10;
-            // 
-            // textBox71
-            // 
-            textBox71.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox71.Location = new Point(3217, 162);
-            textBox71.Margin = new Padding(3, 5, 3, 5);
-            textBox71.Name = "textBox71";
-            textBox71.Size = new Size(117, 32);
-            textBox71.TabIndex = 10;
-            // 
-            // label109
-            // 
-            label109.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label109.AutoSize = true;
-            label109.Location = new Point(3347, 450);
-            label109.Name = "label109";
-            label109.Size = new Size(100, 26);
-            label109.TabIndex = 8;
-            label109.Text = "باقي المؤجلات";
-            // 
             // group_Tawzie_Farey
             // 
             group_Tawzie_Farey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -3045,30 +2197,6 @@
             group_Tawzie_Farey.BorderRadius = 28;
             group_Tawzie_Farey.BorderThickness = 2;
             group_Tawzie_Farey.Controls.Add(text_Tawzie_Farey);
-            group_Tawzie_Farey.Controls.Add(button31);
-            group_Tawzie_Farey.Controls.Add(button32);
-            group_Tawzie_Farey.Controls.Add(button33);
-            group_Tawzie_Farey.Controls.Add(button34);
-            group_Tawzie_Farey.Controls.Add(button35);
-            group_Tawzie_Farey.Controls.Add(comboBox47);
-            group_Tawzie_Farey.Controls.Add(comboBox48);
-            group_Tawzie_Farey.Controls.Add(comboBox49);
-            group_Tawzie_Farey.Controls.Add(comboBox50);
-            group_Tawzie_Farey.Controls.Add(comboBox51);
-            group_Tawzie_Farey.Controls.Add(label94);
-            group_Tawzie_Farey.Controls.Add(comboBox52);
-            group_Tawzie_Farey.Controls.Add(textBox62);
-            group_Tawzie_Farey.Controls.Add(label95);
-            group_Tawzie_Farey.Controls.Add(label96);
-            group_Tawzie_Farey.Controls.Add(label97);
-            group_Tawzie_Farey.Controls.Add(label98);
-            group_Tawzie_Farey.Controls.Add(label99);
-            group_Tawzie_Farey.Controls.Add(textBox63);
-            group_Tawzie_Farey.Controls.Add(label100);
-            group_Tawzie_Farey.Controls.Add(textBox64);
-            group_Tawzie_Farey.Controls.Add(textBox65);
-            group_Tawzie_Farey.Controls.Add(textBox66);
-            group_Tawzie_Farey.Controls.Add(label101);
             group_Tawzie_Farey.ForeColor = Color.Black;
             group_Tawzie_Farey.Location = new Point(31, 1134);
             group_Tawzie_Farey.Margin = new Padding(3, 5, 3, 5);
@@ -3093,251 +2221,6 @@
             text_Tawzie_Farey.TabIndex = 63;
             text_Tawzie_Farey.TextChanged += text_Tawzie_Farey_TextChanged;
             // 
-            // button31
-            // 
-            button31.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button31.Location = new Point(2932, 358);
-            button31.Margin = new Padding(3, 5, 3, 5);
-            button31.Name = "button31";
-            button31.Size = new Size(75, 37);
-            button31.TabIndex = 12;
-            button31.Text = "اضافة";
-            button31.UseVisualStyleBackColor = true;
-            // 
-            // button32
-            // 
-            button32.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button32.Location = new Point(2932, 294);
-            button32.Margin = new Padding(3, 5, 3, 5);
-            button32.Name = "button32";
-            button32.Size = new Size(75, 37);
-            button32.TabIndex = 12;
-            button32.Text = "اضافة";
-            button32.UseVisualStyleBackColor = true;
-            // 
-            // button33
-            // 
-            button33.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button33.Location = new Point(2932, 230);
-            button33.Margin = new Padding(3, 5, 3, 5);
-            button33.Name = "button33";
-            button33.Size = new Size(75, 37);
-            button33.TabIndex = 12;
-            button33.Text = "اضافة";
-            button33.UseVisualStyleBackColor = true;
-            // 
-            // button34
-            // 
-            button34.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button34.Location = new Point(2932, 438);
-            button34.Margin = new Padding(3, 5, 3, 5);
-            button34.Name = "button34";
-            button34.Size = new Size(75, 37);
-            button34.TabIndex = 12;
-            button34.Text = "اضافة";
-            button34.UseVisualStyleBackColor = true;
-            // 
-            // button35
-            // 
-            button35.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button35.Location = new Point(2932, 166);
-            button35.Margin = new Padding(3, 5, 3, 5);
-            button35.Name = "button35";
-            button35.Size = new Size(75, 37);
-            button35.TabIndex = 12;
-            button35.Text = "اضافة";
-            button35.UseVisualStyleBackColor = true;
-            // 
-            // comboBox47
-            // 
-            comboBox47.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox47.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox47.FormattingEnabled = true;
-            comboBox47.Location = new Point(3044, 440);
-            comboBox47.Margin = new Padding(3, 5, 3, 5);
-            comboBox47.Name = "comboBox47";
-            comboBox47.Size = new Size(149, 32);
-            comboBox47.TabIndex = 11;
-            // 
-            // comboBox48
-            // 
-            comboBox48.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox48.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox48.FormattingEnabled = true;
-            comboBox48.Location = new Point(3044, 366);
-            comboBox48.Margin = new Padding(3, 5, 3, 5);
-            comboBox48.Name = "comboBox48";
-            comboBox48.Size = new Size(149, 32);
-            comboBox48.TabIndex = 11;
-            // 
-            // comboBox49
-            // 
-            comboBox49.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox49.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox49.FormattingEnabled = true;
-            comboBox49.Location = new Point(3044, 294);
-            comboBox49.Margin = new Padding(3, 5, 3, 5);
-            comboBox49.Name = "comboBox49";
-            comboBox49.Size = new Size(149, 32);
-            comboBox49.TabIndex = 11;
-            // 
-            // comboBox50
-            // 
-            comboBox50.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox50.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox50.FormattingEnabled = true;
-            comboBox50.Location = new Point(3044, 230);
-            comboBox50.Margin = new Padding(3, 5, 3, 5);
-            comboBox50.Name = "comboBox50";
-            comboBox50.Size = new Size(149, 32);
-            comboBox50.TabIndex = 11;
-            // 
-            // comboBox51
-            // 
-            comboBox51.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox51.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox51.FormattingEnabled = true;
-            comboBox51.Location = new Point(3044, 166);
-            comboBox51.Margin = new Padding(3, 5, 3, 5);
-            comboBox51.Name = "comboBox51";
-            comboBox51.Size = new Size(149, 32);
-            comboBox51.TabIndex = 11;
-            // 
-            // label94
-            // 
-            label94.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label94.AutoSize = true;
-            label94.Location = new Point(4055, 75);
-            label94.Name = "label94";
-            label94.Size = new Size(56, 26);
-            label94.TabIndex = 1;
-            label94.Text = "الجلسة";
-            // 
-            // comboBox52
-            // 
-            comboBox52.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox52.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox52.FormattingEnabled = true;
-            comboBox52.Location = new Point(3777, 62);
-            comboBox52.Margin = new Padding(3, 5, 3, 5);
-            comboBox52.Name = "comboBox52";
-            comboBox52.Size = new Size(230, 32);
-            comboBox52.TabIndex = 1;
-            // 
-            // textBox62
-            // 
-            textBox62.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox62.Location = new Point(3242, 440);
-            textBox62.Margin = new Padding(3, 5, 3, 5);
-            textBox62.Name = "textBox62";
-            textBox62.Size = new Size(117, 32);
-            textBox62.TabIndex = 10;
-            // 
-            // label95
-            // 
-            label95.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label95.AutoSize = true;
-            label95.Location = new Point(3406, 309);
-            label95.Name = "label95";
-            label95.Size = new Size(54, 26);
-            label95.TabIndex = 8;
-            label95.Text = "مد اجل";
-            // 
-            // label96
-            // 
-            label96.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label96.Location = new Point(3371, 162);
-            label96.Name = "label96";
-            label96.Size = new Size(76, 66);
-            label96.TabIndex = 8;
-            label96.Text = "احكام فرعية واثبات";
-            // 
-            // label97
-            // 
-            label97.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label97.AutoSize = true;
-            label97.Location = new Point(3072, 115);
-            label97.Name = "label97";
-            label97.Size = new Size(48, 26);
-            label97.TabIndex = 8;
-            label97.Text = "الشهر";
-            // 
-            // label98
-            // 
-            label98.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label98.AutoSize = true;
-            label98.Location = new Point(3256, 115);
-            label98.Name = "label98";
-            label98.Size = new Size(44, 26);
-            label98.TabIndex = 8;
-            label98.Text = "العدد";
-            // 
-            // label99
-            // 
-            label99.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label99.AutoSize = true;
-            label99.Location = new Point(3377, 227);
-            label99.Name = "label99";
-            label99.Size = new Size(94, 26);
-            label99.TabIndex = 8;
-            label99.Text = "محجوز للحكم";
-            // 
-            // textBox63
-            // 
-            textBox63.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox63.Location = new Point(3239, 368);
-            textBox63.Margin = new Padding(3, 5, 3, 5);
-            textBox63.Name = "textBox63";
-            textBox63.Size = new Size(117, 32);
-            textBox63.TabIndex = 10;
-            // 
-            // label100
-            // 
-            label100.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label100.AutoSize = true;
-            label100.Location = new Point(3371, 368);
-            label100.Name = "label100";
-            label100.Size = new Size(103, 26);
-            label100.TabIndex = 8;
-            label100.Text = "اعادة للمرافعة";
-            // 
-            // textBox64
-            // 
-            textBox64.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox64.Location = new Point(3239, 299);
-            textBox64.Margin = new Padding(3, 5, 3, 5);
-            textBox64.Name = "textBox64";
-            textBox64.Size = new Size(117, 32);
-            textBox64.TabIndex = 10;
-            // 
-            // textBox65
-            // 
-            textBox65.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox65.Location = new Point(3239, 226);
-            textBox65.Margin = new Padding(3, 5, 3, 5);
-            textBox65.Name = "textBox65";
-            textBox65.Size = new Size(117, 32);
-            textBox65.TabIndex = 10;
-            // 
-            // textBox66
-            // 
-            textBox66.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox66.Location = new Point(3239, 162);
-            textBox66.Margin = new Padding(3, 5, 3, 5);
-            textBox66.Name = "textBox66";
-            textBox66.Size = new Size(117, 32);
-            textBox66.TabIndex = 10;
-            // 
-            // label101
-            // 
-            label101.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label101.AutoSize = true;
-            label101.Location = new Point(3369, 450);
-            label101.Name = "label101";
-            label101.Size = new Size(100, 26);
-            label101.TabIndex = 8;
-            label101.Text = "باقي المؤجلات";
-            // 
             // group_Tawzie_Katey
             // 
             group_Tawzie_Katey.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -3348,30 +2231,6 @@
             group_Tawzie_Katey.Controls.Add(group_Tawzie_Katey_Solh);
             group_Tawzie_Katey.Controls.Add(group_Tawzie_Katey_Mawdoey);
             group_Tawzie_Katey.Controls.Add(group_Tawzie_Katey_Shakly);
-            group_Tawzie_Katey.Controls.Add(button11);
-            group_Tawzie_Katey.Controls.Add(button12);
-            group_Tawzie_Katey.Controls.Add(button13);
-            group_Tawzie_Katey.Controls.Add(button14);
-            group_Tawzie_Katey.Controls.Add(button15);
-            group_Tawzie_Katey.Controls.Add(comboBox23);
-            group_Tawzie_Katey.Controls.Add(comboBox24);
-            group_Tawzie_Katey.Controls.Add(comboBox25);
-            group_Tawzie_Katey.Controls.Add(comboBox26);
-            group_Tawzie_Katey.Controls.Add(comboBox27);
-            group_Tawzie_Katey.Controls.Add(label62);
-            group_Tawzie_Katey.Controls.Add(comboBox28);
-            group_Tawzie_Katey.Controls.Add(textBox42);
-            group_Tawzie_Katey.Controls.Add(label63);
-            group_Tawzie_Katey.Controls.Add(label64);
-            group_Tawzie_Katey.Controls.Add(label65);
-            group_Tawzie_Katey.Controls.Add(label66);
-            group_Tawzie_Katey.Controls.Add(label67);
-            group_Tawzie_Katey.Controls.Add(textBox43);
-            group_Tawzie_Katey.Controls.Add(label68);
-            group_Tawzie_Katey.Controls.Add(textBox44);
-            group_Tawzie_Katey.Controls.Add(textBox45);
-            group_Tawzie_Katey.Controls.Add(textBox46);
-            group_Tawzie_Katey.Controls.Add(label69);
             group_Tawzie_Katey.ForeColor = Color.Black;
             group_Tawzie_Katey.Location = new Point(30, 160);
             group_Tawzie_Katey.Margin = new Padding(3, 5, 3, 5);
@@ -3394,30 +2253,6 @@
             group_Tawzie_Katey_Solh.BorderRadius = 28;
             group_Tawzie_Katey_Solh.BorderThickness = 2;
             group_Tawzie_Katey_Solh.Controls.Add(text_Tawzie_Katey_Solh);
-            group_Tawzie_Katey_Solh.Controls.Add(button26);
-            group_Tawzie_Katey_Solh.Controls.Add(button27);
-            group_Tawzie_Katey_Solh.Controls.Add(button28);
-            group_Tawzie_Katey_Solh.Controls.Add(button29);
-            group_Tawzie_Katey_Solh.Controls.Add(button30);
-            group_Tawzie_Katey_Solh.Controls.Add(comboBox41);
-            group_Tawzie_Katey_Solh.Controls.Add(comboBox42);
-            group_Tawzie_Katey_Solh.Controls.Add(comboBox43);
-            group_Tawzie_Katey_Solh.Controls.Add(comboBox44);
-            group_Tawzie_Katey_Solh.Controls.Add(comboBox45);
-            group_Tawzie_Katey_Solh.Controls.Add(label86);
-            group_Tawzie_Katey_Solh.Controls.Add(comboBox46);
-            group_Tawzie_Katey_Solh.Controls.Add(textBox57);
-            group_Tawzie_Katey_Solh.Controls.Add(label87);
-            group_Tawzie_Katey_Solh.Controls.Add(label88);
-            group_Tawzie_Katey_Solh.Controls.Add(label89);
-            group_Tawzie_Katey_Solh.Controls.Add(label90);
-            group_Tawzie_Katey_Solh.Controls.Add(label91);
-            group_Tawzie_Katey_Solh.Controls.Add(textBox58);
-            group_Tawzie_Katey_Solh.Controls.Add(label92);
-            group_Tawzie_Katey_Solh.Controls.Add(textBox59);
-            group_Tawzie_Katey_Solh.Controls.Add(textBox60);
-            group_Tawzie_Katey_Solh.Controls.Add(textBox61);
-            group_Tawzie_Katey_Solh.Controls.Add(label93);
             group_Tawzie_Katey_Solh.ForeColor = Color.Black;
             group_Tawzie_Katey_Solh.Location = new Point(21, 797);
             group_Tawzie_Katey_Solh.Margin = new Padding(3, 5, 3, 5);
@@ -3441,251 +2276,6 @@
             text_Tawzie_Katey_Solh.Size = new Size(165, 32);
             text_Tawzie_Katey_Solh.TabIndex = 62;
             text_Tawzie_Katey_Solh.TextChanged += text_Tawzie_Katey_Solh_TextChanged;
-            // 
-            // button26
-            // 
-            button26.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button26.Location = new Point(2287, 358);
-            button26.Margin = new Padding(3, 5, 3, 5);
-            button26.Name = "button26";
-            button26.Size = new Size(75, 37);
-            button26.TabIndex = 12;
-            button26.Text = "اضافة";
-            button26.UseVisualStyleBackColor = true;
-            // 
-            // button27
-            // 
-            button27.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button27.Location = new Point(2287, 294);
-            button27.Margin = new Padding(3, 5, 3, 5);
-            button27.Name = "button27";
-            button27.Size = new Size(75, 37);
-            button27.TabIndex = 12;
-            button27.Text = "اضافة";
-            button27.UseVisualStyleBackColor = true;
-            // 
-            // button28
-            // 
-            button28.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button28.Location = new Point(2287, 230);
-            button28.Margin = new Padding(3, 5, 3, 5);
-            button28.Name = "button28";
-            button28.Size = new Size(75, 37);
-            button28.TabIndex = 12;
-            button28.Text = "اضافة";
-            button28.UseVisualStyleBackColor = true;
-            // 
-            // button29
-            // 
-            button29.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button29.Location = new Point(2287, 438);
-            button29.Margin = new Padding(3, 5, 3, 5);
-            button29.Name = "button29";
-            button29.Size = new Size(75, 37);
-            button29.TabIndex = 12;
-            button29.Text = "اضافة";
-            button29.UseVisualStyleBackColor = true;
-            // 
-            // button30
-            // 
-            button30.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button30.Location = new Point(2287, 166);
-            button30.Margin = new Padding(3, 5, 3, 5);
-            button30.Name = "button30";
-            button30.Size = new Size(75, 37);
-            button30.TabIndex = 12;
-            button30.Text = "اضافة";
-            button30.UseVisualStyleBackColor = true;
-            // 
-            // comboBox41
-            // 
-            comboBox41.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox41.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox41.FormattingEnabled = true;
-            comboBox41.Location = new Point(2399, 440);
-            comboBox41.Margin = new Padding(3, 5, 3, 5);
-            comboBox41.Name = "comboBox41";
-            comboBox41.Size = new Size(149, 32);
-            comboBox41.TabIndex = 11;
-            // 
-            // comboBox42
-            // 
-            comboBox42.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox42.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox42.FormattingEnabled = true;
-            comboBox42.Location = new Point(2399, 366);
-            comboBox42.Margin = new Padding(3, 5, 3, 5);
-            comboBox42.Name = "comboBox42";
-            comboBox42.Size = new Size(149, 32);
-            comboBox42.TabIndex = 11;
-            // 
-            // comboBox43
-            // 
-            comboBox43.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox43.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox43.FormattingEnabled = true;
-            comboBox43.Location = new Point(2399, 294);
-            comboBox43.Margin = new Padding(3, 5, 3, 5);
-            comboBox43.Name = "comboBox43";
-            comboBox43.Size = new Size(149, 32);
-            comboBox43.TabIndex = 11;
-            // 
-            // comboBox44
-            // 
-            comboBox44.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox44.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox44.FormattingEnabled = true;
-            comboBox44.Location = new Point(2399, 230);
-            comboBox44.Margin = new Padding(3, 5, 3, 5);
-            comboBox44.Name = "comboBox44";
-            comboBox44.Size = new Size(149, 32);
-            comboBox44.TabIndex = 11;
-            // 
-            // comboBox45
-            // 
-            comboBox45.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox45.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox45.FormattingEnabled = true;
-            comboBox45.Location = new Point(2399, 166);
-            comboBox45.Margin = new Padding(3, 5, 3, 5);
-            comboBox45.Name = "comboBox45";
-            comboBox45.Size = new Size(149, 32);
-            comboBox45.TabIndex = 11;
-            // 
-            // label86
-            // 
-            label86.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label86.AutoSize = true;
-            label86.Location = new Point(3410, 75);
-            label86.Name = "label86";
-            label86.Size = new Size(56, 26);
-            label86.TabIndex = 1;
-            label86.Text = "الجلسة";
-            // 
-            // comboBox46
-            // 
-            comboBox46.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox46.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox46.FormattingEnabled = true;
-            comboBox46.Location = new Point(3132, 62);
-            comboBox46.Margin = new Padding(3, 5, 3, 5);
-            comboBox46.Name = "comboBox46";
-            comboBox46.Size = new Size(230, 32);
-            comboBox46.TabIndex = 1;
-            // 
-            // textBox57
-            // 
-            textBox57.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox57.Location = new Point(2597, 440);
-            textBox57.Margin = new Padding(3, 5, 3, 5);
-            textBox57.Name = "textBox57";
-            textBox57.Size = new Size(117, 32);
-            textBox57.TabIndex = 10;
-            // 
-            // label87
-            // 
-            label87.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label87.AutoSize = true;
-            label87.Location = new Point(2761, 309);
-            label87.Name = "label87";
-            label87.Size = new Size(54, 26);
-            label87.TabIndex = 8;
-            label87.Text = "مد اجل";
-            // 
-            // label88
-            // 
-            label88.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label88.Location = new Point(2726, 162);
-            label88.Name = "label88";
-            label88.Size = new Size(76, 66);
-            label88.TabIndex = 8;
-            label88.Text = "احكام فرعية واثبات";
-            // 
-            // label89
-            // 
-            label89.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label89.AutoSize = true;
-            label89.Location = new Point(2427, 115);
-            label89.Name = "label89";
-            label89.Size = new Size(48, 26);
-            label89.TabIndex = 8;
-            label89.Text = "الشهر";
-            // 
-            // label90
-            // 
-            label90.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label90.AutoSize = true;
-            label90.Location = new Point(2611, 115);
-            label90.Name = "label90";
-            label90.Size = new Size(44, 26);
-            label90.TabIndex = 8;
-            label90.Text = "العدد";
-            // 
-            // label91
-            // 
-            label91.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label91.AutoSize = true;
-            label91.Location = new Point(2732, 227);
-            label91.Name = "label91";
-            label91.Size = new Size(94, 26);
-            label91.TabIndex = 8;
-            label91.Text = "محجوز للحكم";
-            // 
-            // textBox58
-            // 
-            textBox58.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox58.Location = new Point(2594, 368);
-            textBox58.Margin = new Padding(3, 5, 3, 5);
-            textBox58.Name = "textBox58";
-            textBox58.Size = new Size(117, 32);
-            textBox58.TabIndex = 10;
-            // 
-            // label92
-            // 
-            label92.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label92.AutoSize = true;
-            label92.Location = new Point(2726, 368);
-            label92.Name = "label92";
-            label92.Size = new Size(103, 26);
-            label92.TabIndex = 8;
-            label92.Text = "اعادة للمرافعة";
-            // 
-            // textBox59
-            // 
-            textBox59.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox59.Location = new Point(2594, 299);
-            textBox59.Margin = new Padding(3, 5, 3, 5);
-            textBox59.Name = "textBox59";
-            textBox59.Size = new Size(117, 32);
-            textBox59.TabIndex = 10;
-            // 
-            // textBox60
-            // 
-            textBox60.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox60.Location = new Point(2594, 226);
-            textBox60.Margin = new Padding(3, 5, 3, 5);
-            textBox60.Name = "textBox60";
-            textBox60.Size = new Size(117, 32);
-            textBox60.TabIndex = 10;
-            // 
-            // textBox61
-            // 
-            textBox61.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox61.Location = new Point(2594, 162);
-            textBox61.Margin = new Padding(3, 5, 3, 5);
-            textBox61.Name = "textBox61";
-            textBox61.Size = new Size(117, 32);
-            textBox61.TabIndex = 10;
-            // 
-            // label93
-            // 
-            label93.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label93.AutoSize = true;
-            label93.Location = new Point(2724, 450);
-            label93.Name = "label93";
-            label93.Size = new Size(100, 26);
-            label93.TabIndex = 8;
-            label93.Text = "باقي المؤجلات";
             // 
             // group_Tawzie_Katey_Mawdoey
             // 
@@ -3714,30 +2304,6 @@
             group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_Enkeda);
             group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_RafdBehaltha);
             group_Tawzie_Katey_Mawdoey.Controls.Add(text_Tawzie_Katey_Mawdoey_Kobol);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(button21);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(button22);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(button23);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(button24);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(button25);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox35);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox36);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox37);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox38);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox39);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(label78);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(comboBox40);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(textBox52);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(label79);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(label80);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(label81);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(label82);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(label83);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(textBox53);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(label84);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(textBox54);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(textBox55);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(textBox56);
-            group_Tawzie_Katey_Mawdoey.Controls.Add(label85);
             group_Tawzie_Katey_Mawdoey.ForeColor = Color.Black;
             group_Tawzie_Katey_Mawdoey.Location = new Point(23, 403);
             group_Tawzie_Katey_Mawdoey.Margin = new Padding(3, 5, 3, 5);
@@ -3949,251 +2515,6 @@
             text_Tawzie_Katey_Mawdoey_Kobol.TabIndex = 54;
             text_Tawzie_Katey_Mawdoey_Kobol.TextChanged += text_Tawzie_Katey_Mawdoey_TextChanged;
             // 
-            // button21
-            // 
-            button21.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button21.Location = new Point(2287, 358);
-            button21.Margin = new Padding(3, 5, 3, 5);
-            button21.Name = "button21";
-            button21.Size = new Size(75, 37);
-            button21.TabIndex = 12;
-            button21.Text = "اضافة";
-            button21.UseVisualStyleBackColor = true;
-            // 
-            // button22
-            // 
-            button22.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button22.Location = new Point(2287, 294);
-            button22.Margin = new Padding(3, 5, 3, 5);
-            button22.Name = "button22";
-            button22.Size = new Size(75, 37);
-            button22.TabIndex = 12;
-            button22.Text = "اضافة";
-            button22.UseVisualStyleBackColor = true;
-            // 
-            // button23
-            // 
-            button23.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button23.Location = new Point(2287, 230);
-            button23.Margin = new Padding(3, 5, 3, 5);
-            button23.Name = "button23";
-            button23.Size = new Size(75, 37);
-            button23.TabIndex = 12;
-            button23.Text = "اضافة";
-            button23.UseVisualStyleBackColor = true;
-            // 
-            // button24
-            // 
-            button24.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button24.Location = new Point(2287, 438);
-            button24.Margin = new Padding(3, 5, 3, 5);
-            button24.Name = "button24";
-            button24.Size = new Size(75, 37);
-            button24.TabIndex = 12;
-            button24.Text = "اضافة";
-            button24.UseVisualStyleBackColor = true;
-            // 
-            // button25
-            // 
-            button25.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button25.Location = new Point(2287, 166);
-            button25.Margin = new Padding(3, 5, 3, 5);
-            button25.Name = "button25";
-            button25.Size = new Size(75, 37);
-            button25.TabIndex = 12;
-            button25.Text = "اضافة";
-            button25.UseVisualStyleBackColor = true;
-            // 
-            // comboBox35
-            // 
-            comboBox35.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox35.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox35.FormattingEnabled = true;
-            comboBox35.Location = new Point(2399, 440);
-            comboBox35.Margin = new Padding(3, 5, 3, 5);
-            comboBox35.Name = "comboBox35";
-            comboBox35.Size = new Size(149, 32);
-            comboBox35.TabIndex = 11;
-            // 
-            // comboBox36
-            // 
-            comboBox36.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox36.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox36.FormattingEnabled = true;
-            comboBox36.Location = new Point(2399, 366);
-            comboBox36.Margin = new Padding(3, 5, 3, 5);
-            comboBox36.Name = "comboBox36";
-            comboBox36.Size = new Size(149, 32);
-            comboBox36.TabIndex = 11;
-            // 
-            // comboBox37
-            // 
-            comboBox37.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox37.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox37.FormattingEnabled = true;
-            comboBox37.Location = new Point(2399, 294);
-            comboBox37.Margin = new Padding(3, 5, 3, 5);
-            comboBox37.Name = "comboBox37";
-            comboBox37.Size = new Size(149, 32);
-            comboBox37.TabIndex = 11;
-            // 
-            // comboBox38
-            // 
-            comboBox38.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox38.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox38.FormattingEnabled = true;
-            comboBox38.Location = new Point(2399, 230);
-            comboBox38.Margin = new Padding(3, 5, 3, 5);
-            comboBox38.Name = "comboBox38";
-            comboBox38.Size = new Size(149, 32);
-            comboBox38.TabIndex = 11;
-            // 
-            // comboBox39
-            // 
-            comboBox39.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox39.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox39.FormattingEnabled = true;
-            comboBox39.Location = new Point(2399, 166);
-            comboBox39.Margin = new Padding(3, 5, 3, 5);
-            comboBox39.Name = "comboBox39";
-            comboBox39.Size = new Size(149, 32);
-            comboBox39.TabIndex = 11;
-            // 
-            // label78
-            // 
-            label78.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label78.AutoSize = true;
-            label78.Location = new Point(3410, 75);
-            label78.Name = "label78";
-            label78.Size = new Size(56, 26);
-            label78.TabIndex = 1;
-            label78.Text = "الجلسة";
-            // 
-            // comboBox40
-            // 
-            comboBox40.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox40.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox40.FormattingEnabled = true;
-            comboBox40.Location = new Point(3132, 62);
-            comboBox40.Margin = new Padding(3, 5, 3, 5);
-            comboBox40.Name = "comboBox40";
-            comboBox40.Size = new Size(230, 32);
-            comboBox40.TabIndex = 1;
-            // 
-            // textBox52
-            // 
-            textBox52.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox52.Location = new Point(2597, 440);
-            textBox52.Margin = new Padding(3, 5, 3, 5);
-            textBox52.Name = "textBox52";
-            textBox52.Size = new Size(117, 32);
-            textBox52.TabIndex = 10;
-            // 
-            // label79
-            // 
-            label79.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label79.AutoSize = true;
-            label79.Location = new Point(2761, 309);
-            label79.Name = "label79";
-            label79.Size = new Size(54, 26);
-            label79.TabIndex = 8;
-            label79.Text = "مد اجل";
-            // 
-            // label80
-            // 
-            label80.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label80.Location = new Point(2726, 162);
-            label80.Name = "label80";
-            label80.Size = new Size(76, 66);
-            label80.TabIndex = 8;
-            label80.Text = "احكام فرعية واثبات";
-            // 
-            // label81
-            // 
-            label81.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label81.AutoSize = true;
-            label81.Location = new Point(2427, 115);
-            label81.Name = "label81";
-            label81.Size = new Size(48, 26);
-            label81.TabIndex = 8;
-            label81.Text = "الشهر";
-            // 
-            // label82
-            // 
-            label82.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label82.AutoSize = true;
-            label82.Location = new Point(2611, 115);
-            label82.Name = "label82";
-            label82.Size = new Size(44, 26);
-            label82.TabIndex = 8;
-            label82.Text = "العدد";
-            // 
-            // label83
-            // 
-            label83.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label83.AutoSize = true;
-            label83.Location = new Point(2732, 227);
-            label83.Name = "label83";
-            label83.Size = new Size(94, 26);
-            label83.TabIndex = 8;
-            label83.Text = "محجوز للحكم";
-            // 
-            // textBox53
-            // 
-            textBox53.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox53.Location = new Point(2594, 368);
-            textBox53.Margin = new Padding(3, 5, 3, 5);
-            textBox53.Name = "textBox53";
-            textBox53.Size = new Size(117, 32);
-            textBox53.TabIndex = 10;
-            // 
-            // label84
-            // 
-            label84.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label84.AutoSize = true;
-            label84.Location = new Point(2726, 368);
-            label84.Name = "label84";
-            label84.Size = new Size(103, 26);
-            label84.TabIndex = 8;
-            label84.Text = "اعادة للمرافعة";
-            // 
-            // textBox54
-            // 
-            textBox54.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox54.Location = new Point(2594, 299);
-            textBox54.Margin = new Padding(3, 5, 3, 5);
-            textBox54.Name = "textBox54";
-            textBox54.Size = new Size(117, 32);
-            textBox54.TabIndex = 10;
-            // 
-            // textBox55
-            // 
-            textBox55.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox55.Location = new Point(2594, 226);
-            textBox55.Margin = new Padding(3, 5, 3, 5);
-            textBox55.Name = "textBox55";
-            textBox55.Size = new Size(117, 32);
-            textBox55.TabIndex = 10;
-            // 
-            // textBox56
-            // 
-            textBox56.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox56.Location = new Point(2594, 162);
-            textBox56.Margin = new Padding(3, 5, 3, 5);
-            textBox56.Name = "textBox56";
-            textBox56.Size = new Size(117, 32);
-            textBox56.TabIndex = 10;
-            // 
-            // label85
-            // 
-            label85.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label85.AutoSize = true;
-            label85.Location = new Point(2724, 450);
-            label85.Name = "label85";
-            label85.Size = new Size(100, 26);
-            label85.TabIndex = 8;
-            label85.Text = "باقي المؤجلات";
-            // 
             // group_Tawzie_Katey_Shakly
             // 
             group_Tawzie_Katey_Shakly.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -4219,30 +2540,6 @@
             group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_TarkAlKhsoma);
             group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_SkotAlhak);
             group_Tawzie_Katey_Shakly.Controls.Add(text_Tawzie_Katey_Shakly_AdamKbol);
-            group_Tawzie_Katey_Shakly.Controls.Add(button16);
-            group_Tawzie_Katey_Shakly.Controls.Add(button17);
-            group_Tawzie_Katey_Shakly.Controls.Add(button18);
-            group_Tawzie_Katey_Shakly.Controls.Add(button19);
-            group_Tawzie_Katey_Shakly.Controls.Add(button20);
-            group_Tawzie_Katey_Shakly.Controls.Add(comboBox29);
-            group_Tawzie_Katey_Shakly.Controls.Add(comboBox30);
-            group_Tawzie_Katey_Shakly.Controls.Add(comboBox31);
-            group_Tawzie_Katey_Shakly.Controls.Add(comboBox32);
-            group_Tawzie_Katey_Shakly.Controls.Add(comboBox33);
-            group_Tawzie_Katey_Shakly.Controls.Add(label70);
-            group_Tawzie_Katey_Shakly.Controls.Add(comboBox34);
-            group_Tawzie_Katey_Shakly.Controls.Add(textBox47);
-            group_Tawzie_Katey_Shakly.Controls.Add(label71);
-            group_Tawzie_Katey_Shakly.Controls.Add(label72);
-            group_Tawzie_Katey_Shakly.Controls.Add(label73);
-            group_Tawzie_Katey_Shakly.Controls.Add(label74);
-            group_Tawzie_Katey_Shakly.Controls.Add(label75);
-            group_Tawzie_Katey_Shakly.Controls.Add(textBox48);
-            group_Tawzie_Katey_Shakly.Controls.Add(label76);
-            group_Tawzie_Katey_Shakly.Controls.Add(textBox49);
-            group_Tawzie_Katey_Shakly.Controls.Add(textBox50);
-            group_Tawzie_Katey_Shakly.Controls.Add(textBox51);
-            group_Tawzie_Katey_Shakly.Controls.Add(label77);
             group_Tawzie_Katey_Shakly.ForeColor = Color.Black;
             group_Tawzie_Katey_Shakly.Location = new Point(21, 61);
             group_Tawzie_Katey_Shakly.Margin = new Padding(3, 5, 3, 5);
@@ -4437,496 +2734,6 @@
             text_Tawzie_Katey_Shakly_AdamKbol.TabIndex = 46;
             text_Tawzie_Katey_Shakly_AdamKbol.TextChanged += text_Tawzie_Katey_Shakly_TextChanged;
             // 
-            // button16
-            // 
-            button16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button16.Location = new Point(1664, 358);
-            button16.Margin = new Padding(3, 5, 3, 5);
-            button16.Name = "button16";
-            button16.Size = new Size(75, 37);
-            button16.TabIndex = 12;
-            button16.Text = "اضافة";
-            button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            button17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button17.Location = new Point(1664, 294);
-            button17.Margin = new Padding(3, 5, 3, 5);
-            button17.Name = "button17";
-            button17.Size = new Size(75, 37);
-            button17.TabIndex = 12;
-            button17.Text = "اضافة";
-            button17.UseVisualStyleBackColor = true;
-            // 
-            // button18
-            // 
-            button18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button18.Location = new Point(1664, 230);
-            button18.Margin = new Padding(3, 5, 3, 5);
-            button18.Name = "button18";
-            button18.Size = new Size(75, 37);
-            button18.TabIndex = 12;
-            button18.Text = "اضافة";
-            button18.UseVisualStyleBackColor = true;
-            // 
-            // button19
-            // 
-            button19.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button19.Location = new Point(1664, 438);
-            button19.Margin = new Padding(3, 5, 3, 5);
-            button19.Name = "button19";
-            button19.Size = new Size(75, 37);
-            button19.TabIndex = 12;
-            button19.Text = "اضافة";
-            button19.UseVisualStyleBackColor = true;
-            // 
-            // button20
-            // 
-            button20.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button20.Location = new Point(1664, 166);
-            button20.Margin = new Padding(3, 5, 3, 5);
-            button20.Name = "button20";
-            button20.Size = new Size(75, 37);
-            button20.TabIndex = 12;
-            button20.Text = "اضافة";
-            button20.UseVisualStyleBackColor = true;
-            // 
-            // comboBox29
-            // 
-            comboBox29.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox29.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox29.FormattingEnabled = true;
-            comboBox29.Location = new Point(1776, 440);
-            comboBox29.Margin = new Padding(3, 5, 3, 5);
-            comboBox29.Name = "comboBox29";
-            comboBox29.Size = new Size(149, 32);
-            comboBox29.TabIndex = 11;
-            // 
-            // comboBox30
-            // 
-            comboBox30.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox30.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox30.FormattingEnabled = true;
-            comboBox30.Location = new Point(1776, 366);
-            comboBox30.Margin = new Padding(3, 5, 3, 5);
-            comboBox30.Name = "comboBox30";
-            comboBox30.Size = new Size(149, 32);
-            comboBox30.TabIndex = 11;
-            // 
-            // comboBox31
-            // 
-            comboBox31.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox31.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox31.FormattingEnabled = true;
-            comboBox31.Location = new Point(1776, 294);
-            comboBox31.Margin = new Padding(3, 5, 3, 5);
-            comboBox31.Name = "comboBox31";
-            comboBox31.Size = new Size(149, 32);
-            comboBox31.TabIndex = 11;
-            // 
-            // comboBox32
-            // 
-            comboBox32.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox32.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox32.FormattingEnabled = true;
-            comboBox32.Location = new Point(1776, 230);
-            comboBox32.Margin = new Padding(3, 5, 3, 5);
-            comboBox32.Name = "comboBox32";
-            comboBox32.Size = new Size(149, 32);
-            comboBox32.TabIndex = 11;
-            // 
-            // comboBox33
-            // 
-            comboBox33.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox33.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox33.FormattingEnabled = true;
-            comboBox33.Location = new Point(1776, 166);
-            comboBox33.Margin = new Padding(3, 5, 3, 5);
-            comboBox33.Name = "comboBox33";
-            comboBox33.Size = new Size(149, 32);
-            comboBox33.TabIndex = 11;
-            // 
-            // label70
-            // 
-            label70.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label70.AutoSize = true;
-            label70.Location = new Point(2787, 75);
-            label70.Name = "label70";
-            label70.Size = new Size(56, 26);
-            label70.TabIndex = 1;
-            label70.Text = "الجلسة";
-            // 
-            // comboBox34
-            // 
-            comboBox34.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox34.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox34.FormattingEnabled = true;
-            comboBox34.Location = new Point(2509, 62);
-            comboBox34.Margin = new Padding(3, 5, 3, 5);
-            comboBox34.Name = "comboBox34";
-            comboBox34.Size = new Size(230, 32);
-            comboBox34.TabIndex = 1;
-            // 
-            // textBox47
-            // 
-            textBox47.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox47.Location = new Point(1974, 440);
-            textBox47.Margin = new Padding(3, 5, 3, 5);
-            textBox47.Name = "textBox47";
-            textBox47.Size = new Size(117, 32);
-            textBox47.TabIndex = 10;
-            // 
-            // label71
-            // 
-            label71.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label71.AutoSize = true;
-            label71.Location = new Point(2138, 309);
-            label71.Name = "label71";
-            label71.Size = new Size(54, 26);
-            label71.TabIndex = 8;
-            label71.Text = "مد اجل";
-            // 
-            // label72
-            // 
-            label72.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label72.Location = new Point(2103, 162);
-            label72.Name = "label72";
-            label72.Size = new Size(76, 66);
-            label72.TabIndex = 8;
-            label72.Text = "احكام فرعية واثبات";
-            // 
-            // label73
-            // 
-            label73.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label73.AutoSize = true;
-            label73.Location = new Point(1804, 115);
-            label73.Name = "label73";
-            label73.Size = new Size(48, 26);
-            label73.TabIndex = 8;
-            label73.Text = "الشهر";
-            // 
-            // label74
-            // 
-            label74.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label74.AutoSize = true;
-            label74.Location = new Point(1988, 115);
-            label74.Name = "label74";
-            label74.Size = new Size(44, 26);
-            label74.TabIndex = 8;
-            label74.Text = "العدد";
-            // 
-            // label75
-            // 
-            label75.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label75.AutoSize = true;
-            label75.Location = new Point(2109, 227);
-            label75.Name = "label75";
-            label75.Size = new Size(94, 26);
-            label75.TabIndex = 8;
-            label75.Text = "محجوز للحكم";
-            // 
-            // textBox48
-            // 
-            textBox48.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox48.Location = new Point(1971, 368);
-            textBox48.Margin = new Padding(3, 5, 3, 5);
-            textBox48.Name = "textBox48";
-            textBox48.Size = new Size(117, 32);
-            textBox48.TabIndex = 10;
-            // 
-            // label76
-            // 
-            label76.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label76.AutoSize = true;
-            label76.Location = new Point(2103, 368);
-            label76.Name = "label76";
-            label76.Size = new Size(103, 26);
-            label76.TabIndex = 8;
-            label76.Text = "اعادة للمرافعة";
-            // 
-            // textBox49
-            // 
-            textBox49.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox49.Location = new Point(1971, 299);
-            textBox49.Margin = new Padding(3, 5, 3, 5);
-            textBox49.Name = "textBox49";
-            textBox49.Size = new Size(117, 32);
-            textBox49.TabIndex = 10;
-            // 
-            // textBox50
-            // 
-            textBox50.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox50.Location = new Point(1971, 226);
-            textBox50.Margin = new Padding(3, 5, 3, 5);
-            textBox50.Name = "textBox50";
-            textBox50.Size = new Size(117, 32);
-            textBox50.TabIndex = 10;
-            // 
-            // textBox51
-            // 
-            textBox51.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox51.Location = new Point(1971, 162);
-            textBox51.Margin = new Padding(3, 5, 3, 5);
-            textBox51.Name = "textBox51";
-            textBox51.Size = new Size(117, 32);
-            textBox51.TabIndex = 10;
-            // 
-            // label77
-            // 
-            label77.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label77.AutoSize = true;
-            label77.Location = new Point(2101, 450);
-            label77.Name = "label77";
-            label77.Size = new Size(100, 26);
-            label77.TabIndex = 8;
-            label77.Text = "باقي المؤجلات";
-            // 
-            // button11
-            // 
-            button11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button11.Location = new Point(1041, 358);
-            button11.Margin = new Padding(3, 5, 3, 5);
-            button11.Name = "button11";
-            button11.Size = new Size(75, 37);
-            button11.TabIndex = 12;
-            button11.Text = "اضافة";
-            button11.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            button12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button12.Location = new Point(1041, 294);
-            button12.Margin = new Padding(3, 5, 3, 5);
-            button12.Name = "button12";
-            button12.Size = new Size(75, 37);
-            button12.TabIndex = 12;
-            button12.Text = "اضافة";
-            button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            button13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button13.Location = new Point(1041, 230);
-            button13.Margin = new Padding(3, 5, 3, 5);
-            button13.Name = "button13";
-            button13.Size = new Size(75, 37);
-            button13.TabIndex = 12;
-            button13.Text = "اضافة";
-            button13.UseVisualStyleBackColor = true;
-            // 
-            // button14
-            // 
-            button14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button14.Location = new Point(1041, 438);
-            button14.Margin = new Padding(3, 5, 3, 5);
-            button14.Name = "button14";
-            button14.Size = new Size(75, 37);
-            button14.TabIndex = 12;
-            button14.Text = "اضافة";
-            button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            button15.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button15.Location = new Point(1041, 166);
-            button15.Margin = new Padding(3, 5, 3, 5);
-            button15.Name = "button15";
-            button15.Size = new Size(75, 37);
-            button15.TabIndex = 12;
-            button15.Text = "اضافة";
-            button15.UseVisualStyleBackColor = true;
-            // 
-            // comboBox23
-            // 
-            comboBox23.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox23.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox23.FormattingEnabled = true;
-            comboBox23.Location = new Point(1153, 440);
-            comboBox23.Margin = new Padding(3, 5, 3, 5);
-            comboBox23.Name = "comboBox23";
-            comboBox23.Size = new Size(149, 32);
-            comboBox23.TabIndex = 11;
-            // 
-            // comboBox24
-            // 
-            comboBox24.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox24.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox24.FormattingEnabled = true;
-            comboBox24.Location = new Point(1153, 366);
-            comboBox24.Margin = new Padding(3, 5, 3, 5);
-            comboBox24.Name = "comboBox24";
-            comboBox24.Size = new Size(149, 32);
-            comboBox24.TabIndex = 11;
-            // 
-            // comboBox25
-            // 
-            comboBox25.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox25.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox25.FormattingEnabled = true;
-            comboBox25.Location = new Point(1153, 294);
-            comboBox25.Margin = new Padding(3, 5, 3, 5);
-            comboBox25.Name = "comboBox25";
-            comboBox25.Size = new Size(149, 32);
-            comboBox25.TabIndex = 11;
-            // 
-            // comboBox26
-            // 
-            comboBox26.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox26.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox26.FormattingEnabled = true;
-            comboBox26.Location = new Point(1153, 230);
-            comboBox26.Margin = new Padding(3, 5, 3, 5);
-            comboBox26.Name = "comboBox26";
-            comboBox26.Size = new Size(149, 32);
-            comboBox26.TabIndex = 11;
-            // 
-            // comboBox27
-            // 
-            comboBox27.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox27.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox27.FormattingEnabled = true;
-            comboBox27.Location = new Point(1153, 166);
-            comboBox27.Margin = new Padding(3, 5, 3, 5);
-            comboBox27.Name = "comboBox27";
-            comboBox27.Size = new Size(149, 32);
-            comboBox27.TabIndex = 11;
-            // 
-            // label62
-            // 
-            label62.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label62.AutoSize = true;
-            label62.Location = new Point(2164, 75);
-            label62.Name = "label62";
-            label62.Size = new Size(56, 26);
-            label62.TabIndex = 1;
-            label62.Text = "الجلسة";
-            // 
-            // comboBox28
-            // 
-            comboBox28.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox28.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox28.FormattingEnabled = true;
-            comboBox28.Location = new Point(1886, 62);
-            comboBox28.Margin = new Padding(3, 5, 3, 5);
-            comboBox28.Name = "comboBox28";
-            comboBox28.Size = new Size(230, 32);
-            comboBox28.TabIndex = 1;
-            // 
-            // textBox42
-            // 
-            textBox42.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox42.Location = new Point(1351, 440);
-            textBox42.Margin = new Padding(3, 5, 3, 5);
-            textBox42.Name = "textBox42";
-            textBox42.Size = new Size(117, 32);
-            textBox42.TabIndex = 10;
-            // 
-            // label63
-            // 
-            label63.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label63.AutoSize = true;
-            label63.Location = new Point(1515, 309);
-            label63.Name = "label63";
-            label63.Size = new Size(54, 26);
-            label63.TabIndex = 8;
-            label63.Text = "مد اجل";
-            // 
-            // label64
-            // 
-            label64.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label64.Location = new Point(1480, 162);
-            label64.Name = "label64";
-            label64.Size = new Size(76, 66);
-            label64.TabIndex = 8;
-            label64.Text = "احكام فرعية واثبات";
-            // 
-            // label65
-            // 
-            label65.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label65.AutoSize = true;
-            label65.Location = new Point(1181, 115);
-            label65.Name = "label65";
-            label65.Size = new Size(48, 26);
-            label65.TabIndex = 8;
-            label65.Text = "الشهر";
-            // 
-            // label66
-            // 
-            label66.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label66.AutoSize = true;
-            label66.Location = new Point(1365, 115);
-            label66.Name = "label66";
-            label66.Size = new Size(44, 26);
-            label66.TabIndex = 8;
-            label66.Text = "العدد";
-            // 
-            // label67
-            // 
-            label67.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label67.AutoSize = true;
-            label67.Location = new Point(1486, 227);
-            label67.Name = "label67";
-            label67.Size = new Size(94, 26);
-            label67.TabIndex = 8;
-            label67.Text = "محجوز للحكم";
-            // 
-            // textBox43
-            // 
-            textBox43.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox43.Location = new Point(1348, 368);
-            textBox43.Margin = new Padding(3, 5, 3, 5);
-            textBox43.Name = "textBox43";
-            textBox43.Size = new Size(117, 32);
-            textBox43.TabIndex = 10;
-            // 
-            // label68
-            // 
-            label68.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label68.AutoSize = true;
-            label68.Location = new Point(1480, 368);
-            label68.Name = "label68";
-            label68.Size = new Size(103, 26);
-            label68.TabIndex = 8;
-            label68.Text = "اعادة للمرافعة";
-            // 
-            // textBox44
-            // 
-            textBox44.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox44.Location = new Point(1348, 299);
-            textBox44.Margin = new Padding(3, 5, 3, 5);
-            textBox44.Name = "textBox44";
-            textBox44.Size = new Size(117, 32);
-            textBox44.TabIndex = 10;
-            // 
-            // textBox45
-            // 
-            textBox45.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox45.Location = new Point(1348, 226);
-            textBox45.Margin = new Padding(3, 5, 3, 5);
-            textBox45.Name = "textBox45";
-            textBox45.Size = new Size(117, 32);
-            textBox45.TabIndex = 10;
-            // 
-            // textBox46
-            // 
-            textBox46.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox46.Location = new Point(1348, 162);
-            textBox46.Margin = new Padding(3, 5, 3, 5);
-            textBox46.Name = "textBox46";
-            textBox46.Size = new Size(117, 32);
-            textBox46.TabIndex = 10;
-            // 
-            // label69
-            // 
-            label69.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label69.AutoSize = true;
-            label69.Location = new Point(1478, 450);
-            label69.Name = "label69";
-            label69.Size = new Size(100, 26);
-            label69.TabIndex = 8;
-            label69.Text = "باقي المؤجلات";
-            // 
             // comboBox_Tawzie_Judje
             // 
             comboBox_Tawzie_Judje.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -4967,251 +2774,6 @@
             label59.TabIndex = 13;
             label59.Text = "القاضي";
             // 
-            // button6
-            // 
-            button6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button6.Location = new Point(1089, 358);
-            button6.Margin = new Padding(3, 5, 3, 5);
-            button6.Name = "button6";
-            button6.Size = new Size(75, 37);
-            button6.TabIndex = 12;
-            button6.Text = "اضافة";
-            button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            button7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button7.Location = new Point(1089, 294);
-            button7.Margin = new Padding(3, 5, 3, 5);
-            button7.Name = "button7";
-            button7.Size = new Size(75, 37);
-            button7.TabIndex = 12;
-            button7.Text = "اضافة";
-            button7.UseVisualStyleBackColor = true;
-            // 
-            // button8
-            // 
-            button8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button8.Location = new Point(1089, 230);
-            button8.Margin = new Padding(3, 5, 3, 5);
-            button8.Name = "button8";
-            button8.Size = new Size(75, 37);
-            button8.TabIndex = 12;
-            button8.Text = "اضافة";
-            button8.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            button9.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button9.Location = new Point(1089, 438);
-            button9.Margin = new Padding(3, 5, 3, 5);
-            button9.Name = "button9";
-            button9.Size = new Size(75, 37);
-            button9.TabIndex = 12;
-            button9.Text = "اضافة";
-            button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            button10.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button10.Location = new Point(1089, 166);
-            button10.Margin = new Padding(3, 5, 3, 5);
-            button10.Name = "button10";
-            button10.Size = new Size(75, 37);
-            button10.TabIndex = 12;
-            button10.Text = "اضافة";
-            button10.UseVisualStyleBackColor = true;
-            // 
-            // comboBox16
-            // 
-            comboBox16.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox16.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox16.FormattingEnabled = true;
-            comboBox16.Location = new Point(1201, 440);
-            comboBox16.Margin = new Padding(3, 5, 3, 5);
-            comboBox16.Name = "comboBox16";
-            comboBox16.Size = new Size(149, 32);
-            comboBox16.TabIndex = 11;
-            // 
-            // comboBox17
-            // 
-            comboBox17.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox17.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox17.FormattingEnabled = true;
-            comboBox17.Location = new Point(1201, 366);
-            comboBox17.Margin = new Padding(3, 5, 3, 5);
-            comboBox17.Name = "comboBox17";
-            comboBox17.Size = new Size(149, 32);
-            comboBox17.TabIndex = 11;
-            // 
-            // comboBox18
-            // 
-            comboBox18.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox18.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox18.FormattingEnabled = true;
-            comboBox18.Location = new Point(1201, 294);
-            comboBox18.Margin = new Padding(3, 5, 3, 5);
-            comboBox18.Name = "comboBox18";
-            comboBox18.Size = new Size(149, 32);
-            comboBox18.TabIndex = 11;
-            // 
-            // comboBox19
-            // 
-            comboBox19.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox19.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox19.FormattingEnabled = true;
-            comboBox19.Location = new Point(1201, 230);
-            comboBox19.Margin = new Padding(3, 5, 3, 5);
-            comboBox19.Name = "comboBox19";
-            comboBox19.Size = new Size(149, 32);
-            comboBox19.TabIndex = 11;
-            // 
-            // comboBox20
-            // 
-            comboBox20.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox20.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox20.FormattingEnabled = true;
-            comboBox20.Location = new Point(1201, 166);
-            comboBox20.Margin = new Padding(3, 5, 3, 5);
-            comboBox20.Name = "comboBox20";
-            comboBox20.Size = new Size(149, 32);
-            comboBox20.TabIndex = 11;
-            // 
-            // label51
-            // 
-            label51.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label51.AutoSize = true;
-            label51.Location = new Point(2212, 75);
-            label51.Name = "label51";
-            label51.Size = new Size(56, 26);
-            label51.TabIndex = 1;
-            label51.Text = "الجلسة";
-            // 
-            // comboBox21
-            // 
-            comboBox21.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox21.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox21.FormattingEnabled = true;
-            comboBox21.Location = new Point(1934, 62);
-            comboBox21.Margin = new Padding(3, 5, 3, 5);
-            comboBox21.Name = "comboBox21";
-            comboBox21.Size = new Size(230, 32);
-            comboBox21.TabIndex = 1;
-            // 
-            // textBox36
-            // 
-            textBox36.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox36.Location = new Point(1399, 440);
-            textBox36.Margin = new Padding(3, 5, 3, 5);
-            textBox36.Name = "textBox36";
-            textBox36.Size = new Size(117, 32);
-            textBox36.TabIndex = 10;
-            // 
-            // label52
-            // 
-            label52.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label52.AutoSize = true;
-            label52.Location = new Point(1563, 309);
-            label52.Name = "label52";
-            label52.Size = new Size(54, 26);
-            label52.TabIndex = 8;
-            label52.Text = "مد اجل";
-            // 
-            // label53
-            // 
-            label53.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label53.Location = new Point(1528, 162);
-            label53.Name = "label53";
-            label53.Size = new Size(76, 66);
-            label53.TabIndex = 8;
-            label53.Text = "احكام فرعية واثبات";
-            // 
-            // label54
-            // 
-            label54.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label54.AutoSize = true;
-            label54.Location = new Point(1229, 115);
-            label54.Name = "label54";
-            label54.Size = new Size(48, 26);
-            label54.TabIndex = 8;
-            label54.Text = "الشهر";
-            // 
-            // label55
-            // 
-            label55.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label55.AutoSize = true;
-            label55.Location = new Point(1413, 115);
-            label55.Name = "label55";
-            label55.Size = new Size(44, 26);
-            label55.TabIndex = 8;
-            label55.Text = "العدد";
-            // 
-            // label56
-            // 
-            label56.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label56.AutoSize = true;
-            label56.Location = new Point(1534, 227);
-            label56.Name = "label56";
-            label56.Size = new Size(94, 26);
-            label56.TabIndex = 8;
-            label56.Text = "محجوز للحكم";
-            // 
-            // textBox38
-            // 
-            textBox38.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox38.Location = new Point(1396, 368);
-            textBox38.Margin = new Padding(3, 5, 3, 5);
-            textBox38.Name = "textBox38";
-            textBox38.Size = new Size(117, 32);
-            textBox38.TabIndex = 10;
-            // 
-            // label57
-            // 
-            label57.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label57.AutoSize = true;
-            label57.Location = new Point(1528, 368);
-            label57.Name = "label57";
-            label57.Size = new Size(103, 26);
-            label57.TabIndex = 8;
-            label57.Text = "اعادة للمرافعة";
-            // 
-            // textBox39
-            // 
-            textBox39.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox39.Location = new Point(1396, 299);
-            textBox39.Margin = new Padding(3, 5, 3, 5);
-            textBox39.Name = "textBox39";
-            textBox39.Size = new Size(117, 32);
-            textBox39.TabIndex = 10;
-            // 
-            // textBox40
-            // 
-            textBox40.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox40.Location = new Point(1396, 226);
-            textBox40.Margin = new Padding(3, 5, 3, 5);
-            textBox40.Name = "textBox40";
-            textBox40.Size = new Size(117, 32);
-            textBox40.TabIndex = 10;
-            // 
-            // textBox41
-            // 
-            textBox41.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            textBox41.Location = new Point(1396, 162);
-            textBox41.Margin = new Padding(3, 5, 3, 5);
-            textBox41.Name = "textBox41";
-            textBox41.Size = new Size(117, 32);
-            textBox41.TabIndex = 10;
-            // 
-            // label58
-            // 
-            label58.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label58.AutoSize = true;
-            label58.Location = new Point(1526, 450);
-            label58.Name = "label58";
-            label58.Size = new Size(100, 26);
-            label58.TabIndex = 8;
-            label58.Text = "باقي المؤجلات";
-            // 
             // btn_Save
             // 
             btn_Save.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -5241,8 +2803,6 @@
             CustomGroupBox_MoeadMenAlKhobraa.BorderColor = Color.Blue;
             CustomGroupBox_MoeadMenAlKhobraa.BorderRadius = 28;
             CustomGroupBox_MoeadMenAlKhobraa.BorderThickness = 2;
-            CustomGroupBox_MoeadMenAlKhobraa.Controls.Add(label118);
-            CustomGroupBox_MoeadMenAlKhobraa.Controls.Add(comboBox65);
             CustomGroupBox_MoeadMenAlKhobraa.Controls.Add(label121);
             CustomGroupBox_MoeadMenAlKhobraa.Controls.Add(text_MoeadMenAlKhobraa);
             CustomGroupBox_MoeadMenAlKhobraa.ForeColor = Color.Black;
@@ -5258,27 +2818,6 @@
             CustomGroupBox_MoeadMenAlKhobraa.TitleBackgroundColor = Color.Yellow;
             CustomGroupBox_MoeadMenAlKhobraa.TitleFontSize = 12F;
             CustomGroupBox_MoeadMenAlKhobraa.UseCompatibleTextRendering = true;
-            // 
-            // label118
-            // 
-            label118.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label118.AutoSize = true;
-            label118.Location = new Point(1504, 75);
-            label118.Name = "label118";
-            label118.Size = new Size(56, 26);
-            label118.TabIndex = 1;
-            label118.Text = "الجلسة";
-            // 
-            // comboBox65
-            // 
-            comboBox65.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            comboBox65.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox65.FormattingEnabled = true;
-            comboBox65.Location = new Point(1226, 62);
-            comboBox65.Margin = new Padding(3, 5, 3, 5);
-            comboBox65.Name = "comboBox65";
-            comboBox65.Size = new Size(230, 32);
-            comboBox65.TabIndex = 1;
             // 
             // label121
             // 
@@ -5298,16 +2837,6 @@
             text_MoeadMenAlKhobraa.Name = "text_MoeadMenAlKhobraa";
             text_MoeadMenAlKhobraa.Size = new Size(117, 32);
             text_MoeadMenAlKhobraa.TabIndex = 32;
-            // 
-            // label4
-            // 
-            label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label4.AutoSize = true;
-            label4.Location = new Point(530, 125);
-            label4.Name = "label4";
-            label4.Size = new Size(48, 26);
-            label4.TabIndex = 8;
-            label4.Text = "الشهر";
             // 
             // StatisticsAddUserControl
             // 
@@ -5362,7 +2891,6 @@
             group_Tawzie_Farey.ResumeLayout(false);
             group_Tawzie_Farey.PerformLayout();
             group_Tawzie_Katey.ResumeLayout(false);
-            group_Tawzie_Katey.PerformLayout();
             group_Tawzie_Katey_Solh.ResumeLayout(false);
             group_Tawzie_Katey_Solh.PerformLayout();
             group_Tawzie_Katey_Mawdoey.ResumeLayout(false);
@@ -5393,7 +2921,6 @@
         private Label label6;
         private TextBox text_Motdawal_MoagalSabek;
         private Label label5;
-        private ComboBox comboBox2;
         private CustomGroupBox CustomGroupBox_Taksir;
         private Label label14;
         private TextBox Text_Taksir_Count;
@@ -5413,8 +2940,6 @@
         private Label label17;
         private TextBox text__Ehalah_From;
         private Label label18;
-        private Label label16;
-        private ComboBox comboBox5;
         private CustomGroupBox group_Mokadam;
         private TextBox text_Mokadam_Total;
         private TextBox text_Mokadam_New;
@@ -5422,11 +2947,7 @@
         private Label label19;
         private TextBox text_Mokadam_Motadawal;
         private Label label20;
-        private Label label21;
-        private ComboBox comboBox6;
         private CustomGroupBox group_MoeagalKhargALshahr;
-        private Label label25;
-        private ComboBox comboBox7;
         private CustomGroupBox CustomGroupBox_MahkoumFih;
         private CustomGroupBox group_Katey;
         private TextBox text_MahkoumFih_Katey_Solh;
@@ -5437,10 +2958,6 @@
         private Label label32;
         private TextBox text_MahkoumFih_Katey_Shakly;
         private Label label30;
-        private Label label31;
-        private ComboBox comboBox9;
-        private Label label28;
-        private ComboBox comboBox8;
         private TextBox text_MahkoumFih_EnktaeSirAlKhsoma;
         private TextBox text_MahkoumFih_WakfGazaey;
         private Label label37;
@@ -5472,8 +2989,6 @@
         private ComboBox comboBox_MoagalatAlaAshhorTalia_MadAgal;
         private ComboBox comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm;
         private ComboBox comboBox_MoagalatAlaAshhorTalia_Farey;
-        private Label label43;
-        private ComboBox comboBox10;
         private TextBox text_MoagalatAlaAshhorTalia_AlBaky;
         private Label label44;
         private Label label45;
@@ -5490,218 +3005,23 @@
         private Button btn_MoagalatAlaAshhorTalia_Farey;
         private ComboBox comboBox_MoagalatAlaAshhorTalia_AlBaky;
         private Label label47;
-        private Label label50;
         private Label label46;
         private CustomGroupBox group_Tawzie;
         private CustomGroupBox group_Tawzie_Katey;
         private CustomGroupBox group_Tawzie_Katey_Mawdoey;
-        private Button button21;
-        private Button button22;
-        private Button button23;
-        private Button button24;
-        private Button button25;
-        private ComboBox comboBox35;
-        private ComboBox comboBox36;
-        private ComboBox comboBox37;
-        private ComboBox comboBox38;
-        private ComboBox comboBox39;
-        private Label label78;
-        private ComboBox comboBox40;
-        private TextBox textBox52;
-        private Label label79;
-        private Label label80;
-        private Label label81;
-        private Label label82;
-        private Label label83;
-        private TextBox textBox53;
-        private Label label84;
-        private TextBox textBox54;
-        private TextBox textBox55;
-        private TextBox textBox56;
-        private Label label85;
         private CustomGroupBox group_Tawzie_Katey_Shakly;
-        private Button button16;
-        private Button button17;
-        private Button button18;
-        private Button button19;
-        private Button button20;
-        private ComboBox comboBox29;
-        private ComboBox comboBox30;
-        private ComboBox comboBox31;
-        private ComboBox comboBox32;
-        private ComboBox comboBox33;
-        private Label label70;
-        private ComboBox comboBox34;
-        private TextBox textBox47;
-        private Label label71;
-        private Label label72;
-        private Label label73;
-        private Label label74;
-        private Label label75;
-        private TextBox textBox48;
-        private Label label76;
-        private TextBox textBox49;
-        private TextBox textBox50;
-        private TextBox textBox51;
-        private Label label77;
-        private Button button11;
-        private Button button12;
-        private Button button13;
-        private Button button14;
-        private Button button15;
-        private ComboBox comboBox23;
-        private ComboBox comboBox24;
-        private ComboBox comboBox25;
-        private ComboBox comboBox26;
-        private ComboBox comboBox27;
-        private Label label62;
-        private ComboBox comboBox28;
-        private TextBox textBox42;
-        private Label label63;
-        private Label label64;
-        private Label label65;
-        private Label label66;
-        private Label label67;
-        private TextBox textBox43;
-        private Label label68;
-        private TextBox textBox44;
-        private TextBox textBox45;
-        private TextBox textBox46;
-        private Label label69;
         private ComboBox comboBox_Tawzie_Judje;
         private Label Text_Tawzie_JudgeId;
         private Label Text_Tawzie_Judge_Job;
         private Label label59;
-        private Button button6;
-        private Button button7;
-        private Button button8;
-        private Button button9;
-        private Button button10;
-        private ComboBox comboBox16;
-        private ComboBox comboBox17;
-        private ComboBox comboBox18;
-        private ComboBox comboBox19;
-        private ComboBox comboBox20;
-        private Label label51;
-        private ComboBox comboBox21;
-        private TextBox textBox36;
-        private Label label52;
-        private Label label53;
-        private Label label54;
-        private Label label55;
-        private Label label56;
-        private TextBox textBox38;
-        private Label label57;
-        private TextBox textBox39;
-        private TextBox textBox40;
-        private TextBox textBox41;
-        private Label label58;
         private Button btn_Tawzie_Add;
         private CustomGroupBox group_Tawzie_Okhra;
-        private Button button41;
-        private Button button42;
-        private Button button43;
-        private Button button44;
-        private Button button45;
-        private ComboBox comboBox59;
-        private ComboBox comboBox60;
-        private ComboBox comboBox61;
-        private ComboBox comboBox62;
-        private ComboBox comboBox63;
-        private Label label110;
-        private ComboBox comboBox64;
-        private TextBox textBox72;
-        private Label label111;
-        private Label label112;
-        private Label label113;
-        private Label label114;
-        private Label label115;
-        private TextBox textBox73;
-        private Label label116;
-        private TextBox textBox74;
-        private TextBox textBox75;
-        private TextBox textBox76;
-        private Label label117;
         private CustomGroupBox group_Tawzie_Ethbat;
-        private Button button36;
-        private Button button37;
-        private Button button38;
-        private Button button39;
-        private Button button40;
-        private ComboBox comboBox53;
-        private ComboBox comboBox54;
-        private ComboBox comboBox55;
-        private ComboBox comboBox56;
-        private ComboBox comboBox57;
-        private Label label102;
-        private ComboBox comboBox58;
-        private TextBox textBox67;
-        private Label label103;
-        private Label label104;
-        private Label label105;
-        private Label label106;
-        private Label label107;
-        private TextBox textBox68;
-        private Label label108;
-        private TextBox textBox69;
-        private TextBox textBox70;
-        private TextBox textBox71;
-        private Label label109;
         private CustomGroupBox group_Tawzie_Farey;
-        private Button button31;
-        private Button button32;
-        private Button button33;
-        private Button button34;
-        private Button button35;
-        private ComboBox comboBox47;
-        private ComboBox comboBox48;
-        private ComboBox comboBox49;
-        private ComboBox comboBox50;
-        private ComboBox comboBox51;
-        private Label label94;
-        private ComboBox comboBox52;
-        private TextBox textBox62;
-        private Label label95;
-        private Label label96;
-        private Label label97;
-        private Label label98;
-        private Label label99;
-        private TextBox textBox63;
-        private Label label100;
-        private TextBox textBox64;
-        private TextBox textBox65;
-        private TextBox textBox66;
-        private Label label101;
         private CustomGroupBox group_Tawzie_Katey_Solh;
-        private Button button26;
-        private Button button27;
-        private Button button28;
-        private Button button29;
-        private Button button30;
-        private ComboBox comboBox41;
-        private ComboBox comboBox42;
-        private ComboBox comboBox43;
-        private ComboBox comboBox44;
-        private ComboBox comboBox45;
-        private Label label86;
-        private ComboBox comboBox46;
-        private TextBox textBox57;
-        private Label label87;
-        private Label label88;
-        private Label label89;
-        private Label label90;
-        private Label label91;
-        private TextBox textBox58;
-        private Label label92;
-        private TextBox textBox59;
-        private TextBox textBox60;
-        private TextBox textBox61;
-        private Label label93;
         private Button btn_Save;
         private Button btn_Delete;
         private CustomGroupBox CustomGroupBox_MoeadMenAlKhobraa;
-        private Label label118;
-        private ComboBox comboBox65;
         private Label label121;
         private TextBox text_MoeadMenAlKhobraa;
         private Label label124;
@@ -5794,5 +3114,9 @@
         private DataGridViewButtonColumn delete;
         private DataGridViewButtonColumn Edit;
         private Label label4;
+        private TextBox text_ahkamKadi2;
+        private TextBox text_ahkamKadi1;
+        private Label label152;
+        private Label label61;
     }
 }

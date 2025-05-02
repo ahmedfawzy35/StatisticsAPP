@@ -28,9 +28,7 @@ namespace StatisticsAPP.Forms.StatisticsForms
         bool isEditCircleStatisticsForYear = false;
         List<Circle> userCircles;
         private Dictionary<string, int> months = new Dictionary<string, int>
-    {
-       
-    };
+   
         public StatisticsAddUserControl()
         {
             InitializeComponent();
@@ -44,7 +42,6 @@ namespace StatisticsAPP.Forms.StatisticsForms
             comboBox_MoagalatAlaAshhorTalia_MadAgal.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
             comboBox_MoagalatAlaAshhorTalia_MahgouzLelhokm.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
             comboBox_Tawzie_Judje.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
-
            
         }
         #region Methods
@@ -119,27 +116,48 @@ namespace StatisticsAPP.Forms.StatisticsForms
                                                                   .Include(x => x.CircleDay).ThenInclude(x => x.DelayCacesForMonths)
                                                                   .Where(x => x.IdCircleDay == circleday.Id && x.Year == Config.Year && x.Month == Config.Month).FirstOrDefault();
 
-            isEditCircleStatistics = circleStatistics != null;
+            if (circleStatistics == null)
+            {
+                MessageBox.Show("لم يتم فتح الاحصائية بعد ");
+
+             var grobs = this.Controls.OfType<CustomGroupBox>().ToList();
+                foreach (var group in grobs)
+                {
+                    group.Enabled = false;
+                }
+                btn_Delete.Enabled = false;
+                btn_Save.Enabled = false;
+              
+            }
+            else
+            {
+
+                var grobs = this.Controls.OfType<CustomGroupBox>().ToList();
+                foreach (var group in grobs)
+                {
+                    group.Enabled = true;
+                }
+                btn_Delete.Enabled = true;
+                btn_Save.Enabled = true;
+            }
         }
         #endregion
-        private void SetValues()
+        #region Add Methods
+        private void AddDelayCacesForMonth()
         {
-
-            if (circleStatistics == null) { return; }
-
-            var caseYear = (CaseYear)comboBox_CaseYear.SelectedValue;
-
-            if (caseYear == null)
+            if (string.IsNullOrEmpty(text_MoagalatAlaAshhorTalia_Farey.Text)) return;
+            var delayCacesForMonth = new DelayCacesForMonth
             {
-                return;
-            }
-
-            var yearStatisticsDecisions = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year == caseYear.Year).FirstOrDefault();
-            var StatisticsInterCases = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year == caseYear.Year).FirstOrDefault();
-            var StatisticsDelayCases = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year == caseYear.Year).FirstOrDefault();
-
-
+                IdCircleDay = circleStatistics!.IdCircleDay,
+                
+                
+                Month = Config.Month,
+                Count = int.Parse(text_MoagalatAlaAshhorTalia_AlBaky.Text),
+                
+            };
         }
+
+        #endregion
 
         #region Calc Methods
         private void CalcMotadawal()
@@ -310,7 +328,25 @@ namespace StatisticsAPP.Forms.StatisticsForms
 
             return validation_errors;
         }
+        #endregion
+        private void SetValues()
+        {
 
+            if (circleStatistics == null) { return; }
+
+            var caseYear = (CaseYear)comboBox_CaseYear.SelectedValue;
+
+            if (caseYear == null)
+            {
+                return;
+            }
+
+            var yearStatisticsDecisions = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year == caseYear.Year).FirstOrDefault();
+            var StatisticsInterCases = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year == caseYear.Year).FirstOrDefault();
+            var StatisticsDelayCases = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year == caseYear.Year).FirstOrDefault();
+
+
+        }
         private string GetArabicMonthName(int month)
         {
             return new DateTime(1, month, 1)
@@ -341,7 +377,7 @@ namespace StatisticsAPP.Forms.StatisticsForms
 
 
         }
-        #endregion
+      
         #endregion
 
 

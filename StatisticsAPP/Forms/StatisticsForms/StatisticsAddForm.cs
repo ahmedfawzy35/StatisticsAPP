@@ -19,10 +19,10 @@ namespace StatisticsAPP.Forms.StatisticsForms
         {
             InitializeComponent();
             _Config = Config;
-            StatisticsAddUserControl statisticsAddUserControl = new StatisticsAddUserControl{Config = _Config };
-            statisticsAddUserControl.Dock = DockStyle.Top;
-            panel2.Controls.Clear();
-            panel2.Controls.Add(statisticsAddUserControl);
+            //StatisticsAddUserControl statisticsAddUserControl = new StatisticsAddUserControl{Config = _Config };
+            //statisticsAddUserControl.Dock = DockStyle.Top;
+            //panel2.Controls.Clear();
+            //panel2.Controls.Add(statisticsAddUserControl);
 
         }
     }
