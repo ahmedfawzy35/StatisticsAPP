@@ -205,5 +205,21 @@ namespace StatisticsAPP.Utility
                 return string.Empty ;
             }
         }
+
+        public static class  InterCasesTypes
+        {
+           public const string MogaddMenShatb = "مجدد من الشطب";
+           public const string moagalMenAlwakfLhinAlfasl = "معجل من الوقف لحين الفصل في";
+           public const string moagalMenAlwakfGzaey = "معجل من الوقف الجزائي";
+           public const string moagalMenAlwakfTaeliky = "معجل من الوقف التعليقي";
+           public const string moagalMenAlwakfItfaky = "معجل من الوقف الاتفاقي";
+           public const string moagalMenAlEnktae = "معجل من الانقضاء";
+           public const string MoadMenAlEstenf = "معاد من الاستئناف";
+           public const string EhalaForm = "احالة من الدائرة";
+           public const string ehalaTo = "احالة الى الدائرة";
+           public const string newCases = "جديد";
+          
+
         }
+    }
 }

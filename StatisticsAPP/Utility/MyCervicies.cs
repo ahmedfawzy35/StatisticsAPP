@@ -1,6 +1,7 @@
 ﻿using StatisticsAPP.Data;
 using StatisticsAPP.Servicies.AuthServicies;
 using StatisticsAPP.Servicies.AuthServicies.UserServicies;
+using StatisticsAPP.Servicies.StatisticsCervicies;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,13 @@ namespace StatisticsAPP.Utility
         public static UserManager userManager = new UserManager(_context);
         public static RoleManager roleManager = new RoleManager(_context);
         public static CheckPermissionsManager checkPermissionsManager = new CheckPermissionsManager(roleManager.getuserOperations(LocalUser.localUserId));
-      
+
+        #endregion
+
+        #region statistics
+        public static StatisticsManager statisticsManager = new StatisticsManager(_context);
+
+
         #endregion
     }
 }

@@ -30,8 +30,6 @@
         {
             panel1 = new Panel();
             panel2 = new Panel();
-            addStatisticsUserControl1 = new StatisticsAPP.UserControls.AddStatisticsUserControl();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -45,24 +43,11 @@
             // panel2
             // 
             panel2.AutoScroll = true;
-            panel2.Controls.Add(addStatisticsUserControl1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 47);
             panel2.Name = "panel2";
             panel2.Size = new Size(1557, 552);
             panel2.TabIndex = 1;
-            // 
-            // addStatisticsUserControl1
-            // 
-            addStatisticsUserControl1.AutoScroll = true;
-            addStatisticsUserControl1.Dock = DockStyle.Top;
-            addStatisticsUserControl1.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            addStatisticsUserControl1.Location = new Point(0, 0);
-            addStatisticsUserControl1.Margin = new Padding(3, 5, 3, 5);
-            addStatisticsUserControl1.Name = "addStatisticsUserControl1";
-            addStatisticsUserControl1.RightToLeft = RightToLeft.Yes;
-            addStatisticsUserControl1.Size = new Size(1540, 3498);
-            addStatisticsUserControl1.TabIndex = 0;
             // 
             // StatisticsAddForm
             // 
@@ -75,7 +60,6 @@
             RightToLeft = RightToLeft.Yes;
             RightToLeftLayout = true;
             Text = "اضافة احصائية";
-            panel2.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -83,6 +67,5 @@
 
         private Panel panel1;
         private Panel panel2;
-        private UserControls.AddStatisticsUserControl addStatisticsUserControl1;
     }
 }

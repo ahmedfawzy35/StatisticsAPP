@@ -27,7 +27,7 @@ namespace StatisticsAPP.Forms.StatisticsForms
         bool isEditCircleStatistics = false;
         bool isEditCircleStatisticsForYear = false;
         List<Circle> userCircles;
-        private Dictionary<string, int> months = new Dictionary<string, int>
+        private Dictionary<string, int> months = new Dictionary<string, int> { };
    
         public StatisticsAddUserControl()
         {

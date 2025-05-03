@@ -14,5 +14,6 @@ namespace StatisticsAPP.Models.StatisticsModels
         public string? Name { get; set; }
         public int Year { get; set; }
         public bool IsOld { get; set; }
+        public bool Enabled { get; set; }    
     }
 }

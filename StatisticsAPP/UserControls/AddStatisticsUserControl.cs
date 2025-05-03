@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using StatisticsAPP._ForTest;
-using StatisticsAPP.Dtos;
+using StatisticsAPP.Forms.MainForm;
 using StatisticsAPP.Models.CircleModels;
 using StatisticsAPP.Models.StatisticsModels;
 using StatisticsAPP.Servicies.CircleServicies.DTOS;
+using StatisticsAPP.Servicies.StatisticsCervicies;
 using StatisticsAPP.Servicies.StatisticsCervicies.DTOS;
 using StatisticsAPP.Utility;
 using System;
@@ -35,8 +35,7 @@ namespace StatisticsAPP.UserControls
         readonly DataTable dt = new();
         private int hoveredRowIndex = -1;
         private int hoveredColumnIndex = -1;
-        readonly StatisticsManager statisticsManager = new StatisticsManager();
-        List<Statistaics> StatisticsList;
+        List<StatistaicsDto> StatisticsList;
         public AddStatisticsUserControl()
         {
             InitializeComponent();
@@ -50,20 +49,20 @@ namespace StatisticsAPP.UserControls
 
 
 
-            BindingList<Statistaics> statisticsList = new BindingList<Statistaics>(statisticsManager.StatisticsList());
-            dataGridView1.DataSource = statisticsList;
-            StatisticsList = statisticsManager.StatisticsList();
-            dataGridView1.DataSource = StatisticsList;
-            dataGridView2.DataSource = StatisticsList;
-            dataGridView3.DataSource = StatisticsList;
-            dataGridView4.DataSource = StatisticsList;
-            dataGridView5.DataSource = StatisticsList;
+            BindingList<StatistaicsDto> statisticsList = new BindingList<StatistaicsDto>(MyCervicies.statisticsManager.StatisticsList());
+            dataGridView_StatisticInformation.DataSource = statisticsList;
+            StatisticsList = MyCervicies.statisticsManager.StatisticsList();
+            dataGridView_StatisticInformation.DataSource = StatisticsList;
+            dataGridView_Juge1.DataSource = StatisticsList;
+            dataGridView_Juge2.DataSource = StatisticsList;
+            dataGridView_Juge3.DataSource = StatisticsList;
+            dataGridView_Juge4.DataSource = StatisticsList;
 
-            EditColoumnsWidth(dataGridView2);
-            EditColoumnsWidth(dataGridView1);
-            EditColoumnsWidth(dataGridView3);
-            EditColoumnsWidth(dataGridView4);
-            EditColoumnsWidth(dataGridView5);
+            EditColoumnsWidth(dataGridView_Juge1);
+            EditColoumnsWidth(dataGridView_StatisticInformation);
+            EditColoumnsWidth(dataGridView_Juge2);
+            EditColoumnsWidth(dataGridView_Juge3);
+            EditColoumnsWidth(dataGridView_Juge4);
         }
 
         #region fff
@@ -127,40 +126,61 @@ namespace StatisticsAPP.UserControls
         }
         private void GetStatistic()
         {
-            if (Config == null) {; return; }
-            var circleday = (CircleDay)comboBox_CircleDays.SelectedItem;
-            if (circleday == null) { MessageBox.Show("CircleDay is null"); return; }
+            if (Config == null) { return; }
+            var circle = (Circle)comboBox_Circles.SelectedItem!;
+            if (circle == null) { MessageBox.Show("CircleDay is null"); return; }
+            var circleday = comboBox_CircleDays.SelectedItem as CircleDay;
+            if (circleday == null)
+            {
+                MessageBox.Show("CircleDay is null");
+                
+                return;
 
+            }
 
-            circleStatistics = MyContext.context.CircleStatistics.Include(x => x.StatisticsDecisions).ThenInclude(x => x.CaseYear)
-                                                                  .Include(x => x.StatisticsInterCases).ThenInclude(x => x.CaseYear)
-                                                                  .Include(x => x.StatisticsDelayCases).ThenInclude(x => x.CaseYear)
-                                                                  .Include(x => x.CircleDay).ThenInclude(x => x.DelayCacesForMonths)
-                                                                  .Where(x => x.IdCircleDay == circleday.Id && x.Year == Config.Year && x.Month == Config.Month).FirstOrDefault();
+            circleStatistics = MyContext.context.CircleStatistics
+                .Include(x => x.StatisticsDecisions!)
+                    .ThenInclude(x => x.CaseYear!)
+                .Include(x => x.StatisticsInterCases!)
+                    .ThenInclude(x => x.CaseYear!)
+                .Include(x => x.StatisticsDelayCases!)
+                    .ThenInclude(x => x.CaseYear!)
+                .Include(x => x.CircleDay!)
+                    .ThenInclude(x => x.DelayCacesForMonths!)
+                .FirstOrDefault(x => x.IdCircleDay == circleday.Id && x.Year == Config.Year && x.Month == Config.Month);
 
             if (circleStatistics == null)
             {
                 MessageBox.Show("لم يتم فتح الاحصائية بعد ");
+             
+              
 
-                var grobs = this.Controls.OfType<CustomGroupBox>().ToList();
-                foreach (var group in grobs)
-                {
-                    group.Enabled = false;
-                }
-                //btn_Delete.Enabled = false;
-                //btn_Save.Enabled = false;
-
+                dataGridView_StatisticInformation.Enabled = false;
+                dataGridView_Juge1.Enabled = false;
+                dataGridView_Juge2.Enabled = false;
+                dataGridView_Juge3.Enabled = false;
+                dataGridView_Juge4.Enabled = false;
+                dataGridView_Ethbat.Enabled = false;
+                dataGridView_Mahgouz.Enabled = false;
+                dataGridView_MadAgal.Enabled = false;
+                dataGridView_Morafea.Enabled = false;
+                dataGridView_Baki.Enabled = false;
+                button1.Enabled = false;
+                return;
             }
             else
             {
-
-                var grobs = this.Controls.OfType<CustomGroupBox>().ToList();
-                foreach (var group in grobs)
-                {
-                    group.Enabled = true;
-                }
-                //btn_Delete.Enabled = true;
-                //btn_Save.Enabled = true;
+                dataGridView_StatisticInformation.Enabled = true;
+                dataGridView_Juge1.Enabled = true;
+                dataGridView_Juge2.Enabled = true;
+                dataGridView_Juge3.Enabled = true;
+                dataGridView_Juge4.Enabled = true;
+                dataGridView_Ethbat.Enabled = true;
+                dataGridView_Mahgouz.Enabled = true;
+                dataGridView_MadAgal.Enabled = true;
+                dataGridView_Morafea.Enabled = true;
+                dataGridView_Baki.Enabled = true;
+                button1.Enabled = true;
             }
         }
         private string GetArabicMonthName(int month)
@@ -168,6 +188,9 @@ namespace StatisticsAPP.UserControls
             return new DateTime(1, month, 1)
                 .ToString("MMMM", new CultureInfo("ar-AE")); // أو "ar-EG" للغة المصرية
         }
+
+     
+
 
         private void comboBox1_MouseWheel(object sender, MouseEventArgs e)
         {
@@ -194,11 +217,11 @@ namespace StatisticsAPP.UserControls
             {
                 e.PaintBackground(e.CellBounds, true); // رسم الخلفية
 
-                string headerText = dataGridView1.Columns[e.ColumnIndex].HeaderText;
+                string headerText = dataGridView_StatisticInformation.Columns[e.ColumnIndex].HeaderText;
 
-                using (Brush brush = new SolidBrush(dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor))
+                using (Brush brush = new SolidBrush(dataGridView_StatisticInformation.ColumnHeadersDefaultCellStyle.ForeColor))
                 {
-                    SizeF textSize = e.Graphics!.MeasureString(headerText, dataGridView1.ColumnHeadersDefaultCellStyle.Font);
+                    SizeF textSize = e.Graphics!.MeasureString(headerText, dataGridView_StatisticInformation.ColumnHeadersDefaultCellStyle.Font);
 
                     // تدوير النص
                     e.Graphics.TranslateTransform(
@@ -210,7 +233,7 @@ namespace StatisticsAPP.UserControls
                     // رسم النص في المنتصف
                     e.Graphics.DrawString(
                         headerText,
-                        dataGridView1.ColumnHeadersDefaultCellStyle.Font,
+                        dataGridView_StatisticInformation.ColumnHeadersDefaultCellStyle.Font,
                         brush,
                         new PointF((e.CellBounds.Height - textSize.Width) / 2, -textSize.Height / 2)
                     );
@@ -229,9 +252,9 @@ namespace StatisticsAPP.UserControls
             hoveredColumnIndex = e.ColumnIndex;
 
             // تظليل الصف والعمود
-            dataGridView1.Columns[hoveredColumnIndex].HeaderCell.Style.BackColor = Color.YellowGreen;
+            dataGridView_StatisticInformation.Columns[hoveredColumnIndex].HeaderCell.Style.BackColor = Color.YellowGreen;
 
-            dataGridView1.Rows[hoveredRowIndex].Cells[0].Style.BackColor = Color.YellowGreen;
+            dataGridView_StatisticInformation.Rows[hoveredRowIndex].Cells[0].Style.BackColor = Color.YellowGreen;
 
             //for (int i = 0; i < dataGridView1.ColumnCount; i++)
             //{
@@ -252,9 +275,9 @@ namespace StatisticsAPP.UserControls
 
             // إعادة لون الصف
 
-            dataGridView1.Columns[hoveredColumnIndex].HeaderCell.Style.BackColor = Color.LightGray;
+            dataGridView_StatisticInformation.Columns[hoveredColumnIndex].HeaderCell.Style.BackColor = Color.LightGray;
 
-            dataGridView1.Rows[hoveredRowIndex].Cells[0].Style.BackColor = Color.White;
+            dataGridView_StatisticInformation.Rows[hoveredRowIndex].Cells[0].Style.BackColor = Color.White;
 
 
             //for (int i = 0; i < dataGridView1.ColumnCount; i++)
@@ -326,18 +349,19 @@ namespace StatisticsAPP.UserControls
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             // التحقق من اسم العمود
-            string columnName = dataGridView1.Columns[e.ColumnIndex].HeaderText;
+            string columnName = dataGridView_StatisticInformation.Columns[e.ColumnIndex].HeaderText;
 
             if (columnName == "جملة المقدم" || columnName == "جملة الاحكام القطعية" || columnName == "جملة الاثبات" || columnName == "جملة الوقف" || columnName == "جملة المحكوم فيه" || columnName == "جملة المؤجل")
             {
                 // تغيير لون العمود "جملة المحكوم فيه" إلى لون معين
                 e.CellStyle.BackColor = Color.FromArgb(32, 178, 170);
-                dataGridView1.Columns[e.ColumnIndex].HeaderCell.Style.BackColor = Color.FromArgb(32, 178, 170);
+                dataGridView_StatisticInformation.Columns[e.ColumnIndex].HeaderCell.Style.BackColor = Color.FromArgb(32, 178, 170);
             }
         }
 
         private void AddStatisticsUserControl_Load(object sender, EventArgs e)
         {
+            GetCircles();
             Text_SupCourt.Text = Config.SupCourtName;
             Text_SuperCourt.Text = Config.SuperCourtName;
             Text_Year.Text = Config.Year.ToString();

@@ -190,6 +190,15 @@ namespace StatisticsAPP.Forms.MainForm
                 tabControl1.SelectTab(select);
             }
         }
+
+        public void RemoveTabPage(TabPage tabPage)
+        {
+            if (tabPage != null && tabControl1.TabPages.Contains(tabPage))
+            {
+                tabControl1.TabPages.Remove(tabPage);
+            }
+        }
+        
         public static Rectangle GetRTLCoordinates(Rectangle container, Rectangle drawRectangle)
         {
             return new Rectangle(

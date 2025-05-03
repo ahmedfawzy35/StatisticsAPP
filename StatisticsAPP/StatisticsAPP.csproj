@@ -47,4 +47,13 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Dtos\" />
+    <Folder Include="_ForTest\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Servicies\StatisticsCervicies\DTOS\StatistaicsDto.cs" />
+  </ItemGroup>
+
 </Project>

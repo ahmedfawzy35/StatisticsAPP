@@ -184,6 +184,9 @@ namespace StatisticsAPP.Seeds
             InterCase interCase9 = new InterCase { Name = "معجل من الوقف التعليقي", UserId = userid, CreatedAt = DateTime.Now, IdInterCasesCategory = المعجل.Id };
             InterCase interCase10 = new InterCase { Name = "معجل من الوقف الاتفاقي", UserId = userid, CreatedAt = DateTime.Now, IdInterCasesCategory = المعجل.Id };
 
+            var جديد = await db.InterCasesCategories.Where(x => x.Name == "جديد").FirstOrDefaultAsync();
+            if (جديد == null) return;
+            InterCase interCase11 = new InterCase { Name = "جديد", UserId = userid, CreatedAt = DateTime.Now, IdInterCasesCategory = جديد.Id };
             await db.InterCases.AddRangeAsync(new InterCase[] { interCase1, interCase2, interCase3, interCase4, interCase5, interCase6, interCase1, interCase7, interCase8, interCase9, interCase10 });
             await db.SaveChangesAsync();
         }

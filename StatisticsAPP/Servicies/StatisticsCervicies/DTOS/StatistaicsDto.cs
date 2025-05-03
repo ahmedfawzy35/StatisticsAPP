@@ -1,13 +1,24 @@
-﻿using System;
+﻿using StatisticsAPP.Models.JudgeModels;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StatisticsAPP.Dtos
+namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
 {
-    public class Statistaics
+    public class CircleDayStatistaicsDto
+    {
+        [DisplayName("السنة")]
+        public int Year { get; set; }
+        [DisplayName("الشهر")]
+        public int Month { get; set; }
+        public List<StatistaicsDto>? StaticsForYear { get; set; }
+        public List<Judge>?   Judges { get; set; }
+      
+    }
+    public class StatistaicsDto
     {
         [DisplayName("السنة")]
         public int Year { get; set; }

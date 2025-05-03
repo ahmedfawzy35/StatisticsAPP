@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle10 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle11 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle12 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle14 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle15 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
-            dataGridView1 = new DataGridView();
+            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle26 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle27 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle28 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle29 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle30 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle31 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle32 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle33 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle34 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle35 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle36 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle37 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle38 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle39 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle40 = new DataGridViewCellStyle();
+            dataGridView_StatisticInformation = new DataGridView();
             panel1 = new Panel();
             label13 = new Label();
             comboBox_CircleDays = new ComboBox();
@@ -67,19 +67,19 @@
             panel4 = new Panel();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel6 = new Panel();
-            dataGridView2 = new DataGridView();
+            dataGridView_Juge1 = new DataGridView();
             panel7 = new Panel();
             label1 = new Label();
             panel8 = new Panel();
-            dataGridView3 = new DataGridView();
+            dataGridView_Juge2 = new DataGridView();
             panel9 = new Panel();
             label2 = new Label();
             panel10 = new Panel();
-            dataGridView4 = new DataGridView();
+            dataGridView_Juge3 = new DataGridView();
             panel11 = new Panel();
             label3 = new Label();
             panel12 = new Panel();
-            dataGridView5 = new DataGridView();
+            dataGridView_Juge4 = new DataGridView();
             panel13 = new Panel();
             label4 = new Label();
             panel5 = new Panel();
@@ -87,102 +87,102 @@
             panel14 = new Panel();
             tableLayoutPanel2 = new TableLayoutPanel();
             panel20 = new Panel();
-            dataGridView10 = new DataGridView();
+            dataGridView_Baki = new DataGridView();
             panel26 = new Panel();
             label12 = new Label();
             panel19 = new Panel();
-            dataGridView9 = new DataGridView();
+            dataGridView_Morafea = new DataGridView();
             panel25 = new Panel();
             label11 = new Label();
             panel18 = new Panel();
-            dataGridView8 = new DataGridView();
+            dataGridView_MadAgal = new DataGridView();
             panel24 = new Panel();
             label10 = new Label();
             panel17 = new Panel();
-            dataGridView7 = new DataGridView();
+            dataGridView_Mahgouz = new DataGridView();
             panel23 = new Panel();
             label9 = new Label();
             panel16 = new Panel();
-            dataGridView6 = new DataGridView();
+            dataGridView_Ethbat = new DataGridView();
             panel22 = new Panel();
             label8 = new Label();
             panel15 = new Panel();
             label7 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_StatisticInformation).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Juge1).BeginInit();
             panel7.SuspendLayout();
             panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Juge2).BeginInit();
             panel9.SuspendLayout();
             panel10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Juge3).BeginInit();
             panel11.SuspendLayout();
             panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Juge4).BeginInit();
             panel13.SuspendLayout();
             panel5.SuspendLayout();
             panel14.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Baki).BeginInit();
             panel26.SuspendLayout();
             panel19.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Morafea).BeginInit();
             panel25.SuspendLayout();
             panel18.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView8).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_MadAgal).BeginInit();
             panel24.SuspendLayout();
             panel17.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView7).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Mahgouz).BeginInit();
             panel23.SuspendLayout();
             panel16.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView6).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Ethbat).BeginInit();
             panel22.SuspendLayout();
             panel15.SuspendLayout();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridView_StatisticInformation
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.LightGray;
-            dataGridViewCellStyle1.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeight = 150;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = Color.White;
-            dataGridViewCellStyle2.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.GridColor = Color.LightGray;
-            dataGridView1.Location = new Point(0, 0);
-            dataGridView1.Margin = new Padding(3, 5, 3, 5);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RightToLeft = RightToLeft.Yes;
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.Size = new Size(1548, 580);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellBeginEdit += dataGridView1_CellBeginEdit;
-            dataGridView1.CellEndEdit += dataGridView1_CellEndEdit;
-            dataGridView1.CellFormatting += dataGridView1_CellFormatting;
-            dataGridView1.CellPainting += dataGridView1_CellPainting;
-            dataGridView1.CellValidating += dataGridView1_CellValidating;
+            dataGridView_StatisticInformation.BackgroundColor = Color.White;
+            dataGridView_StatisticInformation.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = Color.LightGray;
+            dataGridViewCellStyle21.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle21.ForeColor = Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = DataGridViewTriState.True;
+            dataGridView_StatisticInformation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridView_StatisticInformation.ColumnHeadersHeight = 150;
+            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle22.BackColor = Color.White;
+            dataGridViewCellStyle22.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle22.ForeColor = Color.Black;
+            dataGridViewCellStyle22.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle22.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.False;
+            dataGridView_StatisticInformation.DefaultCellStyle = dataGridViewCellStyle22;
+            dataGridView_StatisticInformation.Dock = DockStyle.Fill;
+            dataGridView_StatisticInformation.EnableHeadersVisualStyles = false;
+            dataGridView_StatisticInformation.GridColor = Color.LightGray;
+            dataGridView_StatisticInformation.Location = new Point(0, 0);
+            dataGridView_StatisticInformation.Margin = new Padding(3, 5, 3, 5);
+            dataGridView_StatisticInformation.Name = "dataGridView_StatisticInformation";
+            dataGridView_StatisticInformation.RightToLeft = RightToLeft.Yes;
+            dataGridView_StatisticInformation.RowHeadersVisible = false;
+            dataGridView_StatisticInformation.Size = new Size(1548, 580);
+            dataGridView_StatisticInformation.TabIndex = 0;
+            dataGridView_StatisticInformation.CellBeginEdit += dataGridView1_CellBeginEdit;
+            dataGridView_StatisticInformation.CellEndEdit += dataGridView1_CellEndEdit;
+            dataGridView_StatisticInformation.CellFormatting += dataGridView1_CellFormatting;
+            dataGridView_StatisticInformation.CellPainting += dataGridView1_CellPainting;
+            dataGridView_StatisticInformation.CellValidating += dataGridView1_CellValidating;
             // 
             // panel1
             // 
@@ -324,7 +324,7 @@
             // 
             // panel2
             // 
-            panel2.Controls.Add(dataGridView1);
+            panel2.Controls.Add(dataGridView_StatisticInformation);
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(0, 281);
             panel2.Margin = new Padding(3, 5, 3, 5);
@@ -386,7 +386,7 @@
             // 
             // panel6
             // 
-            panel6.Controls.Add(dataGridView2);
+            panel6.Controls.Add(dataGridView_Juge1);
             panel6.Controls.Add(panel7);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(777, 5);
@@ -395,40 +395,40 @@
             panel6.Size = new Size(768, 661);
             panel6.TabIndex = 5;
             // 
-            // dataGridView2
+            // dataGridView_Juge1
             // 
-            dataGridView2.BackgroundColor = Color.White;
-            dataGridView2.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = Color.LightGray;
-            dataGridViewCellStyle3.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridView2.ColumnHeadersHeight = 150;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.White;
-            dataGridViewCellStyle4.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
-            dataGridView2.DefaultCellStyle = dataGridViewCellStyle4;
-            dataGridView2.Dock = DockStyle.Fill;
-            dataGridView2.EnableHeadersVisualStyles = false;
-            dataGridView2.GridColor = Color.LightGray;
-            dataGridView2.Location = new Point(0, 48);
-            dataGridView2.Margin = new Padding(3, 5, 3, 5);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersVisible = false;
-            dataGridView2.Size = new Size(768, 613);
-            dataGridView2.TabIndex = 1;
-            dataGridView2.CellBeginEdit += dataGridView1_CellBeginEdit;
-            dataGridView2.CellEndEdit += dataGridView1_CellEndEdit;
-            dataGridView2.CellPainting += dataGridView1_CellPainting;
-            dataGridView2.CellValidating += dataGridView1_CellValidating;
+            dataGridView_Juge1.BackgroundColor = Color.White;
+            dataGridView_Juge1.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle23.BackColor = Color.LightGray;
+            dataGridViewCellStyle23.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle23.ForeColor = Color.Black;
+            dataGridViewCellStyle23.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle23.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.True;
+            dataGridView_Juge1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridView_Juge1.ColumnHeadersHeight = 150;
+            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle24.BackColor = Color.White;
+            dataGridViewCellStyle24.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle24.ForeColor = Color.Black;
+            dataGridViewCellStyle24.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle24.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.False;
+            dataGridView_Juge1.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridView_Juge1.Dock = DockStyle.Fill;
+            dataGridView_Juge1.EnableHeadersVisualStyles = false;
+            dataGridView_Juge1.GridColor = Color.LightGray;
+            dataGridView_Juge1.Location = new Point(0, 48);
+            dataGridView_Juge1.Margin = new Padding(3, 5, 3, 5);
+            dataGridView_Juge1.Name = "dataGridView_Juge1";
+            dataGridView_Juge1.RowHeadersVisible = false;
+            dataGridView_Juge1.Size = new Size(768, 613);
+            dataGridView_Juge1.TabIndex = 1;
+            dataGridView_Juge1.CellBeginEdit += dataGridView1_CellBeginEdit;
+            dataGridView_Juge1.CellEndEdit += dataGridView1_CellEndEdit;
+            dataGridView_Juge1.CellPainting += dataGridView1_CellPainting;
+            dataGridView_Juge1.CellValidating += dataGridView1_CellValidating;
             // 
             // panel7
             // 
@@ -454,7 +454,7 @@
             // 
             // panel8
             // 
-            panel8.Controls.Add(dataGridView3);
+            panel8.Controls.Add(dataGridView_Juge2);
             panel8.Controls.Add(panel9);
             panel8.Dock = DockStyle.Fill;
             panel8.Location = new Point(3, 5);
@@ -463,40 +463,40 @@
             panel8.Size = new Size(768, 661);
             panel8.TabIndex = 6;
             // 
-            // dataGridView3
+            // dataGridView_Juge2
             // 
-            dataGridView3.BackgroundColor = Color.White;
-            dataGridView3.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = Color.LightGray;
-            dataGridViewCellStyle5.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            dataGridView3.ColumnHeadersHeight = 150;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = Color.White;
-            dataGridViewCellStyle6.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridView3.DefaultCellStyle = dataGridViewCellStyle6;
-            dataGridView3.Dock = DockStyle.Fill;
-            dataGridView3.EnableHeadersVisualStyles = false;
-            dataGridView3.GridColor = Color.LightGray;
-            dataGridView3.Location = new Point(0, 48);
-            dataGridView3.Margin = new Padding(3, 5, 3, 5);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersVisible = false;
-            dataGridView3.Size = new Size(768, 613);
-            dataGridView3.TabIndex = 2;
-            dataGridView3.CellBeginEdit += dataGridView1_CellBeginEdit;
-            dataGridView3.CellEndEdit += dataGridView1_CellEndEdit;
-            dataGridView3.CellPainting += dataGridView1_CellPainting;
-            dataGridView3.CellValidating += dataGridView1_CellValidating;
+            dataGridView_Juge2.BackgroundColor = Color.White;
+            dataGridView_Juge2.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle25.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle25.BackColor = Color.LightGray;
+            dataGridViewCellStyle25.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle25.ForeColor = Color.Black;
+            dataGridViewCellStyle25.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle25.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle25.WrapMode = DataGridViewTriState.True;
+            dataGridView_Juge2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridView_Juge2.ColumnHeadersHeight = 150;
+            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle26.BackColor = Color.White;
+            dataGridViewCellStyle26.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle26.ForeColor = Color.Black;
+            dataGridViewCellStyle26.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle26.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.False;
+            dataGridView_Juge2.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridView_Juge2.Dock = DockStyle.Fill;
+            dataGridView_Juge2.EnableHeadersVisualStyles = false;
+            dataGridView_Juge2.GridColor = Color.LightGray;
+            dataGridView_Juge2.Location = new Point(0, 48);
+            dataGridView_Juge2.Margin = new Padding(3, 5, 3, 5);
+            dataGridView_Juge2.Name = "dataGridView_Juge2";
+            dataGridView_Juge2.RowHeadersVisible = false;
+            dataGridView_Juge2.Size = new Size(768, 613);
+            dataGridView_Juge2.TabIndex = 2;
+            dataGridView_Juge2.CellBeginEdit += dataGridView1_CellBeginEdit;
+            dataGridView_Juge2.CellEndEdit += dataGridView1_CellEndEdit;
+            dataGridView_Juge2.CellPainting += dataGridView1_CellPainting;
+            dataGridView_Juge2.CellValidating += dataGridView1_CellValidating;
             // 
             // panel9
             // 
@@ -522,7 +522,7 @@
             // 
             // panel10
             // 
-            panel10.Controls.Add(dataGridView4);
+            panel10.Controls.Add(dataGridView_Juge3);
             panel10.Controls.Add(panel11);
             panel10.Dock = DockStyle.Fill;
             panel10.Location = new Point(777, 676);
@@ -531,40 +531,40 @@
             panel10.Size = new Size(768, 655);
             panel10.TabIndex = 7;
             // 
-            // dataGridView4
+            // dataGridView_Juge3
             // 
-            dataGridView4.BackgroundColor = Color.White;
-            dataGridView4.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = Color.LightGray;
-            dataGridViewCellStyle7.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle7.ForeColor = Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
-            dataGridView4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridView4.ColumnHeadersHeight = 150;
-            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = Color.White;
-            dataGridViewCellStyle8.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle8.ForeColor = Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle8.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
-            dataGridView4.DefaultCellStyle = dataGridViewCellStyle8;
-            dataGridView4.Dock = DockStyle.Fill;
-            dataGridView4.EnableHeadersVisualStyles = false;
-            dataGridView4.GridColor = Color.LightGray;
-            dataGridView4.Location = new Point(0, 48);
-            dataGridView4.Margin = new Padding(3, 5, 3, 5);
-            dataGridView4.Name = "dataGridView4";
-            dataGridView4.RowHeadersVisible = false;
-            dataGridView4.Size = new Size(768, 607);
-            dataGridView4.TabIndex = 3;
-            dataGridView4.CellBeginEdit += dataGridView1_CellBeginEdit;
-            dataGridView4.CellEndEdit += dataGridView1_CellEndEdit;
-            dataGridView4.CellPainting += dataGridView1_CellPainting;
-            dataGridView4.CellValidating += dataGridView1_CellValidating;
+            dataGridView_Juge3.BackgroundColor = Color.White;
+            dataGridView_Juge3.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle27.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = Color.LightGray;
+            dataGridViewCellStyle27.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle27.ForeColor = Color.Black;
+            dataGridViewCellStyle27.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = DataGridViewTriState.True;
+            dataGridView_Juge3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            dataGridView_Juge3.ColumnHeadersHeight = 150;
+            dataGridViewCellStyle28.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle28.BackColor = Color.White;
+            dataGridViewCellStyle28.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle28.ForeColor = Color.Black;
+            dataGridViewCellStyle28.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle28.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle28.WrapMode = DataGridViewTriState.False;
+            dataGridView_Juge3.DefaultCellStyle = dataGridViewCellStyle28;
+            dataGridView_Juge3.Dock = DockStyle.Fill;
+            dataGridView_Juge3.EnableHeadersVisualStyles = false;
+            dataGridView_Juge3.GridColor = Color.LightGray;
+            dataGridView_Juge3.Location = new Point(0, 48);
+            dataGridView_Juge3.Margin = new Padding(3, 5, 3, 5);
+            dataGridView_Juge3.Name = "dataGridView_Juge3";
+            dataGridView_Juge3.RowHeadersVisible = false;
+            dataGridView_Juge3.Size = new Size(768, 607);
+            dataGridView_Juge3.TabIndex = 3;
+            dataGridView_Juge3.CellBeginEdit += dataGridView1_CellBeginEdit;
+            dataGridView_Juge3.CellEndEdit += dataGridView1_CellEndEdit;
+            dataGridView_Juge3.CellPainting += dataGridView1_CellPainting;
+            dataGridView_Juge3.CellValidating += dataGridView1_CellValidating;
             // 
             // panel11
             // 
@@ -590,7 +590,7 @@
             // 
             // panel12
             // 
-            panel12.Controls.Add(dataGridView5);
+            panel12.Controls.Add(dataGridView_Juge4);
             panel12.Controls.Add(panel13);
             panel12.Dock = DockStyle.Fill;
             panel12.Location = new Point(3, 676);
@@ -599,40 +599,40 @@
             panel12.Size = new Size(768, 655);
             panel12.TabIndex = 8;
             // 
-            // dataGridView5
+            // dataGridView_Juge4
             // 
-            dataGridView5.BackgroundColor = Color.White;
-            dataGridView5.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = Color.LightGray;
-            dataGridViewCellStyle9.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle9.ForeColor = Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
-            dataGridView5.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridView5.ColumnHeadersHeight = 150;
-            dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = Color.White;
-            dataGridViewCellStyle10.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle10.ForeColor = Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle10.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle10.WrapMode = DataGridViewTriState.False;
-            dataGridView5.DefaultCellStyle = dataGridViewCellStyle10;
-            dataGridView5.Dock = DockStyle.Fill;
-            dataGridView5.EnableHeadersVisualStyles = false;
-            dataGridView5.GridColor = Color.LightGray;
-            dataGridView5.Location = new Point(0, 48);
-            dataGridView5.Margin = new Padding(3, 5, 3, 5);
-            dataGridView5.Name = "dataGridView5";
-            dataGridView5.RowHeadersVisible = false;
-            dataGridView5.Size = new Size(768, 607);
-            dataGridView5.TabIndex = 4;
-            dataGridView5.CellBeginEdit += dataGridView1_CellBeginEdit;
-            dataGridView5.CellEndEdit += dataGridView1_CellEndEdit;
-            dataGridView5.CellPainting += dataGridView1_CellPainting;
-            dataGridView5.CellValidating += dataGridView1_CellValidating;
+            dataGridView_Juge4.BackgroundColor = Color.White;
+            dataGridView_Juge4.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle29.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = Color.LightGray;
+            dataGridViewCellStyle29.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle29.ForeColor = Color.Black;
+            dataGridViewCellStyle29.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle29.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle29.WrapMode = DataGridViewTriState.True;
+            dataGridView_Juge4.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            dataGridView_Juge4.ColumnHeadersHeight = 150;
+            dataGridViewCellStyle30.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle30.BackColor = Color.White;
+            dataGridViewCellStyle30.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle30.ForeColor = Color.Black;
+            dataGridViewCellStyle30.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle30.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle30.WrapMode = DataGridViewTriState.False;
+            dataGridView_Juge4.DefaultCellStyle = dataGridViewCellStyle30;
+            dataGridView_Juge4.Dock = DockStyle.Fill;
+            dataGridView_Juge4.EnableHeadersVisualStyles = false;
+            dataGridView_Juge4.GridColor = Color.LightGray;
+            dataGridView_Juge4.Location = new Point(0, 48);
+            dataGridView_Juge4.Margin = new Padding(3, 5, 3, 5);
+            dataGridView_Juge4.Name = "dataGridView_Juge4";
+            dataGridView_Juge4.RowHeadersVisible = false;
+            dataGridView_Juge4.Size = new Size(768, 607);
+            dataGridView_Juge4.TabIndex = 4;
+            dataGridView_Juge4.CellBeginEdit += dataGridView1_CellBeginEdit;
+            dataGridView_Juge4.CellEndEdit += dataGridView1_CellEndEdit;
+            dataGridView_Juge4.CellPainting += dataGridView1_CellPainting;
+            dataGridView_Juge4.CellValidating += dataGridView1_CellValidating;
             // 
             // panel13
             // 
@@ -712,7 +712,7 @@
             // 
             // panel20
             // 
-            panel20.Controls.Add(dataGridView10);
+            panel20.Controls.Add(dataGridView_Baki);
             panel20.Controls.Add(panel26);
             panel20.Dock = DockStyle.Fill;
             panel20.Location = new Point(469, 523);
@@ -721,36 +721,36 @@
             panel20.Size = new Size(536, 549);
             panel20.TabIndex = 4;
             // 
-            // dataGridView10
+            // dataGridView_Baki
             // 
-            dataGridView10.BackgroundColor = Color.White;
-            dataGridView10.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = Color.LightGray;
-            dataGridViewCellStyle11.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle11.ForeColor = Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = DataGridViewTriState.True;
-            dataGridView10.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            dataGridView10.ColumnHeadersHeight = 150;
-            dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = Color.White;
-            dataGridViewCellStyle12.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle12.ForeColor = Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle12.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle12.WrapMode = DataGridViewTriState.False;
-            dataGridView10.DefaultCellStyle = dataGridViewCellStyle12;
-            dataGridView10.Dock = DockStyle.Fill;
-            dataGridView10.EnableHeadersVisualStyles = false;
-            dataGridView10.GridColor = Color.LightGray;
-            dataGridView10.Location = new Point(0, 87);
-            dataGridView10.Margin = new Padding(3, 5, 3, 5);
-            dataGridView10.Name = "dataGridView10";
-            dataGridView10.RowHeadersVisible = false;
-            dataGridView10.Size = new Size(536, 462);
-            dataGridView10.TabIndex = 4;
+            dataGridView_Baki.BackgroundColor = Color.White;
+            dataGridView_Baki.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle31.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle31.BackColor = Color.LightGray;
+            dataGridViewCellStyle31.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle31.ForeColor = Color.Black;
+            dataGridViewCellStyle31.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle31.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle31.WrapMode = DataGridViewTriState.True;
+            dataGridView_Baki.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle31;
+            dataGridView_Baki.ColumnHeadersHeight = 150;
+            dataGridViewCellStyle32.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle32.BackColor = Color.White;
+            dataGridViewCellStyle32.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle32.ForeColor = Color.Black;
+            dataGridViewCellStyle32.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle32.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle32.WrapMode = DataGridViewTriState.False;
+            dataGridView_Baki.DefaultCellStyle = dataGridViewCellStyle32;
+            dataGridView_Baki.Dock = DockStyle.Fill;
+            dataGridView_Baki.EnableHeadersVisualStyles = false;
+            dataGridView_Baki.GridColor = Color.LightGray;
+            dataGridView_Baki.Location = new Point(0, 87);
+            dataGridView_Baki.Margin = new Padding(3, 5, 3, 5);
+            dataGridView_Baki.Name = "dataGridView_Baki";
+            dataGridView_Baki.RowHeadersVisible = false;
+            dataGridView_Baki.Size = new Size(536, 462);
+            dataGridView_Baki.TabIndex = 4;
             // 
             // panel26
             // 
@@ -776,7 +776,7 @@
             // 
             // panel19
             // 
-            panel19.Controls.Add(dataGridView9);
+            panel19.Controls.Add(dataGridView_Morafea);
             panel19.Controls.Add(panel25);
             panel19.Dock = DockStyle.Fill;
             panel19.Location = new Point(1011, 523);
@@ -785,36 +785,36 @@
             panel19.Size = new Size(534, 549);
             panel19.TabIndex = 3;
             // 
-            // dataGridView9
+            // dataGridView_Morafea
             // 
-            dataGridView9.BackgroundColor = Color.White;
-            dataGridView9.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = Color.LightGray;
-            dataGridViewCellStyle13.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle13.ForeColor = Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.True;
-            dataGridView9.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
-            dataGridView9.ColumnHeadersHeight = 150;
-            dataGridViewCellStyle14.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = Color.White;
-            dataGridViewCellStyle14.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle14.ForeColor = Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle14.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle14.WrapMode = DataGridViewTriState.False;
-            dataGridView9.DefaultCellStyle = dataGridViewCellStyle14;
-            dataGridView9.Dock = DockStyle.Fill;
-            dataGridView9.EnableHeadersVisualStyles = false;
-            dataGridView9.GridColor = Color.LightGray;
-            dataGridView9.Location = new Point(0, 87);
-            dataGridView9.Margin = new Padding(3, 5, 3, 5);
-            dataGridView9.Name = "dataGridView9";
-            dataGridView9.RowHeadersVisible = false;
-            dataGridView9.Size = new Size(534, 462);
-            dataGridView9.TabIndex = 4;
+            dataGridView_Morafea.BackgroundColor = Color.White;
+            dataGridView_Morafea.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle33.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = Color.LightGray;
+            dataGridViewCellStyle33.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle33.ForeColor = Color.Black;
+            dataGridViewCellStyle33.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle33.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle33.WrapMode = DataGridViewTriState.True;
+            dataGridView_Morafea.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridView_Morafea.ColumnHeadersHeight = 150;
+            dataGridViewCellStyle34.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = Color.White;
+            dataGridViewCellStyle34.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle34.ForeColor = Color.Black;
+            dataGridViewCellStyle34.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle34.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle34.WrapMode = DataGridViewTriState.False;
+            dataGridView_Morafea.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridView_Morafea.Dock = DockStyle.Fill;
+            dataGridView_Morafea.EnableHeadersVisualStyles = false;
+            dataGridView_Morafea.GridColor = Color.LightGray;
+            dataGridView_Morafea.Location = new Point(0, 87);
+            dataGridView_Morafea.Margin = new Padding(3, 5, 3, 5);
+            dataGridView_Morafea.Name = "dataGridView_Morafea";
+            dataGridView_Morafea.RowHeadersVisible = false;
+            dataGridView_Morafea.Size = new Size(534, 462);
+            dataGridView_Morafea.TabIndex = 4;
             // 
             // panel25
             // 
@@ -840,7 +840,7 @@
             // 
             // panel18
             // 
-            panel18.Controls.Add(dataGridView8);
+            panel18.Controls.Add(dataGridView_MadAgal);
             panel18.Controls.Add(panel24);
             panel18.Dock = DockStyle.Fill;
             panel18.Location = new Point(3, 5);
@@ -849,36 +849,36 @@
             panel18.Size = new Size(460, 508);
             panel18.TabIndex = 2;
             // 
-            // dataGridView8
+            // dataGridView_MadAgal
             // 
-            dataGridView8.BackgroundColor = Color.White;
-            dataGridView8.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle15.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = Color.LightGray;
-            dataGridViewCellStyle15.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle15.ForeColor = Color.Black;
-            dataGridViewCellStyle15.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = DataGridViewTriState.True;
-            dataGridView8.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
-            dataGridView8.ColumnHeadersHeight = 150;
-            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = Color.White;
-            dataGridViewCellStyle16.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle16.ForeColor = Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle16.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.False;
-            dataGridView8.DefaultCellStyle = dataGridViewCellStyle16;
-            dataGridView8.Dock = DockStyle.Fill;
-            dataGridView8.EnableHeadersVisualStyles = false;
-            dataGridView8.GridColor = Color.LightGray;
-            dataGridView8.Location = new Point(0, 87);
-            dataGridView8.Margin = new Padding(3, 5, 3, 5);
-            dataGridView8.Name = "dataGridView8";
-            dataGridView8.RowHeadersVisible = false;
-            dataGridView8.Size = new Size(460, 421);
-            dataGridView8.TabIndex = 4;
+            dataGridView_MadAgal.BackgroundColor = Color.White;
+            dataGridView_MadAgal.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle35.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = Color.LightGray;
+            dataGridViewCellStyle35.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle35.ForeColor = Color.Black;
+            dataGridViewCellStyle35.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = DataGridViewTriState.True;
+            dataGridView_MadAgal.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
+            dataGridView_MadAgal.ColumnHeadersHeight = 150;
+            dataGridViewCellStyle36.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = Color.White;
+            dataGridViewCellStyle36.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle36.ForeColor = Color.Black;
+            dataGridViewCellStyle36.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle36.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle36.WrapMode = DataGridViewTriState.False;
+            dataGridView_MadAgal.DefaultCellStyle = dataGridViewCellStyle36;
+            dataGridView_MadAgal.Dock = DockStyle.Fill;
+            dataGridView_MadAgal.EnableHeadersVisualStyles = false;
+            dataGridView_MadAgal.GridColor = Color.LightGray;
+            dataGridView_MadAgal.Location = new Point(0, 87);
+            dataGridView_MadAgal.Margin = new Padding(3, 5, 3, 5);
+            dataGridView_MadAgal.Name = "dataGridView_MadAgal";
+            dataGridView_MadAgal.RowHeadersVisible = false;
+            dataGridView_MadAgal.Size = new Size(460, 421);
+            dataGridView_MadAgal.TabIndex = 4;
             // 
             // panel24
             // 
@@ -904,7 +904,7 @@
             // 
             // panel17
             // 
-            panel17.Controls.Add(dataGridView7);
+            panel17.Controls.Add(dataGridView_Mahgouz);
             panel17.Controls.Add(panel23);
             panel17.Dock = DockStyle.Fill;
             panel17.Location = new Point(469, 5);
@@ -913,36 +913,36 @@
             panel17.Size = new Size(536, 508);
             panel17.TabIndex = 1;
             // 
-            // dataGridView7
+            // dataGridView_Mahgouz
             // 
-            dataGridView7.BackgroundColor = Color.White;
-            dataGridView7.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = Color.LightGray;
-            dataGridViewCellStyle17.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle17.ForeColor = Color.Black;
-            dataGridViewCellStyle17.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.True;
-            dataGridView7.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            dataGridView7.ColumnHeadersHeight = 150;
-            dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = Color.White;
-            dataGridViewCellStyle18.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle18.ForeColor = Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle18.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle18.WrapMode = DataGridViewTriState.False;
-            dataGridView7.DefaultCellStyle = dataGridViewCellStyle18;
-            dataGridView7.Dock = DockStyle.Fill;
-            dataGridView7.EnableHeadersVisualStyles = false;
-            dataGridView7.GridColor = Color.LightGray;
-            dataGridView7.Location = new Point(0, 87);
-            dataGridView7.Margin = new Padding(3, 5, 3, 5);
-            dataGridView7.Name = "dataGridView7";
-            dataGridView7.RowHeadersVisible = false;
-            dataGridView7.Size = new Size(536, 421);
-            dataGridView7.TabIndex = 4;
+            dataGridView_Mahgouz.BackgroundColor = Color.White;
+            dataGridView_Mahgouz.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle37.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = Color.LightGray;
+            dataGridViewCellStyle37.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle37.ForeColor = Color.Black;
+            dataGridViewCellStyle37.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = DataGridViewTriState.True;
+            dataGridView_Mahgouz.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            dataGridView_Mahgouz.ColumnHeadersHeight = 150;
+            dataGridViewCellStyle38.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = Color.White;
+            dataGridViewCellStyle38.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle38.ForeColor = Color.Black;
+            dataGridViewCellStyle38.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle38.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle38.WrapMode = DataGridViewTriState.False;
+            dataGridView_Mahgouz.DefaultCellStyle = dataGridViewCellStyle38;
+            dataGridView_Mahgouz.Dock = DockStyle.Fill;
+            dataGridView_Mahgouz.EnableHeadersVisualStyles = false;
+            dataGridView_Mahgouz.GridColor = Color.LightGray;
+            dataGridView_Mahgouz.Location = new Point(0, 87);
+            dataGridView_Mahgouz.Margin = new Padding(3, 5, 3, 5);
+            dataGridView_Mahgouz.Name = "dataGridView_Mahgouz";
+            dataGridView_Mahgouz.RowHeadersVisible = false;
+            dataGridView_Mahgouz.Size = new Size(536, 421);
+            dataGridView_Mahgouz.TabIndex = 4;
             // 
             // panel23
             // 
@@ -968,7 +968,7 @@
             // 
             // panel16
             // 
-            panel16.Controls.Add(dataGridView6);
+            panel16.Controls.Add(dataGridView_Ethbat);
             panel16.Controls.Add(panel22);
             panel16.Dock = DockStyle.Fill;
             panel16.Location = new Point(1011, 5);
@@ -977,36 +977,36 @@
             panel16.Size = new Size(534, 508);
             panel16.TabIndex = 0;
             // 
-            // dataGridView6
+            // dataGridView_Ethbat
             // 
-            dataGridView6.BackgroundColor = Color.White;
-            dataGridView6.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = Color.LightGray;
-            dataGridViewCellStyle19.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle19.ForeColor = Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.True;
-            dataGridView6.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            dataGridView6.ColumnHeadersHeight = 150;
-            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = Color.White;
-            dataGridViewCellStyle20.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle20.ForeColor = Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = Color.LightBlue;
-            dataGridViewCellStyle20.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle20.WrapMode = DataGridViewTriState.False;
-            dataGridView6.DefaultCellStyle = dataGridViewCellStyle20;
-            dataGridView6.Dock = DockStyle.Fill;
-            dataGridView6.EnableHeadersVisualStyles = false;
-            dataGridView6.GridColor = Color.LightGray;
-            dataGridView6.Location = new Point(0, 87);
-            dataGridView6.Margin = new Padding(3, 5, 3, 5);
-            dataGridView6.Name = "dataGridView6";
-            dataGridView6.RowHeadersVisible = false;
-            dataGridView6.Size = new Size(534, 421);
-            dataGridView6.TabIndex = 4;
+            dataGridView_Ethbat.BackgroundColor = Color.White;
+            dataGridView_Ethbat.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle39.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = Color.LightGray;
+            dataGridViewCellStyle39.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle39.ForeColor = Color.Black;
+            dataGridViewCellStyle39.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = DataGridViewTriState.True;
+            dataGridView_Ethbat.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            dataGridView_Ethbat.ColumnHeadersHeight = 150;
+            dataGridViewCellStyle40.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = Color.White;
+            dataGridViewCellStyle40.Font = new Font("Cairo", 8.999999F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle40.ForeColor = Color.Black;
+            dataGridViewCellStyle40.SelectionBackColor = Color.LightBlue;
+            dataGridViewCellStyle40.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle40.WrapMode = DataGridViewTriState.False;
+            dataGridView_Ethbat.DefaultCellStyle = dataGridViewCellStyle40;
+            dataGridView_Ethbat.Dock = DockStyle.Fill;
+            dataGridView_Ethbat.EnableHeadersVisualStyles = false;
+            dataGridView_Ethbat.GridColor = Color.LightGray;
+            dataGridView_Ethbat.Location = new Point(0, 87);
+            dataGridView_Ethbat.Margin = new Padding(3, 5, 3, 5);
+            dataGridView_Ethbat.Name = "dataGridView_Ethbat";
+            dataGridView_Ethbat.RowHeadersVisible = false;
+            dataGridView_Ethbat.Size = new Size(534, 421);
+            dataGridView_Ethbat.TabIndex = 4;
             // 
             // panel22
             // 
@@ -1069,7 +1069,7 @@
             RightToLeft = RightToLeft.Yes;
             Size = new Size(1548, 3498);
             Load += AddStatisticsUserControl_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_StatisticInformation).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
@@ -1077,50 +1077,50 @@
             panel4.ResumeLayout(false);
             tableLayoutPanel1.ResumeLayout(false);
             panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Juge1).EndInit();
             panel7.ResumeLayout(false);
             panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Juge2).EndInit();
             panel9.ResumeLayout(false);
             panel10.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Juge3).EndInit();
             panel11.ResumeLayout(false);
             panel12.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Juge4).EndInit();
             panel13.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel14.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             panel20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Baki).EndInit();
             panel26.ResumeLayout(false);
             panel19.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Morafea).EndInit();
             panel25.ResumeLayout(false);
             panel18.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView8).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_MadAgal).EndInit();
             panel24.ResumeLayout(false);
             panel17.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView7).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Mahgouz).EndInit();
             panel23.ResumeLayout(false);
             panel16.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView6).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView_Ethbat).EndInit();
             panel22.ResumeLayout(false);
             panel15.ResumeLayout(false);
             ResumeLayout(false);
         }
 
         #endregion
-        private DataGridView dataGridView1;
+        private DataGridView dataGridView_StatisticInformation;
         private Panel panel1;
         private Panel panel2;
         private Panel panel3;
         private Panel panel4;
         private TableLayoutPanel tableLayoutPanel1;
-        private DataGridView dataGridView2;
-        private DataGridView dataGridView5;
-        private DataGridView dataGridView4;
-        private DataGridView dataGridView3;
+        private DataGridView dataGridView_Juge1;
+        private DataGridView dataGridView_Juge4;
+        private DataGridView dataGridView_Juge3;
+        private DataGridView dataGridView_Juge2;
         private Panel panel5;
         private Panel panel6;
         private Panel panel7;
@@ -1145,19 +1145,19 @@
         private Panel panel17;
         private Panel panel16;
         private Label label7;
-        private DataGridView dataGridView10;
+        private DataGridView dataGridView_Baki;
         private Panel panel26;
         private Label label12;
-        private DataGridView dataGridView9;
+        private DataGridView dataGridView_Morafea;
         private Panel panel25;
         private Label label11;
-        private DataGridView dataGridView8;
+        private DataGridView dataGridView_MadAgal;
         private Panel panel24;
         private Label label10;
-        private DataGridView dataGridView7;
+        private DataGridView dataGridView_Mahgouz;
         private Panel panel23;
         private Label label9;
-        private DataGridView dataGridView6;
+        private DataGridView dataGridView_Ethbat;
         private Panel panel22;
         private Label label8;
         private Button button1;
