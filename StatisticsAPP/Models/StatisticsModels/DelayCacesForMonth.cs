@@ -19,6 +19,9 @@ namespace StatisticsAPP.Models.StatisticsModels
         public int Year { get; set; }
         public int IdCircleStatistics { get; set; }
         public int IdCircleDay { get; set; }
+        public int IdCaseYear { get; set; }
+        [ForeignKey("IdCaseYear")]
+        public CaseYear? CaseYear { get; set; }
         public DelayCacesForMonthType? IdDelayCacesForMonthType { get; set; }
 
         [ForeignKey("IdCircleDay")]

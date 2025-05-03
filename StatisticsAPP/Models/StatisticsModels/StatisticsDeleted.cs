@@ -1,4 +1,5 @@
-﻿using StatisticsAPP.Models.StatisticsModels;
+﻿using StatisticsAPP.Models.DecisionModels;
+using StatisticsAPP.Models.JudgeModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -6,19 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StatisticsAPP.Models.InterCasesModels
+namespace StatisticsAPP.Models.StatisticsModels
 {
-    public class Shortening :MainClass
+    public class StatisticsDeleted : MainClass
     {
         public int Id { get; set; }
+        public int IdCircleStatistics { get; set; }
+
         public int Count { get; set; }
-        public int Month { get; set; }
-        public int Year { get; set; }
         public int CaseYearId { get; set; }
+       
+        [ForeignKey("IdCircleStatistics")]
+        public CircleStatistics? CircleStatistics { get; set; }
+        
         [ForeignKey("CaseYearId")]
         public CaseYear? CaseYear { get; set; }
-        public int IdCircleStatistics { get; set; }
-        [ForeignKey("IdCircleStatistics")]
-        public CircleStatistics?   CircleStatistics { get; set; }
     }
 }

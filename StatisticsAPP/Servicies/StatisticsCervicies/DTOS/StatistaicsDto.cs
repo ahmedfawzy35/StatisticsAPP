@@ -1,4 +1,5 @@
-﻿using StatisticsAPP.Models.JudgeModels;
+﻿using StatisticsAPP.Models.CircleModels;
+using StatisticsAPP.Models.JudgeModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,9 +15,21 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         public int Year { get; set; }
         [DisplayName("الشهر")]
         public int Month { get; set; }
+        public int IdCircleDay { get; set; }
+        public int IdCircle { get; set; }
+        public int StartCaseYear { get; set; }
+        public int EndCaseYear { get; set; }
+        public int CountCaseYear { get; set; }
+        public CircleCategory? CircleCategory { get; set; }
+        public CircleType? CircleType { get; set; }
+        public CircleMasterType? CircleMasterType { get; set; }
         public List<StatistaicsDto>? StaticsForYear { get; set; }
         public List<Judge>?   Judges { get; set; }
-      
+       
+
+
+
+
     }
     public class StatistaicsDto
     {
@@ -26,15 +39,15 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         public int Sapek { get; set; }
         [DisplayName("مجدد من الشطب")]
         public int MogaddMenShatb { get; set; }
-        [DisplayName("من الوقف لحين الفصل")]
+        [DisplayName("معجل من الوقف لحين الفصل في")]
         public int moagalMenAlwakfLhinAlfasl { get; set; }
-        [DisplayName("من الوقف الجزائي")]
+        [DisplayName("معجل من الوقف الجزائي")]
         public int moagalMenAlwakfGzaey { get; set; }
-        [DisplayName("من الوقف التعليقي")]
+        [DisplayName("معجل من الوقف التعليقي")]
         public int moagalMenAlwakfTaeliky { get; set; }
-        [DisplayName("من الوقف الاتفاقي")]
+        [DisplayName("معجل من الوقف الاتفاقي")]
         public int moagalMenAlwakfItfaky { get; set; }
-        [DisplayName("من الانقطاع")]
+        [DisplayName("معجل من الانقطاع")]
         public int moagalMenAlEnktae { get; set; }
         [DisplayName("معاد من الاستئناف")]
         public int MoadMenAlEstenf { get; set; }
@@ -46,11 +59,11 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         public int EhalaForm { get; set; }
         [DisplayName("احالة الى الدائرة")]
         public int ehalaTo { get; set; }
-        [DisplayName("الجديد")]
+        [DisplayName("جديد")]
         public int newCases { get; set; }
         [DisplayName("جملة المقدم")]
         public int TotalMokadam => Sapek + MogaddMenShatb + moagalMenAlwakfLhinAlfasl + moagalMenAlwakfGzaey + moagalMenAlwakfTaeliky + moagalMenAlwakfItfaky + moagalMenAlEnktae + MoadMenAlEstenf + TaksirCount + ehalaTo + newCases - EhalaForm;
-        [DisplayName("المشطب")]
+        [DisplayName("المشطوب")]
         public int Mashtob { get; set; }
         [DisplayName("شكلي")]
         public int Shakly { get; set; }
@@ -69,11 +82,11 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         [DisplayName("تحقيق")]
         public int Tahkik { get; set; }
         [DisplayName("استجواب")]
-        public int Estgeap { get; set; }
+        public int Estgwap { get; set; }
         [DisplayName("حلف يمين")]
         public int HelfYamin { get; set; }
         [DisplayName("جملة الاثبات")]
-        public int TotalEthbat => Farey + Khapir + BackToKhapir + Tahkik + Estgeap + HelfYamin;
+        public int TotalEthbat =>  Khapir + BackToKhapir + Tahkik + Estgwap + HelfYamin;
         [DisplayName("وقف جزائي")]
         public int WakfGazaey { get; set; }
         [DisplayName("وقف تعليقي")]
@@ -85,16 +98,16 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         [DisplayName("انقطاع سير الخصومة")]
         public int EnktaeSirAlKhsoma { get; set; }
         [DisplayName("جملة المحكوم فيه")]
-        public int TotaMahkomFih => TotalKatey + TotalEthbat + TotalWakf + EnktaeSirAlKhsoma;
-        [DisplayName("محجوز للحكم")]
+        public int TotaMahkomFih => TotalKatey + TotalEthbat + TotalWakf + EnktaeSirAlKhsoma + Farey;
+        [DisplayName("محجوز للحكم خارج الشهر")]
         public int MahguzLelHokm { get; set; }
-        [DisplayName("مد اجل")]
+        [DisplayName("مد اجل خارج الشهر")]
         public int MadAgal { get; set; }
-        [DisplayName("اعادة للمرافعة")]
+        [DisplayName("اعادة للمرافعة خارج الشهر")]
         public int EadaLelMorafea { get; set; }
-        [DisplayName("مؤجل للتقرير")]
+        [DisplayName("المؤجل لورود التقرير")]
         public int MoeagalLelTkrir { get; set; }
-        [DisplayName("اخرى")]
+        [DisplayName("أخرى")]
         public int Okhrah { get; set; }
         [DisplayName("جملة المؤجل")]
 

@@ -213,12 +213,60 @@ namespace StatisticsAPP.Utility
            public const string moagalMenAlwakfGzaey = "معجل من الوقف الجزائي";
            public const string moagalMenAlwakfTaeliky = "معجل من الوقف التعليقي";
            public const string moagalMenAlwakfItfaky = "معجل من الوقف الاتفاقي";
-           public const string moagalMenAlEnktae = "معجل من الانقضاء";
+           public const string moagalMenAlEnktae = "معجل من الانقطاع";
            public const string MoadMenAlEstenf = "معاد من الاستئناف";
            public const string EhalaForm = "احالة من الدائرة";
            public const string ehalaTo = "احالة الى الدائرة";
            public const string newCases = "جديد";
           
+
+        }
+        public static class DecisionKateyTypes
+        {
+           
+            public const string Shakly = "شكلي";
+            public const string Mawdoey = "موضوعي";
+            public const string Solh = "صلح";
+          
+        } 
+        public static class DecisionFareyTypes
+        {
+           
+            public const string Farey = "فرعي";
+           
+          
+        }
+        public static class DecisionEnktaeSirAlKhsomaTypes
+        {
+           
+            public const string EnktaeSirAlKhsoma = "انقطاع سير الخصومه";
+           
+          
+        }
+        public static class DecisionWakftTypes
+        {
+            public const string WakfGazaey = "وقف جزائي";
+            public const string WakfTaeliky = "وقف تعليقي";
+            public const string WakfEtfaky = "وقف اتفاقي";
+           
+        }
+        public static class DecisionEthbatTypes
+        {
+            public const string Khapir = "ندب خبير";
+            public const string BackToKhapir = "إعادة للخبير";
+            public const string Tahkik = "تحقيق";
+            public const string Estgwap = "استجواب";
+            public const string HelfYamin = "حلف يمين";
+           
+        }
+        public static class DelayCacesypes
+        {
+            public const string MahguzLelHokm = "محجوز للحكم خارج الشهر";
+            public const string MadAgal = "مد اجل خارج الشهر";
+            public const string EadaLelMorafea = "اعادة للمرافعة خارج الشهر";
+            public const string MoeagalLelTkrir = "المؤجل لورود التقرير";
+            public const string Okhrah = "أخرى";
+
 
         }
     }

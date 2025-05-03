@@ -81,6 +81,7 @@ namespace StatisticsAPP.Data
         public DbSet<StatisticsDelayCases> StatisticsDelayCases { get; set; } = default!;
         public DbSet<DelayCacesForMonth> DelayCacesForMonths { get; set; } = default!;
         public DbSet<DelayCacesForMonthType> delayCacesForMonthTypes { get; set; } = default!;
+        public DbSet<StatisticsDeleted> StatisticsDeleteds { get; set; } = default!;
         public DbSet<CaseYear> CaseYears { get; set; } = default!;
 
         #endregion
