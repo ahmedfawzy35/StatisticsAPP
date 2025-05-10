@@ -15,6 +15,7 @@ namespace StatisticsAPP.Models.CircleModels
         public int Id { get; set; }
         [Required]
         public  string? Name { get; set; }
+        public  bool  Enable { get; set; }
         [Required]
         public  string? Day { get; set; }
 

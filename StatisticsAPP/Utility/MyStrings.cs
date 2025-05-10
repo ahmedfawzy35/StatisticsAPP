@@ -228,13 +228,52 @@ namespace StatisticsAPP.Utility
             public const string Mawdoey = "موضوعي";
             public const string Solh = "صلح";
           
+        }
+        public static class DecisionKatey_ShaklyTypes
+        {
+           
+            public const string AdmKbol = "عدم قبول";
+            public const string AdmEjhtsas = "عدم اختصاص";
+            public const string SkotAlHakFiRAFEAlDaewa = "سقوط الحق في رفع الدعوى";
+            public const string SkotAlKhsomaWEnkdaeha = "سقوط الخصومة وانقضائها";
+            public const string TarkAlKhsoma = "ترك الخصومة";
+            public const string EnedamAlKhsoma = "انعدام الخصومة";
+            public const string KanLamTkon = "كأن لم تكن";
+          
         } 
+        public static class DecisionKatey_MawdoeyTypes
+        {
+           
+            public const string Kbol = "قبول";
+            public const string Rafd = "رفض";
+            public const string RafdBeHalatha = "رفض بحالتها";
+            public const string AdamGwazLeSabekatAlFaslFiha = "عدم جواز لسابقة الفصل فيها";
+            public const string EnkdaeAlhakBeModiAlModa = "انقضاء الحق بمضي المدة";
+            public const string Solh = "صلح";
+          
+        } 
+
+
         public static class DecisionFareyTypes
         {
            
             public const string Farey = "فرعي";
            
           
+        }
+        public static class DecisionMadAgalTypes
+        {
+
+            public const string MadAgal = "مد أجل";
+
+
+        }
+        public static class DecisionEadaLeMorafeaTypes
+        {
+
+            public const string EadaLelMorafea = "إعادة للمرافعة";
+
+
         }
         public static class DecisionEnktaeSirAlKhsomaTypes
         {

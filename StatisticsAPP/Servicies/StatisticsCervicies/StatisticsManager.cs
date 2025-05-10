@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using StatisticsAPP.Data;
 using StatisticsAPP.Models.CircleModels;
+using StatisticsAPP.Models.DecisionModels;
 using StatisticsAPP.Models.JudgeModels;
 using StatisticsAPP.Models.StatisticsModels;
 using StatisticsAPP.Servicies.StatisticsCervicies.DTOS;
@@ -85,27 +86,65 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
 
             CircleDayStatistaicsDto circleDay = new CircleDayStatistaicsDto();
 
-            circleDay.Year = circleStatistics.Year;
-            circleDay.Month = circleStatistics.Month;
-            circleDay.Judges = await GetCircleJugesAsync(circleId, new DateTime(year, month, 30));
+           
             var StaticsForYears = new List<StatistaicsDto>();
-
+            var circl = await _context.Circles
+                .Include(x => x.CircleCategory!)
+                .FirstOrDefaultAsync(x => x.Id == circleId);
+            var mycircleday = await _context.CircleDays
+                .Include(x => x.CircleType!)
+                .ThenInclude(x => x.CircleMasterType!)
+                .FirstOrDefaultAsync(x => x.Id == circledayId);
 
             foreach (var caseYear in caseYears)
             {
                 StaticsForYears.Add(setStatistaicsDto(circleStatistics, caseYear , sapek));
             }
+            circleDay.Year = circleStatistics.Year;
+            circleDay.Month = circleStatistics.Month;
+            circleDay.IdCircleDay = circleStatistics.IdCircleDay;
+            circleDay.IdCircle = circleStatistics.CircleDay!.CircleId;
+            circleDay.StartCaseYear = circleStatistics.StartCaseYear;
+            circleDay.EndCaseYear = circleStatistics.EndCaseYear;
+            circleDay.CountCaseYear = caseYears.Count();
+            circleDay.CircleCategory = circl!.CircleCategory;
+            circleDay.CircleType = mycircleday!.CircleType;
+            circleDay.CircleMasterType = mycircleday.CircleType!.CircleMasterType!;
 
             circleDay.StaticsForYear = StaticsForYears;
+            circleDay.Judges = await GetCircleJugesAsync(circleId, new DateTime(year, month, 30));
+            foreach (var judge in circleDay.Judges)
+            {
+                if (judge.Rate == 1)
+                {
+                    circleDay.JudgeDecision1 = setJudgesDeccisionsDto(1, circleStatistics.StatisticsDecisions!.ToList()!, caseYears.ToList());
 
+                }
+                else if (judge.Rate == 2)
+                {
+                    circleDay.JudgeDecision2 = setJudgesDeccisionsDto(2, circleStatistics.StatisticsDecisions!.ToList()!, caseYears.ToList());
+                }
+                else if (judge.Rate == 3)
+                {
+                    circleDay.JudgeDecision3 = setJudgesDeccisionsDto(3, circleStatistics.StatisticsDecisions!.ToList()!, caseYears.ToList());
+                }
+                else if (judge.Rate == 4)
+                {
+                    circleDay.JudgeDecision4 = setJudgesDeccisionsDto(4, circleStatistics.StatisticsDecisions!.ToList()!, caseYears.ToList());
+                }
+            }
 
             return circleDay;
         }
-        public async Task<List<Judge>> GetCircleJugesAsync(int IdCircle, DateTime date)
+        public async Task<List<CircleJudge>> GetCircleJugesAsync(int IdCircle, DateTime date)
         {
 
-            // TO DO
-            return new List<Judge>();
+            var hudjes =await _context.CircleJudges
+                .Include(x => x.Judge!)
+                .Include(x => x.Circle!)
+                .Where(x => x.Circle!.Id == IdCircle && x.DateStart <= date.Date && (x.DateEnd == null || x.DateEnd >= date.Date))
+                .ToListAsync();
+            return hudjes.OrderBy(x=>x.Rate).ToList();
         }
         private StatistaicsDto setStatistaicsDto(CircleStatistics circleStatistics, CaseYear caseYear ,List< DelayCacesForMonth> sapek)
         {
@@ -155,5 +194,49 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
             return statistaicsDto;
 
         }
+        public  List<JudgesDeccisionDto> setJudgesDeccisionsDto(int JudgeId , List<StatisticsDecisions> decisions , List<CaseYear> years)
+        {
+            var judgeDecisions = new List<JudgesDeccisionDto>();
+
+            foreach (var year in years)
+            {
+                var judgeDecision = new JudgesDeccisionDto();
+                judgeDecision.Year = year.Year;
+                judgeDecision.AdmKbol = decisions.Where(x=>x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_ShaklyTypes.AdmKbol).Sum(x => x.Count);
+                judgeDecision.AdmEjhtsas = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_ShaklyTypes.AdmEjhtsas).Sum(x => x.Count);
+                judgeDecision.SkotAlHakFiRAFEAlDaewa = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_ShaklyTypes.SkotAlHakFiRAFEAlDaewa).Sum(x => x.Count);
+                judgeDecision.SkotAlKhsomaWEnkdaeha = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_ShaklyTypes.SkotAlKhsomaWEnkdaeha).Sum(x => x.Count);
+                judgeDecision.TarkAlKhsoma = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_ShaklyTypes.TarkAlKhsoma).Sum(x => x.Count);
+                judgeDecision.EnedamAlKhsoma = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_ShaklyTypes.EnedamAlKhsoma).Sum(x => x.Count);
+                judgeDecision.KanLamTkon = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_ShaklyTypes.KanLamTkon).Sum(x => x.Count);
+                judgeDecision.Kbol = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_MawdoeyTypes.Kbol).Sum(x => x.Count);
+                judgeDecision.Rafd = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_MawdoeyTypes.Rafd).Sum(x => x.Count);
+                judgeDecision.RafdBeHalatha = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_MawdoeyTypes.RafdBeHalatha).Sum(x => x.Count);
+                judgeDecision.AdamGwazLeSabekatAlFaslFiha = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_MawdoeyTypes.AdamGwazLeSabekatAlFaslFiha).Sum(x => x.Count);
+                judgeDecision.EnkdaeAlhakBeModiAlModa = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_MawdoeyTypes.EnkdaeAlhakBeModiAlModa).Sum(x => x.Count);
+                judgeDecision.Solh = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionKatey_MawdoeyTypes.Solh).Sum(x => x.Count);
+                judgeDecision.Farey = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionFareyTypes.Farey).Sum(x => x.Count);
+                judgeDecision.NadbKhabir = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionEthbatTypes.Khapir).Sum(x => x.Count);
+                judgeDecision.BackTOKhabir = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionEthbatTypes.BackToKhapir).Sum(x => x.Count);
+                judgeDecision.Tahkik = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionEthbatTypes.Tahkik).Sum(x => x.Count);
+                judgeDecision.Estgwab = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionEthbatTypes.Estgwap).Sum(x => x.Count);
+                judgeDecision.HelfYamin = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionEthbatTypes.HelfYamin).Sum(x => x.Count);
+                judgeDecision.WakfGazaey = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionWakftTypes.WakfGazaey).Sum(x => x.Count);
+                judgeDecision.WakfTaeliky = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionWakftTypes.WakfTaeliky).Sum(x => x.Count);
+                judgeDecision.WakfEtifaky = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionWakftTypes.WakfEtfaky).Sum(x => x.Count);
+                judgeDecision.EnktaeSirAlKhsoma = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionEnktaeSirAlKhsomaTypes.EnktaeSirAlKhsoma).Sum(x => x.Count);
+                judgeDecision.MadAgal = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionMadAgalTypes.MadAgal).Sum(x => x.Count);
+                judgeDecision.EadaLelMorafea = decisions.Where(x => x.IdJudge == JudgeId && x.CaseYear!.Year == year.Year && x.Decision!.Name == MyStrings.DecisionEadaLeMorafeaTypes.EadaLelMorafea).Sum(x => x.Count);
+
+                judgeDecisions.Add(judgeDecision);
+            }
+
+
+
+            return  judgeDecisions;
+
+        }
+
+
     }
 }

@@ -20,16 +20,82 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         public int StartCaseYear { get; set; }
         public int EndCaseYear { get; set; }
         public int CountCaseYear { get; set; }
-        public CircleCategory? CircleCategory { get; set; }
-        public CircleType? CircleType { get; set; }
-        public CircleMasterType? CircleMasterType { get; set; }
-        public List<StatistaicsDto>? StaticsForYear { get; set; }
-        public List<Judge>?   Judges { get; set; }
-       
+        public CircleCategory? CircleCategory { get; set; }= new CircleCategory();
+        public CircleType? CircleType { get; set; } = new CircleType();
+        public CircleMasterType? CircleMasterType { get; set; } = new CircleMasterType();
+        public List<StatistaicsDto>? StaticsForYear { get; set; } = new List<StatistaicsDto>();
+        public List<CircleJudge>? Judges { get; set; } = new List<CircleJudge>();
+        public List<JudgesDeccisionDto>?   JudgeDecision1 { get; set; } = new List<JudgesDeccisionDto>();
+        public List<JudgesDeccisionDto>?   JudgeDecision2 { get; set; } = new List<JudgesDeccisionDto>();
+        public List<JudgesDeccisionDto>?   JudgeDecision3 { get; set; } = new List<JudgesDeccisionDto>();
+        public List<JudgesDeccisionDto>?   JudgeDecision4 { get; set; } = new List<JudgesDeccisionDto>();
 
 
 
 
+
+    }
+
+    public class JudgesDeccisionDto
+    {
+        [DisplayName("السنة")]
+        public int Year { get; set; }
+        [DisplayName("عدم قبول")]
+        public int AdmKbol { get; set; }
+        [DisplayName("عدم اختصاص")]
+        public int AdmEjhtsas { get; set; }
+        [DisplayName("سقوط الحق في رفع الدعوى")]
+        public int SkotAlHakFiRAFEAlDaewa { get; set; }
+        [DisplayName("سقوط الخصومة وانقضائها")]
+        public int SkotAlKhsomaWEnkdaeha { get; set; }
+        [DisplayName("ترك الخصومة")]
+        public int TarkAlKhsoma{ get; set; }
+        [DisplayName("انعدام الخصومة")]
+        public int EnedamAlKhsoma { get; set; }
+        [DisplayName("كأن لم تكن")]
+        public int KanLamTkon { get; set; }
+        [DisplayName("قبول")]
+        public int Kbol{ get; set; }
+        [DisplayName("رفض")]
+        public int Rafd{ get; set; }
+        [DisplayName("رفض بحالتها")]
+        public int RafdBeHalatha{ get; set; }
+        [DisplayName("عدم جواز لسابقة الفصل")]
+        public int AdamGwazLeSabekatAlFaslFiha{ get; set; }
+        [DisplayName("انقضاء الحق بمضي المدة (التقادم)")]
+        public int EnkdaeAlhakBeModiAlModa{ get; set; }
+        [DisplayName("صلح")]
+        public int Solh{ get; set; }
+        [DisplayName("اجمالي الاحكام القطعية")]
+        public int TotalKatey => AdmKbol + AdmEjhtsas + SkotAlHakFiRAFEAlDaewa + SkotAlKhsomaWEnkdaeha + TarkAlKhsoma + KanLamTkon + Kbol + Rafd + RafdBeHalatha + AdamGwazLeSabekatAlFaslFiha + EnkdaeAlhakBeModiAlModa + Solh;
+        [DisplayName("أحكام فرعية")]
+        public int Farey { get; set; }
+        [DisplayName("ندب خبير")]
+        public int NadbKhabir { get; set; }
+        [DisplayName("إعادة للخبير")]
+        public int BackTOKhabir { get; set; }
+        [DisplayName("تحقيق")]
+        public int Tahkik { get; set; }
+        [DisplayName("استجواب")]
+        public int Estgwab { get; set; }
+        [DisplayName("حلف يمين")]
+        public int HelfYamin { get; set; }
+        [DisplayName("وقف جزائي")]
+        public int WakfGazaey { get; set; }
+        [DisplayName("وقف تعليقي")]
+        public int WakfTaeliky { get; set; }
+        [DisplayName("وقف اتفاقي")]
+        public int WakfEtifaky { get; set; }
+        [DisplayName("انقطاع سير الخصومة")]
+        public int EnktaeSirAlKhsoma { get; set; }
+        [DisplayName("المجموع")]
+        public int Total => TotalKatey + Farey + NadbKhabir + BackTOKhabir + Tahkik + Estgwab + HelfYamin + WakfGazaey + WakfTaeliky + WakfEtifaky + EnktaeSirAlKhsoma;
+        [DisplayName("مد أجل")]
+        public int MadAgal { get; set; }
+        [DisplayName("إعادة للمرافعة")]
+        public int EadaLelMorafea { get; set; }
+        [DisplayName("القضايا المعادة من الاستئناف")]
+        public int MoeadMenAlEsenaf { get; set; } 
     }
     public class StatistaicsDto
     {
