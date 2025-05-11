@@ -65,7 +65,7 @@ namespace StatisticsAPP.UserControls
             //dataGridView_Juge4.DataSource = StatisticsList;
 
 
-            
+
         }
 
         #region fff
@@ -136,25 +136,25 @@ namespace StatisticsAPP.UserControls
             if (circleday == null)
             {
                 MessageBox.Show("CircleDay is null");
-                
+
                 return;
 
             }
             StatisticsManager manager = new StatisticsManager(new Data.ApplicationDbContext());
-            circleStatistics =await manager.GetStatistaicsDtoAsync(circleday.Id , circle.Id , Config.Month, Config.Year );
+            circleStatistics = await manager.GetStatistaicsDtoAsync(circleday.Id, circle.Id, Config.Month, Config.Year);
             if (circleStatistics == null)
             {
                 MessageBox.Show("لم يتم فتح الاحصائية بعد ");
                 return;
             }
-            string juge1Name = circleStatistics.Judges!.Where(x => x.Rate == 1).FirstOrDefault()!.Judge!.Name!;
-            string juge2Name = circleStatistics.Judges!.Where(x => x.Rate == 2).FirstOrDefault()!.Judge!.Name!;
-            string juge3Name = circleStatistics.Judges!.Where(x => x.Rate == 3).FirstOrDefault()!.Judge!.Name!;
-            string juge4Name = circleStatistics.Judges!.Where(x => x.Rate == 4).FirstOrDefault()!.Judge!.Name!;
+            string juge1Name = circleStatistics.Judges!.Count < 1 ? " ": circleStatistics.Judges!.Where(x => x.Rate == 1).FirstOrDefault()!.Judge!.Name!;
+            string juge2Name = circleStatistics.Judges!.Count < 2 ? " " : circleStatistics.Judges!.Where(x => x.Rate == 2).FirstOrDefault()!.Judge!.Name!;
+            string juge3Name = circleStatistics.Judges!.Count < 3 ? " " : circleStatistics.Judges!.Where(x => x.Rate == 3).FirstOrDefault()!.Judge!.Name!;
+            string juge4Name = circleStatistics.Judges!.Count < 4 ? " " : circleStatistics.Judges!.Where(x => x.Rate == 4).FirstOrDefault()!.Judge!.Name!;
             label_Juge1.Text = $"رئيس الدائرة -  {juge1Name}";
             label_Juge2.Text = $"عضو يمين الدائرة -  {juge2Name}";
             label_Juge3.Text = $"عضو يسار الدائرة -  {juge3Name}";
-            label_Juge4.Text = circleStatistics.Judges!.Count <4 ? " " : $"عضو يسار اليسار الدائرة -  {juge4Name}";
+            label_Juge4.Text = circleStatistics.Judges!.Count < 4 ? " " : $"عضو يسار اليسار الدائرة -  {juge4Name}";
             BindingList<StatistaicsDto> statisticsList = new BindingList<StatistaicsDto>(circleStatistics.StaticsForYear!);
             dataGridView_StatisticInformation.DataSource = statisticsList;
 
@@ -171,19 +171,19 @@ namespace StatisticsAPP.UserControls
             dataGridView_Juge4.DataSource = judgei4;
             dataGridView_Juge4.Visible = circleStatistics.Judges!.Count > 3 ? true : false;
 
-
-            EditColoumnsWidth(dataGridView_Juge1);
             EditColoumnsWidth(dataGridView_StatisticInformation);
-            EditColoumnsWidth(dataGridView_Juge2);
-            EditColoumnsWidth(dataGridView_Juge3);
-            EditColoumnsWidth(dataGridView_Juge4);
+            dataGridView_StatisticInformation.Columns[0].Visible = false;
+            EditColoumnsWidthForJudje(dataGridView_Juge1);
+            EditColoumnsWidthForJudje(dataGridView_Juge2);
+            EditColoumnsWidthForJudje(dataGridView_Juge3);
+            EditColoumnsWidthForJudje(dataGridView_Juge4);
 
 
             if (circleStatistics == null)
             {
                 MessageBox.Show("لم يتم فتح الاحصائية بعد ");
-             
-              
+
+
 
                 dataGridView_StatisticInformation.Enabled = false;
                 dataGridView_Juge1.Enabled = false;
@@ -219,7 +219,7 @@ namespace StatisticsAPP.UserControls
                 .ToString("MMMM", new CultureInfo("ar-AE")); // أو "ar-EG" للغة المصرية
         }
 
-     
+
 
 
         private void comboBox1_MouseWheel(object sender, MouseEventArgs e)
@@ -237,7 +237,21 @@ namespace StatisticsAPP.UserControls
                 col.Width = colwidth;
 
             }
-            dataGridView.Columns[0].Width = colwidth * 3;
+            dataGridView.Columns[1].Width = colwidth * 3;
+            dataGridView.Invalidate();
+        }
+        void EditColoumnsWidthForJudje(DataGridView dataGridView)
+        {
+            int totalWidth = this.Width / 2;
+            int colwidth = totalWidth / 31;
+            foreach (DataGridViewColumn col in dataGridView.Columns)
+            {
+
+                col.Width = colwidth;
+
+            }
+            dataGridView.Columns[0].Visible = false;
+            dataGridView.Columns[1].Width = colwidth * 3;
             dataGridView.Invalidate();
         }
         private void dataGridView1_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
@@ -246,12 +260,12 @@ namespace StatisticsAPP.UserControls
             if (e.RowIndex == -1 && e.ColumnIndex >= 0)
             {
                 e.PaintBackground(e.CellBounds, true); // رسم الخلفية
+                DataGridView dataGridView = (DataGridView)sender;
+                string headerText = dataGridView.Columns[e.ColumnIndex].HeaderText;
 
-                string headerText = dataGridView_StatisticInformation.Columns[e.ColumnIndex].HeaderText;
-
-                using (Brush brush = new SolidBrush(dataGridView_StatisticInformation.ColumnHeadersDefaultCellStyle.ForeColor))
+                using (Brush brush = new SolidBrush(dataGridView.ColumnHeadersDefaultCellStyle.ForeColor))
                 {
-                    SizeF textSize = e.Graphics!.MeasureString(headerText, dataGridView_StatisticInformation.ColumnHeadersDefaultCellStyle.Font);
+                    SizeF textSize = e.Graphics!.MeasureString(headerText, dataGridView.ColumnHeadersDefaultCellStyle.Font);
 
                     // تدوير النص
                     e.Graphics.TranslateTransform(
@@ -263,7 +277,7 @@ namespace StatisticsAPP.UserControls
                     // رسم النص في المنتصف
                     e.Graphics.DrawString(
                         headerText,
-                        dataGridView_StatisticInformation.ColumnHeadersDefaultCellStyle.Font,
+                        dataGridView.ColumnHeadersDefaultCellStyle.Font,
                         brush,
                         new PointF((e.CellBounds.Height - textSize.Width) / 2, -textSize.Height / 2)
                     );
@@ -327,7 +341,7 @@ namespace StatisticsAPP.UserControls
         void HighlightRowAndColumn(DataGridView grid, int rowIndex, int colIndex)
         {
             grid.Columns[colIndex].HeaderCell.Style.BackColor = Color.YellowGreen;
-            grid.Rows[rowIndex].Cells[0].Style.BackColor = Color.YellowGreen;
+            grid.Rows[rowIndex].Cells[1].Style.BackColor = Color.YellowGreen;
             grid.Columns[colIndex].HeaderCell.Style.BackColor = Color.LightGreen;
 
         }
@@ -346,24 +360,61 @@ namespace StatisticsAPP.UserControls
                 col.HeaderCell.Style.BackColor = Color.White;
             }
         }
+        private void UpdateTotalRow()
+        {
+            if (circleStatistics.StaticsForYear == null || circleStatistics.StaticsForYear.Count == 0)
+                return;
+
+            var totalRow = circleStatistics.StaticsForYear.Last();
+
+            var properties = typeof(StatistaicsDto)
+                .GetProperties()
+                .Where(p =>
+                    p.PropertyType == typeof(int) &&
+                    p.CanWrite &&
+                    !p.GetGetMethod().IsVirtual &&
+                    p.Name != "Year" // ✅ استثناء العمود الثاني (Year)
+                )
+                .ToList();
+
+            foreach (var prop in properties)
+            {
+                int sum = circleStatistics.StaticsForYear
+                    .Take(circleStatistics.StaticsForYear.Count - 1) // استثناء صف الإجمالي
+                    .Sum(x => (int)(prop.GetValue(x) ?? 0));
+
+                prop.SetValue(totalRow, sum);
+            }
+
+            dataGridView_StatisticInformation.Refresh(); // تحديث الواجهة
+        }
 
         private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             DataGridView dataGridView = sender as DataGridView;
-            ResetGridColors(dataGridView);
 
-            int colIndex = e.ColumnIndex;
-            int rowIndex = e.RowIndex;
+            if (dataGridView.Name == "dataGridView_StatisticInformation")
+            {
+                if (e.RowIndex == circleStatistics.StaticsForYear.Count - 1) // صف الإجمالي
+                {
+                    e.Cancel = true;
+                    return;
+                }
+            }
+            //ResetGridColors(dataGridView);
 
-            HighlightRowAndColumn(dataGridView, rowIndex, colIndex);
+            //int colIndex = e.ColumnIndex;
+            //int rowIndex = e.RowIndex;
+
+            //HighlightRowAndColumn(dataGridView, rowIndex, colIndex);
 
         }
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dataGridView = sender as DataGridView;
+            //DataGridView dataGridView = sender as DataGridView;
 
-            ResetGridColors(dataGridView);
+            //ResetGridColors(dataGridView);
         }
         private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
         {
@@ -379,13 +430,21 @@ namespace StatisticsAPP.UserControls
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             // التحقق من اسم العمود
-            string columnName = dataGridView_StatisticInformation.Columns[e.ColumnIndex].HeaderText;
 
-            if (columnName == "جملة المقدم" || columnName == "جملة الاحكام القطعية" || columnName == "جملة الاثبات" || columnName == "جملة الوقف" || columnName == "جملة المحكوم فيه" || columnName == "جملة المؤجل")
+            DataGridView dataGridView = sender as DataGridView;
+            string columnName = dataGridView.Columns[e.ColumnIndex].HeaderText;
+
+            if (columnName == "جملة المقدم" || columnName == "جملة الاحكام القطعية" || columnName == "جملة الاثبات" || columnName == "جملة الوقف" || columnName == "جملة المحكوم فيه" || columnName == "جملة المؤجل" || columnName == "اجمالي الاحكام القطعية" || columnName == "المجموع")
             {
                 // تغيير لون العمود "جملة المحكوم فيه" إلى لون معين
                 e.CellStyle.BackColor = Color.FromArgb(32, 178, 170);
-                dataGridView_StatisticInformation.Columns[e.ColumnIndex].HeaderCell.Style.BackColor = Color.FromArgb(32, 178, 170);
+                dataGridView.Columns[e.ColumnIndex].HeaderCell.Style.BackColor = Color.FromArgb(32, 178, 170);
+            }
+
+            if (dataGridView.Rows[e.RowIndex].DataBoundItem is StatistaicsDto dto && dto.IsTotalRow == 1)
+            {
+                dataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(218, 165, 32);
+                dataGridView.Rows[e.RowIndex].DefaultCellStyle.Font = new Font(dataGridView.Font, FontStyle.Bold);
             }
         }
 
@@ -407,7 +466,33 @@ namespace StatisticsAPP.UserControls
 
         private async void comboBox_CircleDays_SelectedIndexChanged(object sender, EventArgs e)
         {
-          await  GetStatistic();
+            await GetStatistic();
+        }
+
+        private void dataGridView_StatisticInformation_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            // تجاهل التعديل في صف الإجمالي
+            if (e.RowIndex >= 0 && e.RowIndex < circleStatistics!.StaticsForYear!.Count - 1)
+            {
+                UpdateTotalRow();
+            }
+        }
+
+        private void dataGridView_StatisticInformation_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dataGridView_StatisticInformation.IsCurrentCellDirty)
+            {
+                dataGridView_StatisticInformation.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        private void dataGridView_StatisticInformation_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static StatisticsAPP.Utility.MyStrings;
 
 namespace StatisticsAPP.Servicies.StatisticsCervicies
@@ -101,6 +102,14 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
             {
                 StaticsForYears.Add(setStatistaicsDto(circleStatistics, caseYear, sapek));
             }
+            #region Add Total Row
+            var totalRow = GetTotalRow(StaticsForYears);
+            StaticsForYears.Add(totalRow);
+
+
+
+            #endregion
+
             circleDay.Year = circleStatistics.Year;
             circleDay.Month = circleStatistics.Month;
             circleDay.IdCircleDay = circleStatistics.IdCircleDay;
@@ -266,5 +275,46 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
                 .ToListAsync();
             return decisions;
         }
+        public StatistaicsDto GetTotalRow(List<StatistaicsDto> list)
+        {
+            return new StatistaicsDto
+            {
+                IsTotalRow = 1,
+                Year = 0, // أو "إجمالي" لو غيرت النوع إلى string
+                Sapek = list.Sum(x => x.Sapek),
+                MogaddMenShatb = list.Sum(x => x.MogaddMenShatb),
+                moagalMenAlwakfLhinAlfasl = list.Sum(x => x.moagalMenAlwakfLhinAlfasl),
+                moagalMenAlwakfGzaey = list.Sum(x => x.moagalMenAlwakfGzaey),
+                moagalMenAlwakfTaeliky = list.Sum(x => x.moagalMenAlwakfTaeliky),
+                moagalMenAlwakfItfaky = list.Sum(x => x.moagalMenAlwakfItfaky),
+                moagalMenAlEnktae = list.Sum(x => x.moagalMenAlEnktae),
+                MoadMenAlEstenf = list.Sum(x => x.MoadMenAlEstenf),
+                TaksirCount = list.Sum(x => x.TaksirCount),
+                TaksirMonth = list.Sum(x => x.TaksirMonth),
+                EhalaForm = list.Sum(x => x.EhalaForm),
+                ehalaTo = list.Sum(x => x.ehalaTo),
+                newCases = list.Sum(x => x.newCases),
+                Mashtob = list.Sum(x => x.Mashtob),
+                Shakly = list.Sum(x => x.Shakly),
+                Mawdoey = list.Sum(x => x.Mawdoey),
+                Solh = list.Sum(x => x.Solh),
+                Farey = list.Sum(x => x.Farey),
+                Khapir = list.Sum(x => x.Khapir),
+                BackToKhapir = list.Sum(x => x.BackToKhapir),
+                Tahkik = list.Sum(x => x.Tahkik),
+                Estgwap = list.Sum(x => x.Estgwap),
+                HelfYamin = list.Sum(x => x.HelfYamin),
+                WakfGazaey = list.Sum(x => x.WakfGazaey),
+                WakfTaeliky = list.Sum(x => x.WakfTaeliky),
+                WakfEtfaky = list.Sum(x => x.WakfEtfaky),
+                EnktaeSirAlKhsoma = list.Sum(x => x.EnktaeSirAlKhsoma),
+                MahguzLelHokm = list.Sum(x => x.MahguzLelHokm),
+                MadAgal = list.Sum(x => x.MadAgal),
+                EadaLelMorafea = list.Sum(x => x.EadaLelMorafea),
+                MoeagalLelTkrir = list.Sum(x => x.MoeagalLelTkrir),
+                Okhrah = list.Sum(x => x.Okhrah),
+            };
+        }
+
     }
 }

@@ -43,6 +43,8 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
 
     public class JudgesDeccisionDto
     {
+        [DisplayName("هل اجمالي")]
+        public int IsTotalRow { get; set; } = 0;
         [DisplayName("السنة")]
         public int Year { get; set; }
         [DisplayName("عدم قبول")]
@@ -104,6 +106,8 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
     }
     public class StatistaicsDto
     {
+        [DisplayName("هل اجمالي")]
+        public int IsTotalRow { get; set; } = 0;
         [DisplayName("السنة")]
         public int Year { get; set; }
         [DisplayName("السابق")]
