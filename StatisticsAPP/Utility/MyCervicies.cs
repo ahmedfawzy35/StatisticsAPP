@@ -22,7 +22,7 @@ namespace StatisticsAPP.Utility
         #endregion
 
         #region statistics
-        public static StatisticsManager statisticsManager = new StatisticsManager(_context);
+        public static StatisticsManager statisticsManager = new StatisticsManager(new ApplicationDbContext());
 
 
         #endregion

@@ -3,6 +3,7 @@ using StatisticsAPP.Forms.CircleForms;
 using StatisticsAPP.Forms.CourtsForms;
 using StatisticsAPP.Forms.StatisticsForms;
 using StatisticsAPP.Seeds;
+using StatisticsAPP.Servicies.StatisticsCervicies;
 using StatisticsAPP.Servicies.StatisticsCervicies.DTOS;
 using StatisticsAPP.Utility;
 using System;
@@ -72,7 +73,7 @@ namespace StatisticsAPP.Forms.MainForm
             for (int i = 0; i < tabControl1.TabPages.Count; i++)
             {
 
-                if (tabControl1.TabPages[i].Controls.OfType<StatisticsAddForm>().ToList().Count > 0 )
+                if (tabControl1.TabPages[i].Controls.OfType<StatisticsAddForm>().ToList().Count > 0)
                 {
 
                     var frm = tabControl1.TabPages[i].Controls.OfType<StatisticsAddForm>().ToList().First();
@@ -81,7 +82,7 @@ namespace StatisticsAPP.Forms.MainForm
                         frm._Config.CircleCtogryId == config.CircleCtogryId &&
                         frm._Config.CircleMasterTypeId == config.CircleMasterTypeId &&
                         frm._Config.Year == config.Year &&
-                        frm._Config.Month == config.Month 
+                        frm._Config.Month == config.Month
 
                         )
                     {
@@ -105,7 +106,7 @@ namespace StatisticsAPP.Forms.MainForm
                 if (tabControl1.TabPages[i].Controls.OfType<StatisticsAddForm>().ToList().Count > 0)
                 {
 
-                  a++;
+                    a++;
                 }
             }
 
@@ -116,7 +117,7 @@ namespace StatisticsAPP.Forms.MainForm
         #region Tab Control
         public void ShowForm(string x, Form frm)
         {
-         
+
             int select = is_exits(x);
             if (select == -1)
             {
@@ -133,7 +134,7 @@ namespace StatisticsAPP.Forms.MainForm
                 };
                 tabControl1.TabPages.Add(xtab);
                 tabControl1.TabPages[index1].AutoScroll = true;
-               
+
 
                 tabControl1.TabPages[index1].Controls.Clear();
                 tabControl1.TabPages[index1].Text = x;
@@ -154,7 +155,7 @@ namespace StatisticsAPP.Forms.MainForm
 
             int select = is_exitsAddStatstics(frm._Config!);
             int count = CountAddStatstics();
-            if (count > 2) 
+            if (count > 2)
             {
                 MessageBox.Show("تم فتح ثلاثة نوافذ لاضافة احصائية وهو الحد الاقصي اغلق احد النوافذ");
                 return;
@@ -198,7 +199,7 @@ namespace StatisticsAPP.Forms.MainForm
                 tabControl1.TabPages.Remove(tabPage);
             }
         }
-        
+
         public static Rectangle GetRTLCoordinates(Rectangle container, Rectangle drawRectangle)
         {
             return new Rectangle(
@@ -299,7 +300,7 @@ namespace StatisticsAPP.Forms.MainForm
             //tabControl1.DrawItem += tabControl1_DrawItem;
             tabControl1.Padding = new System.Drawing.Point(50, 3);
 
-          
+
             await Task.Run(async () =>
             {
 
@@ -374,11 +375,20 @@ namespace StatisticsAPP.Forms.MainForm
             if (frm.ShowDialog() == DialogResult.OK)
             {
                 var config = frm.FormConfig;
+
+
                 StatisticsAddForm frm2 = new StatisticsAddForm(config!);
                 frm2._Config = config;
-                ShowFormAddStatistcs("اضافة احصائية",frm2);
+                ShowFormAddStatistcs("اضافة احصائية", frm2);
 
             }
+
+        }
+
+        private void فتحالاحصائيةToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //OpenStatisticsForm
+            ShowForm("فتح الاحصائية", new OpenStatisticsForm());
 
         }
     }

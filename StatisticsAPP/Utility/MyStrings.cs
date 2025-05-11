@@ -308,5 +308,16 @@ namespace StatisticsAPP.Utility
 
 
         }
+
+        public static class DelayCacesForMonthTypes
+        {
+            public const string DelayCacesForMonthEthbat = "أحكام فرعية واثبات";
+            public const string DelayCacesForMonthMahgouzLelHokm = "محجوز للحكم";
+            public const string DelayCacesForMonthMadAgal = "مد أجل";
+            public const string DelayCacesForMonthEadaLelMorafea = "إعادة للمرافعة";
+            public const string DelayCacesForMonthBaky = "باقي المؤجلات";
+
+
+        }
     }
 }

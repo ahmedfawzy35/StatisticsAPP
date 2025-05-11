@@ -23,7 +23,7 @@ namespace StatisticsAPP.UserControls
     {
         #region fff
         public StatisticsFormConfig? Config { get; set; }
-        public CircleStatistics? circleStatistics { get; set; }
+        public CircleDayStatistaicsDto? circleStatistics { get; set; }
         bool isEditCircleStatistics = false;
         bool isEditCircleStatisticsForYear = false;
         List<Circle> userCircles;
@@ -48,21 +48,24 @@ namespace StatisticsAPP.UserControls
             #endregion
 
 
+            //circleStatistics = await manager.GetStatistaicsDtoAsync(circleday.Id, circle.Id, Config.Month, Config.Year);
+            //BindingList<StatistaicsDto> statisticsList = new BindingList<StatistaicsDto>(circleStatistics.StaticsForYear!);
+            //dataGridView_StatisticInformation.DataSource = statisticsList;
+            //BindingList<StatistaicsDto> statisticsList = new BindingList<StatistaicsDto>(circleStatistics.StaticsForYear!);
+            //dataGridView_StatisticInformation.DataSource = statisticsList;
 
-            BindingList<StatistaicsDto> statisticsList = new BindingList<StatistaicsDto>(MyCervicies.statisticsManager.StatisticsList());
-            dataGridView_StatisticInformation.DataSource = statisticsList;
-            StatisticsList = MyCervicies.statisticsManager.StatisticsList();
-            dataGridView_StatisticInformation.DataSource = StatisticsList;
-            dataGridView_Juge1.DataSource = StatisticsList;
-            dataGridView_Juge2.DataSource = StatisticsList;
-            dataGridView_Juge3.DataSource = StatisticsList;
-            dataGridView_Juge4.DataSource = StatisticsList;
 
-            EditColoumnsWidth(dataGridView_Juge1);
-            EditColoumnsWidth(dataGridView_StatisticInformation);
-            EditColoumnsWidth(dataGridView_Juge2);
-            EditColoumnsWidth(dataGridView_Juge3);
-            EditColoumnsWidth(dataGridView_Juge4);
+
+
+            //StatisticsList = MyCervicies.statisticsManager.StatisticsList();
+            //dataGridView_StatisticInformation.DataSource = StatisticsList;
+            //dataGridView_Juge1.DataSource = StatisticsList;
+            //dataGridView_Juge2.DataSource = StatisticsList;
+            //dataGridView_Juge3.DataSource = StatisticsList;
+            //dataGridView_Juge4.DataSource = StatisticsList;
+
+
+            
         }
 
         #region fff
@@ -124,7 +127,7 @@ namespace StatisticsAPP.UserControls
             //comboBox_Tawzie_Judje.DisplayMember = "NameJudge";
             //comboBox_Tawzie_Judje.ValueMember = "IdJudge";
         }
-        private void GetStatistic()
+        private async Task GetStatistic()
         {
             if (Config == null) { return; }
             var circle = (Circle)comboBox_Circles.SelectedItem!;
@@ -137,17 +140,44 @@ namespace StatisticsAPP.UserControls
                 return;
 
             }
+            StatisticsManager manager = new StatisticsManager(new Data.ApplicationDbContext());
+            circleStatistics =await manager.GetStatistaicsDtoAsync(circleday.Id , circle.Id , Config.Month, Config.Year );
+            if (circleStatistics == null)
+            {
+                MessageBox.Show("لم يتم فتح الاحصائية بعد ");
+                return;
+            }
+            string juge1Name = circleStatistics.Judges!.Where(x => x.Rate == 1).FirstOrDefault()!.Judge!.Name!;
+            string juge2Name = circleStatistics.Judges!.Where(x => x.Rate == 2).FirstOrDefault()!.Judge!.Name!;
+            string juge3Name = circleStatistics.Judges!.Where(x => x.Rate == 3).FirstOrDefault()!.Judge!.Name!;
+            string juge4Name = circleStatistics.Judges!.Where(x => x.Rate == 4).FirstOrDefault()!.Judge!.Name!;
+            label_Juge1.Text = $"رئيس الدائرة -  {juge1Name}";
+            label_Juge2.Text = $"عضو يمين الدائرة -  {juge2Name}";
+            label_Juge3.Text = $"عضو يسار الدائرة -  {juge3Name}";
+            label_Juge4.Text = circleStatistics.Judges!.Count <4 ? " " : $"عضو يسار اليسار الدائرة -  {juge4Name}";
+            BindingList<StatistaicsDto> statisticsList = new BindingList<StatistaicsDto>(circleStatistics.StaticsForYear!);
+            dataGridView_StatisticInformation.DataSource = statisticsList;
 
-            circleStatistics = MyContext.context.CircleStatistics
-                .Include(x => x.StatisticsDecisions!)
-                    .ThenInclude(x => x.CaseYear!)
-                .Include(x => x.StatisticsInterCases!)
-                    .ThenInclude(x => x.CaseYear!)
-                .Include(x => x.StatisticsDelayCases!)
-                    .ThenInclude(x => x.CaseYear!)
-                .Include(x => x.CircleDay!)
-                    .ThenInclude(x => x.DelayCacesForMonths!)
-                .FirstOrDefault(x => x.IdCircleDay == circleday.Id && x.Year == Config.Year && x.Month == Config.Month);
+            BindingList<JudgesDeccisionDto> judgei1 = new BindingList<JudgesDeccisionDto>(circleStatistics.JudgeDecision1!);
+            dataGridView_Juge1.DataSource = judgei1;
+
+            BindingList<JudgesDeccisionDto> judgei2 = new BindingList<JudgesDeccisionDto>(circleStatistics.JudgeDecision2!);
+            dataGridView_Juge2.DataSource = judgei2;
+
+            BindingList<JudgesDeccisionDto> judgei3 = new BindingList<JudgesDeccisionDto>(circleStatistics.JudgeDecision2!);
+            dataGridView_Juge3.DataSource = judgei3;
+
+            BindingList<JudgesDeccisionDto> judgei4 = new BindingList<JudgesDeccisionDto>(circleStatistics.JudgeDecision4!);
+            dataGridView_Juge4.DataSource = judgei4;
+            dataGridView_Juge4.Visible = circleStatistics.Judges!.Count > 3 ? true : false;
+
+
+            EditColoumnsWidth(dataGridView_Juge1);
+            EditColoumnsWidth(dataGridView_StatisticInformation);
+            EditColoumnsWidth(dataGridView_Juge2);
+            EditColoumnsWidth(dataGridView_Juge3);
+            EditColoumnsWidth(dataGridView_Juge4);
+
 
             if (circleStatistics == null)
             {
@@ -200,7 +230,7 @@ namespace StatisticsAPP.UserControls
         void EditColoumnsWidth(DataGridView dataGridView)
         {
             int totalWidth = this.Width;
-            int colwidth = totalWidth / 39;
+            int colwidth = totalWidth / 42;
             foreach (DataGridViewColumn col in dataGridView.Columns)
             {
 
@@ -375,9 +405,9 @@ namespace StatisticsAPP.UserControls
             GetCirclDays();
         }
 
-        private void comboBox_CircleDays_SelectedIndexChanged(object sender, EventArgs e)
+        private async void comboBox_CircleDays_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GetStatistic();
+          await  GetStatistic();
         }
     }
 }

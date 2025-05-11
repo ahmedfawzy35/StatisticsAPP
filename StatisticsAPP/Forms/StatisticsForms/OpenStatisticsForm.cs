@@ -67,7 +67,12 @@ namespace StatisticsAPP.Forms.StatisticsForms
                         CircleDay = circleDay,
                         CreatedAt = DateTime.Now,
                         UserId = LocalUser.localUserId,
+                        StartCaseYear = 2020,
+                        EndCaseYear = 2025,
+                        Employee = " ",
+                        CountCaseYear =6 ,
                         
+
                     });
                 }
             }

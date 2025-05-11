@@ -62,6 +62,7 @@
             ToolStripMenuItem_EditPassword = new ToolStripMenuItem();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
+            فتحالاحصائيةToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             tabControl1.SuspendLayout();
             SuspendLayout();
@@ -168,7 +169,7 @@
             // 
             // ToolStripMenuItem_Statistics
             // 
-            ToolStripMenuItem_Statistics.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuItem_AddStatistic_Madani, ToolStripMenuItem_AddStatistic_Genaey, ToolStripMenuItem_AddStatistic_Osra, احصائيةقاضيToolStripMenuItem, احصائيةمحكمةابتدائيةToolStripMenuItem, احصائيةمحكمةجزئيةToolStripMenuItem });
+            ToolStripMenuItem_Statistics.DropDownItems.AddRange(new ToolStripItem[] { ToolStripMenuItem_AddStatistic_Madani, ToolStripMenuItem_AddStatistic_Genaey, ToolStripMenuItem_AddStatistic_Osra, احصائيةقاضيToolStripMenuItem, احصائيةمحكمةابتدائيةToolStripMenuItem, احصائيةمحكمةجزئيةToolStripMenuItem, فتحالاحصائيةToolStripMenuItem });
             ToolStripMenuItem_Statistics.Name = "ToolStripMenuItem_Statistics";
             ToolStripMenuItem_Statistics.Size = new Size(73, 20);
             ToolStripMenuItem_Statistics.Text = "الاحصائيات";
@@ -305,6 +306,13 @@
             tabPage1.TabIndex = 0;
             tabPage1.Text = "الرئيسيه";
             // 
+            // فتحالاحصائيةToolStripMenuItem
+            // 
+            فتحالاحصائيةToolStripMenuItem.Name = "فتحالاحصائيةToolStripMenuItem";
+            فتحالاحصائيةToolStripMenuItem.Size = new Size(186, 22);
+            فتحالاحصائيةToolStripMenuItem.Text = "فتح الاحصائية";
+            فتحالاحصائيةToolStripMenuItem.Click += فتحالاحصائيةToolStripMenuItem_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -362,5 +370,6 @@
         private ToolStripMenuItem احصائيةمحكمةابتدائيةToolStripMenuItem;
         private ToolStripMenuItem احصائيةمحكمةجزئيةToolStripMenuItem;
         private ToolStripMenuItem ايامالانعقادToolStripMenuItem;
+        private ToolStripMenuItem فتحالاحصائيةToolStripMenuItem;
     }
 }

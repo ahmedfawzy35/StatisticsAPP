@@ -29,6 +29,11 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         public List<JudgesDeccisionDto>?   JudgeDecision2 { get; set; } = new List<JudgesDeccisionDto>();
         public List<JudgesDeccisionDto>?   JudgeDecision3 { get; set; } = new List<JudgesDeccisionDto>();
         public List<JudgesDeccisionDto>?   JudgeDecision4 { get; set; } = new List<JudgesDeccisionDto>();
+        public List<DelayCacesForMonthDto>? DelayCacesForMonthEthbat { get; set; } = new List<DelayCacesForMonthDto>();
+        public List<DelayCacesForMonthDto>? DelayCacesForMonthMahgouzLelHokm { get; set; } = new List<DelayCacesForMonthDto>();
+        public List<DelayCacesForMonthDto>? DelayCacesForMonthMadAgal { get; set; } = new List<DelayCacesForMonthDto>();
+        public List<DelayCacesForMonthDto>? DelayCacesForMonthEadaLelMorafea { get; set; } = new List<DelayCacesForMonthDto>();
+        public List<DelayCacesForMonthDto>? DelayCacesForMonthBaky { get; set; } = new List<DelayCacesForMonthDto>();
 
 
 
@@ -181,5 +186,13 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
 
 
     }
+    public class DelayCacesForMonthDto
+    {
+        public int CaseYear { get; set; }
+        public int Month1 { get; set; }
+        public int Month2 { get; set; }
+        public int Month3 { get; set; }
+        public int Total => Month1 + Month2 + Month3;
 
-}
+    }
+    }

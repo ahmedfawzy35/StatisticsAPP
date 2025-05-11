@@ -69,19 +69,19 @@
             panel6 = new Panel();
             dataGridView_Juge1 = new DataGridView();
             panel7 = new Panel();
-            label1 = new Label();
+            label_Juge1 = new Label();
             panel8 = new Panel();
             dataGridView_Juge2 = new DataGridView();
             panel9 = new Panel();
-            label2 = new Label();
+            label_Juge2 = new Label();
             panel10 = new Panel();
             dataGridView_Juge3 = new DataGridView();
             panel11 = new Panel();
-            label3 = new Label();
+            label_Juge3 = new Label();
             panel12 = new Panel();
             dataGridView_Juge4 = new DataGridView();
             panel13 = new Panel();
-            label4 = new Label();
+            label_Juge4 = new Label();
             panel5 = new Panel();
             button1 = new Button();
             panel14 = new Panel();
@@ -432,7 +432,7 @@
             // 
             // panel7
             // 
-            panel7.Controls.Add(label1);
+            panel7.Controls.Add(label_Juge1);
             panel7.Dock = DockStyle.Top;
             panel7.Location = new Point(0, 0);
             panel7.Margin = new Padding(3, 5, 3, 5);
@@ -440,17 +440,17 @@
             panel7.Size = new Size(768, 48);
             panel7.TabIndex = 0;
             // 
-            // label1
+            // label_Juge1
             // 
-            label1.BackColor = Color.FromArgb(192, 255, 192);
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(768, 48);
-            label1.TabIndex = 0;
-            label1.Text = "رئيس الدائرة";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            label_Juge1.BackColor = Color.FromArgb(192, 255, 192);
+            label_Juge1.Dock = DockStyle.Fill;
+            label_Juge1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label_Juge1.Location = new Point(0, 0);
+            label_Juge1.Name = "label_Juge1";
+            label_Juge1.Size = new Size(768, 48);
+            label_Juge1.TabIndex = 0;
+            label_Juge1.Text = "رئيس الدائرة";
+            label_Juge1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel8
             // 
@@ -500,7 +500,7 @@
             // 
             // panel9
             // 
-            panel9.Controls.Add(label2);
+            panel9.Controls.Add(label_Juge2);
             panel9.Dock = DockStyle.Top;
             panel9.Location = new Point(0, 0);
             panel9.Margin = new Padding(3, 5, 3, 5);
@@ -508,17 +508,17 @@
             panel9.Size = new Size(768, 48);
             panel9.TabIndex = 0;
             // 
-            // label2
+            // label_Juge2
             // 
-            label2.BackColor = Color.FromArgb(192, 255, 192);
-            label2.Dock = DockStyle.Fill;
-            label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label2.Location = new Point(0, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(768, 48);
-            label2.TabIndex = 1;
-            label2.Text = "عضو يمين الدائرة";
-            label2.TextAlign = ContentAlignment.MiddleCenter;
+            label_Juge2.BackColor = Color.FromArgb(192, 255, 192);
+            label_Juge2.Dock = DockStyle.Fill;
+            label_Juge2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label_Juge2.Location = new Point(0, 0);
+            label_Juge2.Name = "label_Juge2";
+            label_Juge2.Size = new Size(768, 48);
+            label_Juge2.TabIndex = 1;
+            label_Juge2.Text = "عضو يمين الدائرة";
+            label_Juge2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel10
             // 
@@ -568,7 +568,7 @@
             // 
             // panel11
             // 
-            panel11.Controls.Add(label3);
+            panel11.Controls.Add(label_Juge3);
             panel11.Dock = DockStyle.Top;
             panel11.Location = new Point(0, 0);
             panel11.Margin = new Padding(3, 5, 3, 5);
@@ -576,17 +576,17 @@
             panel11.Size = new Size(768, 48);
             panel11.TabIndex = 0;
             // 
-            // label3
+            // label_Juge3
             // 
-            label3.BackColor = Color.FromArgb(192, 255, 192);
-            label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label3.Location = new Point(0, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(768, 48);
-            label3.TabIndex = 1;
-            label3.Text = "عضو يسار الدائرة";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
+            label_Juge3.BackColor = Color.FromArgb(192, 255, 192);
+            label_Juge3.Dock = DockStyle.Fill;
+            label_Juge3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label_Juge3.Location = new Point(0, 0);
+            label_Juge3.Name = "label_Juge3";
+            label_Juge3.Size = new Size(768, 48);
+            label_Juge3.TabIndex = 1;
+            label_Juge3.Text = "عضو يسار الدائرة";
+            label_Juge3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel12
             // 
@@ -636,7 +636,7 @@
             // 
             // panel13
             // 
-            panel13.Controls.Add(label4);
+            panel13.Controls.Add(label_Juge4);
             panel13.Dock = DockStyle.Top;
             panel13.Location = new Point(0, 0);
             panel13.Margin = new Padding(3, 5, 3, 5);
@@ -644,17 +644,17 @@
             panel13.Size = new Size(768, 48);
             panel13.TabIndex = 0;
             // 
-            // label4
+            // label_Juge4
             // 
-            label4.BackColor = Color.FromArgb(192, 255, 192);
-            label4.Dock = DockStyle.Fill;
-            label4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label4.Location = new Point(0, 0);
-            label4.Name = "label4";
-            label4.Size = new Size(768, 48);
-            label4.TabIndex = 2;
-            label4.Text = "عضو يسار يسار الدائرة";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
+            label_Juge4.BackColor = Color.FromArgb(192, 255, 192);
+            label_Juge4.Dock = DockStyle.Fill;
+            label_Juge4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label_Juge4.Location = new Point(0, 0);
+            label_Juge4.Name = "label_Juge4";
+            label_Juge4.Size = new Size(768, 48);
+            label_Juge4.TabIndex = 2;
+            label_Juge4.Text = "عضو يسار يسار الدائرة";
+            label_Juge4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // panel5
             // 
@@ -1124,16 +1124,16 @@
         private Panel panel5;
         private Panel panel6;
         private Panel panel7;
-        private Label label1;
+        private Label label_Juge1;
         private Panel panel8;
         private Panel panel9;
-        private Label label2;
+        private Label label_Juge2;
         private Panel panel10;
         private Panel panel11;
-        private Label label3;
+        private Label label_Juge3;
         private Panel panel12;
         private Panel panel13;
-        private Label label4;
+        private Label label_Juge4;
         private Panel panel14;
         private Label label5;
         private Label label6;

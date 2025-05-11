@@ -20,11 +20,11 @@ namespace StatisticsAPP.Forms.StatisticsForms
         {
             InitializeComponent();
             _Config = Config;
+
             AddStatisticsUserControl statisticsAddUserControl = new AddStatisticsUserControl { Config = _Config };
             statisticsAddUserControl.Dock = DockStyle.Top;
             panel2.Controls.Clear();
             panel2.Controls.Add(statisticsAddUserControl);
-
         }
     }
 }
