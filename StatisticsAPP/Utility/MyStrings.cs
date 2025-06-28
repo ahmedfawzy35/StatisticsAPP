@@ -50,6 +50,36 @@ namespace StatisticsAPP.Utility
             الخميس,
             الجمعه
         }
+
+        public static string GetNextMonthArabicName(int currentMonth)
+        {
+            int nextMonth = currentMonth == 12 ? 1 : currentMonth + 1;
+            return GetArabicMonthName(nextMonth);
+        }
+        public static string GetArabicMonthName(int month)
+        {
+            // أسماء الشهور الميلادية بالعربي
+            string[] arabicMonths = new string[]
+            {
+        "يناير",    // 1
+        "فبراير",   // 2
+        "مارس",     // 3
+        "أبريل",    // 4
+        "مايو",     // 5
+        "يونيو",    // 6
+        "يوليو",    // 7
+        "أغسطس",    // 8
+        "سبتمبر",   // 9
+        "أكتوبر",   // 10
+        "نوفمبر",   // 11
+        "ديسمبر"    // 12
+            };
+
+            if (month < 1 || month > 12)
+                return string.Empty;
+
+            return arabicMonths[month - 1];
+        }
         public static string GetArabicDay(string EnglishDay)
         {
             switch (EnglishDay)

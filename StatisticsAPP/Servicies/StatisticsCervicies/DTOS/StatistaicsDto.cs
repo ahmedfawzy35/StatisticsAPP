@@ -61,6 +61,7 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         public int EnedamAlKhsoma { get; set; }
         [DisplayName("كأن لم تكن")]
         public int KanLamTkon { get; set; }
+       
         [DisplayName("قبول")]
         public int Kbol{ get; set; }
         [DisplayName("رفض")]
@@ -71,10 +72,11 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         public int AdamGwazLeSabekatAlFaslFiha{ get; set; }
         [DisplayName("انقضاء الحق بمضي المدة (التقادم)")]
         public int EnkdaeAlhakBeModiAlModa{ get; set; }
+     
         [DisplayName("صلح")]
         public int Solh{ get; set; }
         [DisplayName("اجمالي الاحكام القطعية")]
-        public int TotalKatey => AdmKbol + AdmEjhtsas + SkotAlHakFiRAFEAlDaewa + SkotAlKhsomaWEnkdaeha + TarkAlKhsoma + KanLamTkon + Kbol + Rafd + RafdBeHalatha + AdamGwazLeSabekatAlFaslFiha + EnkdaeAlhakBeModiAlModa + Solh;
+        public int TotalKatey => AdmKbol + AdmEjhtsas + SkotAlHakFiRAFEAlDaewa + SkotAlKhsomaWEnkdaeha + TarkAlKhsoma + EnedamAlKhsoma + KanLamTkon + Kbol + Rafd + RafdBeHalatha + AdamGwazLeSabekatAlFaslFiha + EnkdaeAlhakBeModiAlModa + Solh;
         [DisplayName("أحكام فرعية")]
         public int Farey { get; set; }
         [DisplayName("ندب خبير")]

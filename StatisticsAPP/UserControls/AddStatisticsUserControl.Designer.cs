@@ -50,7 +50,8 @@
             DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
             dataGridView_StatisticInformation = new DataGridView();
             panel1 = new Panel();
-            label13 = new Label();
+            pictureBox_Loading = new PictureBox();
+            label_Ethbat = new Label();
             comboBox_CircleDays = new ComboBox();
             Text_CircleMasterType = new Label();
             Text_Month = new Label();
@@ -80,7 +81,6 @@
             label_Juge3 = new Label();
             panel12 = new Panel();
             dataGridView_Juge4 = new DataGridView();
-            panel13 = new Panel();
             label_Juge4 = new Label();
             panel5 = new Panel();
             button1 = new Button();
@@ -89,27 +89,34 @@
             panel20 = new Panel();
             dataGridView_Baki = new DataGridView();
             panel26 = new Panel();
+            label__Baki = new Label();
             label12 = new Label();
             panel19 = new Panel();
             dataGridView_Morafea = new DataGridView();
             panel25 = new Panel();
+            label1_Morafea = new Label();
             label11 = new Label();
             panel18 = new Panel();
             dataGridView_MadAgal = new DataGridView();
             panel24 = new Panel();
+            label_MadAgal = new Label();
             label10 = new Label();
             panel17 = new Panel();
             dataGridView_Mahgouz = new DataGridView();
             panel23 = new Panel();
+            label_Mahgouz = new Label();
             label9 = new Label();
             panel16 = new Panel();
             dataGridView_Ethbat = new DataGridView();
             panel22 = new Panel();
+            label__Ethbat = new Label();
             label8 = new Label();
             panel15 = new Panel();
+            button2 = new Button();
             label7 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView_StatisticInformation).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_Loading).BeginInit();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
@@ -125,7 +132,6 @@
             panel11.SuspendLayout();
             panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView_Juge4).BeginInit();
-            panel13.SuspendLayout();
             panel5.SuspendLayout();
             panel14.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
@@ -191,7 +197,8 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
-            panel1.Controls.Add(label13);
+            panel1.Controls.Add(pictureBox_Loading);
+            panel1.Controls.Add(label_Ethbat);
             panel1.Controls.Add(comboBox_CircleDays);
             panel1.Controls.Add(Text_CircleMasterType);
             panel1.Controls.Add(Text_Month);
@@ -210,19 +217,27 @@
             panel1.Size = new Size(1548, 233);
             panel1.TabIndex = 1;
             // 
-            // label13
+            // pictureBox_Loading
             // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            label13.AutoSize = true;
-            label13.Location = new Point(1201, 152);
-            label13.Name = "label13";
-            label13.Size = new Size(50, 19);
-            label13.TabIndex = 3;
-            label13.Text = "الجلسة";
+            pictureBox_Loading.Image = Properties.Resources.loading_gif;
+            pictureBox_Loading.Location = new Point(28, 33);
+            pictureBox_Loading.Name = "pictureBox_Loading";
+            pictureBox_Loading.Size = new Size(100, 50);
+            pictureBox_Loading.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_Loading.TabIndex = 12;
+            pictureBox_Loading.TabStop = false;
+            // 
+            // label_Ethbat
+            // 
+            label_Ethbat.AutoSize = true;
+            label_Ethbat.Location = new Point(1201, 152);
+            label_Ethbat.Name = "label_Ethbat";
+            label_Ethbat.Size = new Size(50, 19);
+            label_Ethbat.TabIndex = 3;
+            label_Ethbat.Text = "الجلسة";
             // 
             // comboBox_CircleDays
             // 
-            comboBox_CircleDays.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_CircleDays.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_CircleDays.FormattingEnabled = true;
             comboBox_CircleDays.Location = new Point(923, 147);
@@ -234,7 +249,6 @@
             // 
             // Text_CircleMasterType
             // 
-            Text_CircleMasterType.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Text_CircleMasterType.Location = new Point(715, 147);
             Text_CircleMasterType.Name = "Text_CircleMasterType";
             Text_CircleMasterType.Size = new Size(185, 24);
@@ -244,7 +258,6 @@
             // 
             // Text_Month
             // 
-            Text_Month.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Text_Month.Location = new Point(400, 59);
             Text_Month.Name = "Text_Month";
             Text_Month.Size = new Size(87, 24);
@@ -254,7 +267,6 @@
             // 
             // Text_CircleCtogry
             // 
-            Text_CircleCtogry.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Text_CircleCtogry.Location = new Point(554, 147);
             Text_CircleCtogry.Name = "Text_CircleCtogry";
             Text_CircleCtogry.Size = new Size(185, 24);
@@ -264,7 +276,6 @@
             // 
             // Text_SupCourt
             // 
-            Text_SupCourt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Text_SupCourt.Location = new Point(513, 59);
             Text_SupCourt.Name = "Text_SupCourt";
             Text_SupCourt.Size = new Size(185, 24);
@@ -274,7 +285,6 @@
             // 
             // Text_Year
             // 
-            Text_Year.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Text_Year.Location = new Point(320, 59);
             Text_Year.Name = "Text_Year";
             Text_Year.Size = new Size(74, 24);
@@ -284,7 +294,6 @@
             // 
             // Text_SuperCourt
             // 
-            Text_SuperCourt.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             Text_SuperCourt.Location = new Point(704, 59);
             Text_SuperCourt.Name = "Text_SuperCourt";
             Text_SuperCourt.Size = new Size(185, 24);
@@ -294,7 +303,6 @@
             // 
             // label14
             // 
-            label14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label14.AutoSize = true;
             label14.Location = new Point(1201, 80);
             label14.Name = "label14";
@@ -304,7 +312,6 @@
             // 
             // comboBox_Circles
             // 
-            comboBox_Circles.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_Circles.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_Circles.FormattingEnabled = true;
             comboBox_Circles.Location = new Point(923, 75);
@@ -383,9 +390,11 @@
             tableLayoutPanel1.Margin = new Padding(3, 5, 3, 5);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 420F));
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 420F));
-            tableLayoutPanel1.Size = new Size(1548, 1336);
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(1548, 1200
+                );
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel6
@@ -432,9 +441,10 @@
             dataGridView_Juge1.TabIndex = 1;
             dataGridView_Juge1.CellBeginEdit += dataGridView1_CellBeginEdit;
             dataGridView_Juge1.CellEndEdit += dataGridView1_CellEndEdit;
-            dataGridView_Juge1.CellFormatting += dataGridView1_CellFormatting;
+            dataGridView_Juge1.CellFormatting += dataGridViewJuges_CellFormatting;
             dataGridView_Juge1.CellPainting += dataGridView1_CellPainting;
             dataGridView_Juge1.CellValidating += dataGridView1_CellValidating;
+            dataGridView_Juge1.CellValueChanged += dataGridView_Judge_CellValueChanged;
             // 
             // panel7
             // 
@@ -502,9 +512,10 @@
             dataGridView_Juge2.TabIndex = 2;
             dataGridView_Juge2.CellBeginEdit += dataGridView1_CellBeginEdit;
             dataGridView_Juge2.CellEndEdit += dataGridView1_CellEndEdit;
-            dataGridView_Juge2.CellFormatting += dataGridView1_CellFormatting;
+            dataGridView_Juge2.CellFormatting += dataGridViewJuges_CellFormatting;
             dataGridView_Juge2.CellPainting += dataGridView1_CellPainting;
             dataGridView_Juge2.CellValidating += dataGridView1_CellValidating;
+            dataGridView_Juge2.CellValueChanged += dataGridView_Judge_CellValueChanged;
             // 
             // panel9
             // 
@@ -572,9 +583,10 @@
             dataGridView_Juge3.TabIndex = 3;
             dataGridView_Juge3.CellBeginEdit += dataGridView1_CellBeginEdit;
             dataGridView_Juge3.CellEndEdit += dataGridView1_CellEndEdit;
-            dataGridView_Juge3.CellFormatting += dataGridView1_CellFormatting;
+            dataGridView_Juge3.CellFormatting += dataGridViewJuges_CellFormatting;
             dataGridView_Juge3.CellPainting += dataGridView1_CellPainting;
             dataGridView_Juge3.CellValidating += dataGridView1_CellValidating;
+            dataGridView_Juge3.CellValueChanged += dataGridView_Judge_CellValueChanged;
             // 
             // panel11
             // 
@@ -603,7 +615,7 @@
             panel12.AutoSize = true;
             panel12.AutoSizeMode = AutoSizeMode.GrowAndShrink;
             panel12.Controls.Add(dataGridView_Juge4);
-            panel12.Controls.Add(panel13);
+            panel12.Controls.Add(label_Juge4);
             panel12.Dock = DockStyle.Fill;
             panel12.Location = new Point(3, 425);
             panel12.Margin = new Padding(3, 5, 3, 5);
@@ -644,24 +656,15 @@
             dataGridView_Juge4.TabIndex = 4;
             dataGridView_Juge4.CellBeginEdit += dataGridView1_CellBeginEdit;
             dataGridView_Juge4.CellEndEdit += dataGridView1_CellEndEdit;
-            dataGridView_Juge4.CellFormatting += dataGridView1_CellFormatting;
+            dataGridView_Juge4.CellFormatting += dataGridViewJuges_CellFormatting;
             dataGridView_Juge4.CellPainting += dataGridView1_CellPainting;
             dataGridView_Juge4.CellValidating += dataGridView1_CellValidating;
-            // 
-            // panel13
-            // 
-            panel13.Controls.Add(label_Juge4);
-            panel13.Dock = DockStyle.Top;
-            panel13.Location = new Point(0, 0);
-            panel13.Margin = new Padding(3, 5, 3, 5);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(768, 48);
-            panel13.TabIndex = 0;
+            dataGridView_Juge4.CellValueChanged += dataGridView_Judge_CellValueChanged;
             // 
             // label_Juge4
             // 
             label_Juge4.BackColor = Color.FromArgb(192, 255, 192);
-            label_Juge4.Dock = DockStyle.Fill;
+            label_Juge4.Dock = DockStyle.Top;
             label_Juge4.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label_Juge4.Location = new Point(0, 0);
             label_Juge4.Name = "label_Juge4";
@@ -715,13 +718,13 @@
             tableLayoutPanel2.Controls.Add(panel17, 1, 0);
             tableLayoutPanel2.Controls.Add(panel16, 0, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(0, 36);
+            tableLayoutPanel2.Location = new Point(0, 87);
             tableLayoutPanel2.Margin = new Padding(3, 5, 3, 5);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 2;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 48.1481476F));
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 51.8518524F));
-            tableLayoutPanel2.Size = new Size(1548, 1077);
+            tableLayoutPanel2.Size = new Size(1548, 1026);
             tableLayoutPanel2.TabIndex = 3;
             // 
             // panel20
@@ -729,10 +732,10 @@
             panel20.Controls.Add(dataGridView_Baki);
             panel20.Controls.Add(panel26);
             panel20.Dock = DockStyle.Fill;
-            panel20.Location = new Point(469, 523);
+            panel20.Location = new Point(469, 499);
             panel20.Margin = new Padding(3, 5, 3, 5);
             panel20.Name = "panel20";
-            panel20.Size = new Size(536, 549);
+            panel20.Size = new Size(536, 522);
             panel20.TabIndex = 4;
             // 
             // dataGridView_Baki
@@ -764,11 +767,13 @@
             dataGridView_Baki.Margin = new Padding(3, 5, 3, 5);
             dataGridView_Baki.Name = "dataGridView_Baki";
             dataGridView_Baki.RowHeadersVisible = false;
-            dataGridView_Baki.Size = new Size(536, 462);
+            dataGridView_Baki.Size = new Size(536, 435);
             dataGridView_Baki.TabIndex = 4;
+            dataGridView_Baki.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DelayCasesGrid_CellValueChanged);
             // 
             // panel26
             // 
+            panel26.Controls.Add(label__Baki);
             panel26.Controls.Add(label12);
             panel26.Dock = DockStyle.Top;
             panel26.Location = new Point(0, 0);
@@ -776,6 +781,18 @@
             panel26.Name = "panel26";
             panel26.Size = new Size(536, 87);
             panel26.TabIndex = 1;
+            // 
+            // label__Baki
+            // 
+            label__Baki.BackColor = Color.Gainsboro;
+            label__Baki.Dock = DockStyle.Top;
+            label__Baki.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label__Baki.Location = new Point(0, 44);
+            label__Baki.Name = "label__Baki";
+            label__Baki.Size = new Size(536, 44);
+            label__Baki.TabIndex = 6;
+            label__Baki.Text = "0";
+            label__Baki.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
@@ -794,10 +811,10 @@
             panel19.Controls.Add(dataGridView_Morafea);
             panel19.Controls.Add(panel25);
             panel19.Dock = DockStyle.Fill;
-            panel19.Location = new Point(1011, 523);
+            panel19.Location = new Point(1011, 499);
             panel19.Margin = new Padding(3, 5, 3, 5);
             panel19.Name = "panel19";
-            panel19.Size = new Size(534, 549);
+            panel19.Size = new Size(534, 522);
             panel19.TabIndex = 3;
             // 
             // dataGridView_Morafea
@@ -829,11 +846,13 @@
             dataGridView_Morafea.Margin = new Padding(3, 5, 3, 5);
             dataGridView_Morafea.Name = "dataGridView_Morafea";
             dataGridView_Morafea.RowHeadersVisible = false;
-            dataGridView_Morafea.Size = new Size(534, 462);
+            dataGridView_Morafea.Size = new Size(534, 435);
             dataGridView_Morafea.TabIndex = 4;
+            dataGridView_Morafea.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DelayCasesGrid_CellValueChanged);
             // 
             // panel25
             // 
+            panel25.Controls.Add(label1_Morafea);
             panel25.Controls.Add(label11);
             panel25.Dock = DockStyle.Top;
             panel25.Location = new Point(0, 0);
@@ -841,6 +860,18 @@
             panel25.Name = "panel25";
             panel25.Size = new Size(534, 87);
             panel25.TabIndex = 1;
+            // 
+            // label1_Morafea
+            // 
+            label1_Morafea.BackColor = Color.Gainsboro;
+            label1_Morafea.Dock = DockStyle.Top;
+            label1_Morafea.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label1_Morafea.Location = new Point(0, 44);
+            label1_Morafea.Name = "label1_Morafea";
+            label1_Morafea.Size = new Size(534, 44);
+            label1_Morafea.TabIndex = 6;
+            label1_Morafea.Text = "0";
+            label1_Morafea.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label11
             // 
@@ -862,7 +893,7 @@
             panel18.Location = new Point(3, 5);
             panel18.Margin = new Padding(3, 5, 3, 5);
             panel18.Name = "panel18";
-            panel18.Size = new Size(460, 508);
+            panel18.Size = new Size(460, 484);
             panel18.TabIndex = 2;
             // 
             // dataGridView_MadAgal
@@ -894,11 +925,13 @@
             dataGridView_MadAgal.Margin = new Padding(3, 5, 3, 5);
             dataGridView_MadAgal.Name = "dataGridView_MadAgal";
             dataGridView_MadAgal.RowHeadersVisible = false;
-            dataGridView_MadAgal.Size = new Size(460, 421);
+            dataGridView_MadAgal.Size = new Size(460, 397);
             dataGridView_MadAgal.TabIndex = 4;
+            dataGridView_MadAgal.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DelayCasesGrid_CellValueChanged);
             // 
             // panel24
             // 
+            panel24.Controls.Add(label_MadAgal);
             panel24.Controls.Add(label10);
             panel24.Dock = DockStyle.Top;
             panel24.Location = new Point(0, 0);
@@ -906,6 +939,18 @@
             panel24.Name = "panel24";
             panel24.Size = new Size(460, 87);
             panel24.TabIndex = 1;
+            // 
+            // label_MadAgal
+            // 
+            label_MadAgal.BackColor = Color.Gainsboro;
+            label_MadAgal.Dock = DockStyle.Top;
+            label_MadAgal.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label_MadAgal.Location = new Point(0, 44);
+            label_MadAgal.Name = "label_MadAgal";
+            label_MadAgal.Size = new Size(460, 44);
+            label_MadAgal.TabIndex = 6;
+            label_MadAgal.Text = "0";
+            label_MadAgal.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label10
             // 
@@ -927,7 +972,7 @@
             panel17.Location = new Point(469, 5);
             panel17.Margin = new Padding(3, 5, 3, 5);
             panel17.Name = "panel17";
-            panel17.Size = new Size(536, 508);
+            panel17.Size = new Size(536, 484);
             panel17.TabIndex = 1;
             // 
             // dataGridView_Mahgouz
@@ -959,11 +1004,13 @@
             dataGridView_Mahgouz.Margin = new Padding(3, 5, 3, 5);
             dataGridView_Mahgouz.Name = "dataGridView_Mahgouz";
             dataGridView_Mahgouz.RowHeadersVisible = false;
-            dataGridView_Mahgouz.Size = new Size(536, 421);
+            dataGridView_Mahgouz.Size = new Size(536, 397);
             dataGridView_Mahgouz.TabIndex = 4;
+            dataGridView_Mahgouz.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DelayCasesGrid_CellValueChanged);
             // 
             // panel23
             // 
+            panel23.Controls.Add(label_Mahgouz);
             panel23.Controls.Add(label9);
             panel23.Dock = DockStyle.Top;
             panel23.Location = new Point(0, 0);
@@ -971,6 +1018,18 @@
             panel23.Name = "panel23";
             panel23.Size = new Size(536, 87);
             panel23.TabIndex = 1;
+            // 
+            // label_Mahgouz
+            // 
+            label_Mahgouz.BackColor = Color.Gainsboro;
+            label_Mahgouz.Dock = DockStyle.Top;
+            label_Mahgouz.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label_Mahgouz.Location = new Point(0, 44);
+            label_Mahgouz.Name = "label_Mahgouz";
+            label_Mahgouz.Size = new Size(536, 44);
+            label_Mahgouz.TabIndex = 6;
+            label_Mahgouz.Text = "0";
+            label_Mahgouz.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label9
             // 
@@ -992,7 +1051,7 @@
             panel16.Location = new Point(1011, 5);
             panel16.Margin = new Padding(3, 5, 3, 5);
             panel16.Name = "panel16";
-            panel16.Size = new Size(534, 508);
+            panel16.Size = new Size(534, 484);
             panel16.TabIndex = 0;
             // 
             // dataGridView_Ethbat
@@ -1024,11 +1083,13 @@
             dataGridView_Ethbat.Margin = new Padding(3, 5, 3, 5);
             dataGridView_Ethbat.Name = "dataGridView_Ethbat";
             dataGridView_Ethbat.RowHeadersVisible = false;
-            dataGridView_Ethbat.Size = new Size(534, 421);
+            dataGridView_Ethbat.Size = new Size(534, 397);
             dataGridView_Ethbat.TabIndex = 4;
+            dataGridView_Ethbat.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DelayCasesGrid_CellValueChanged);
             // 
             // panel22
             // 
+            panel22.Controls.Add(label__Ethbat);
             panel22.Controls.Add(label8);
             panel22.Dock = DockStyle.Top;
             panel22.Location = new Point(0, 0);
@@ -1036,6 +1097,18 @@
             panel22.Name = "panel22";
             panel22.Size = new Size(534, 87);
             panel22.TabIndex = 0;
+            // 
+            // label__Ethbat
+            // 
+            label__Ethbat.BackColor = Color.Gainsboro;
+            label__Ethbat.Dock = DockStyle.Top;
+            label__Ethbat.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label__Ethbat.Location = new Point(0, 44);
+            label__Ethbat.Name = "label__Ethbat";
+            label__Ethbat.Size = new Size(534, 44);
+            label__Ethbat.TabIndex = 5;
+            label__Ethbat.Text = "0";
+            label__Ethbat.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label8
             // 
@@ -1051,18 +1124,29 @@
             // 
             // panel15
             // 
+            panel15.Controls.Add(button2);
             panel15.Controls.Add(label7);
             panel15.Dock = DockStyle.Top;
             panel15.Location = new Point(0, 0);
             panel15.Margin = new Padding(3, 5, 3, 5);
             panel15.Name = "panel15";
-            panel15.Size = new Size(1548, 36);
+            panel15.Size = new Size(1548, 87);
             panel15.TabIndex = 2;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(1325, 40);
+            button2.Name = "button2";
+            button2.Size = new Size(207, 39);
+            button2.TabIndex = 4;
+            button2.Text = "توزيع المؤجلات على اول شهر";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label7
             // 
             label7.BackColor = Color.FromArgb(192, 255, 192);
-            label7.Dock = DockStyle.Fill;
+            label7.Dock = DockStyle.Top;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             label7.Location = new Point(0, 0);
             label7.Name = "label7";
@@ -1091,6 +1175,7 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView_StatisticInformation).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_Loading).EndInit();
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel4.ResumeLayout(false);
@@ -1107,7 +1192,6 @@
             panel11.ResumeLayout(false);
             panel12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView_Juge4).EndInit();
-            panel13.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel14.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
@@ -1138,7 +1222,6 @@
         private Panel panel4;
         private TableLayoutPanel tableLayoutPanel1;
         private DataGridView dataGridView_Juge1;
-        private DataGridView dataGridView_Juge4;
         private DataGridView dataGridView_Juge3;
         private DataGridView dataGridView_Juge2;
         private Panel panel5;
@@ -1151,8 +1234,6 @@
         private Panel panel10;
         private Panel panel11;
         private Label label_Juge3;
-        private Panel panel12;
-        private Panel panel13;
         private Label label_Juge4;
         private Panel panel14;
         private Label label5;
@@ -1181,7 +1262,7 @@
         private Panel panel22;
         private Label label8;
         private Button button1;
-        private Label label13;
+        private Label label_Ethbat;
         private ComboBox comboBox_CircleDays;
         private Label Text_CircleMasterType;
         private Label Text_Month;
@@ -1191,5 +1272,14 @@
         private Label Text_SuperCourt;
         private Label label14;
         private ComboBox comboBox_Circles;
+        private Label label__Ethbat;
+        private Label label__Baki;
+        private Label label1_Morafea;
+        private Label label_MadAgal;
+        private Label label_Mahgouz;
+        private Button button2;
+        private PictureBox pictureBox_Loading;
+        private Panel panel12;
+        private DataGridView dataGridView_Juge4;
     }
 }

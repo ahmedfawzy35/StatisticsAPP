@@ -73,6 +73,8 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
                    .ThenInclude(x => x.CaseYear!)
                .Include(x => x.CircleDay!)
                    .ThenInclude(x => x.DelayCacesForMonths!)
+                .Include(x => x.DelayCacesForMonths!)
+                     .ThenInclude(x => x.DelayCacesForMonthType!)
                .Include(x => x.StatisticsDeleted!)
                    .ThenInclude(x => x.CaseYear!)
                .Include(x => x.Shortening!)
@@ -103,7 +105,7 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
                 StaticsForYears.Add(setStatistaicsDto(circleStatistics, caseYear, sapek));
             }
             #region Add Total Row
-            var totalRow = GetTotalRow(StaticsForYears);
+            var totalRow = GetTotalRowStatistaics(StaticsForYears);
             StaticsForYears.Add(totalRow);
 
 
@@ -128,27 +130,34 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
                 if (judge.Rate == 1)
                 {
                     circleDay.JudgeDecision1 = setJudgesDeccisionsDto(1, circleStatistics.StatisticsDecisions!.ToList()!, caseYears.ToList());
-
+                    var totalrow = GetTotalRowJudgesDeccision(circleDay.JudgeDecision1);
+                    circleDay.JudgeDecision1.Add(totalrow);
                 }
                 else if (judge.Rate == 2)
                 {
                     circleDay.JudgeDecision2 = setJudgesDeccisionsDto(2, circleStatistics.StatisticsDecisions!.ToList()!, caseYears.ToList());
+                    var totalrow = GetTotalRowJudgesDeccision(circleDay.JudgeDecision2);
+                    circleDay.JudgeDecision2.Add(totalrow);
                 }
                 else if (judge.Rate == 3)
                 {
                     circleDay.JudgeDecision3 = setJudgesDeccisionsDto(3, circleStatistics.StatisticsDecisions!.ToList()!, caseYears.ToList());
+                    var totalrow = GetTotalRowJudgesDeccision(circleDay.JudgeDecision3);
+                    circleDay.JudgeDecision3.Add(totalrow);
                 }
                 else if (judge.Rate == 4)
                 {
                     circleDay.JudgeDecision4 = setJudgesDeccisionsDto(4, circleStatistics.StatisticsDecisions!.ToList()!, caseYears.ToList());
+                    var totalrow = GetTotalRowJudgesDeccision(circleDay.JudgeDecision4);
+                    circleDay.JudgeDecision4.Add(totalrow);
                 }
             }
             int c = circleStatistics.Month == 12 ? 1 : circleStatistics.Month+1;
-            //circleDay.DelayCacesForMonthEthbat = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthEthbat, circleStatistics.Month );
-            //circleDay.DelayCacesForMonthEadaLelMorafea = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthEadaLelMorafea, circleStatistics.Month );
-            //circleDay.DelayCacesForMonthMahgouzLelHokm = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthMahgouzLelHokm, circleStatistics.Month );
-            //circleDay.DelayCacesForMonthMadAgal = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthMadAgal, circleStatistics.Month );
-            //circleDay.DelayCacesForMonthBaky = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthBaky, circleStatistics.Month );
+            circleDay.DelayCacesForMonthEthbat = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthEthbat, circleStatistics.Month);
+            circleDay.DelayCacesForMonthEadaLelMorafea = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthEadaLelMorafea, circleStatistics.Month);
+            circleDay.DelayCacesForMonthMahgouzLelHokm = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthMahgouzLelHokm, circleStatistics.Month);
+            circleDay.DelayCacesForMonthMadAgal = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthMadAgal, circleStatistics.Month);
+            circleDay.DelayCacesForMonthBaky = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthBaky, circleStatistics.Month);
 
             return circleDay;
         }
@@ -275,7 +284,7 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
                 .ToListAsync();
             return decisions;
         }
-        public StatistaicsDto GetTotalRow(List<StatistaicsDto> list)
+        public StatistaicsDto GetTotalRowStatistaics(List<StatistaicsDto> list)
         {
             return new StatistaicsDto
             {
@@ -313,6 +322,39 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
                 EadaLelMorafea = list.Sum(x => x.EadaLelMorafea),
                 MoeagalLelTkrir = list.Sum(x => x.MoeagalLelTkrir),
                 Okhrah = list.Sum(x => x.Okhrah),
+            };
+        }
+
+        public JudgesDeccisionDto GetTotalRowJudgesDeccision(List<JudgesDeccisionDto> list)
+        {
+            return new JudgesDeccisionDto
+            {
+                IsTotalRow = 1,
+                Year = 0, // أو "إجمالي" لو غيرت النوع إلى string
+                AdmKbol = list.Sum(x => x.AdmKbol),
+                AdmEjhtsas = list.Sum(x => x.AdmEjhtsas),
+                SkotAlHakFiRAFEAlDaewa = list.Sum(x => x.SkotAlHakFiRAFEAlDaewa),
+                SkotAlKhsomaWEnkdaeha = list.Sum(x => x.SkotAlKhsomaWEnkdaeha),
+                TarkAlKhsoma = list.Sum(x => x.TarkAlKhsoma),
+                EnedamAlKhsoma = list.Sum(x => x.EnedamAlKhsoma),
+                KanLamTkon = list.Sum(x => x.KanLamTkon),
+                Kbol = list.Sum(x => x.Kbol),
+                Rafd = list.Sum(x => x.Rafd),
+                RafdBeHalatha = list.Sum(x => x.RafdBeHalatha),
+                AdamGwazLeSabekatAlFaslFiha = list.Sum(x => x.AdamGwazLeSabekatAlFaslFiha),
+                EnkdaeAlhakBeModiAlModa = list.Sum(x => x.EnkdaeAlhakBeModiAlModa),
+                Solh = list.Sum(x => x.Solh),
+                Farey = list.Sum(x => x.Farey),
+                NadbKhabir = list.Sum(x => x.NadbKhabir),
+                BackTOKhabir = list.Sum(x => x.BackTOKhabir),
+                Tahkik = list.Sum(x => x.Tahkik),
+                Estgwab = list.Sum(x => x.Estgwab),
+                HelfYamin = list.Sum(x => x.HelfYamin),
+                WakfGazaey = list.Sum(x => x.WakfGazaey),
+                WakfTaeliky = list.Sum(x => x.WakfTaeliky),
+                WakfEtifaky = list.Sum(x => x.WakfEtifaky),
+                EnktaeSirAlKhsoma = list.Sum(x => x.EnktaeSirAlKhsoma),
+                MadAgal = list.Sum(x => x.MadAgal)
             };
         }
 
