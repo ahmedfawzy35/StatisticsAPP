@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Guna.UI2.WinForms;
+using Krypton.Toolkit;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using StatisticsAPP.Forms.MainForm;
 using StatisticsAPP.Models.CircleModels;
@@ -267,15 +269,14 @@ namespace StatisticsAPP.UserControls
         #endregion
 
         #region Design
+        // تعديل جميع الدوال والمعاملات لتعمل مع DataGridView فقط
         void EditColoumnsWidth(DataGridView dataGridView)
         {
             int totalWidth = this.Width;
             int colwidth = totalWidth / 42;
             foreach (DataGridViewColumn col in dataGridView.Columns)
             {
-
                 col.Width = colwidth;
-
             }
             dataGridView.Columns[1].Width = colwidth * 3;
             dataGridView.Invalidate();
@@ -286,15 +287,10 @@ namespace StatisticsAPP.UserControls
             int colwidth = totalWidth / 31;
             foreach (DataGridViewColumn col in dataGridView.Columns)
             {
-
                 col.Width = colwidth;
-
             }
             dataGridView.Columns[0].Visible = false;
-            //dataGridView.Columns[9].Visible = false;
-            //dataGridView.Columns[15].Visible = false;
             dataGridView.Columns[1].Width = colwidth * 3;
-            //  dataGridView.Invalidate();
         }
         void EditColoumnsWidthForDelayCaces()
         {
@@ -365,7 +361,8 @@ namespace StatisticsAPP.UserControls
             label1_Morafea.Text = totalRow.EadaLelMorafea.ToString();
             label__Baki.Text = (totalRow.Okhrah + totalRow.MoeagalLelTkrir).ToString();
 
-            dataGridView_StatisticInformation.InvalidateRow(5);
+            if (dataGridView_StatisticInformation.Rows.Count > 5)
+                dataGridView_StatisticInformation.InvalidateRow(5);
 
             // إجبار DataGridView على تحديث صف الإجمالي فوراً
             var cm = dataGridView_StatisticInformation.BindingContext[dataGridView_StatisticInformation.DataSource] as CurrencyManager;
@@ -374,7 +371,7 @@ namespace StatisticsAPP.UserControls
 
         private void UpdateTotalRow_dataGridView_Judge(List<JudgesDeccisionDto>? JudgeDecision, DataGridView dataGridView)
         {
-            if (JudgeDecision == null || JudgeDecision!.Count == 0)
+            if (JudgeDecision == null || JudgeDecision.Count == 0)
                 return;
 
             var totalRow = JudgeDecision.Last();
@@ -410,10 +407,10 @@ namespace StatisticsAPP.UserControls
         // منع التعديل في صف الإجمالي
         private void dataGridView1_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            DataGridView dataGridView = sender as DataGridView;
-
-
-            if (e.RowIndex == circleStatistics.StaticsForYear!.Count - 1) // صف الإجمالي
+            var dataGridView = sender as DataGridView;
+            if (dataGridView == null || circleStatistics?.StaticsForYear == null)
+                return;
+            if (e.RowIndex == circleStatistics.StaticsForYear.Count - 1)
             {
                 e.Cancel = true;
                 return;
@@ -512,9 +509,9 @@ namespace StatisticsAPP.UserControls
 
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dataGridView = sender as DataGridView;
-
-            ResetGridColors(dataGridView);
+            var dataGridView = sender as DataGridView;
+            if (dataGridView != null)
+                ResetGridColors(dataGridView);
         }
         // التحقق من صحة الخلايا عند التحرير --  للأرقام فقط
         private void dataGridView1_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
@@ -530,14 +527,11 @@ namespace StatisticsAPP.UserControls
         // تلوين اعمدة الاجماليات لجداول احكام القضاة
         private void dataGridViewJuges_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-
-            // التحقق من اسم العمود
-
-            DataGridView dataGridView = sender as DataGridView;
-            string columnName = dataGridView!.Columns[e.ColumnIndex].HeaderText;
+            var dataGridView = sender as DataGridView;
+            if (dataGridView == null) return;
+            string columnName = dataGridView.Columns[e.ColumnIndex].HeaderText;
             if (columnName == "اجمالي الاحكام القطعية" || columnName == "المجموع")
             {
-                // تغيير لون العمود "جملة المحكوم فيه" إلى لون معين
                 e.CellStyle.BackColor = Color.FromArgb(32, 178, 170);
                 dataGridView.Columns[e.ColumnIndex].HeaderCell.Style.BackColor = Color.FromArgb(32, 178, 170);
             }
@@ -550,25 +544,19 @@ namespace StatisticsAPP.UserControls
         // تلوين اعمدة الاجماليات لجدول احكام الانتاج
         private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            // التحقق من اسم العمود
-
-            DataGridView dataGridView = sender as DataGridView;
+            var dataGridView = sender as DataGridView;
+            if (dataGridView == null) return;
             string columnName = dataGridView.Columns[e.ColumnIndex].HeaderText;
-
             if (columnName == "جملة المقدم" || columnName == "جملة الاحكام القطعية" || columnName == "جملة الاثبات" || columnName == "جملة الوقف" || columnName == "جملة المحكوم فيه" || columnName == "جملة المؤجل")
             {
-                // تغيير لون العمود "جملة المحكوم فيه" إلى لون معين
                 e.CellStyle.BackColor = Color.FromArgb(32, 178, 170);
                 dataGridView.Columns[e.ColumnIndex].HeaderCell.Style.BackColor = Color.FromArgb(32, 178, 170);
             }
-
             if (dataGridView.Rows[e.RowIndex].DataBoundItem is StatistaicsDto dto && dto.IsTotalRow == 1)
             {
                 dataGridView.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.FromArgb(218, 165, 32);
                 dataGridView.Rows[e.RowIndex].DefaultCellStyle.Font = new Font(dataGridView.Font, FontStyle.Bold);
             }
-
-            // تأكد من أن اسم العمود هو TotalMokadam
             if (dataGridView_StatisticInformation.Columns[e.ColumnIndex].Name == "TotalMokadam")
             {
                 var row = dataGridView_StatisticInformation.Rows[e.RowIndex];
@@ -576,9 +564,6 @@ namespace StatisticsAPP.UserControls
                 var totaMahkomFih = Convert.ToInt32(row.Cells["TotaMahkomFih"].Value);
                 var totoalMoeagal = Convert.ToInt32(row.Cells["TotoalMoeagal"].Value);
                 var Mashtob = Convert.ToInt32(row.Cells["Mashtob"].Value);
-
-
-
                 if (totalMokadam != (totaMahkomFih + totoalMoeagal + Mashtob))
                 {
                     e.CellStyle.BackColor = Color.Red;
@@ -601,9 +586,9 @@ namespace StatisticsAPP.UserControls
         // تحديث صف الإجمالي عند تغيير قيمة خلية في جدول أحكام القاضي الأول
         private void dataGridView_Judge_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            DataGridView dataGridView = sender as DataGridView;
-            // تجاهل التعديل في صف الإجمالي
-            if (e.RowIndex >= 0 && e.RowIndex < circleStatistics!.StaticsForYear!.Count - 1)
+            var dataGridView = sender as DataGridView;
+            if (dataGridView == null || circleStatistics?.StaticsForYear == null) return;
+            if (e.RowIndex >= 0 && e.RowIndex < circleStatistics.StaticsForYear.Count - 1)
             {
                 switch (dataGridView.Name)
                 {
@@ -622,9 +607,7 @@ namespace StatisticsAPP.UserControls
                     default:
                         break;
                 }
-                // تحديث الأعمدة المجمعّة
                 UpdateStatisticInfoAggregates(e.RowIndex);
-                // تحديث صف الإجمالي مباشرة بعد تحديث الأعمدة المجمعّة
                 UpdateTotalRow_dataGridView_StatisticInformation();
             }
         }
@@ -669,7 +652,6 @@ namespace StatisticsAPP.UserControls
                     cell.Style.BackColor = Color.White;
                 }
             }
-
             foreach (DataGridViewColumn col in grid.Columns)
             {
                 col.HeaderCell.Style.BackColor = Color.White;

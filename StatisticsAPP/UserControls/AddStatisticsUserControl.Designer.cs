@@ -1,4 +1,6 @@
-﻿namespace StatisticsAPP.UserControls
+﻿using Guna.UI2.WinForms;
+using Krypton.Toolkit;
+namespace StatisticsAPP.UserControls
 {
     partial class AddStatisticsUserControl
     {
@@ -229,35 +231,41 @@
             // 
             // label_Ethbat
             // 
+            label_Ethbat.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label_Ethbat.AutoSize = true;
-            label_Ethbat.Location = new Point(1201, 152);
+            label_Ethbat.Font = new Font("Cairo", 9.75F, FontStyle.Bold);
+            label_Ethbat.Location = new Point(1323, 110);
             label_Ethbat.Name = "label_Ethbat";
-            label_Ethbat.Size = new Size(50, 19);
+            label_Ethbat.Size = new Size(51, 24);
             label_Ethbat.TabIndex = 3;
             label_Ethbat.Text = "الجلسة";
             // 
             // comboBox_CircleDays
             // 
+            comboBox_CircleDays.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_CircleDays.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_CircleDays.Font = new Font("Cairo", 9.75F, FontStyle.Bold);
             comboBox_CircleDays.FormattingEnabled = true;
-            comboBox_CircleDays.Location = new Point(923, 147);
+            comboBox_CircleDays.Location = new Point(1045, 105);
             comboBox_CircleDays.Margin = new Padding(3, 5, 3, 5);
             comboBox_CircleDays.Name = "comboBox_CircleDays";
-            comboBox_CircleDays.Size = new Size(230, 25);
+            comboBox_CircleDays.Size = new Size(230, 32);
             comboBox_CircleDays.TabIndex = 4;
             comboBox_CircleDays.SelectedIndexChanged += comboBox_CircleDays_SelectedIndexChanged;
             // 
             // Text_CircleMasterType
             // 
-            Text_CircleMasterType.Location = new Point(715, 147);
+            Text_CircleMasterType.Font = new Font("Cairo", 15F, FontStyle.Bold);
+            Text_CircleMasterType.Location = new Point(722, 110);
             Text_CircleMasterType.Name = "Text_CircleMasterType";
-            Text_CircleMasterType.Size = new Size(185, 24);
+            Text_CircleMasterType.Size = new Size(185, 40);
             Text_CircleMasterType.TabIndex = 5;
             Text_CircleMasterType.Text = "الدائرة";
             Text_CircleMasterType.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Text_Month
             // 
+            Text_Month.Font = new Font("Cairo", 9.75F, FontStyle.Bold);
             Text_Month.Location = new Point(400, 59);
             Text_Month.Name = "Text_Month";
             Text_Month.Size = new Size(87, 24);
@@ -267,7 +275,8 @@
             // 
             // Text_CircleCtogry
             // 
-            Text_CircleCtogry.Location = new Point(554, 147);
+            Text_CircleCtogry.Font = new Font("Cairo", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            Text_CircleCtogry.Location = new Point(722, 162);
             Text_CircleCtogry.Name = "Text_CircleCtogry";
             Text_CircleCtogry.Size = new Size(185, 24);
             Text_CircleCtogry.TabIndex = 7;
@@ -276,15 +285,17 @@
             // 
             // Text_SupCourt
             // 
-            Text_SupCourt.Location = new Point(513, 59);
+            Text_SupCourt.Font = new Font("Cairo", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            Text_SupCourt.Location = new Point(685, 59);
             Text_SupCourt.Name = "Text_SupCourt";
-            Text_SupCourt.Size = new Size(185, 24);
+            Text_SupCourt.Size = new Size(277, 24);
             Text_SupCourt.TabIndex = 8;
             Text_SupCourt.Text = "الدائرة";
             Text_SupCourt.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Text_Year
             // 
+            Text_Year.Font = new Font("Cairo", 9.75F, FontStyle.Bold);
             Text_Year.Location = new Point(320, 59);
             Text_Year.Name = "Text_Year";
             Text_Year.Size = new Size(74, 24);
@@ -294,30 +305,35 @@
             // 
             // Text_SuperCourt
             // 
-            Text_SuperCourt.Location = new Point(704, 59);
+            Text_SuperCourt.Font = new Font("Cairo", 15F, FontStyle.Bold);
+            Text_SuperCourt.Location = new Point(673, 21);
             Text_SuperCourt.Name = "Text_SuperCourt";
-            Text_SuperCourt.Size = new Size(185, 24);
+            Text_SuperCourt.Size = new Size(289, 38);
             Text_SuperCourt.TabIndex = 10;
             Text_SuperCourt.Text = "الدائرة";
             Text_SuperCourt.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label14
             // 
+            label14.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label14.AutoSize = true;
-            label14.Location = new Point(1201, 80);
+            label14.Font = new Font("Cairo", 9.75F, FontStyle.Bold);
+            label14.Location = new Point(1323, 38);
             label14.Name = "label14";
-            label14.Size = new Size(46, 19);
+            label14.Size = new Size(46, 24);
             label14.TabIndex = 11;
             label14.Text = "الدائرة";
             // 
             // comboBox_Circles
             // 
+            comboBox_Circles.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_Circles.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox_Circles.Font = new Font("Cairo", 9.75F, FontStyle.Bold);
             comboBox_Circles.FormattingEnabled = true;
-            comboBox_Circles.Location = new Point(923, 75);
+            comboBox_Circles.Location = new Point(1045, 33);
             comboBox_Circles.Margin = new Padding(3, 5, 3, 5);
             comboBox_Circles.Name = "comboBox_Circles";
-            comboBox_Circles.Size = new Size(230, 25);
+            comboBox_Circles.Size = new Size(230, 32);
             comboBox_Circles.TabIndex = 2;
             comboBox_Circles.SelectedIndexChanged += comboBox_Circles_SelectedIndexChanged;
             // 
@@ -393,8 +409,7 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle());
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(1548, 1200
-                );
+            tableLayoutPanel1.Size = new Size(1548, 1336);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // panel6
@@ -769,7 +784,7 @@
             dataGridView_Baki.RowHeadersVisible = false;
             dataGridView_Baki.Size = new Size(536, 435);
             dataGridView_Baki.TabIndex = 4;
-            dataGridView_Baki.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DelayCasesGrid_CellValueChanged);
+            dataGridView_Baki.CellValueChanged += DelayCasesGrid_CellValueChanged;
             // 
             // panel26
             // 
@@ -848,7 +863,7 @@
             dataGridView_Morafea.RowHeadersVisible = false;
             dataGridView_Morafea.Size = new Size(534, 435);
             dataGridView_Morafea.TabIndex = 4;
-            dataGridView_Morafea.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DelayCasesGrid_CellValueChanged);
+            dataGridView_Morafea.CellValueChanged += DelayCasesGrid_CellValueChanged;
             // 
             // panel25
             // 
@@ -927,7 +942,7 @@
             dataGridView_MadAgal.RowHeadersVisible = false;
             dataGridView_MadAgal.Size = new Size(460, 397);
             dataGridView_MadAgal.TabIndex = 4;
-            dataGridView_MadAgal.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DelayCasesGrid_CellValueChanged);
+            dataGridView_MadAgal.CellValueChanged += DelayCasesGrid_CellValueChanged;
             // 
             // panel24
             // 
@@ -1006,7 +1021,7 @@
             dataGridView_Mahgouz.RowHeadersVisible = false;
             dataGridView_Mahgouz.Size = new Size(536, 397);
             dataGridView_Mahgouz.TabIndex = 4;
-            dataGridView_Mahgouz.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DelayCasesGrid_CellValueChanged);
+            dataGridView_Mahgouz.CellValueChanged += DelayCasesGrid_CellValueChanged;
             // 
             // panel23
             // 
@@ -1085,7 +1100,7 @@
             dataGridView_Ethbat.RowHeadersVisible = false;
             dataGridView_Ethbat.Size = new Size(534, 397);
             dataGridView_Ethbat.TabIndex = 4;
-            dataGridView_Ethbat.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.DelayCasesGrid_CellValueChanged);
+            dataGridView_Ethbat.CellValueChanged += DelayCasesGrid_CellValueChanged;
             // 
             // panel22
             // 

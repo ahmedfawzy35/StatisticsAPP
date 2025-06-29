@@ -13,6 +13,7 @@ namespace StatisticsAPP.Models.StatisticsModels
     public class CircleStatistics : MainClass
     {
         public int Id { get; set; }
+        public int Mokamam { get; set; }
         public int IdCircleDay { get; set; }
         [Required]
         public  string? DayOfWork { get; set; }
