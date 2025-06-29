@@ -1,5 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using Krypton.Toolkit;
+﻿
 namespace StatisticsAPP.UserControls
 {
     partial class AddStatisticsUserControl

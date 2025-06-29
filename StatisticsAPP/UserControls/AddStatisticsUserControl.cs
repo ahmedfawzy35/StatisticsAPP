@@ -1,5 +1,4 @@
-﻿using Guna.UI2.WinForms;
-using Krypton.Toolkit;
+﻿
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using StatisticsAPP.Forms.MainForm;
