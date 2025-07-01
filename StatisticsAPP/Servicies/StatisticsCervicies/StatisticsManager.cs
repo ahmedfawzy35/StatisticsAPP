@@ -64,6 +64,7 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
             var circleStatistics = await _context.CircleStatistics
                .Include(x => x.StatisticsDecisions!)
                    .ThenInclude(x => x.CaseYear!)
+                   .Include(x => x.Sapek!).ThenInclude(x => x.CaseYear!)
                .Include(x => x.StatisticsDecisions!)
                    .ThenInclude(x => x.Decision!)
                          .ThenInclude(x => x.DecisionCategory!)
@@ -73,6 +74,7 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
                    .ThenInclude(x => x.CaseYear!)
                .Include(x => x.CircleDay!)
                    .ThenInclude(x => x.DelayCacesForMonths!)
+                   .ThenInclude(x => x.CaseYear!)
                 .Include(x => x.DelayCacesForMonths!)
                      .ThenInclude(x => x.DelayCacesForMonthType!)
                .Include(x => x.StatisticsDeleted!)
@@ -80,8 +82,8 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
                .Include(x => x.Shortening!)
                    .ThenInclude(x => x.CaseYear!)
                .FirstOrDefaultAsync(x => x.IdCircleDay == circledayId && x.Year == year && x.Month == month);
-            if(circleStatistics == null) return null;
-            var sapek = await _context.DelayCacesForMonths.Include(x => x.CaseYear!)
+            if (circleStatistics == null) return null;
+            var delayCacesForMonths = await _context.DelayCacesForMonths.Include(x => x.CaseYear!)
                 .Where(x => x.IdCircleDay == circledayId && x.Month == month && x.Year == year)
                 .ToListAsync();
             var caseYearsNotSorted = await _context.CaseYears.Where(x => x.Year >= circleStatistics!.StartCaseYear && x.Year <= circleStatistics.EndCaseYear).ToListAsync();
@@ -102,7 +104,32 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
 
             foreach (var caseYear in caseYears)
             {
-                StaticsForYears.Add(setStatistaicsDto(circleStatistics, caseYear, sapek));
+                var static_for_year = setStatistaicsDto(circleStatistics, caseYear);
+                if (circleStatistics.IsNew )
+                    static_for_year.Sapek = CalcMokadam(delayCacesForMonths, circleStatistics.Year, circleStatistics.Month, caseYear);
+                else
+                {
+                    if(circleStatistics.Sapek == null)
+                    {
+                        static_for_year.Sapek = 0;
+
+
+                    }else
+                    {
+                        static_for_year.Sapek = circleStatistics.Sapek!
+                       .Where(x => x.CaseYear!.Year == caseYear.Year).FirstOrDefault() == null ? 0
+                       :
+                       circleStatistics.Sapek!
+                       .Where(x => x.CaseYear!.Year == caseYear.Year).FirstOrDefault()
+                       .Count;
+
+                    }
+
+
+                }
+                    StaticsForYears.Add(static_for_year);
+                
+
             }
             #region Add Total Row
             var totalRow = GetTotalRowStatistaics(StaticsForYears);
@@ -152,7 +179,7 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
                     circleDay.JudgeDecision4.Add(totalrow);
                 }
             }
-            int c = circleStatistics.Month == 12 ? 1 : circleStatistics.Month+1;
+            int c = circleStatistics.Month == 12 ? 1 : circleStatistics.Month + 1;
             circleDay.DelayCacesForMonthEthbat = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthEthbat, circleStatistics.Month);
             circleDay.DelayCacesForMonthEadaLelMorafea = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthEadaLelMorafea, circleStatistics.Month);
             circleDay.DelayCacesForMonthMahgouzLelHokm = SetDelayCacesForMonthDtos(circleStatistics.DelayCacesForMonths!.ToList(), caseYears.ToList(), DelayCacesForMonthTypes.DelayCacesForMonthMahgouzLelHokm, circleStatistics.Month);
@@ -171,45 +198,45 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
                 .ToListAsync();
             return hudjes.OrderBy(x => x.Rate).ToList();
         }
-        private StatistaicsDto setStatistaicsDto(CircleStatistics circleStatistics, CaseYear caseYear, List<DelayCacesForMonth> sapek)
+        private StatistaicsDto setStatistaicsDto(CircleStatistics circleStatistics, CaseYear caseYear)
         {
             StatistaicsDto statistaicsDto = new StatistaicsDto();
-            
-                statistaicsDto.Year = caseYear.Year;
-                statistaicsDto.Sapek = sapek.Where(x => x.CaseYear!.Year == caseYear.Year).Sum(x => x.Count);
-                statistaicsDto.MogaddMenShatb = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.MogaddMenShatb).Sum(x => x.Count);
-                statistaicsDto.moagalMenAlwakfLhinAlfasl = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.moagalMenAlwakfLhinAlfasl).Sum(x => x.Count);
-                statistaicsDto.moagalMenAlwakfGzaey = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.moagalMenAlwakfGzaey).Sum(x => x.Count);
-                statistaicsDto.moagalMenAlwakfTaeliky = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.moagalMenAlwakfTaeliky).Sum(x => x.Count);
-                statistaicsDto.moagalMenAlwakfItfaky = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.moagalMenAlwakfItfaky).Sum(x => x.Count);
-                statistaicsDto.moagalMenAlEnktae = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.moagalMenAlEnktae).Sum(x => x.Count);
-                statistaicsDto.MoadMenAlEstenf = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.MoadMenAlEstenf).Sum(x => x.Count);
-                statistaicsDto.EhalaForm = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.EhalaForm).Sum(x => x.Count);
-                statistaicsDto.EhalaForm = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.ehalaTo).Sum(x => x.Count);
-                statistaicsDto.newCases = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.newCases).Sum(x => x.Count);
-                statistaicsDto.TaksirCount = circleStatistics.Shortening!.Where(x => x.CaseYear!.Year <= caseYear.Year).Sum(x => x.Count);
-                statistaicsDto.Mashtob = circleStatistics.StatisticsDeleted!.Where(x => x.CaseYear!.Year <= caseYear.Year).Sum(x => x.Count);
-                statistaicsDto.Shakly = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionKateyTypes.Shakly).Sum(x => x.Count);
-                statistaicsDto.Mawdoey = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionKateyTypes.Mawdoey).Sum(x => x.Count);
-                statistaicsDto.Solh = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionKateyTypes.Solh).Sum(x => x.Count);
-                statistaicsDto.Farey = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionFareyTypes.Farey).Sum(x => x.Count);
-                statistaicsDto.Khapir = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEthbatTypes.Khapir).Sum(x => x.Count);
-                statistaicsDto.BackToKhapir = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEthbatTypes.BackToKhapir).Sum(x => x.Count);
-                statistaicsDto.Tahkik = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEthbatTypes.Tahkik).Sum(x => x.Count);
-                statistaicsDto.Estgwap = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEthbatTypes.Estgwap).Sum(x => x.Count);
-                statistaicsDto.HelfYamin = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEthbatTypes.HelfYamin).Sum(x => x.Count);
-                statistaicsDto.WakfGazaey = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionWakftTypes.WakfGazaey).Sum(x => x.Count);
-                statistaicsDto.WakfTaeliky = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionWakftTypes.WakfTaeliky).Sum(x => x.Count);
-                statistaicsDto.EnktaeSirAlKhsoma = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEnktaeSirAlKhsomaTypes.EnktaeSirAlKhsoma).Sum(x => x.Count);
-                statistaicsDto.MahguzLelHokm = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.DelayCase!.Name! == MyStrings.DelayCacesypes.MahguzLelHokm).Sum(x => x.Count);
-                statistaicsDto.MadAgal = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.DelayCase!.Name! == MyStrings.DelayCacesypes.MadAgal).Sum(x => x.Count);
-                statistaicsDto.EadaLelMorafea = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.DelayCase!.Name! == MyStrings.DelayCacesypes.MadAgal).Sum(x => x.Count);
-                statistaicsDto.MoeagalLelTkrir = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.DelayCase!.Name! == MyStrings.DelayCacesypes.MoeagalLelTkrir).Sum(x => x.Count);
-                statistaicsDto.Okhrah = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.DelayCase!.Name! == MyStrings.DelayCacesypes.Okhrah).Sum(x => x.Count);
+
+            statistaicsDto.Year = caseYear.Year;
+           // statistaicsDto.Sapek = circleStatistics.Sapek.Where(x=>x.CaseYear.Year == caseYear.Year).FirstOrDefault() == null ?0 : circleStatistics.Sapek.Where(x => x.CaseYear.Year == caseYear.Year).FirstOrDefault().Count;
+            statistaicsDto.MogaddMenShatb = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.MogaddMenShatb).Sum(x => x.Count);
+            statistaicsDto.moagalMenAlwakfLhinAlfasl = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.moagalMenAlwakfLhinAlfasl).Sum(x => x.Count);
+            statistaicsDto.moagalMenAlwakfGzaey = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.moagalMenAlwakfGzaey).Sum(x => x.Count);
+            statistaicsDto.moagalMenAlwakfTaeliky = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.moagalMenAlwakfTaeliky).Sum(x => x.Count);
+            statistaicsDto.moagalMenAlwakfItfaky = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.moagalMenAlwakfItfaky).Sum(x => x.Count);
+            statistaicsDto.moagalMenAlEnktae = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.moagalMenAlEnktae).Sum(x => x.Count);
+            statistaicsDto.MoadMenAlEstenf = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.MoadMenAlEstenf).Sum(x => x.Count);
+            statistaicsDto.EhalaForm = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.EhalaForm).Sum(x => x.Count);
+            statistaicsDto.EhalaForm = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.ehalaTo).Sum(x => x.Count);
+            statistaicsDto.newCases = circleStatistics.StatisticsInterCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.InterCase!.Name == MyStrings.InterCasesTypes.newCases).Sum(x => x.Count);
+            statistaicsDto.TaksirCount = circleStatistics.Shortening!.Where(x => x.CaseYear!.Year <= caseYear.Year).Sum(x => x.Count);
+            statistaicsDto.Mashtob = circleStatistics.StatisticsDeleted!.Where(x => x.CaseYear!.Year <= caseYear.Year).Sum(x => x.Count);
+            statistaicsDto.Shakly = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionKateyTypes.Shakly).Sum(x => x.Count);
+            statistaicsDto.Mawdoey = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionKateyTypes.Mawdoey).Sum(x => x.Count);
+            statistaicsDto.Solh = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionKateyTypes.Solh).Sum(x => x.Count);
+            statistaicsDto.Farey = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionFareyTypes.Farey).Sum(x => x.Count);
+            statistaicsDto.Khapir = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEthbatTypes.Khapir).Sum(x => x.Count);
+            statistaicsDto.BackToKhapir = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEthbatTypes.BackToKhapir).Sum(x => x.Count);
+            statistaicsDto.Tahkik = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEthbatTypes.Tahkik).Sum(x => x.Count);
+            statistaicsDto.Estgwap = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEthbatTypes.Estgwap).Sum(x => x.Count);
+            statistaicsDto.HelfYamin = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEthbatTypes.HelfYamin).Sum(x => x.Count);
+            statistaicsDto.WakfGazaey = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionWakftTypes.WakfGazaey).Sum(x => x.Count);
+            statistaicsDto.WakfTaeliky = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionWakftTypes.WakfTaeliky).Sum(x => x.Count);
+            statistaicsDto.EnktaeSirAlKhsoma = circleStatistics.StatisticsDecisions!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.Decision!.DecisionCategory!.Name == MyStrings.DecisionEnktaeSirAlKhsomaTypes.EnktaeSirAlKhsoma).Sum(x => x.Count);
+            statistaicsDto.MahguzLelHokm = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.DelayCase!.Name! == MyStrings.DelayCacesypes.MahguzLelHokm).Sum(x => x.Count);
+            statistaicsDto.MadAgal = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.DelayCase!.Name! == MyStrings.DelayCacesypes.MadAgal).Sum(x => x.Count);
+            statistaicsDto.EadaLelMorafea = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.DelayCase!.Name! == MyStrings.DelayCacesypes.MadAgal).Sum(x => x.Count);
+            statistaicsDto.MoeagalLelTkrir = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.DelayCase!.Name! == MyStrings.DelayCacesypes.MoeagalLelTkrir).Sum(x => x.Count);
+            statistaicsDto.Okhrah = circleStatistics.StatisticsDelayCases!.Where(x => x.CaseYear!.Year <= caseYear.Year && x.DelayCase!.Name! == MyStrings.DelayCacesypes.Okhrah).Sum(x => x.Count);
 
 
 
-             
+
 
             return statistaicsDto;
 
@@ -256,7 +283,7 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
             return judgeDecisions;
 
         }
-        public List<DelayCacesForMonthDto> SetDelayCacesForMonthDtos(List<DelayCacesForMonth> delayCacesForMonths, List<CaseYear> years , string Type , int firstMonth)
+        public List<DelayCacesForMonthDto> SetDelayCacesForMonthDtos(List<DelayCacesForMonth> delayCacesForMonths, List<CaseYear> years, string Type, int firstMonth)
         {
             int secondMonth = firstMonth == 12 ? 1 : firstMonth + 1;
             int thirdMonth = firstMonth == 11 ? 1 : firstMonth + 2;
@@ -265,7 +292,7 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
             {
                 var delayCacesForMonthDto = new DelayCacesForMonthDto();
                 delayCacesForMonthDto.CaseYear = item.Year;
-                delayCacesForMonthDto.Month1 = delayCacesForMonths.Where(x => x.DelayCacesForMonthType!.Name == Type &&  x.CaseYear!.Year == item.Year && x.Month == firstMonth).Sum(x=>x.Count) ;
+                delayCacesForMonthDto.Month1 = delayCacesForMonths.Where(x => x.DelayCacesForMonthType!.Name == Type && x.CaseYear!.Year == item.Year && x.Month == firstMonth).Sum(x => x.Count);
                 delayCacesForMonthDto.Month2 = delayCacesForMonths.Where(x => x.DelayCacesForMonthType!.Name == Type && x.CaseYear!.Year == item.Year && x.Month == secondMonth).Sum(x => x.Count);
                 delayCacesForMonthDto.Month3 = delayCacesForMonths.Where(x => x.DelayCacesForMonthType!.Name == Type && x.CaseYear!.Year == item.Year && x.Month == thirdMonth).Sum(x => x.Count);
 
@@ -274,9 +301,9 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
             return delayCacesForMonthDtos;
 
         }
-        public async Task< List<StatisticsDecisions>> GetStatisticsDecisions(int circleStatisticsId)
+        public async Task<List<StatisticsDecisions>> GetStatisticsDecisions(int circleStatisticsId)
         {
-            var decisions =await _context.StatisticsDecisions
+            var decisions = await _context.StatisticsDecisions
                 .Include(x => x.Decision!).ThenInclude(x => x.DecisionCategory!)
                 .Include(x => x.Judge!)
                 .Include(x => x.CaseYear!)
@@ -358,5 +385,13 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies
             };
         }
 
+        public int CalcMokadam(List<DelayCacesForMonth> delays, int year, int month , CaseYear caseYear)
+        {
+            var count =  delays
+                .Where(x => x.CaseYear.Year == caseYear.Year && x.Month == month &&  x.Year == year )
+                .Sum(x => x.Count);
+            return count;
+
+        }
     }
 }

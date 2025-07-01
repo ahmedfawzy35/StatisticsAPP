@@ -13,7 +13,8 @@ namespace StatisticsAPP.Models.StatisticsModels
     public class CircleStatistics : MainClass
     {
         public int Id { get; set; }
-        public int Mokamam { get; set; }
+
+        public bool IsNew { get; set; }
         public int IdCircleDay { get; set; }
         [Required]
         public  string? DayOfWork { get; set; }
@@ -34,7 +35,10 @@ namespace StatisticsAPP.Models.StatisticsModels
         public virtual IEnumerable<DelayCacesForMonth>? DelayCacesForMonths { get; set; }
         public virtual IEnumerable<StatisticsDeleted>? StatisticsDeleted { get; set; }
         public virtual IEnumerable<Shortening>? Shortening { get; set; }
-
+        public virtual IEnumerable<Sapek>? Sapek { get; set; }
+      
     }
 
+
+    
 }
