@@ -20,6 +20,7 @@ namespace StatisticsAPP.Servicies.StatisticsCervicies.DTOS
         public int StartCaseYear { get; set; }
         public int EndCaseYear { get; set; }
         public int CountCaseYear { get; set; }
+        public int IdCircleStatistaic { get; set; }
         public CircleCategory? CircleCategory { get; set; }= new CircleCategory();
         public CircleType? CircleType { get; set; } = new CircleType();
         public CircleMasterType? CircleMasterType { get; set; } = new CircleMasterType();

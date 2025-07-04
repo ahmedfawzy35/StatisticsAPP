@@ -40,7 +40,7 @@
             comboBox_Year.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_Year.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_Year.FormattingEnabled = true;
-            comboBox_Year.Location = new Point(146, 81);
+            comboBox_Year.Location = new Point(117, 81);
             comboBox_Year.Name = "comboBox_Year";
             comboBox_Year.Size = new Size(121, 23);
             comboBox_Year.TabIndex = 7;
@@ -49,7 +49,7 @@
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Location = new Point(49, 81);
+            label2.Location = new Point(20, 81);
             label2.Name = "label2";
             label2.Size = new Size(34, 15);
             label2.TabIndex = 4;
@@ -60,7 +60,7 @@
             comboBox_Month.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_Month.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_Month.FormattingEnabled = true;
-            comboBox_Month.Location = new Point(146, 29);
+            comboBox_Month.Location = new Point(117, 29);
             comboBox_Month.Name = "comboBox_Month";
             comboBox_Month.Size = new Size(121, 23);
             comboBox_Month.TabIndex = 6;
@@ -69,7 +69,7 @@
             // 
             label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
-            label1.Location = new Point(49, 32);
+            label1.Location = new Point(20, 32);
             label1.Name = "label1";
             label1.Size = new Size(35, 15);
             label1.TabIndex = 5;
@@ -77,7 +77,8 @@
             // 
             // button1
             // 
-            button1.Location = new Point(146, 176);
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.Location = new Point(117, 176);
             button1.Name = "button1";
             button1.Size = new Size(107, 59);
             button1.TabIndex = 8;
@@ -89,7 +90,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(356, 288);
+            ClientSize = new Size(327, 293);
             Controls.Add(button1);
             Controls.Add(comboBox_Year);
             Controls.Add(label2);

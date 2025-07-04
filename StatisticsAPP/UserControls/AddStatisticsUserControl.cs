@@ -139,12 +139,15 @@ namespace StatisticsAPP.UserControls
         }
         private void ShowLoading()
         {
-            pictureBox_Loading.BringToFront();
-            pictureBox_Loading.Dock = DockStyle.Fill;
+            comboBox_Circles.Enabled = false;
+            comboBox_CircleDays.Enabled = false;
+        
             pictureBox_Loading.Visible = true;
         }
         private void HideLoading()
         {
+            comboBox_Circles.Enabled = true;
+            comboBox_CircleDays.Enabled = true;
             pictureBox_Loading.Visible = false;
         }
         private async Task GetStatistic()
@@ -359,7 +362,8 @@ namespace StatisticsAPP.UserControls
             label_MadAgal.Text = totalRow.MadAgal.ToString();
             label1_Morafea.Text = totalRow.EadaLelMorafea.ToString();
             label__Baki.Text = (totalRow.Okhrah + totalRow.MoeagalLelTkrir).ToString();
-
+            totalRow.IsTotalRow = 1; // تعيين قيمة العمود الأول (IsTotalRow) إلى 1
+            circleStatistics.StaticsForYear[circleStatistics.StaticsForYear.Count - 1] = totalRow;
             if (dataGridView_StatisticInformation.Rows.Count > 5)
                 dataGridView_StatisticInformation.InvalidateRow(5);
 
@@ -830,6 +834,12 @@ namespace StatisticsAPP.UserControls
                 cell.Style.BackColor = Color.Red;
             else
                 cell.Style.BackColor = Color.White;
+        }
+
+        private async void button1_Click(object sender, EventArgs e)
+        {
+          await  MyCervicies.statisticsManager!.SaveStatistic(circleStatistics!);
+           // MessageBox.Show("تم حفظ الاحصائية بنجاح", "نجاح", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

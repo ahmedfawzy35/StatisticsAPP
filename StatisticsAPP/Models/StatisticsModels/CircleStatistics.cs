@@ -14,7 +14,7 @@ namespace StatisticsAPP.Models.StatisticsModels
     {
         public int Id { get; set; }
 
-        public bool IsNew { get; set; }
+        public bool IsNew { get; set; }=true;
         public int IdCircleDay { get; set; }
         [Required]
         public  string? DayOfWork { get; set; }

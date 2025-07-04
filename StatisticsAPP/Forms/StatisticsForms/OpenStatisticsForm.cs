@@ -61,6 +61,7 @@ namespace StatisticsAPP.Forms.StatisticsForms
                     circleStatistics.Add(new CircleStatistics()
                     {
                         IdCircleDay = circleDay.Id,
+                        IsNew = true,   
                         DayOfWork = circleDay.Day,
                         Year = Convert.ToInt32(comboBox_Year.SelectedItem),
                         Month = Convert.ToInt32(comboBox_Month.SelectedValue),

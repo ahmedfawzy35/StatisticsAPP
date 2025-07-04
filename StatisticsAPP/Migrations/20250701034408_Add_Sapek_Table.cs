@@ -19,7 +19,7 @@ namespace StatisticsAPP.Migrations
                 table: "CircleStatistics",
                 type: "bit",
                 nullable: false,
-                defaultValue: false);
+                defaultValue: true);
 
             migrationBuilder.CreateTable(
                 name: "Sapeks",
