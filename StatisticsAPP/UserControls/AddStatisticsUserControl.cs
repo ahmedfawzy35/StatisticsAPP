@@ -394,7 +394,7 @@ namespace StatisticsAPP.UserControls
                 int sum = JudgeDecision
                     .Take(JudgeDecision.Count - 1) // استثناء صف الإجمالي
                     .Sum(x => (int)(prop.GetValue(x) ?? 0));
-
+                totalRow.IsTotalRow = 1; // تعيين قيمة العمود الأول (IsTotalRow) إلى 1
                 prop.SetValue(totalRow, sum);
             }
 

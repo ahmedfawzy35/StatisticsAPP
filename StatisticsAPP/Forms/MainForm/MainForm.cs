@@ -374,7 +374,7 @@ namespace StatisticsAPP.Forms.MainForm
             StatisticsAddConfigurationForm frm = new StatisticsAddConfigurationForm();
             if (frm.ShowDialog() == DialogResult.OK)
             {
-                var config = frm.FormConfig;
+               var config = frm.FormConfig;
 
 
                 StatisticsAddForm frm2 = new StatisticsAddForm(config!);

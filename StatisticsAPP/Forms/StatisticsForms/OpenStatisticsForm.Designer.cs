@@ -37,7 +37,6 @@
             // 
             // comboBox_Year
             // 
-            comboBox_Year.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_Year.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_Year.FormattingEnabled = true;
             comboBox_Year.Location = new Point(117, 81);
@@ -47,7 +46,6 @@
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
             label2.Location = new Point(20, 81);
             label2.Name = "label2";
@@ -57,7 +55,6 @@
             // 
             // comboBox_Month
             // 
-            comboBox_Month.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             comboBox_Month.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBox_Month.FormattingEnabled = true;
             comboBox_Month.Location = new Point(117, 29);
@@ -67,7 +64,6 @@
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.Location = new Point(20, 32);
             label1.Name = "label1";
@@ -77,7 +73,6 @@
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button1.Location = new Point(117, 176);
             button1.Name = "button1";
             button1.Size = new Size(107, 59);

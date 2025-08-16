@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StatisticsAPP.Data;
 
@@ -11,9 +12,11 @@ using StatisticsAPP.Data;
 namespace StatisticsAPP.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250708020921_editTable")]
+    partial class editTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -974,7 +977,13 @@ namespace StatisticsAPP.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("CaseYearId")
+                        .HasColumnType("int");
+
                     b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("DelayCacesForMonthTypeId")
                         .HasColumnType("int");
 
                     b.Property<int>("IdCaseYear")
@@ -988,7 +997,9 @@ namespace StatisticsAPP.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdCaseYear");
+                    b.HasIndex("CaseYearId");
+
+                    b.HasIndex("DelayCacesForMonthTypeId");
 
                     b.HasIndex("IdCircleDay");
 
@@ -1628,9 +1639,11 @@ namespace StatisticsAPP.Migrations
                 {
                     b.HasOne("StatisticsAPP.Models.StatisticsModels.CaseYear", "CaseYear")
                         .WithMany()
-                        .HasForeignKey("IdCaseYear")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CaseYearId");
+
+                    b.HasOne("StatisticsAPP.Models.StatisticsModels.DelayCacesForMonthType", "DelayCacesForMonthType")
+                        .WithMany()
+                        .HasForeignKey("DelayCacesForMonthTypeId");
 
                     b.HasOne("StatisticsAPP.Models.CircleModels.CircleDay", "CircleDay")
                         .WithMany()
@@ -1649,6 +1662,8 @@ namespace StatisticsAPP.Migrations
                     b.Navigation("CircleDay");
 
                     b.Navigation("CircleStatistics");
+
+                    b.Navigation("DelayCacesForMonthType");
                 });
 
             modelBuilder.Entity("StatisticsAPP.Models.StatisticsModels.StatisticsDecisions", b =>

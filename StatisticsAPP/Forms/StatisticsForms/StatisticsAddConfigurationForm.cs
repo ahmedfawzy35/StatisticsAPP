@@ -1,4 +1,5 @@
-﻿using StatisticsAPP.Models.CircleModels;
+﻿using Microsoft.EntityFrameworkCore;
+using StatisticsAPP.Models.CircleModels;
 using StatisticsAPP.Models.CourtsModels;
 using StatisticsAPP.Servicies.StatisticsCervicies.DTOS;
 using StatisticsAPP.Utility;
@@ -73,25 +74,71 @@ namespace StatisticsAPP.Forms.StatisticsForms
             if (comboBox_CircleCategory.SelectedItem == null || comboBox_CircleMasterType.SelectedItem == null
                 || comboBox_SupCourt.SelectedItem == null || comboBox_SuperCourt.SelectedItem == null)
             {
+                DialogResult = DialogResult.None;
                 return;
+                 
             }
-            FormConfig = new StatisticsFormConfig()
+            var circleDays = MyContext.context.CircleDays.Include(x => x.Circle).Include(x=> x.CircleType).Where(c => c.Circle.IdSupCourt == ((SupCourt)comboBox_SupCourt.SelectedItem).Id
+                                                                  && c.Circle.IdCircleCategory == ((CircleCategory)comboBox_CircleCategory.SelectedItem).Id
+                
+                                                                  && c.CircleType.IdCircleMasterType == ((CircleMasterType)comboBox_CircleMasterType.SelectedItem).Id).ToList();
+            var errors = new List<string>();
+            if (circleDays.Count > 0)
             {
 
-                CircleCtogryId = ((CircleCategory)comboBox_CircleCategory.SelectedItem).Id,
-                CircleMasterTypeId = ((CircleMasterType)comboBox_CircleMasterType.SelectedItem).Id,
-                Month = comboBox_Month.SelectedIndex + 1,
-                SupCourtId = ((SupCourt)comboBox_SupCourt.SelectedItem).Id,
-                SuperCourtId = ((SuperCourt)comboBox_SuperCourt.SelectedItem).Id,
-                Year = Convert.ToInt32(comboBox_Year.SelectedItem),
-                SuperCourtName = ((SuperCourt)comboBox_SuperCourt.SelectedItem).Name,
-                SupCourtName = ((SupCourt)comboBox_SupCourt.SelectedItem).Name,
-                CircleCtogryName= ((CircleCategory)comboBox_CircleCategory.SelectedItem).Name,
-                CircleMasterTypeName = ((CircleMasterType)comboBox_CircleMasterType.SelectedItem).Name
+                foreach (var item in circleDays)
+                {
+                   var circleStatistic = MyContext.context.CircleStatistics.FirstOrDefault(x => x.IdCircleDay == item.Id
+                                                                 && x.Month == comboBox_Month.SelectedIndex + 1
+                                                                 && x.Year == Convert.ToInt32(comboBox_Year.SelectedItem));
+
+                    if (circleStatistic == null)
+                    {
+                        errors.Add($"  (  { item.Circle!.Name} ) اليوم ({item.Name})   ");
+                        
+                       
+                    }
+                }
+
+                if (errors.Count > 0)
+                {
+                    StringBuilder errorMessage = new StringBuilder();
+                    errorMessage.AppendLine("الاحصائيات التالية غير موجودة:");
+                    foreach (var error in errors)
+                    {
+                        errorMessage.AppendLine(error);
+
+                    }
+                    
+                    MessageBox.Show(errorMessage.ToString(), "خطأ في الاحصائيات", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DialogResult = DialogResult.None;
+
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("لا يوجد دوائر لهذا التكوين");
+                DialogResult = DialogResult.None;
+                return;
+            }
+                FormConfig = new StatisticsFormConfig()
+                {
+
+                    CircleCtogryId = ((CircleCategory)comboBox_CircleCategory.SelectedItem).Id,
+                    CircleMasterTypeId = ((CircleMasterType)comboBox_CircleMasterType.SelectedItem).Id,
+                    Month = comboBox_Month.SelectedIndex + 1,
+                    SupCourtId = ((SupCourt)comboBox_SupCourt.SelectedItem).Id,
+                    SuperCourtId = ((SuperCourt)comboBox_SuperCourt.SelectedItem).Id,
+                    Year = Convert.ToInt32(comboBox_Year.SelectedItem),
+                    SuperCourtName = ((SuperCourt)comboBox_SuperCourt.SelectedItem).Name,
+                    SupCourtName = ((SupCourt)comboBox_SupCourt.SelectedItem).Name,
+                    CircleCtogryName = ((CircleCategory)comboBox_CircleCategory.SelectedItem).Name,
+                    CircleMasterTypeName = ((CircleMasterType)comboBox_CircleMasterType.SelectedItem).Name
 
 
 
-            };
+                };
 
             this.Close();
 
